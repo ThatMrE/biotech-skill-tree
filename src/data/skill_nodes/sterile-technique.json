@@ -1,0 +1,82 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "sterile-technique",
+  "title": {
+    "name": "sterile (aseptic) technique",
+    "level": 2
+  },
+  "project": "Core Skills",
+  "video": {
+    "url": "https://www.jove.com/v/10040/aseptic-technique-in-environmental-science"
+  },
+  "time": 60,
+  "level": "beginner",
+  "overview": {
+    "description": "Aseptic technique is easy to learn, impossible to master. Technical errors only matter if they introduce non-experimental variables. If you reliably grow contamination-free plates and verify results, the nuances of your set-up don't matter - results are what count.",
+    "objectives": [
+      "perform sterile transfers near a flame",
+      "use an inoculating loop/wand and a glass spreader",
+      "understand why controls catch non-experimental variables",
+      "diagnose contamination from plate morphology"
+    ],
+    "prerequisites": [
+      "poured plates",
+      "a sterile workspace"
+    ]
+  },
+  "steps": {
+    "description": "Aseptic technique is easy to learn, impossible to master. Technical errors only matter if they introduce non-experimental variables. If you reliably grow contamination-free plates and verify results, the nuances of your set-up don't matter - results are what count.",
+    "intro": "Aseptic technique is easy to learn, impossible to master. Technical errors only matter if they introduce non-experimental variables. If you reliably grow contamination-free plates and verify results, the nuances of your set-up don't matter - results are what count.",
+    "tools": [
+      "inoculating loop or wand",
+      "glass spreader",
+      "Bunsen burner",
+      "agar plates",
+      "liquid culture"
+    ],
+    "estimatatedTime": {
+      "setup": 10,
+      "config": 20,
+      "testing": 20
+    },
+    "instructions": [
+      {
+        "title": "Flame your tools",
+        "description": "Flame the inoculating loop to red-hot, let it cool a moment, then pick a colony or dip into culture - always within the cone of protection."
+      },
+      {
+        "title": "Streak for single colonies",
+        "description": "Streak in quadrants, flaming the loop between sectors, to isolate single colonies."
+      },
+      {
+        "title": "Spread evenly",
+        "description": "Use a sterile glass spreader to distribute liquid culture across a plate for even lawn or countable colonies."
+      },
+      {
+        "title": "Always run controls",
+        "description": "Include positive and negative controls so that contamination or reagent failure is immediately diagnosable."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Streak a plate to obtain isolated single colonies and photograph the result. Include a contamination-free negative control plate."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Sterile Technique protocol",
+      "url": "https://www.neosynbio.com/sterile-technique"
+    },
+    {
+      "title": "NeoSynBio: The Inoculating Loop / Wand",
+      "url": "https://www.neosynbio.com/inoculation-wand"
+    },
+    {
+      "title": "Addgene: Streaking bacteria for single colonies (video protocol)",
+      "url": "https://www.addgene.org/protocols/streak-plate/"
+    },
+    {
+      "title": "ASM / JoVE Science Education: Aseptic technique fundamentals",
+      "url": "https://www.jove.com/science-education"
+    }
+  ]
+}

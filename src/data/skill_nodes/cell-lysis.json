@@ -1,0 +1,71 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "cell-lysis",
+  "title": {
+    "name": "cell lysis",
+    "level": 7
+  },
+  "project": "Protein Production",
+  "video": {
+    "url": ""
+  },
+  "time": 90,
+  "level": "intermediate",
+  "overview": {
+    "description": "Once your protein is made, you have to extract it - 'there are many ways to skin E. coli'. Lysis releases everything inside the cell as 'cell slurry'; the right enzymes/inhibitors protect your protein of interest during the process.",
+    "objectives": [
+      "choose a lysis method (chemical, sonication, bead-beating)",
+      "include protease inhibitors and keep samples cold",
+      "clarify lysate to separate soluble protein"
+    ],
+    "prerequisites": [
+      "induced cell pellet"
+    ]
+  },
+  "steps": {
+    "description": "Once your protein is made, you have to extract it - 'there are many ways to skin E. coli'. Lysis releases everything inside the cell as 'cell slurry'; the right enzymes/inhibitors protect your protein of interest during the process.",
+    "intro": "Once your protein is made, you have to extract it - 'there are many ways to skin E. coli'. Lysis releases everything inside the cell as 'cell slurry'; the right enzymes/inhibitors protect your protein of interest during the process.",
+    "tools": [
+      "lysis buffer / detergent reagent",
+      "sonicator or bead beater",
+      "protease inhibitors",
+      "centrifuge"
+    ],
+    "estimatatedTime": {
+      "setup": 15,
+      "config": 30,
+      "testing": 30
+    },
+    "instructions": [
+      {
+        "title": "Resuspend cold",
+        "description": "Resuspend the pellet in cold lysis buffer with protease inhibitors; keep on ice throughout."
+      },
+      {
+        "title": "Lyse",
+        "description": "Sonicate (pulsed, on ice) or bead-beat until the cloudy suspension turns translucent."
+      },
+      {
+        "title": "Clarify",
+        "description": "Centrifuge to separate soluble protein (supernatant) from debris/inclusion bodies (pellet)."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Lyse an induced culture and keep aliquots of lysate, cleared supernatant and pellet for SDS-PAGE analysis."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Cell Lysis protocols",
+      "url": "https://www.neosynbio.com/cell-lysis"
+    },
+    {
+      "title": "Thermo Scientific: Pierce Cell Lysis Technical Handbook",
+      "url": "https://tools.thermofisher.com/content/sfs/brochures/1601757-Cell-Lysis-Handbook.pdf"
+    },
+    {
+      "title": "Thermo Fisher: traditional methods of cell lysis",
+      "url": "https://www.thermofisher.com/us/en/home/life-science/protein-biology/protein-biology-learning-center/protein-biology-resource-library/pierce-protein-methods/traditional-methods-cell-lysis.html"
+    }
+  ]
+}

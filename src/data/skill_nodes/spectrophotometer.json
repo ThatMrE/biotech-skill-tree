@@ -1,0 +1,66 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "spectrophotometer",
+  "title": {
+    "name": "the spectrophotometer",
+    "level": 2
+  },
+  "project": "Equipment",
+  "video": {
+    "url": ""
+  },
+  "time": 20,
+  "level": "beginner",
+  "overview": {
+    "description": "The spectrophotometer measures optical density (OD600) - how much light your culture blocks as it grows. It's how you choose the right moment to induce protein expression. It's relatively easy to DIY.",
+    "objectives": [
+      "measure OD600 against a blank",
+      "relate OD to growth phase",
+      "consider DIY photometer options"
+    ],
+    "prerequisites": [
+      "the micropipette node"
+    ]
+  },
+  "steps": {
+    "description": "The spectrophotometer measures optical density (OD600) - how much light your culture blocks as it grows. It's how you choose the right moment to induce protein expression. It's relatively easy to DIY.",
+    "intro": "The spectrophotometer measures optical density (OD600) - how much light your culture blocks as it grows. It's how you choose the right moment to induce protein expression. It's relatively easy to DIY.",
+    "tools": [
+      "spectrophotometer",
+      "cuvettes",
+      "media blank"
+    ],
+    "estimatatedTime": {
+      "setup": 3,
+      "config": 6,
+      "testing": 6
+    },
+    "instructions": [
+      {
+        "title": "Blank the instrument",
+        "description": "Zero the reading with a cuvette of sterile media."
+      },
+      {
+        "title": "Measure OD600",
+        "description": "Read your culture at 600 nm; dilute if the reading exceeds the linear range."
+      },
+      {
+        "title": "Map to growth",
+        "description": "Track OD600 over time to identify exponential phase for induction."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Record a short OD600 time-course of a growing culture and identify the exponential phase."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Spectrophotometer & cuvettes guide",
+      "url": "https://www.neosynbio.com/spectrophotometer-cuvettes"
+    },
+    {
+      "title": "OD600 and bacterial growth curves (overview)",
+      "url": "https://www.thermofisher.com/us/en/home/life-science/lab-equipment/spectrophotometers-refractometers-electrochemistry/uv-vis-spectrophotometers.html"
+    }
+  ]
+}

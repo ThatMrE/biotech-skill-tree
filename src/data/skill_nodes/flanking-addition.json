@@ -1,0 +1,70 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "flanking-addition",
+  "title": {
+    "name": "flanking sequence addition",
+    "level": 4
+  },
+  "project": "Amplification",
+  "video": {
+    "url": ""
+  },
+  "time": 60,
+  "level": "intermediate",
+  "overview": {
+    "description": "A neat PCR trick: because 3' homology matters far more than 5', you can add whatever you want to the 5' end of a primer. That lets you append restriction sites - or Gibson/Golden Gate overhangs - and even lift genes out of their natural context.",
+    "objectives": [
+      "exploit that 3' homology matters more than 5'",
+      "add sites by designing 5' primer overhangs",
+      "'lift' a gene out of a plasmid or environmental sample"
+    ],
+    "prerequisites": [
+      "Primer Design",
+      "PCR"
+    ]
+  },
+  "steps": {
+    "description": "A neat PCR trick: because 3' homology matters far more than 5', you can add whatever you want to the 5' end of a primer. That lets you append restriction sites - or Gibson/Golden Gate overhangs - and even lift genes out of their natural context.",
+    "intro": "A neat PCR trick: because 3' homology matters far more than 5', you can add whatever you want to the 5' end of a primer. That lets you append restriction sites - or Gibson/Golden Gate overhangs - and even lift genes out of their natural context.",
+    "tools": [
+      "custom primers with 5' overhangs",
+      "PCR reagents"
+    ],
+    "estimatatedTime": {
+      "setup": 10,
+      "config": 20,
+      "testing": 20
+    },
+    "instructions": [
+      {
+        "title": "Design the overhang",
+        "description": "Keep the 3' end fully complementary to the template; append your new sequence to the 5' end."
+      },
+      {
+        "title": "Amplify",
+        "description": "Run PCR - early cycles use only the template-binding region, later cycles incorporate the full primer."
+      },
+      {
+        "title": "Confirm",
+        "description": "Gel-check that the product gained the expected length from the added flanks."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Add restriction sites (or assembly overhangs) to a fragment by PCR and confirm the size shift on a gel."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Flanking Sequence Addition",
+      "url": "https://www.neosynbio.com/flanking-restriction-site-addition"
+    },
+    {
+      "title": "Addgene: Adding restriction sites by PCR (PCR cloning)",
+      "url": "https://www.addgene.org/protocols/pcr-cloning/"
+    },
+    {
+      "title": "NEB: designing primers with 5' additions",
+      "url": "https://www.neb.com/en-us/tools-and-resources/usage-guidelines"
+    }
+  ]
+}

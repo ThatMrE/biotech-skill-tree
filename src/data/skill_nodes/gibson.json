@@ -1,0 +1,75 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "gibson",
+  "title": {
+    "name": "gibson assembly",
+    "level": 6
+  },
+  "project": "Advanced Assembly",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=tlVbf5fXhp4"
+  },
+  "time": 120,
+  "level": "advanced",
+  "overview": {
+    "description": "Gibson Assembly replaces digest+ligation with a single isothermal reaction that joins fragments via homologous overlapping ends - reportedly up to 6 at once. Most of the work is primer design for scarless overlaps, so revise that first.",
+    "objectives": [
+      "design primers with homologous overlaps",
+      "assemble multiple fragments in one isothermal reaction",
+      "decide when to switch from RE digest to single-step cloning"
+    ],
+    "prerequisites": [
+      "Primer Design",
+      "Flanking Sequence Addition"
+    ]
+  },
+  "steps": {
+    "description": "Gibson Assembly replaces digest+ligation with a single isothermal reaction that joins fragments via homologous overlapping ends - reportedly up to 6 at once. Most of the work is primer design for scarless overlaps, so revise that first.",
+    "intro": "Gibson Assembly replaces digest+ligation with a single isothermal reaction that joins fragments via homologous overlapping ends - reportedly up to 6 at once. Most of the work is primer design for scarless overlaps, so revise that first.",
+    "tools": [
+      "Gibson assembly master mix",
+      "PCR fragments with overlaps",
+      "thermocycler"
+    ],
+    "estimatatedTime": {
+      "setup": 20,
+      "config": 40,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "Design overlaps",
+        "description": "Design ~20-40 bp homologous overlaps between adjacent fragments using your assembly wizard."
+      },
+      {
+        "title": "Amplify fragments",
+        "description": "PCR each fragment with the overlap-adding primers; gel-confirm sizes."
+      },
+      {
+        "title": "Assemble",
+        "description": "Combine fragments with the master mix and incubate at 50C; transform directly."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Assemble a multi-fragment construct by Gibson and confirm it by colony PCR or sequencing."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Gibson Assembly",
+      "url": "https://www.neosynbio.com/gibson-assembly"
+    },
+    {
+      "title": "NEB: Gibson Assembly overview & protocol",
+      "url": "https://www.neb.com/en-us/applications/cloning-and-synthetic-biology/dna-assembly-and-cloning/gibson-assembly"
+    },
+    {
+      "title": "Addgene: choosing a molecular cloning technique",
+      "url": "https://blog.addgene.org/plasmids-101-sequence-and-ligation-independent-cloning"
+    },
+    {
+      "title": "Benchling: Gibson assembly wizard",
+      "url": "https://www.benchling.com/"
+    }
+  ]
+}

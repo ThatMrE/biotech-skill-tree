@@ -1,0 +1,65 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "centrifuge",
+  "title": {
+    "name": "the centrifuge",
+    "level": 1
+  },
+  "project": "Equipment",
+  "video": {
+    "url": ""
+  },
+  "time": 20,
+  "level": "beginner",
+  "overview": {
+    "description": "The high-speed centrifuge is the single most important piece of equipment for the miniprep. Balance is everything - an unbalanced rotor is dangerous and ruins runs.",
+    "objectives": [
+      "balance a rotor correctly",
+      "select g-force vs rpm",
+      "pellet cells and clarify lysate"
+    ],
+    "prerequisites": [
+      "the micropipette node"
+    ]
+  },
+  "steps": {
+    "description": "The high-speed centrifuge is the single most important piece of equipment for the miniprep. Balance is everything - an unbalanced rotor is dangerous and ruins runs.",
+    "intro": "The high-speed centrifuge is the single most important piece of equipment for the miniprep. Balance is everything - an unbalanced rotor is dangerous and ruins runs.",
+    "tools": [
+      "microcentrifuge",
+      "balanced tubes"
+    ],
+    "estimatatedTime": {
+      "setup": 3,
+      "config": 6,
+      "testing": 6
+    },
+    "instructions": [
+      {
+        "title": "Always balance",
+        "description": "Place tubes symmetrically; add a water-filled balance tube if you have an odd number."
+      },
+      {
+        "title": "Choose the speed",
+        "description": "Convert between rpm and relative centrifugal force (g) for your rotor; use g in protocols."
+      },
+      {
+        "title": "Pellet & decant",
+        "description": "Spin to pellet cells/debris, then carefully decant or pipette off the supernatant."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Describe a balanced loading scheme for an odd number of samples and the g-force you'd use to pellet E. coli."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Centrifuge equipment guide",
+      "url": "https://www.neosynbio.com/centrifuge"
+    },
+    {
+      "title": "Eppendorf: centrifugation basics & rcf/rpm conversion",
+      "url": "https://www.eppendorf.com/us-en/lab-academy/"
+    }
+  ]
+}

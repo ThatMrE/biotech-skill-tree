@@ -1,0 +1,80 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "sds-page",
+  "title": {
+    "name": "sds-page",
+    "level": 7
+  },
+  "project": "Proteome Analysis",
+  "video": {
+    "url": "https://www.jove.com/v/30378/sodium-dodecyl-sulphate-polyacrylamide-gel-electrophoresis-for"
+  },
+  "time": 150,
+  "level": "advanced",
+  "overview": {
+    "description": "SDS-PAGE separates proteins by size. Because proteins lack DNA's uniform charge, they're denatured and wrapped in negative SDS ions so migration depends on size alone. It's the smelliest, most technically demanding gel in the guide - master it and everyone will beg you to run theirs.",
+    "objectives": [
+      "cast/handle a polyacrylamide gel safely",
+      "denature samples and coat them in SDS for uniform charge",
+      "size proteins against a ladder and assess purity"
+    ],
+    "prerequisites": [
+      "protein fractions",
+      "an SDS-PAGE rig"
+    ]
+  },
+  "steps": {
+    "description": "SDS-PAGE separates proteins by size. Because proteins lack DNA's uniform charge, they're denatured and wrapped in negative SDS ions so migration depends on size alone. It's the smelliest, most technically demanding gel in the guide - master it and everyone will beg you to run theirs.",
+    "intro": "SDS-PAGE separates proteins by size. Because proteins lack DNA's uniform charge, they're denatured and wrapped in negative SDS ions so migration depends on size alone. It's the smelliest, most technically demanding gel in the guide - master it and everyone will beg you to run theirs.",
+    "tools": [
+      "polyacrylamide gel rig",
+      "SDS sample buffer + reducing agent (DTT)",
+      "protein ladder",
+      "Coomassie/GelCode stain"
+    ],
+    "estimatatedTime": {
+      "setup": 25,
+      "config": 50,
+      "testing": 50
+    },
+    "instructions": [
+      {
+        "title": "Prep samples",
+        "description": "Mix fractions with SDS loading buffer and a reducing agent (DTT to avoid the b-mercaptoethanol smell); heat to denature."
+      },
+      {
+        "title": "Cast or use a gel",
+        "description": "Use a pre-cast or hand-cast polyacrylamide gel of the right percentage for your protein size."
+      },
+      {
+        "title": "Run & stain",
+        "description": "Load samples + ladder, run at constant voltage, then stain (e.g. Coomassie/GelCode) to visualise bands."
+      },
+      {
+        "title": "Assess purity",
+        "description": "Compare your elution lane to load/wash lanes to judge purity and confirm the expected molecular weight."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Submit a stained SDS-PAGE gel showing your purified protein at the expected size, alongside load/flow-through/wash lanes."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: SDS-PAGE protocol",
+      "url": "https://www.neosynbio.com/sds-page"
+    },
+    {
+      "title": "Bio-Rad: A guide to polyacrylamide gel electrophoresis and detection",
+      "url": "https://www.bio-rad.com/en-us/applications-technologies/protein-electrophoresis-methods"
+    },
+    {
+      "title": "Thermo Fisher: overview of SDS-PAGE",
+      "url": "https://www.thermofisher.com/us/en/home/life-science/protein-biology/protein-biology-learning-center/protein-biology-resource-library/pierce-protein-methods/overview-electrophoresis.html"
+    },
+    {
+      "title": "NeoSynBio: SDS-PAGE enclosure equipment",
+      "url": "https://www.neosynbio.com/sdspage-enclosure"
+    }
+  ]
+}

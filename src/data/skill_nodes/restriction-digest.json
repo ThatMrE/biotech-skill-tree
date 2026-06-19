@@ -1,0 +1,82 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "restriction-digest",
+  "title": {
+    "name": "restriction enzyme digest",
+    "level": 3
+  },
+  "project": "Cut & Paste Cloning",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=qKvtxi_CegQ"
+  },
+  "time": 120,
+  "level": "intermediate",
+  "overview": {
+    "description": "Restriction enzymes are being phased out by Gibson/Golden Gate, but they're an excellent way to learn. In your viewer, filter to unique cutters to avoid shredding your plasmid, find the MCS, and design a non-palindromic two-enzyme digest for directional cloning.",
+    "objectives": [
+      "select unique-cutter enzymes using a sequence viewer",
+      "design and simulate a clean directional ligation",
+      "set up a digest and keep enzymes cold at all times"
+    ],
+    "prerequisites": [
+      "purified plasmid",
+      "an insert",
+      "restriction enzymes",
+      "a sequence viewer"
+    ]
+  },
+  "steps": {
+    "description": "Restriction enzymes are being phased out by Gibson/Golden Gate, but they're an excellent way to learn. In your viewer, filter to unique cutters to avoid shredding your plasmid, find the MCS, and design a non-palindromic two-enzyme digest for directional cloning.",
+    "intro": "Restriction enzymes are being phased out by Gibson/Golden Gate, but they're an excellent way to learn. In your viewer, filter to unique cutters to avoid shredding your plasmid, find the MCS, and design a non-palindromic two-enzyme digest for directional cloning.",
+    "tools": [
+      "restriction enzymes (kept on ice)",
+      "digest buffer",
+      "sequence viewer",
+      "thermocycler/heat block"
+    ],
+    "estimatatedTime": {
+      "setup": 20,
+      "config": 40,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "Filter to unique cutters",
+        "description": "In SnapGene/Benchling, show only enzymes that cut once to find usable sites in the MCS."
+      },
+      {
+        "title": "Pick two enzymes",
+        "description": "Choose two enzymes with compatible buffers and non-homologous ends to force correct orientation."
+      },
+      {
+        "title": "Simulate the assembly",
+        "description": "Virtually digest and ligate to confirm a clean junction before touching the bench."
+      },
+      {
+        "title": "Run the digest",
+        "description": "Combine DNA, enzymes and buffer; incubate at the enzyme's temperature; keep enzymes on ice whenever out of the freezer."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Submit your in-silico cloning map plus a gel showing the digested backbone and insert at expected sizes."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Restriction Enzyme Digest protocol",
+      "url": "https://www.neosynbio.com/restriction-enzyme-digest-of-plasmid-and-insert-dna"
+    },
+    {
+      "title": "NEB: Restriction enzyme digestion overview & double digest finder",
+      "url": "https://www.neb.com/en-us/tools-and-resources/usage-guidelines/double-digest-finder"
+    },
+    {
+      "title": "Addgene: Plasmid screening by restriction digest",
+      "url": "https://blog.addgene.org/plasmids-101-plasmid-screening-strategies"
+    },
+    {
+      "title": "SnapGene: simulating restriction cloning",
+      "url": "https://www.snapgene.com/guides"
+    }
+  ]
+}

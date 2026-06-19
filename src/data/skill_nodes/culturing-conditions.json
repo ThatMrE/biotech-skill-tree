@@ -1,0 +1,70 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "culturing-conditions",
+  "title": {
+    "name": "culturing conditions",
+    "level": 1
+  },
+  "project": "Experimental Design",
+  "video": {
+    "url": "https://www.addgene.org/protocols/streak-plate/"
+  },
+  "time": 25,
+  "level": "beginner",
+  "overview": {
+    "description": "The secret to adapting any protocol is to KNOW YOUR ORGANISM. If a protocol says 37C but your critter prefers 30C, you can make the expert decision to optimise. An abundance of literature is your friend.",
+    "objectives": [
+      "identify the optimal growth temperature and media for your host",
+      "understand growth curves and morphology",
+      "learn to adapt protocols to non-E. coli organisms"
+    ],
+    "prerequisites": [
+      "a chosen host"
+    ]
+  },
+  "steps": {
+    "description": "The secret to adapting any protocol is to KNOW YOUR ORGANISM. If a protocol says 37C but your critter prefers 30C, you can make the expert decision to optimise. An abundance of literature is your friend.",
+    "intro": "The secret to adapting any protocol is to KNOW YOUR ORGANISM. If a protocol says 37C but your critter prefers 30C, you can make the expert decision to optimise. An abundance of literature is your friend.",
+    "tools": [
+      "incubator",
+      "hot water bath",
+      "literature"
+    ],
+    "estimatatedTime": {
+      "setup": 4,
+      "config": 8,
+      "testing": 8
+    },
+    "instructions": [
+      {
+        "title": "Research your organism",
+        "description": "Google culture conditions, ideal media, growth curves, morphology - anything that improves your success rate."
+      },
+      {
+        "title": "Standardise E. coli conditions",
+        "description": "For E. coli: 37C, shaking ~100-200 rpm for liquid culture, LB media."
+      },
+      {
+        "title": "Document deviations",
+        "description": "Record any condition where your organism differs from the default protocol so you can adapt every downstream step."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Produce a one-page 'organism profile': optimal temperature, media, doubling time, and any special handling notes."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Common Culturing Conditions",
+      "url": "https://www.neosynbio.com/culturing-conditions"
+    },
+    {
+      "title": "Addgene: Inoculating a liquid bacterial culture",
+      "url": "https://www.addgene.org/protocols/inoculate-bacterial-culture/"
+    },
+    {
+      "title": "Addgene: Streaking & picking bacterial colonies",
+      "url": "https://www.addgene.org/protocols/streak-plate/"
+    }
+  ]
+}

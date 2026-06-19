@@ -1,0 +1,69 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "plasmids101",
+  "title": {
+    "name": "plasmids101 (theory)",
+    "level": 2
+  },
+  "project": "Theory",
+  "video": {
+    "url": ""
+  },
+  "time": 45,
+  "level": "beginner",
+  "overview": {
+    "description": "Plasmids are like plugins for a cell - files you attach to change its function. But as the saying goes, synbio is 'like writing code inside a burrito': thousands of intersecting messages mean a change can cascade unpredictably, even killing the cell while it makes your protein.",
+    "objectives": [
+      "describe plasmid elements (ORI, resistance, MCS, promoter)",
+      "understand copy number and selection",
+      "appreciate 'catastrophic success' and metabolic burden"
+    ],
+    "prerequisites": [
+      "DNA101"
+    ]
+  },
+  "steps": {
+    "description": "Plasmids are like plugins for a cell - files you attach to change its function. But as the saying goes, synbio is 'like writing code inside a burrito': thousands of intersecting messages mean a change can cascade unpredictably, even killing the cell while it makes your protein.",
+    "intro": "Plasmids are like plugins for a cell - files you attach to change its function. But as the saying goes, synbio is 'like writing code inside a burrito': thousands of intersecting messages mean a change can cascade unpredictably, even killing the cell while it makes your protein.",
+    "tools": [
+      "Benchling or SnapGene",
+      "Addgene plasmid files"
+    ],
+    "estimatatedTime": {
+      "setup": 7,
+      "config": 15,
+      "testing": 15
+    },
+    "instructions": [
+      {
+        "title": "Learn the parts",
+        "description": "Study the ORI, antibiotic-resistance gene, multiple cloning site and promoter, and what each does."
+      },
+      {
+        "title": "Understand copy number",
+        "description": "High-copy plasmids give more yield but more burden; pick based on your goal."
+      },
+      {
+        "title": "Beware catastrophic success",
+        "description": "Recognise that over-expression can kill cells. Inducible systems mitigate this."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Summarise the function of each major plasmid element in your own words and identify them on a real plasmid map."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Plasmids101",
+      "url": "https://www.neosynbio.com/plasmids101"
+    },
+    {
+      "title": "Addgene: Plasmids 101 eBook (4th edition)",
+      "url": "https://blog.addgene.org/plasmids-101-ebook-4th-edition"
+    },
+    {
+      "title": "Addgene: Plasmids 101 blog series",
+      "url": "https://blog.addgene.org/topic/plasmids-101"
+    }
+  ]
+}

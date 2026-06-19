@@ -1,0 +1,82 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "plasmid-insertion",
+  "title": {
+    "name": "plasmid insertion (transformation)",
+    "level": 3
+  },
+  "project": "Genetic Modification",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=1PqWnu2uBrY"
+  },
+  "time": 120,
+  "level": "intermediate",
+  "overview": {
+    "description": "Heat shock, electroporation, gene guns - 'Plasmid Insertion' buries the lead. For first-timers, chemically competent cells + heat shock need the least investment. NOTE: this may count as Genetic Modification in your jurisdiction - check local law first.",
+    "objectives": [
+      "perform heat-shock transformation of chemically competent cells",
+      "understand electroporation as a higher-efficiency alternative",
+      "recover and plate transformants on selection"
+    ],
+    "prerequisites": [
+      "purified plasmid",
+      "competent cells",
+      "a legal/registered workspace if required"
+    ]
+  },
+  "steps": {
+    "description": "Heat shock, electroporation, gene guns - 'Plasmid Insertion' buries the lead. For first-timers, chemically competent cells + heat shock need the least investment. NOTE: this may count as Genetic Modification in your jurisdiction - check local law first.",
+    "intro": "Heat shock, electroporation, gene guns - 'Plasmid Insertion' buries the lead. For first-timers, chemically competent cells + heat shock need the least investment. NOTE: this may count as Genetic Modification in your jurisdiction - check local law first.",
+    "tools": [
+      "chemically competent cells",
+      "heat block or water bath at 42C",
+      "ice",
+      "SOC/LB recovery media",
+      "selection plates"
+    ],
+    "estimatatedTime": {
+      "setup": 20,
+      "config": 40,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "Thaw on ice",
+        "description": "Thaw competent cells on ice and gently add your plasmid DNA. Never vortex competent cells."
+      },
+      {
+        "title": "Heat shock",
+        "description": "Incubate on ice, pulse at 42C for the strain-specific time, then return to ice."
+      },
+      {
+        "title": "Recover",
+        "description": "Add warm recovery media and shake at 37C for ~1 hour (skip for ampicillin selection)."
+      },
+      {
+        "title": "Plate & incubate",
+        "description": "Spread onto antibiotic plates and incubate overnight. Include a no-DNA negative control."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Transform a plasmid into your host, plate with controls, and report colony counts the next day."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Plasmid Insertion protocols",
+      "url": "https://www.neosynbio.com/plasmid-insertion"
+    },
+    {
+      "title": "Addgene: Bacterial transformation (protocol & video)",
+      "url": "https://www.addgene.org/protocols/bacterial-transformation/"
+    },
+    {
+      "title": "NEB: High-efficiency transformation protocol",
+      "url": "https://www.neb.com/en-us/protocols/2012/05/21/high-efficiency-transformation-protocol-c2987"
+    },
+    {
+      "title": "NeoSynBio: Heat shock of chemically competent cells",
+      "url": "https://www.neosynbio.com/heat-shock-transformation-of-chemically-competent-cells"
+    }
+  ]
+}

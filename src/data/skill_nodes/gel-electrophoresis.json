@@ -1,0 +1,87 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "gel-electrophoresis",
+  "title": {
+    "name": "agarose gel electrophoresis",
+    "level": 3
+  },
+  "project": "Analysis Core",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=uAttNVEEEwY"
+  },
+  "time": 90,
+  "level": "beginner",
+  "overview": {
+    "description": "DNA's uniform negative charge lets an electric field drag it through agarose; smaller fragments run faster. High-% gels resolve large fragments better and low-% gels resolve small ones. Loading is the skill everyone fears - bubbles are your enemy.",
+    "objectives": [
+      "pour an agarose gel at the right percentage",
+      "load samples with running dye without bubbles or tails",
+      "size fragments against a DNA ladder",
+      "choose a safer stain (e.g. Thiazole Orange) over EtBr"
+    ],
+    "prerequisites": [
+      "DC power supply",
+      "gel tray & bath",
+      "agarose",
+      "TAE buffer",
+      "DNA ladder"
+    ]
+  },
+  "steps": {
+    "description": "DNA's uniform negative charge lets an electric field drag it through agarose; smaller fragments run faster. High-% gels resolve large fragments better and low-% gels resolve small ones. Loading is the skill everyone fears - bubbles are your enemy.",
+    "intro": "DNA's uniform negative charge lets an electric field drag it through agarose; smaller fragments run faster. High-% gels resolve large fragments better and low-% gels resolve small ones. Loading is the skill everyone fears - bubbles are your enemy.",
+    "tools": [
+      "agarose",
+      "TAE buffer",
+      "casting tray & comb",
+      "DC power supply",
+      "DNA ladder",
+      "loading dye",
+      "DNA stain"
+    ],
+    "estimatatedTime": {
+      "setup": 15,
+      "config": 30,
+      "testing": 30
+    },
+    "instructions": [
+      {
+        "title": "Pour the gel",
+        "description": "Melt agarose in TAE, cool to ~50C, add stain if pre-staining, pour and add the comb. Tape leaky chambers."
+      },
+      {
+        "title": "Prep samples",
+        "description": "Spot running dye on parafilm and mix each DNA sample into a dot; keep dots well separated."
+      },
+      {
+        "title": "Load carefully",
+        "description": "Steady both elbows, lower the tip into the well, depress slowly. Lift a little buffer to avoid tails. Change tips between samples - especially ladders."
+      },
+      {
+        "title": "Run to red",
+        "description": "Place wells near the black (negative) electrode; DNA migrates to red (positive). Stop before the dye runs off."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Run a gel with a ladder and at least one sample. Submit a labelled gel image and estimate the fragment sizes."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Agarose Gel Electrophoresis protocol",
+      "url": "https://www.neosynbio.com/agarose-electrophoresis"
+    },
+    {
+      "title": "Addgene: How to run an agarose gel (protocol & video)",
+      "url": "https://www.addgene.org/protocols/gel-electrophoresis/"
+    },
+    {
+      "title": "Addgene: Purifying DNA from an agarose gel",
+      "url": "https://www.addgene.org/protocols/gel-purification/"
+    },
+    {
+      "title": "Bio-Rad: Sub-Cell GT agarose gel electrophoresis manual",
+      "url": "https://www.bio-rad.com/sites/default/files/webroot/web/pdf/lsr/literature/M1704400B.PDF"
+    }
+  ]
+}

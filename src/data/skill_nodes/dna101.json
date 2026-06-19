@@ -1,0 +1,73 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "dna101",
+  "title": {
+    "name": "dna101 (theory)",
+    "level": 2
+  },
+  "project": "Theory",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=ni1ajYMQxt8"
+  },
+  "time": 45,
+  "level": "beginner",
+  "overview": {
+    "description": "This section fills any gaps in DNA theory before you start manipulating it. If you're confident, skim and move on - but a solid mental model of base pairing, polarity and charge underpins every downstream technique.",
+    "objectives": [
+      "describe DNA structure and antiparallel base pairing",
+      "explain why DNA carries a uniform negative charge",
+      "use a sequence viewer (Benchling/SnapGene) to read a .dna map"
+    ],
+    "prerequisites": [
+      "the intro node"
+    ]
+  },
+  "steps": {
+    "description": "This section fills any gaps in DNA theory before you start manipulating it. If you're confident, skim and move on - but a solid mental model of base pairing, polarity and charge underpins every downstream technique.",
+    "intro": "This section fills any gaps in DNA theory before you start manipulating it. If you're confident, skim and move on - but a solid mental model of base pairing, polarity and charge underpins every downstream technique.",
+    "tools": [
+      "Benchling or SnapGene",
+      "a sample plasmid file"
+    ],
+    "estimatatedTime": {
+      "setup": 7,
+      "config": 15,
+      "testing": 15
+    },
+    "instructions": [
+      {
+        "title": "Review structure",
+        "description": "Refresh the double helix, 5'->3' polarity, A-T/G-C pairing and the phosphate backbone's negative charge."
+      },
+      {
+        "title": "Open a real plasmid",
+        "description": "Download a plasmid (e.g. pET-15b) from Addgene and open it in your viewer to see features, ORIs and restriction sites."
+      },
+      {
+        "title": "Connect theory to charge",
+        "description": "Note that each base adds one negative charge - the basis for gel electrophoresis later."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Annotate a plasmid map in your viewer, labelling the origin of replication, resistance gene, promoter and multiple cloning site."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: DNA101",
+      "url": "https://www.neosynbio.com/dna101"
+    },
+    {
+      "title": "Khan Academy: Biology library (DNA structure & replication)",
+      "url": "https://www.khanacademy.org/science/biology"
+    },
+    {
+      "title": "Addgene: Molecular Biology Reference",
+      "url": "https://www.addgene.org/mol-bio-reference/"
+    },
+    {
+      "title": "Nature Scitable: nucleic acid structure topic room",
+      "url": "https://www.nature.com/scitable/topic/genetics-5/"
+    }
+  ]
+}

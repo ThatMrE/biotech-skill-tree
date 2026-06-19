@@ -1,0 +1,75 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "intro",
+  "title": {
+    "name": "welcome to the synbio skill tree",
+    "level": 1
+  },
+  "project": "Orientation",
+  "video": {
+    "url": ""
+  },
+  "time": 10,
+  "level": "beginner",
+  "overview": {
+    "description": "This tree turns the open-source NeoSynBio Graduate's Guide into a navigable, project-based curriculum. Each node pairs a hands-on protocol with the best-rated external guides so you can go from zero to expressing and purifying your own protein.",
+    "objectives": [
+      "understand the wet-lab progression from sterile workspace to protein purification",
+      "identify which nodes you can skip based on prior experience",
+      "set up a free DNA sequence editor (Benchling or SnapGene)",
+      "understand the legal/biosafety framing before doing any genetic modification"
+    ],
+    "prerequisites": [
+      "an undergraduate background in biology is helpful but not required"
+    ]
+  },
+  "steps": {
+    "description": "This tree turns the open-source NeoSynBio Graduate's Guide into a navigable, project-based curriculum. Each node pairs a hands-on protocol with the best-rated external guides so you can go from zero to expressing and purifying your own protein.",
+    "intro": "This tree turns the open-source NeoSynBio Graduate's Guide into a navigable, project-based curriculum. Each node pairs a hands-on protocol with the best-rated external guides so you can go from zero to expressing and purifying your own protein.",
+    "tools": [
+      "a computer",
+      "internet access",
+      "a notebook (paper or Benchling)"
+    ],
+    "estimatatedTime": {
+      "setup": 2,
+      "config": 3,
+      "testing": 3
+    },
+    "instructions": [
+      {
+        "title": "Read the guide philosophy",
+        "description": "Skim the NeoSynBio introduction. The guide is comprehensive on purpose: skip anything you already know and dive deep where you have gaps."
+      },
+      {
+        "title": "Pick your sequence editor",
+        "description": "Create a free Benchling account or download SnapGene Viewer. You'll use it constantly for plasmid maps, primer design and in-silico cloning."
+      },
+      {
+        "title": "Note your local biosafety rules",
+        "description": "Identify your country's gene-technology regulator before any modification work. The well-trodden path (K12-derived E. coli) is the easiest to get approved."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Write a one-paragraph learning plan: which nodes you'll skip, which you'll focus on, and what your target capstone protein is (GFP is a great first choice)."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: The Graduate's Guide to Synthetic Biology",
+      "url": "https://www.neosynbio.com/the-graduates-guide-to-synthetic-biology"
+    },
+    {
+      "title": "Addgene: Protocols hub & 'Intro to the Lab Bench' series",
+      "url": "https://www.addgene.org/protocols/"
+    },
+    {
+      "title": "iGEM Registry of Standard Biological Parts",
+      "url": "https://parts.igem.org/Main_Page"
+    },
+    {
+      "title": "Benchling (free academic molecular biology suite)",
+      "url": "https://www.benchling.com/"
+    }
+  ]
+}

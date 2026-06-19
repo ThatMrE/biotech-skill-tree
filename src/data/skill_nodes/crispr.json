@@ -1,0 +1,80 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "crispr",
+  "title": {
+    "name": "crispr / cas9",
+    "level": 6
+  },
+  "project": "Advanced Editing",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=2pp17E4E-O8"
+  },
+  "time": 180,
+  "level": "advanced",
+  "overview": {
+    "description": "CRISPR uses a short guide RNA to direct a Cas enzyme to a ~20 nt target adjacent to a PAM, where it cuts DNA. Repair by NHEJ yields knockouts; an HDR template yields precise edits. The art is choosing a unique target and minimising off-targets.",
+    "objectives": [
+      "design a specific ~20 nt gRNA with a valid PAM",
+      "plan knockout vs knock-in (HDR) experiments",
+      "balance on-target activity against off-targets"
+    ],
+    "prerequisites": [
+      "Ligation/cloning",
+      "Primer Design"
+    ]
+  },
+  "steps": {
+    "description": "CRISPR uses a short guide RNA to direct a Cas enzyme to a ~20 nt target adjacent to a PAM, where it cuts DNA. Repair by NHEJ yields knockouts; an HDR template yields precise edits. The art is choosing a unique target and minimising off-targets.",
+    "intro": "CRISPR uses a short guide RNA to direct a Cas enzyme to a ~20 nt target adjacent to a PAM, where it cuts DNA. Repair by NHEJ yields knockouts; an HDR template yields precise edits. The art is choosing a unique target and minimising off-targets.",
+    "tools": [
+      "gRNA design tool (CRISPOR/Benchling/SnapGene)",
+      "Cas9 plasmid",
+      "cloning reagents",
+      "(HDR template if knock-in)"
+    ],
+    "estimatatedTime": {
+      "setup": 30,
+      "config": 60,
+      "testing": 60
+    },
+    "instructions": [
+      {
+        "title": "Define the edit",
+        "description": "Decide knockout (no template) vs precise edit (HDR template)."
+      },
+      {
+        "title": "Design the gRNA",
+        "description": "Pick a unique ~20 nt target next to a PAM; score on-/off-target with a design tool."
+      },
+      {
+        "title": "Clone the guide",
+        "description": "Insert the gRNA oligos into a Cas9 plasmid (often via Golden Gate)."
+      },
+      {
+        "title": "Deliver & validate",
+        "description": "Deliver the Cas9+gRNA into cells and validate the edit by sequencing."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Design a validated gRNA (with PAM and off-target assessment) and outline your knockout or knock-in strategy."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: CRISPR/Cas9 protocol",
+      "url": "https://www.neosynbio.com/crisprcas9"
+    },
+    {
+      "title": "Addgene: CRISPR Guide & 'Plan your experiment'",
+      "url": "https://www.addgene.org/guides/crispr/"
+    },
+    {
+      "title": "Addgene: CRISPR references & gRNA design tools",
+      "url": "https://www.addgene.org/crispr/reference/"
+    },
+    {
+      "title": "SnapGene: guide to gRNA design for CRISPR",
+      "url": "https://www.snapgene.com/guides/design-grna-for-crispr"
+    }
+  ]
+}

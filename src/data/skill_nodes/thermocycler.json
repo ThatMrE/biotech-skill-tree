@@ -1,0 +1,69 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "thermocycler",
+  "title": {
+    "name": "the thermocycler",
+    "level": 1
+  },
+  "project": "Equipment",
+  "video": {
+    "url": ""
+  },
+  "time": 20,
+  "level": "beginner",
+  "overview": {
+    "description": "The thermocycler is the biggest barrier to entry for many synthetic biologists. Cheap options (e.g. miniPCR) exist, and old units from university surplus often work admirably.",
+    "objectives": [
+      "program denature/anneal/extend cycles",
+      "use heated lids and ramp rates",
+      "scout affordable/second-hand options"
+    ],
+    "prerequisites": [
+      "the micropipette node"
+    ]
+  },
+  "steps": {
+    "description": "The thermocycler is the biggest barrier to entry for many synthetic biologists. Cheap options (e.g. miniPCR) exist, and old units from university surplus often work admirably.",
+    "intro": "The thermocycler is the biggest barrier to entry for many synthetic biologists. Cheap options (e.g. miniPCR) exist, and old units from university surplus often work admirably.",
+    "tools": [
+      "thermocycler",
+      "thin-wall PCR tubes"
+    ],
+    "estimatatedTime": {
+      "setup": 3,
+      "config": 6,
+      "testing": 6
+    },
+    "instructions": [
+      {
+        "title": "Enter the program",
+        "description": "Set initial denaturation, then the 3-step cycle (denature/anneal/extend) and final extension."
+      },
+      {
+        "title": "Use the heated lid",
+        "description": "Enable the heated lid to prevent condensation/evaporation during cycling."
+      },
+      {
+        "title": "Save & reuse",
+        "description": "Save common programs; note ramp rates if your enzyme is sensitive."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Write out a complete thermocycler program for a routine PCR of a ~1 kb amplicon."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Thermocycler equipment guide",
+      "url": "https://www.neosynbio.com/thermocycler"
+    },
+    {
+      "title": "miniPCR bio: affordable thermal cyclers",
+      "url": "https://www.minipcr.com/"
+    },
+    {
+      "title": "NEB Tm Calculator (program your annealing temp)",
+      "url": "https://tmcalculator.neb.com/"
+    }
+  ]
+}

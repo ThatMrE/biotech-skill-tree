@@ -1,0 +1,76 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "final-project",
+  "title": {
+    "name": "capstone: express & purify a protein",
+    "level": 8
+  },
+  "project": "Capstone",
+  "video": {
+    "url": ""
+  },
+  "time": 600,
+  "level": "advanced",
+  "overview": {
+    "description": "Synthesise everything: pick a target (GFP is ideal - you can literally see success), design and build the construct, transform and confirm it, induce expression, lyse, and purify. This is the bowling-with-bumpers victory lap that proves you're an independent synthetic biologist.",
+    "objectives": [
+      "integrate every skill from sterile technique to purification",
+      "produce a verifiable protein product (e.g. GFP)",
+      "document the full workflow reproducibly"
+    ],
+    "prerequisites": [
+      "the core wet-lab nodes above"
+    ]
+  },
+  "steps": {
+    "description": "Synthesise everything: pick a target (GFP is ideal - you can literally see success), design and build the construct, transform and confirm it, induce expression, lyse, and purify. This is the bowling-with-bumpers victory lap that proves you're an independent synthetic biologist.",
+    "intro": "Synthesise everything: pick a target (GFP is ideal - you can literally see success), design and build the construct, transform and confirm it, induce expression, lyse, and purify. This is the bowling-with-bumpers victory lap that proves you're an independent synthetic biologist.",
+    "tools": [
+      "everything from the preceding nodes"
+    ],
+    "estimatatedTime": {
+      "setup": 100,
+      "config": 200,
+      "testing": 200
+    },
+    "instructions": [
+      {
+        "title": "Design & build",
+        "description": "Design an expression construct and assemble it (RE digest, Gibson, or Golden Gate)."
+      },
+      {
+        "title": "Confirm",
+        "description": "Screen and sequence-confirm a correct clone."
+      },
+      {
+        "title": "Express & purify",
+        "description": "Induce expression, lyse cells, and affinity-purify the protein."
+      },
+      {
+        "title": "Verify & document",
+        "description": "Confirm the product (fluorescence and/or SDS-PAGE) and write up a reproducible protocol."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Submit a complete mini lab-report: design rationale, confirmation data, expression/purification gels, and a reproducible protocol."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: All Protocols",
+      "url": "https://www.neosynbio.com/protocols"
+    },
+    {
+      "title": "iGEM: project & engineering resources",
+      "url": "https://technology.igem.org/"
+    },
+    {
+      "title": "Addgene: fluorescent proteins guide (GFP capstone)",
+      "url": "https://www.addgene.org/fluorescent-proteins/"
+    },
+    {
+      "title": "Benchling: notebook for documenting your build",
+      "url": "https://www.benchling.com/"
+    }
+  ]
+}

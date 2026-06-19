@@ -1,0 +1,72 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "rt-qpcr",
+  "title": {
+    "name": "rt-qpcr",
+    "level": 5
+  },
+  "project": "RNA Workflows",
+  "video": {
+    "url": "https://www.jove.com/v/10104/rna-extraction-and-rt-pcr-analysis-of-environmental-microbes"
+  },
+  "time": 150,
+  "level": "advanced",
+  "overview": {
+    "description": "RT-qPCR transforms RNA into cDNA via reverse transcriptase, then quantifies it in real time. It's the gold standard for measuring gene expression - but genomic-DNA contamination causes false positives, so clean RNA matters.",
+    "objectives": [
+      "reverse-transcribe RNA to cDNA",
+      "design qPCR assays and controls",
+      "interpret Ct values and quantification"
+    ],
+    "prerequisites": [
+      "RNA Purification",
+      "PCR"
+    ]
+  },
+  "steps": {
+    "description": "RT-qPCR transforms RNA into cDNA via reverse transcriptase, then quantifies it in real time. It's the gold standard for measuring gene expression - but genomic-DNA contamination causes false positives, so clean RNA matters.",
+    "intro": "RT-qPCR transforms RNA into cDNA via reverse transcriptase, then quantifies it in real time. It's the gold standard for measuring gene expression - but genomic-DNA contamination causes false positives, so clean RNA matters.",
+    "tools": [
+      "reverse transcriptase",
+      "qPCR master mix (dye or probe)",
+      "real-time thermocycler",
+      "qPCR primers"
+    ],
+    "estimatatedTime": {
+      "setup": 25,
+      "config": 50,
+      "testing": 50
+    },
+    "instructions": [
+      {
+        "title": "Reverse transcribe",
+        "description": "Convert purified RNA to cDNA with reverse transcriptase."
+      },
+      {
+        "title": "Set up qPCR",
+        "description": "Design specific primers (often spanning exon junctions); include no-RT and no-template controls."
+      },
+      {
+        "title": "Quantify",
+        "description": "Run real-time PCR and interpret Ct values for relative or absolute quantification."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Design an RT-qPCR assay (primers + controls) for a target transcript and outline how you'd interpret the Ct data."
+  },
+  "resources": [
+    {
+      "title": "Bio-Rad: Real-Time PCR (qPCR) applications guide",
+      "url": "https://www.bio-rad.com/en-us/applications-technologies/real-time-pcr-qpcr"
+    },
+    {
+      "title": "Thermo Fisher: RT-qPCR basics",
+      "url": "https://www.thermofisher.com/us/en/home/life-science/pcr/real-time-pcr/real-time-pcr-learning-center.html"
+    },
+    {
+      "title": "JoVE: RNA extraction & RT-PCR (video)",
+      "url": "https://www.jove.com/v/10104/rna-extraction-and-rt-pcr-analysis-of-environmental-microbes"
+    }
+  ]
+}

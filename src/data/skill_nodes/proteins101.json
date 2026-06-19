@@ -1,0 +1,73 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "proteins101",
+  "title": {
+    "name": "proteins101 (theory)",
+    "level": 7
+  },
+  "project": "Theory",
+  "video": {
+    "url": ""
+  },
+  "time": 45,
+  "level": "intermediate",
+  "overview": {
+    "description": "Whether you've mastered DNA manipulation or just want to make GFP, a working knowledge of protein mechanics serves you well. This theory primer covers enough to produce, purify and observe proteins - read more widely for the deep end.",
+    "objectives": [
+      "describe protein structure levels and folding",
+      "connect sequence to expression and purification choices",
+      "understand disulphide bonds and misfolding risks"
+    ],
+    "prerequisites": [
+      "a confirmed expression construct"
+    ]
+  },
+  "steps": {
+    "description": "Whether you've mastered DNA manipulation or just want to make GFP, a working knowledge of protein mechanics serves you well. This theory primer covers enough to produce, purify and observe proteins - read more widely for the deep end.",
+    "intro": "Whether you've mastered DNA manipulation or just want to make GFP, a working knowledge of protein mechanics serves you well. This theory primer covers enough to produce, purify and observe proteins - read more widely for the deep end.",
+    "tools": [
+      "literature",
+      "structure viewers (e.g. PyMOL, AlphaFold DB)"
+    ],
+    "estimatatedTime": {
+      "setup": 7,
+      "config": 15,
+      "testing": 15
+    },
+    "instructions": [
+      {
+        "title": "Review structure",
+        "description": "Refresh primary->quaternary structure and how folding determines function."
+      },
+      {
+        "title": "Plan for folding",
+        "description": "Note where disulphide bonds or complex folds may require slower expression."
+      },
+      {
+        "title": "Map to methods",
+        "description": "Connect your protein's properties to induction, lysis and purification choices."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Summarise your target protein's key properties (size, tags, folding needs) and how they shape your downstream plan."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Proteins101 (Graduate's Guide)",
+      "url": "https://www.neosynbio.com/the-graduates-guide-to-synthetic-biology"
+    },
+    {
+      "title": "Khan Academy: Macromolecules / proteins",
+      "url": "https://www.khanacademy.org/science/biology"
+    },
+    {
+      "title": "RCSB PDB-101: protein structure education",
+      "url": "https://pdb101.rcsb.org/"
+    },
+    {
+      "title": "EMBL-EBI: protein bioinformatics training",
+      "url": "https://www.ebi.ac.uk/training/"
+    }
+  ]
+}

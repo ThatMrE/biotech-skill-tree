@@ -1,0 +1,71 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "sdm",
+  "title": {
+    "name": "site-directed mutagenesis",
+    "level": 6
+  },
+  "project": "Advanced Editing",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=7xFvaI7coyg"
+  },
+  "time": 120,
+  "level": "advanced",
+  "overview": {
+    "description": "SDM makes an almost-perfect copy of your gene with a single intentional point mutation. Use a megaprimer assembled with a backbone, or a round-the-world SDM PCR to remake the backbone too. This is genetic modification - check local rules.",
+    "objectives": [
+      "design mutagenic primers carrying the desired change",
+      "choose megaprimer vs round-the-world strategies",
+      "screen for the intended mutation"
+    ],
+    "prerequisites": [
+      "Primer Design",
+      "Gradient PCR"
+    ]
+  },
+  "steps": {
+    "description": "SDM makes an almost-perfect copy of your gene with a single intentional point mutation. Use a megaprimer assembled with a backbone, or a round-the-world SDM PCR to remake the backbone too. This is genetic modification - check local rules.",
+    "intro": "SDM makes an almost-perfect copy of your gene with a single intentional point mutation. Use a megaprimer assembled with a backbone, or a round-the-world SDM PCR to remake the backbone too. This is genetic modification - check local rules.",
+    "tools": [
+      "mutagenic primers",
+      "high-fidelity polymerase",
+      "DpnI (to remove template)"
+    ],
+    "estimatatedTime": {
+      "setup": 20,
+      "config": 40,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "Design mutagenic primers",
+        "description": "Centre the mismatch within the primer with sufficient flanking complementarity."
+      },
+      {
+        "title": "Amplify the mutant",
+        "description": "Run high-fidelity PCR; for round-the-world, amplify the whole plasmid."
+      },
+      {
+        "title": "Remove template & screen",
+        "description": "DpnI-digest the methylated template, transform, and sequence to confirm the mutation."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Introduce a defined point mutation and confirm it by sequencing the screened clone."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Site Directed Mutagenesis",
+      "url": "https://www.neosynbio.com/site-directed-mutagenesis"
+    },
+    {
+      "title": "NEB: Q5 Site-Directed Mutagenesis Kit protocol",
+      "url": "https://www.neb.com/en-us/products/e0554-q5-site-directed-mutagenesis-kit"
+    },
+    {
+      "title": "Addgene: site-directed mutagenesis overview",
+      "url": "https://blog.addgene.org/plasmids-101-mutagenesis"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "sequencing",
+  "title": {
+    "name": "sequencing prep & interpretation",
+    "level": 5
+  },
+  "project": "Screening",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=-T60I1MJVko"
+  },
+  "time": 90,
+  "level": "intermediate",
+  "overview": {
+    "description": "Sequencing prices keep dropping (synbio's Carlson Curve). At under ~$0.10/bp you can treat sequencing as an alternative to screening everything yourself - though preliminary screening still saves money. Send only your best candidates with a good primer.",
+    "objectives": [
+      "prepare purified product + primer for Sanger sequencing",
+      "decide when sequencing beats gel screening on cost",
+      "interpret chromatograms / alignments"
+    ],
+    "prerequisites": [
+      "a purified plasmid or PCR product",
+      "a sequencing primer"
+    ]
+  },
+  "steps": {
+    "description": "Sequencing prices keep dropping (synbio's Carlson Curve). At under ~$0.10/bp you can treat sequencing as an alternative to screening everything yourself - though preliminary screening still saves money. Send only your best candidates with a good primer.",
+    "intro": "Sequencing prices keep dropping (synbio's Carlson Curve). At under ~$0.10/bp you can treat sequencing as an alternative to screening everything yourself - though preliminary screening still saves money. Send only your best candidates with a good primer.",
+    "tools": [
+      "purified DNA",
+      "sequencing primer",
+      "sequence-alignment software"
+    ],
+    "estimatatedTime": {
+      "setup": 15,
+      "config": 30,
+      "testing": 30
+    },
+    "instructions": [
+      {
+        "title": "Purify & quantify",
+        "description": "Clean up your plasmid or PCR product and quantify it to the provider's spec."
+      },
+      {
+        "title": "Send with a primer",
+        "description": "Pair the sample with an appropriate sequencing primer per the provider's instructions."
+      },
+      {
+        "title": "Align & interpret",
+        "description": "Align the read to your designed sequence to confirm the edit and check for mutations."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Submit an alignment of your sequencing read against your designed construct, highlighting that the edit is correct."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Preparation for External Sequencing",
+      "url": "https://www.neosynbio.com/external-sequencing-prep"
+    },
+    {
+      "title": "Oxford Nanopore: protocols resource centre (in-house sequencing)",
+      "url": "https://nanoporetech.com/resource-centre/protocols"
+    },
+    {
+      "title": "Addgene: analyze sequencing results (Sanger)",
+      "url": "https://blog.addgene.org/plasmids-101-plasmid-screening-strategies"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "confirmation",
+  "title": {
+    "name": "confirmation of edits",
+    "level": 5
+  },
+  "project": "Screening",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=Crv38J3_ZnM"
+  },
+  "time": 180,
+  "level": "intermediate",
+  "overview": {
+    "description": "Colonies don't equal success - undigested plasmid and contamination produce false positives that look identical to real clones. First check your control plates, then patch-plate and colony-PCR your candidates, and confirm the best ones with a diagnostic digest (or sequencing).",
+    "objectives": [
+      "verify controls before trusting colonies",
+      "run a patch plate + colony PCR to screen candidates",
+      "confirm identity by diagnostic restriction digest"
+    ],
+    "prerequisites": [
+      "colonies on a ligation plate",
+      "PCR",
+      "primers"
+    ]
+  },
+  "steps": {
+    "description": "Colonies don't equal success - undigested plasmid and contamination produce false positives that look identical to real clones. First check your control plates, then patch-plate and colony-PCR your candidates, and confirm the best ones with a diagnostic digest (or sequencing).",
+    "intro": "Colonies don't equal success - undigested plasmid and contamination produce false positives that look identical to real clones. First check your control plates, then patch-plate and colony-PCR your candidates, and confirm the best ones with a diagnostic digest (or sequencing).",
+    "tools": [
+      "fresh antibiotic plate",
+      "PCR master mix + screening primers",
+      "restriction enzymes",
+      "gel kit"
+    ],
+    "estimatatedTime": {
+      "setup": 30,
+      "config": 60,
+      "testing": 60
+    },
+    "instructions": [
+      {
+        "title": "Check controls first",
+        "description": "Confirm each control plate matches expectations before screening anything."
+      },
+      {
+        "title": "Patch + colony PCR",
+        "description": "Number colonies, patch them onto a gridded plate, and colony-PCR each with junction/spanning primers."
+      },
+      {
+        "title": "Gel the screen",
+        "description": "Run the colony PCR on a gel; candidates with the expected band advance."
+      },
+      {
+        "title": "Diagnostic digest",
+        "description": "Miniprep the best candidates and digest to confirm band sizes match the in-silico map."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Submit a colony-PCR gel and a diagnostic-digest gel identifying at least one confirmed correct clone."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Confirmation of Edits",
+      "url": "https://www.neosynbio.com/confirmation-of-edits"
+    },
+    {
+      "title": "NeoSynBio: Patch Plate & Colony PCR",
+      "url": "https://www.neosynbio.com/patch-plate-colony-pcr"
+    },
+    {
+      "title": "Addgene: Plasmid screening strategies (incl. colony PCR)",
+      "url": "https://blog.addgene.org/plasmids-101-plasmid-screening-strategies"
+    },
+    {
+      "title": "Addgene: Verify your clones with colony PCR (Gateway blog)",
+      "url": "https://blog.addgene.org/plasmids-101-gateway-cloning"
+    }
+  ]
+}

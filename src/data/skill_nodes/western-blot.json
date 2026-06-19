@@ -1,0 +1,77 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "western-blot",
+  "title": {
+    "name": "western blot",
+    "level": 8
+  },
+  "project": "Proteome Analysis",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=sldmSbygsSI"
+  },
+  "time": 240,
+  "level": "advanced",
+  "overview": {
+    "description": "The western blot (immunoblot) separates proteins by size, transfers them to a membrane, and detects your target with antibodies. It's the standard for confirming a specific protein's identity and relative abundance.",
+    "objectives": [
+      "transfer proteins to a membrane",
+      "block and probe with primary/secondary antibodies",
+      "detect and interpret bands"
+    ],
+    "prerequisites": [
+      "SDS-PAGE",
+      "antibodies against your target"
+    ]
+  },
+  "steps": {
+    "description": "The western blot (immunoblot) separates proteins by size, transfers them to a membrane, and detects your target with antibodies. It's the standard for confirming a specific protein's identity and relative abundance.",
+    "intro": "The western blot (immunoblot) separates proteins by size, transfers them to a membrane, and detects your target with antibodies. It's the standard for confirming a specific protein's identity and relative abundance.",
+    "tools": [
+      "SDS-PAGE gel",
+      "transfer apparatus",
+      "nitrocellulose/PVDF membrane",
+      "primary & secondary antibodies",
+      "detection reagent"
+    ],
+    "estimatatedTime": {
+      "setup": 40,
+      "config": 80,
+      "testing": 80
+    },
+    "instructions": [
+      {
+        "title": "Run & transfer",
+        "description": "Run an SDS-PAGE gel, then transfer the proteins to a membrane (wet or semi-dry)."
+      },
+      {
+        "title": "Block",
+        "description": "Block the membrane to prevent non-specific antibody binding."
+      },
+      {
+        "title": "Probe",
+        "description": "Incubate with a primary antibody, wash, then a labelled secondary antibody."
+      },
+      {
+        "title": "Detect",
+        "description": "Develop with chemiluminescent or fluorescent detection and image the blot."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Submit a western blot image showing a specific band for your target, with the ladder for size reference."
+  },
+  "resources": [
+    {
+      "title": "Bio-Rad: Introduction to Western Blotting (learning center)",
+      "url": "https://www.bio-rad.com/en-us/applications-technologies/introduction-western-blotting"
+    },
+    {
+      "title": "Thermo Fisher: Overview of Western Blotting",
+      "url": "https://www.thermofisher.com/us/en/home/life-science/protein-biology/protein-biology-learning-center/protein-biology-resource-library/pierce-protein-methods/overview-western-blotting.html"
+    },
+    {
+      "title": "Abcam: Western blot protocol & troubleshooting",
+      "url": "https://www.abcam.com/en-us/technical-resources/protocols/western-blot"
+    }
+  ]
+}

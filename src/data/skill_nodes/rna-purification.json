@@ -1,0 +1,72 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "rna-purification",
+  "title": {
+    "name": "rna purification",
+    "level": 5
+  },
+  "project": "RNA Workflows",
+  "video": {
+    "url": "https://www.jove.com/v/10104/rna-extraction-and-rt-pcr-analysis-of-environmental-microbes"
+  },
+  "time": 120,
+  "level": "intermediate",
+  "overview": {
+    "description": "RNA work demands extra care: RNases are everywhere and degrade your sample fast. Extraction lyses cells under RNase-inhibiting conditions, then separates RNA from DNA, protein and lipids.",
+    "objectives": [
+      "maintain an RNase-free workspace",
+      "lyse and separate RNA from DNA/protein",
+      "assess RNA integrity"
+    ],
+    "prerequisites": [
+      "nucleic-acid handling basics",
+      "an RNase-free setup"
+    ]
+  },
+  "steps": {
+    "description": "RNA work demands extra care: RNases are everywhere and degrade your sample fast. Extraction lyses cells under RNase-inhibiting conditions, then separates RNA from DNA, protein and lipids.",
+    "intro": "RNA work demands extra care: RNases are everywhere and degrade your sample fast. Extraction lyses cells under RNase-inhibiting conditions, then separates RNA from DNA, protein and lipids.",
+    "tools": [
+      "RNase-free tubes/tips",
+      "lysis reagent (e.g. guanidinium/phenol or column kit)",
+      "DNase",
+      "cold block"
+    ],
+    "estimatatedTime": {
+      "setup": 20,
+      "config": 40,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "Go RNase-free",
+        "description": "Use RNase-free consumables, gloves and reagents; keep samples cold."
+      },
+      {
+        "title": "Lyse under denaturing conditions",
+        "description": "Lyse cells in a chaotropic/denaturing buffer that inactivates RNases."
+      },
+      {
+        "title": "Separate & DNase-treat",
+        "description": "Bind/precipitate RNA, wash, and DNase-treat to remove genomic DNA before downstream use."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Extract RNA and assess its integrity (e.g. gel or A260/A280), reporting yield and purity."
+  },
+  "resources": [
+    {
+      "title": "Thermo Fisher: RNA extraction for real-time PCR",
+      "url": "https://www.thermofisher.com/us/en/home/life-science/dna-rna-purification-analysis/rna-extraction/rna-applications/rna-extraction-for-real-time-pcr.html"
+    },
+    {
+      "title": "NEB: RNA reagents & handling",
+      "url": "https://www.neb.com/en-us/applications/rna-analysis"
+    },
+    {
+      "title": "JoVE: RNA extraction & RT-PCR (video)",
+      "url": "https://www.jove.com/v/10104/rna-extraction-and-rt-pcr-analysis-of-environmental-microbes"
+    }
+  ]
+}
