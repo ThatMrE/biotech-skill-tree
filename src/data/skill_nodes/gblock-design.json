@@ -1,0 +1,75 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "gblock-design",
+  "title": {
+    "name": "gblock & insert design (theory)",
+    "level": 3
+  },
+  "project": "Experimental Design",
+  "video": {
+    "url": ""
+  },
+  "time": 60,
+  "level": "intermediate",
+  "overview": {
+    "description": "A gBlock is a synthetic DNA strand designed for insertion. Good design front-loads success: pick compatible cut sites, include the transcription/translation machinery, and plan affinity tags now because they're painful to add later.",
+    "objectives": [
+      "design an insert with correct restriction/assembly sites",
+      "add affinity and cleavage tags thoughtfully",
+      "apply codon optimisation for your host"
+    ],
+    "prerequisites": [
+      "Backbone Selection",
+      "a sequence viewer"
+    ]
+  },
+  "steps": {
+    "description": "A gBlock is a synthetic DNA strand designed for insertion. Good design front-loads success: pick compatible cut sites, include the transcription/translation machinery, and plan affinity tags now because they're painful to add later.",
+    "intro": "A gBlock is a synthetic DNA strand designed for insertion. Good design front-loads success: pick compatible cut sites, include the transcription/translation machinery, and plan affinity tags now because they're painful to add later.",
+    "tools": [
+      "Benchling or SnapGene",
+      "a codon-optimisation tool",
+      "synthesis vendor"
+    ],
+    "estimatatedTime": {
+      "setup": 10,
+      "config": 20,
+      "testing": 20
+    },
+    "instructions": [
+      {
+        "title": "Define the construct",
+        "description": "Lay out promoter, RBS, start/stop codons, your gene, and any tags in the correct frame."
+      },
+      {
+        "title": "Add compatible sites",
+        "description": "Include restriction sites (or assembly overhangs) that match your chosen backbone and won't cut internally."
+      },
+      {
+        "title": "Codon-optimise",
+        "description": "Optimise codons for your host to boost expression, then order the synthesised fragment."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Design a complete insert in your viewer, with annotated sites and tags, ready to order. Export the sequence."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: gBlock Design",
+      "url": "https://www.neosynbio.com/gblock-design"
+    },
+    {
+      "title": "Addgene: Plasmid cloning by PCR (primer & insert design)",
+      "url": "https://www.addgene.org/protocols/pcr-cloning/"
+    },
+    {
+      "title": "IDT: gBlocks gene fragments design guidelines",
+      "url": "https://www.idtdna.com/pages/products/genes-and-gene-fragments/double-stranded-dna-fragments/gblocks-gene-fragments"
+    },
+    {
+      "title": "Benchling: sequence design tutorials",
+      "url": "https://www.benchling.com/the-basics-of-primer-design-for-pcr"
+    }
+  ]
+}

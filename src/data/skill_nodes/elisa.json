@@ -1,0 +1,68 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "elisa",
+  "title": {
+    "name": "elisa",
+    "level": 8
+  },
+  "project": "Proteome Analysis",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=RRbuz3VQ100"
+  },
+  "time": 180,
+  "level": "advanced",
+  "overview": {
+    "description": "ELISA (enzyme-linked immunosorbent assay) quantifies an antigen in solution using antibodies and a colourimetric readout. With a standard curve, it turns a colour change into a concentration.",
+    "objectives": [
+      "choose direct/indirect/sandwich format",
+      "build a standard curve",
+      "quantify your antigen"
+    ],
+    "prerequisites": [
+      "a purified antigen or sample",
+      "matched antibodies"
+    ]
+  },
+  "steps": {
+    "description": "ELISA (enzyme-linked immunosorbent assay) quantifies an antigen in solution using antibodies and a colourimetric readout. With a standard curve, it turns a colour change into a concentration.",
+    "intro": "ELISA (enzyme-linked immunosorbent assay) quantifies an antigen in solution using antibodies and a colourimetric readout. With a standard curve, it turns a colour change into a concentration.",
+    "tools": [
+      "microplate",
+      "capture/detection antibodies",
+      "substrate",
+      "plate reader"
+    ],
+    "estimatatedTime": {
+      "setup": 30,
+      "config": 60,
+      "testing": 60
+    },
+    "instructions": [
+      {
+        "title": "Pick a format",
+        "description": "Choose direct, indirect or sandwich ELISA based on your antibodies and sensitivity needs."
+      },
+      {
+        "title": "Coat & block",
+        "description": "Immobilise antigen or capture antibody, then block the plate."
+      },
+      {
+        "title": "Detect & quantify",
+        "description": "Add detection antibody and substrate, read absorbance, and interpolate against a standard curve."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Run (or design) an ELISA with a standard curve and report the calculated concentration of your sample."
+  },
+  "resources": [
+    {
+      "title": "Thermo Fisher: Overview of ELISA",
+      "url": "https://www.thermofisher.com/us/en/home/life-science/protein-biology/protein-biology-learning-center/protein-biology-resource-library/pierce-protein-methods/overview-elisa.html"
+    },
+    {
+      "title": "Bio-Rad: ELISA basics & formats",
+      "url": "https://www.bio-rad-antibodies.com/elisa-types-direct-indirect-sandwich-competition-elisa-formats.html"
+    }
+  ]
+}

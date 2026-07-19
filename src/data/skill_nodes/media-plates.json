@@ -1,0 +1,85 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "media-plates",
+  "title": {
+    "name": "mixing media & pouring plates",
+    "level": 1
+  },
+  "project": "Reagent Prep",
+  "video": {
+    "url": "https://www.addgene.org/protocols/pouring-lb-agar-plates/"
+  },
+  "time": 90,
+  "level": "beginner",
+  "overview": {
+    "description": "Mixing your own media is cheap and self-sufficient: protein, yeast extract, salt, water and agar. Antibiotic media is 'biotech on easy mode' - a few drops purge anything without your plasmid. The only catch is a little maths for antibiotic dilutions.",
+    "objectives": [
+      "mix LB liquid media and LB-agar from scratch",
+      "pour even, bubble-free agar plates",
+      "prepare antibiotic stock solutions and selection plates",
+      "use a micropipette accurately"
+    ],
+    "prerequisites": [
+      "a sterile workspace",
+      "a media-sterilisation method"
+    ]
+  },
+  "steps": {
+    "description": "Mixing your own media is cheap and self-sufficient: protein, yeast extract, salt, water and agar. Antibiotic media is 'biotech on easy mode' - a few drops purge anything without your plasmid. The only catch is a little maths for antibiotic dilutions.",
+    "intro": "Mixing your own media is cheap and self-sufficient: protein, yeast extract, salt, water and agar. Antibiotic media is 'biotech on easy mode' - a few drops purge anything without your plasmid. The only catch is a little maths for antibiotic dilutions.",
+    "tools": [
+      "LB components",
+      "agar",
+      "petri dishes",
+      "glassware",
+      "weighing scale",
+      "RO/MilliQ water",
+      "micropipette",
+      "antibiotic stocks"
+    ],
+    "estimatatedTime": {
+      "setup": 15,
+      "config": 30,
+      "testing": 30
+    },
+    "instructions": [
+      {
+        "title": "Mix LB liquid media",
+        "description": "Combine tryptone, yeast extract and NaCl in water, then sterilise. This is your standard E. coli media."
+      },
+      {
+        "title": "Make LB-agar",
+        "description": "Add agar to LB before sterilising. Cool to ~50C before pouring so it doesn't kill antibiotics."
+      },
+      {
+        "title": "Add antibiotics",
+        "description": "Once the agar is hand-warm, add antibiotic from a frozen stock at the working concentration, swirl, and pour."
+      },
+      {
+        "title": "Pour plates",
+        "description": "Pour a thin even layer, flame off bubbles, let set, then dry lid-ajar before storing inverted at 4C."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Pour a set of LB-agar plates (plain and antibiotic). Photograph them and report your antibiotic working concentration and stock dilution maths."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Mixing Media & Pouring Plates",
+      "url": "https://www.neosynbio.com/mixing-media-and-pouring-plates"
+    },
+    {
+      "title": "NeoSynBio: Antibiotic Stock Solutions & Dilutions",
+      "url": "https://www.neosynbio.com/antibiotic-stock-solution-mixing"
+    },
+    {
+      "title": "Addgene: Making LB agar plates / Over-agar antibiotic",
+      "url": "https://www.addgene.org/protocols/pouring-lb-agar-plates/"
+    },
+    {
+      "title": "Cold Spring Harbor Protocols: LB (Luria-Bertani) medium",
+      "url": "https://cshprotocols.cshlp.org/content/2006/1/pdb.rec8141"
+    }
+  ]
+}

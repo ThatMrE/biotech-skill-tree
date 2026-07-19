@@ -1,0 +1,72 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "flow-cytometry",
+  "title": {
+    "name": "flow cytometry & facs",
+    "level": 7
+  },
+  "project": "Analytical",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=B2zreF2dnWk"
+  },
+  "time": 150,
+  "level": "advanced",
+  "overview": {
+    "description": "Flow cytometry measures thousands of single cells per second by light scatter and fluorescence, and FACS sorts them. It is the standard tool for immunophenotyping, viability, and screening engineered cells - and demands careful controls and compensation.",
+    "objectives": [
+      "interpret forward scatter (size) and side scatter (granularity)",
+      "gate populations and use FMO / unstained controls",
+      "compensate for spectral overlap between fluorophores",
+      "design a panel and sort target cells by FACS"
+    ],
+    "prerequisites": [
+      "Mammalian cell culture"
+    ]
+  },
+  "steps": {
+    "description": "Flow cytometry measures thousands of single cells per second by light scatter and fluorescence, and FACS sorts them. It is the standard tool for immunophenotyping, viability, and screening engineered cells - and demands careful controls and compensation.",
+    "intro": "Flow data is only as good as its controls: without compensation and proper gating, spectral spillover and debris masquerade as real populations.",
+    "tools": [
+      "flow cytometer / FACS sorter",
+      "fluorophore-conjugated antibodies / reporters",
+      "single-stain + FMO controls",
+      "analysis software (FlowJo)"
+    ],
+    "estimatatedTime": {
+      "setup": 40,
+      "config": 80,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "Prep a single-cell suspension",
+        "description": "Dissociate and filter to avoid clumps; stain with fluorophore-conjugated markers or use a fluorescent reporter."
+      },
+      {
+        "title": "Set scatter gates",
+        "description": "Use FSC/SSC to gate cells vs debris and singlets vs doublets before looking at fluorescence."
+      },
+      {
+        "title": "Compensate",
+        "description": "Use single-stain controls to correct spectral overlap; use FMO controls to set positive/negative boundaries."
+      },
+      {
+        "title": "Analyse or sort",
+        "description": "Quantify populations, or physically sort target cells by FACS for downstream culture/analysis."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Design a small flow panel with the controls (unstained, single-stain, FMO) needed to gate and compensate it correctly, and explain what each control rules out."
+  },
+  "resources": [
+    {
+      "title": "Introduction to flow cytometry (Abcam)",
+      "url": "https://www.abcam.com/protocols/introduction-to-flow-cytometry"
+    },
+    {
+      "title": "Compensation & controls (BD)",
+      "url": "https://www.bdbiosciences.com/en-us/resources/bd-assay-sites/multicolor-flow-cytometry"
+    }
+  ]
+}

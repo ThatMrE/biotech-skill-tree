@@ -1,0 +1,69 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "backbone-selection",
+  "title": {
+    "name": "backbone selection (theory)",
+    "level": 2
+  },
+  "project": "Experimental Design",
+  "video": {
+    "url": ""
+  },
+  "time": 40,
+  "level": "intermediate",
+  "overview": {
+    "description": "Professionals call plasmids 'backbones' and match the backbone to the situation. For a first project, pick a simple plasmid with high copy number and an easy-to-source antibiotic - e.g. pET-15b or an iGEM pSB1C3.",
+    "objectives": [
+      "select a backbone by copy number, resistance and MCS",
+      "match a backbone to your expression goal",
+      "find and download sequences from Addgene"
+    ],
+    "prerequisites": [
+      "Plasmids101"
+    ]
+  },
+  "steps": {
+    "description": "Professionals call plasmids 'backbones' and match the backbone to the situation. For a first project, pick a simple plasmid with high copy number and an easy-to-source antibiotic - e.g. pET-15b or an iGEM pSB1C3.",
+    "intro": "Professionals call plasmids 'backbones' and match the backbone to the situation. For a first project, pick a simple plasmid with high copy number and an easy-to-source antibiotic - e.g. pET-15b or an iGEM pSB1C3.",
+    "tools": [
+      "Addgene",
+      "sequence viewer"
+    ],
+    "estimatatedTime": {
+      "setup": 6,
+      "config": 13,
+      "testing": 13
+    },
+    "instructions": [
+      {
+        "title": "List requirements",
+        "description": "Decide copy number, resistance marker, promoter and whether you need an affinity tag."
+      },
+      {
+        "title": "Shortlist backbones",
+        "description": "Compare candidates (pET-15b, pSB1C3, etc.) against your requirements."
+      },
+      {
+        "title": "Download the sequence",
+        "description": "Pull the annotated .dna/.gb file from Addgene for in-silico design."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Choose a backbone, justify it against your requirements, and attach the annotated sequence file."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Backbone Selection",
+      "url": "https://www.neosynbio.com/backbone-selection"
+    },
+    {
+      "title": "Addgene: Choosing your perfect plasmid backbone",
+      "url": "https://blog.addgene.org/plasmids-101-choosing-your-perfect-plasmid-backbone"
+    },
+    {
+      "title": "iGEM Registry: pSB1C3 and standard backbones",
+      "url": "https://parts.igem.org/Plasmid_backbones/Assembly"
+    }
+  ]
+}

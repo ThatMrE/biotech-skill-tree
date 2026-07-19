@@ -1,0 +1,76 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "biofabrication",
+  "title": {
+    "name": "bio design & biofabrication",
+    "level": 8
+  },
+  "project": "Bio Design",
+  "video": {
+    "url": ""
+  },
+  "time": 180,
+  "level": "advanced",
+  "overview": {
+    "description": "Grow materials and objects instead of manufacturing them: engineered living materials, mycelium composites, bacterial cellulose, and biofabricated design. This module bridges biology and design - treating living systems as a fabrication substrate with its own constraints of growth, scale, and sustainability.",
+    "objectives": [
+      "design an object or material to be grown, not built",
+      "cultivate a biomaterial (mycelium, bacterial cellulose)",
+      "weigh scale, reproducibility, and sustainability trade-offs",
+      "integrate engineered biology with design intent"
+    ],
+    "prerequisites": [
+      "Final Project (integrated wet-lab skills)"
+    ]
+  },
+  "steps": {
+    "description": "Choose a living material, define the growth process and mould/scaffold, cultivate under controlled conditions, then post-process into a finished form.",
+    "intro": "Biofabrication is design with a partner that grows: you set conditions and boundaries, and the organism builds the material.",
+    "tools": [
+      "a living material system (mycelium / Komagataeibacter for cellulose)",
+      "substrate + mould/scaffold",
+      "sterile growth setup",
+      "post-processing (drying, pressing, finishing)"
+    ],
+    "estimatatedTime": {
+      "setup": 45,
+      "config": 90,
+      "testing": 45
+    },
+    "instructions": [
+      {
+        "title": "Choose the material & form",
+        "description": "Pick a system (mycelium composite, bacterial cellulose, etc.) and the object/material properties you want."
+      },
+      {
+        "title": "Prepare substrate & scaffold",
+        "description": "Formulate the substrate and build a mould or scaffold that guides growth into the target shape."
+      },
+      {
+        "title": "Cultivate",
+        "description": "Inoculate and grow under controlled, contamination-free conditions until the material sets."
+      },
+      {
+        "title": "Finish & evaluate",
+        "description": "Dry/press/treat the material, then evaluate strength, reproducibility, and sustainability against the design goal."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Propose a biofabricated object or material: the organism/system, the growth-and-mould process, and an honest assessment of scale and sustainability."
+  },
+  "resources": [
+    {
+      "title": "HTGAA - Bio Design & Bio Fabrication (Week 14)",
+      "url": "https://2026a.htgaa.org/"
+    },
+    {
+      "title": "Ecovative - mycelium biomaterials",
+      "url": "https://www.ecovative.com/"
+    },
+    {
+      "title": "Biofabricate - grown-materials design community",
+      "url": "https://www.biofabricate.co/"
+    }
+  ]
+}

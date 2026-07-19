@@ -1,0 +1,245 @@
+{
+  "course": "HTGAA — How To Grow (Almost) Anything · MIT Media Lab",
+  "term": "Spring 2026",
+  "link": "https://2026a.htgaa.org/",
+  "note": "Course-companion mapping: which HTGAA week a skill-tree technique is taught in. Weeks, dates, and instructors are from the published Spring 2026 schedule.",
+  "map": {
+    "intro": {
+      "w": "1",
+      "date": "Feb 3",
+      "module": "Principles & Practices",
+      "who": [
+        "David Kong",
+        "George Church",
+        "Joe Jacobson"
+      ]
+    },
+    "sterile-workspace": {
+      "w": "1",
+      "date": "Feb 3",
+      "module": "Principles & Practices",
+      "who": [
+        "David Kong",
+        "George Church",
+        "Joe Jacobson"
+      ]
+    },
+    "micropipette": {
+      "w": "3",
+      "date": "Feb 17",
+      "module": "Opentrons lab work (liquid handling / automation)",
+      "who": []
+    },
+    "dna101": {
+      "w": "2",
+      "date": "Feb 10",
+      "module": "DNA — Read, Write & Edit",
+      "who": [
+        "George Church",
+        "Joe Jacobson",
+        "Emily Leproust"
+      ]
+    },
+    "gblock-design": {
+      "w": "2",
+      "date": "Feb 10",
+      "module": "DNA — Read, Write & Edit",
+      "who": [
+        "George Church",
+        "Joe Jacobson",
+        "Emily Leproust"
+      ]
+    },
+    "sequencing": {
+      "w": "2",
+      "date": "Feb 10",
+      "module": "DNA — Read, Write & Edit",
+      "who": [
+        "George Church",
+        "Joe Jacobson",
+        "Emily Leproust"
+      ]
+    },
+    "crispr": {
+      "w": "2",
+      "date": "Feb 10",
+      "module": "DNA — Read, Write & Edit",
+      "who": [
+        "George Church",
+        "Joe Jacobson",
+        "Emily Leproust"
+      ]
+    },
+    "sdm": {
+      "w": "2",
+      "date": "Feb 10",
+      "module": "DNA — Read, Write & Edit",
+      "who": [
+        "George Church",
+        "Joe Jacobson",
+        "Emily Leproust"
+      ]
+    },
+    "proteins101": {
+      "w": "4",
+      "date": "Feb 24",
+      "module": "Protein Design I",
+      "who": [
+        "Thras Karydis",
+        "Jon Kaufman"
+      ]
+    },
+    "protein-design": {
+      "w": "4–5",
+      "date": "Feb 24 / Mar 3",
+      "module": "Protein Design I & II",
+      "who": [
+        "Thras Karydis",
+        "Jon Kaufman",
+        "Pranam Chatterjee",
+        "Gabriele Corso"
+      ]
+    },
+    "gibson": {
+      "w": "6",
+      "date": "Mar 10",
+      "module": "Genetic Circuits I: Assembly Technologies",
+      "who": [
+        "Doug Densmore",
+        "Traci Haddock"
+      ]
+    },
+    "golden-gate": {
+      "w": "6",
+      "date": "Mar 10",
+      "module": "Genetic Circuits I: Assembly Technologies",
+      "who": [
+        "Doug Densmore",
+        "Traci Haddock"
+      ]
+    },
+    "genetic-circuits": {
+      "w": "6–7",
+      "date": "Mar 10 / Mar 17",
+      "module": "Genetic Circuits I & II",
+      "who": [
+        "Doug Densmore",
+        "Traci Haddock",
+        "Ron Weiss",
+        "Evan Holbrook"
+      ]
+    },
+    "cell-free": {
+      "w": "9",
+      "date": "Mar 31",
+      "module": "Cell-Free Systems",
+      "who": [
+        "Kate Adamala",
+        "Peter Nguyen",
+        "Ally Huang"
+      ]
+    },
+    "gel-imaging": {
+      "w": "10",
+      "date": "Apr 7",
+      "module": "Advanced Imaging & Measurement Tech",
+      "who": [
+        "Evan Daugharthy"
+      ]
+    },
+    "spectrophotometer": {
+      "w": "10",
+      "date": "Apr 7",
+      "module": "Advanced Imaging & Measurement Tech",
+      "who": [
+        "Evan Daugharthy"
+      ]
+    },
+    "advanced-omics": {
+      "w": "10",
+      "date": "Apr 7",
+      "module": "Advanced Imaging & Measurement Tech",
+      "who": [
+        "Evan Daugharthy"
+      ]
+    },
+    "building-genomes": {
+      "w": "12",
+      "date": "Apr 21",
+      "module": "Building Genomes",
+      "who": [
+        "George Church",
+        "John Glass",
+        "Jef Boeke"
+      ]
+    },
+    "final-project": {
+      "w": "14",
+      "date": "May 5",
+      "module": "Bio Design & Bio Fabrication",
+      "who": [
+        "Michael Chen",
+        "Christina Agapakis"
+      ]
+    },
+    "biofabrication": {
+      "w": "14",
+      "date": "May 5",
+      "module": "Bio Design & Bio Fabrication",
+      "who": [
+        "Michael Chen",
+        "Christina Agapakis"
+      ]
+    },
+    "lab-automation": {
+      "w": "3",
+      "date": "Feb 17",
+      "module": "Opentrons lab work (liquid handling / automation)",
+      "who": []
+    },
+    "ml-for-biology": {
+      "w": "13",
+      "date": "Apr 28",
+      "module": "AI, SynBio, and Scaling Health Innovation",
+      "who": [
+        "Renee Wegrzyn"
+      ]
+    },
+    "bioinformatics": {
+      "w": "2",
+      "date": "Feb 10",
+      "module": "DNA - Read, Write & Edit",
+      "who": [
+        "George Church",
+        "Joe Jacobson",
+        "Emily Leproust"
+      ]
+    },
+    "ngs-analysis": {
+      "w": "2",
+      "date": "Feb 10",
+      "module": "DNA - Read, Write & Edit",
+      "who": [
+        "George Church",
+        "Joe Jacobson",
+        "Emily Leproust"
+      ]
+    },
+    "biosafety-biosecurity": {
+      "w": "1",
+      "date": "Feb 3",
+      "module": "Principles & Practices",
+      "who": [
+        "David Kong",
+        "George Church",
+        "Joe Jacobson"
+      ]
+    },
+    "eln-lims": {
+      "w": "3",
+      "date": "Feb 17",
+      "module": "Opentrons lab work (lab practices & records)",
+      "who": []
+    }
+  }
+}

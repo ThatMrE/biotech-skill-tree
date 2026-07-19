@@ -1,0 +1,73 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "genomic-dna",
+  "title": {
+    "name": "purification of genomic dna",
+    "level": 2
+  },
+  "project": "DNA Extraction",
+  "video": {
+    "url": ""
+  },
+  "time": 90,
+  "level": "intermediate",
+  "overview": {
+    "description": "Genomic DNA is the organism's core code. For E. coli, a simple boil-purification in a heat block extracts the 4.6 Mbp chromosome. But chromosomes are hard to get back into cells - which is why plasmids are the real workhorse of synbio.",
+    "objectives": [
+      "match an extraction method to your genome type",
+      "perform a simple boil-prep for E. coli genomic DNA",
+      "understand why chromosomes are hard to reintroduce into cells"
+    ],
+    "prerequisites": [
+      "DNA101",
+      "sterile technique",
+      "a heat block"
+    ]
+  },
+  "steps": {
+    "description": "Genomic DNA is the organism's core code. For E. coli, a simple boil-purification in a heat block extracts the 4.6 Mbp chromosome. But chromosomes are hard to get back into cells - which is why plasmids are the real workhorse of synbio.",
+    "intro": "Genomic DNA is the organism's core code. For E. coli, a simple boil-purification in a heat block extracts the 4.6 Mbp chromosome. But chromosomes are hard to get back into cells - which is why plasmids are the real workhorse of synbio.",
+    "tools": [
+      "heat block",
+      "microcentrifuge",
+      "lysis reagents",
+      "E. coli culture"
+    ],
+    "estimatatedTime": {
+      "setup": 15,
+      "config": 30,
+      "testing": 30
+    },
+    "instructions": [
+      {
+        "title": "Pick a method for your genome",
+        "description": "Choose an extraction protocol that matches your genome type (ssDNA, dsDNA, etc.)."
+      },
+      {
+        "title": "Boil-prep E. coli",
+        "description": "For a quick crude prep, pellet cells, resuspend, and heat in a heat block to release genomic DNA."
+      },
+      {
+        "title": "Plan downstream use",
+        "description": "Decide what you'll do with the DNA before extracting - reintroducing whole chromosomes is rarely practical."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Extract genomic DNA from your host and run a small aliquot on a gel (after the gel node) to confirm high-molecular-weight DNA."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Genomic DNA Extraction protocols",
+      "url": "https://www.neosynbio.com/purification-of-genomic-dna"
+    },
+    {
+      "title": "protocols.io: genomic / HMW DNA extraction",
+      "url": "https://www.protocols.io/"
+    },
+    {
+      "title": "Addgene: DNA quantification with a spectrophotometer",
+      "url": "https://www.addgene.org/protocols/dna-quantification/"
+    }
+  ]
+}

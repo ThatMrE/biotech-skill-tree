@@ -1,0 +1,81 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "genetic-circuits",
+  "title": {
+    "name": "genetic circuits",
+    "level": 7
+  },
+  "project": "Systems & Circuits",
+  "video": {
+    "url": ""
+  },
+  "time": 180,
+  "level": "advanced",
+  "overview": {
+    "description": "Wire standardised biological parts - promoters, RBSs, repressors, recombinases - into circuits that sense, compute, and actuate. Standardised assembly (MoClo / Golden Gate) makes parts composable; design tools like Cello compile Boolean logic into DNA.",
+    "objectives": [
+      "design a genetic logic gate (NOT/NOR/AND) from characterised parts",
+      "use standardised parts + hierarchical assembly (MoClo)",
+      "predict circuit behaviour and choose reporters to characterise it",
+      "reason about load, retroactivity, and part context effects"
+    ],
+    "prerequisites": [
+      "Golden Gate / Gibson assembly",
+      "Plasmids 101"
+    ]
+  },
+  "steps": {
+    "description": "Pick characterised parts, compose them into a logic function, assemble the DNA with a standardised method, and characterise the transfer function with reporters.",
+    "intro": "A genetic circuit is a program written in DNA: repressors and promoters form gates, and standardised assembly lets you snap validated parts together predictably.",
+    "tools": [
+      "a parts registry (iGEM Registry / SynBioHub)",
+      "MoClo / Golden Gate kit",
+      "Cello or similar circuit-design software",
+      "fluorescent reporters + plate reader"
+    ],
+    "estimatatedTime": {
+      "setup": 40,
+      "config": 80,
+      "testing": 60
+    },
+    "instructions": [
+      {
+        "title": "Specify the logic",
+        "description": "Write the truth table you want (e.g. IPTG AND aTc gives GFP). Choose inputs (inducible promoters) and an output reporter."
+      },
+      {
+        "title": "Choose characterised parts",
+        "description": "Select promoters, RBSs, and repressors with known strengths from a registry so behaviour is predictable."
+      },
+      {
+        "title": "Compile & assemble",
+        "description": "Use Cello to map logic to a gate layout, then build with MoClo/Golden Gate hierarchical assembly."
+      },
+      {
+        "title": "Characterise",
+        "description": "Measure the transfer function with reporters across input combinations; check for load and context effects, and debug part-by-part."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Design a small genetic logic circuit, specify its parts and assembly plan, and describe the reporter experiment that would confirm the intended truth table."
+  },
+  "resources": [
+    {
+      "title": "HTGAA - Genetic Circuits (Weeks 6-7)",
+      "url": "https://2026a.htgaa.org/"
+    },
+    {
+      "title": "iGEM Registry of Standard Biological Parts",
+      "url": "https://parts.igem.org/"
+    },
+    {
+      "title": "Cello - genetic circuit design automation",
+      "url": "https://www.cidarlab.org/cello"
+    },
+    {
+      "title": "SynBioHub - parts & designs repository",
+      "url": "https://synbiohub.org/"
+    }
+  ]
+}

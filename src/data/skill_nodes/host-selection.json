@@ -1,0 +1,73 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "host-selection",
+  "title": {
+    "name": "host selection criteria",
+    "level": 1
+  },
+  "project": "Experimental Design",
+  "video": {
+    "url": ""
+  },
+  "time": 30,
+  "level": "beginner",
+  "overview": {
+    "description": "Pick a simple single-celled organism that can hold and use a plasmid - bacteria or yeast. Use a well-characterised, non-pathogenic strain from a respected supplier. K12-derived E. coli is the well-trodden, easy-to-approve path.",
+    "objectives": [
+      "choose a non-pathogenic, plasmid-compatible host",
+      "weigh the trade-offs of well-characterised vs novel organisms",
+      "verify the legality of working with your chosen organism"
+    ],
+    "prerequisites": [
+      "the intro node"
+    ]
+  },
+  "steps": {
+    "description": "Pick a simple single-celled organism that can hold and use a plasmid - bacteria or yeast. Use a well-characterised, non-pathogenic strain from a respected supplier. K12-derived E. coli is the well-trodden, easy-to-approve path.",
+    "intro": "Pick a simple single-celled organism that can hold and use a plasmid - bacteria or yeast. Use a well-characterised, non-pathogenic strain from a respected supplier. K12-derived E. coli is the well-trodden, easy-to-approve path.",
+    "tools": [
+      "literature databases",
+      "your local regulator's website"
+    ],
+    "estimatatedTime": {
+      "setup": 5,
+      "config": 10,
+      "testing": 10
+    },
+    "instructions": [
+      {
+        "title": "Default to E. coli",
+        "description": "Unless you have a reason not to, choose a K12-derived E. coli strain. Decades of literature make culturing and troubleshooting far easier."
+      },
+      {
+        "title": "Confirm it's non-pathogenic",
+        "description": "Never work with a strain that could infect you. Source from ATCC, DSMZ, a university, or iGEM."
+      },
+      {
+        "title": "Check the law",
+        "description": "Google your government's stance on genetic manipulation and, if unsure, call the regulator. In Australia this is the OGTR."
+      }
+    ]
+  },
+  "submission": {
+    "description": "State your chosen host, its source/strain designation, and a one-line confirmation that it is legal to work with in your jurisdiction."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Host Selection Criteria",
+      "url": "https://www.neosynbio.com/host-selection-criteria"
+    },
+    {
+      "title": "Addgene: Plasmids 101 eBook (host & vector basics)",
+      "url": "https://blog.addgene.org/plasmids-101-ebook-4th-edition"
+    },
+    {
+      "title": "ATCC microbial strain catalogue",
+      "url": "https://www.atcc.org/microbe-products"
+    },
+    {
+      "title": "iGEM Registry: chassis organisms",
+      "url": "https://parts.igem.org/Main_Page"
+    }
+  ]
+}

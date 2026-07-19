@@ -1,0 +1,72 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "bioinformatics",
+  "title": {
+    "name": "bioinformatics foundations",
+    "level": 6
+  },
+  "project": "Data & Informatics",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=WRKQGwh_Mw0"
+  },
+  "time": 150,
+  "level": "advanced",
+  "overview": {
+    "description": "Read, wrangle, and analyse biological sequence data: FASTA/FASTQ formats, quality scores, alignment (BLAST/Bowtie), and scripting with Biopython/pandas. Nearly every wet-lab result now flows through a command line before it means anything.",
+    "objectives": [
+      "work with sequence formats (FASTA, FASTQ, SAM/BAM, VCF)",
+      "read Phred quality scores and trim/QC reads",
+      "align sequences and interpret BLAST results",
+      "script analyses with Biopython / pandas and the command line"
+    ],
+    "prerequisites": [
+      "Sanger sequencing"
+    ]
+  },
+  "steps": {
+    "description": "Read, wrangle, and analyse biological sequence data: FASTA/FASTQ formats, quality scores, alignment (BLAST/Bowtie), and scripting with Biopython/pandas. Nearly every wet-lab result now flows through a command line before it means anything.",
+    "intro": "Bioinformatics is data literacy for biology - the ability to take raw files off an instrument and turn them into an answer, reproducibly.",
+    "tools": [
+      "command line (bash)",
+      "Biopython / pandas",
+      "alignment tools (BLAST, Bowtie2, minimap2)",
+      "a notebook (Jupyter)"
+    ],
+    "estimatatedTime": {
+      "setup": 40,
+      "config": 80,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "Know your formats",
+        "description": "Recognise FASTA (sequence) vs FASTQ (sequence + per-base Phred quality) and downstream SAM/BAM/VCF."
+      },
+      {
+        "title": "QC first",
+        "description": "Assess read quality (FastQC), trim adapters/low-quality bases before any analysis."
+      },
+      {
+        "title": "Align & interpret",
+        "description": "Map reads or BLAST a query; understand e-value, identity, and coverage before trusting a hit."
+      },
+      {
+        "title": "Script it",
+        "description": "Automate parsing and summary with Biopython/pandas so the analysis is reproducible, not click-by-click."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Take a raw FASTQ, QC and trim it, align or BLAST it, and produce a short reproducible summary - explaining each quality decision."
+  },
+  "resources": [
+    {
+      "title": "Biopython tutorial",
+      "url": "https://biopython.org/wiki/Documentation"
+    },
+    {
+      "title": "Rosalind - learn bioinformatics by problem-solving",
+      "url": "https://rosalind.info/"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "miniprep",
+  "title": {
+    "name": "plasmid miniprep (ethanol lysis)",
+    "level": 2
+  },
+  "project": "DNA Extraction",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=MxV6FXPn6VU"
+  },
+  "time": 120,
+  "level": "intermediate",
+  "overview": {
+    "description": "The miniprep is the premier method for purifying plasmid DNA - doable in under two hours with the right set-up. It uses some nasty chemicals (guanidine), so read the MSDS. A high-speed centrifuge is the single most important piece of equipment here.",
+    "objectives": [
+      "perform a silica-column miniprep end to end",
+      "handle guanidine-based buffers safely",
+      "judge plasmid yield (gel is more reliable than nanodrop)"
+    ],
+    "prerequisites": [
+      "a fresh pure colony",
+      "miniprep buffers",
+      "a high-speed centrifuge"
+    ]
+  },
+  "steps": {
+    "description": "The miniprep is the premier method for purifying plasmid DNA - doable in under two hours with the right set-up. It uses some nasty chemicals (guanidine), so read the MSDS. A high-speed centrifuge is the single most important piece of equipment here.",
+    "intro": "The miniprep is the premier method for purifying plasmid DNA - doable in under two hours with the right set-up. It uses some nasty chemicals (guanidine), so read the MSDS. A high-speed centrifuge is the single most important piece of equipment here.",
+    "tools": [
+      "high-speed centrifuge",
+      "silica spin columns",
+      "miniprep buffers (resuspension, lysis, neutralisation, wash)",
+      "oven",
+      "nanodrop/Qubit (optional)"
+    ],
+    "estimatatedTime": {
+      "setup": 20,
+      "config": 40,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "Pellet & resuspend",
+        "description": "Spin down an overnight culture and resuspend the pellet in resuspension buffer."
+      },
+      {
+        "title": "Lyse & neutralise",
+        "description": "Add lysis buffer, wait ~10 min so RNAse degrades RNA, then neutralise and spin to pellet debris."
+      },
+      {
+        "title": "Bind to column",
+        "description": "Load the cleared supernatant onto a silica column and spin to capture plasmid DNA."
+      },
+      {
+        "title": "Wash & dry",
+        "description": "Wash with chaotropic salt then ethanol; dry in an oven to evaporate residual ethanol."
+      },
+      {
+        "title": "Elute",
+        "description": "Add elution buffer and spin into a fresh tube. Store at -20C."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Miniprep a plasmid and report your yield. Verify quality by running an aliquot on an agarose gel."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Miniprep / Ethanol Lysis protocol",
+      "url": "https://www.neosynbio.com/purification-of-plasmid-dna-miniprep-aka-ethanol-lysis"
+    },
+    {
+      "title": "Addgene: Purifying plasmid DNA (protocol & video)",
+      "url": "https://www.addgene.org/protocols/purify-plasmid-dna/"
+    },
+    {
+      "title": "QIAGEN: QIAprep Spin Miniprep Kit handbook",
+      "url": "https://www.qiagen.com/us/products/discovery-and-translational-research/dna-rna-purification/dna-purification/plasmid-dna/qiaprep-spin-miniprep-kit"
+    }
+  ]
+}

@@ -1,0 +1,1865 @@
+{
+  "meta": {
+    "title": "Synbio Bench-Skills Interview Bank",
+    "description": "Practical, equipment- and technique-focused questions for screening and practicing wet-lab synthetic-biology competence. Each question is anchored to a skill-tree node so a wrong answer points straight at what to study. Difficulty: foundational (can they be trusted at a bench), core (day-to-day competence), advanced (troubleshooting / judgment).",
+    "answerKey": "answer is the 0-based index of the correct option"
+  },
+  "questions": [
+    {
+      "id": "micropipette-q1",
+      "nodeId": "micropipette",
+      "topic": "Micropipette",
+      "difficulty": "foundational",
+      "prompt": "You need to transfer 2.5 µL of primer. Which single-channel pipette should you reach for?",
+      "options": [
+        "P1000 (100–1000 µL)",
+        "P200 (20–200 µL)",
+        "P20 (2–20 µL)",
+        "P2 or P10 (0.1–10 µL) — but P2 is most accurate here"
+      ],
+      "answer": 3,
+      "explanation": "Accuracy is worst near the bottom of a pipette's range. 2.5 µL sits comfortably in a P2 (0.1–2 µL is too low; a P2 typically goes to ~2 µL, so a P10 set to 2.5 µL is the practical choice, and a P2 covers up to 2 µL). The key concept: always pick the smallest pipette whose range comfortably contains your volume — never a P200 for 2.5 µL.",
+      "probe": "What happens to accuracy if you set a P200 to 2.5 µL, and why?"
+    },
+    {
+      "id": "micropipette-q2",
+      "nodeId": "micropipette",
+      "topic": "Micropipette",
+      "difficulty": "core",
+      "prompt": "During normal ('forward') pipetting, at which stop do you press the plunger to ASPIRATE (draw up) liquid?",
+      "options": [
+        "Press to the second (hard) stop, then release to fill",
+        "Press to the first (soft) stop, then release to fill",
+        "Press fully then blow out",
+        "Don't press — just dip the tip"
+      ],
+      "answer": 1,
+      "explanation": "Forward pipetting: depress to the FIRST stop before entering the liquid, release slowly to aspirate the set volume, then dispense by pressing to the first stop and finally the second stop to blow out the last drop. Pressing to the second stop before aspirating would over-draw.",
+      "probe": "When would you switch to reverse pipetting instead?"
+    },
+    {
+      "id": "micropipette-q3",
+      "nodeId": "micropipette",
+      "topic": "Micropipette",
+      "difficulty": "advanced",
+      "prompt": "You must pipette a viscous glycerol-based enzyme and a foamy detergent solution accurately. Best technique?",
+      "options": [
+        "Forward pipetting, fast plunger",
+        "Reverse pipetting, slow and steady",
+        "Multichannel at max speed",
+        "Pre-wet once with forward pipetting only"
+      ],
+      "answer": 1,
+      "explanation": "Reverse pipetting (aspirate to the second stop, dispense only to the first stop, keeping a residual) reduces error for viscous, volatile, or foaming liquids because it avoids blow-out that would introduce bubbles or leave clingy residue. Go slowly to let viscous liquid follow the tip.",
+      "probe": "Why does leaving that residual volume improve accuracy for viscous liquids?"
+    },
+    {
+      "id": "micropipette-q4",
+      "nodeId": "micropipette",
+      "topic": "Micropipette",
+      "difficulty": "foundational",
+      "prompt": "Which action will damage a pipette or destroy its calibration?",
+      "options": [
+        "Ejecting the tip after use",
+        "Rotating the volume dial BELOW the minimum or ABOVE the maximum rated range",
+        "Storing it vertically on a stand",
+        "Using filter tips"
+      ],
+      "answer": 1,
+      "explanation": "Forcing the dial past either end of the rated range strips the internal mechanism and throws off calibration. Also never lay a pipette down with liquid in the tip or let liquid enter the barrel. Storing vertically and using filter tips are good practice.",
+      "probe": "Why should you never invert a pipette with liquid in the tip?"
+    },
+    {
+      "id": "centrifuge-q1",
+      "nodeId": "centrifuge",
+      "topic": "Centrifuge",
+      "difficulty": "foundational",
+      "prompt": "You have a single sample tube to spin. What must you do before starting the rotor?",
+      "options": [
+        "Nothing — one tube is fine",
+        "Place a balance tube of equal mass opposite it",
+        "Fill the rotor completely",
+        "Spin at maximum speed briefly"
+      ],
+      "answer": 1,
+      "explanation": "An unbalanced rotor vibrates violently, damages the bearings, and can fail catastrophically. Always place a balance tube of equal mass directly opposite. This is the single most important centrifuge safety rule.",
+      "probe": "How would you balance three tubes in a 6-position rotor?"
+    },
+    {
+      "id": "centrifuge-q2",
+      "nodeId": "centrifuge",
+      "topic": "Centrifuge",
+      "difficulty": "core",
+      "prompt": "A protocol specifies '16,000 × g'. Your centrifuge dial is in RPM. Why does the distinction matter?",
+      "options": [
+        "They are identical",
+        "RCF (× g) depends on rotor radius, so the same RPM gives different g on different rotors",
+        "× g is always higher than RPM",
+        "RPM already accounts for the rotor"
+      ],
+      "answer": 1,
+      "explanation": "Relative centrifugal force (RCF, ×g) = 1.118 × 10⁻⁵ × r × RPM², where r is the rotor radius in cm. The same RPM produces different g-forces on rotors of different radius, so protocols quote ×g for reproducibility. Convert using your rotor's radius (or a rotor chart).",
+      "probe": "If you moved a protocol to a larger-radius rotor, would you increase or decrease RPM to hit the same ×g?"
+    },
+    {
+      "id": "centrifuge-q3",
+      "nodeId": "centrifuge",
+      "topic": "Centrifuge",
+      "difficulty": "core",
+      "prompt": "During a plasmid miniprep you spin a bacterial culture to pellet cells. What is the supernatant and what do you do with it?",
+      "options": [
+        "The pellet is waste; keep the supernatant",
+        "The supernatant is spent medium; discard it and keep the cell pellet",
+        "Both are kept",
+        "Vortex to resuspend before discarding either"
+      ],
+      "answer": 1,
+      "explanation": "Cells collect as the pellet; the liquid above (supernatant) is spent growth medium and is decanted/aspirated off. You then resuspend the pellet in resuspension buffer to begin lysis. Knowing which fraction holds your target is fundamental to every prep.",
+      "probe": "In an alkaline-lysis miniprep, which later spin gives you a pellet you DISCARD and a supernatant you KEEP?"
+    },
+    {
+      "id": "thermocycler-q1",
+      "nodeId": "thermocycler",
+      "topic": "Thermocycler",
+      "difficulty": "core",
+      "prompt": "What is the purpose of the thermocycler's HEATED LID?",
+      "options": [
+        "Speeds up the reaction",
+        "Prevents condensation/evaporation of the reaction on the tube walls and lid",
+        "Denatures the DNA",
+        "Activates the polymerase"
+      ],
+      "answer": 1,
+      "explanation": "The heated lid (typically ~105 °C) keeps the tube tops hotter than the reaction so vapor doesn't condense on the lid and change the reaction volume/concentration. Without it (or without oil in old machines) your 20 µL reaction concentrates as water migrates upward.",
+      "probe": "What symptom in your PCR would hint the heated lid failed?"
+    },
+    {
+      "id": "thermocycler-q2",
+      "nodeId": "thermocycler",
+      "topic": "Thermocycler",
+      "difficulty": "core",
+      "prompt": "Order the three temperatures within one standard PCR cycle (highest → step that anneals primers → extension).",
+      "options": [
+        "Denature ~95 °C → Anneal ~55–65 °C → Extend ~72 °C",
+        "Extend 72 °C → Denature 95 °C → Anneal 55 °C",
+        "Anneal 55 °C → Extend 72 °C → Denature 95 °C",
+        "All three at 72 °C"
+      ],
+      "answer": 0,
+      "explanation": "Each cycle: denaturation (~95 °C, strands separate) → annealing (~55–65 °C, primers bind, set from primer Tm) → extension (~72 °C, Taq/pol synthesizes). ~20–35 cycles amplify exponentially.",
+      "probe": "How do you choose the annealing temperature from your primers?"
+    },
+    {
+      "id": "spectrophotometer-q1",
+      "nodeId": "spectrophotometer",
+      "topic": "Spectrophotometer / Nanodrop",
+      "difficulty": "core",
+      "prompt": "You measure DNA on a Nanodrop and get an A260/A280 ratio of 1.85. What does that tell you?",
+      "options": [
+        "Protein contamination — repurify",
+        "Reasonably pure DNA (~1.8 is ideal for DNA)",
+        "The sample is RNA",
+        "Concentration is too low to read"
+      ],
+      "answer": 1,
+      "explanation": "A260/A280 ≈ 1.8 indicates clean DNA; ~2.0 indicates clean RNA. Ratios well below 1.8 suggest protein or phenol contamination. (A260/A230 flags salt/organic carryover.) 1.85 is fine.",
+      "probe": "What would an A260/A230 of 0.7 suggest, and where does that contaminant come from?"
+    },
+    {
+      "id": "spectrophotometer-q2",
+      "nodeId": "spectrophotometer",
+      "topic": "Spectrophotometer / Nanodrop",
+      "difficulty": "core",
+      "prompt": "At A260, an absorbance of 1.0 corresponds to roughly how much double-stranded DNA?",
+      "options": [
+        "5 ng/µL",
+        "50 ng/µL",
+        "500 ng/µL",
+        "1000 ng/µL"
+      ],
+      "answer": 1,
+      "explanation": "For dsDNA, A260 of 1.0 ≈ 50 ng/µL (ssRNA ≈ 40 ng/µL, ssDNA ≈ 33 ng/µL). This is why the Nanodrop can report concentration directly from the 260 nm reading times the path-length factor.",
+      "probe": "Why must you blank the instrument with your elution buffer, not water, for an accurate reading?"
+    },
+    {
+      "id": "spectrophotometer-q3",
+      "nodeId": "spectrophotometer",
+      "topic": "Spectrophotometer / OD600",
+      "difficulty": "core",
+      "prompt": "You are growing E. coli for a protein expression and monitor OD600. What is OD600 actually measuring?",
+      "options": [
+        "DNA concentration",
+        "Light scattering by cells → a proxy for cell density",
+        "Protein yield",
+        "Antibiotic concentration"
+      ],
+      "answer": 1,
+      "explanation": "OD600 measures light scattering by the culture, which tracks cell density. You typically induce expression (e.g. add IPTG) in mid-log phase around OD600 ~0.4–0.8 when cells are healthy and dividing.",
+      "probe": "Why induce in mid-log rather than stationary phase?"
+    },
+    {
+      "id": "sterile-technique-q1",
+      "nodeId": "sterile-technique",
+      "topic": "Aseptic Technique",
+      "difficulty": "foundational",
+      "prompt": "Working at an open flame (Bunsen burner) on the bench, why do you flame the neck of a media bottle after opening and before closing?",
+      "options": [
+        "To warm the media",
+        "The updraft/heat creates a sterile zone and kills organisms at the opening",
+        "To sterilize the media inside",
+        "To evaporate contaminants from the liquid"
+      ],
+      "answer": 1,
+      "explanation": "The flame creates a convective 'cone of protection' and incinerates microbes at the bottle lip so you don't seed contaminants when pouring or pipetting. It does NOT sterilize the bulk liquid. In a laminar-flow hood the airflow provides the sterile zone instead.",
+      "probe": "How does a laminar-flow hood achieve the same protection without a flame?"
+    },
+    {
+      "id": "sterile-technique-q2",
+      "nodeId": "sterile-technique",
+      "topic": "Aseptic Technique",
+      "difficulty": "core",
+      "prompt": "Two days after streaking, your LB/amp plate shows tiny satellite colonies clustered around larger ones. Most likely cause?",
+      "options": [
+        "Perfect selection",
+        "Ampicillin degraded locally; β-lactamase-secreting colonies let non-resistant neighbours grow",
+        "The plate is contaminated with fungus",
+        "Too much antibiotic"
+      ],
+      "answer": 1,
+      "explanation": "Ampicillin is degraded by secreted β-lactamase, creating antibiotic-free halos where satellite (non-transformed) colonies grow. Pick large well-isolated colonies early, or use a more stable selection (carbenicillin) to reduce satellites.",
+      "probe": "Why does carbenicillin reduce this problem?"
+    },
+    {
+      "id": "sterile-technique-q3",
+      "nodeId": "sterile-workspace",
+      "topic": "Sterile Workspace",
+      "difficulty": "foundational",
+      "prompt": "Which item is NOT part of standard aseptic bench setup for microbial work?",
+      "options": [
+        "70% ethanol to wipe the surface",
+        "Bunsen burner or laminar-flow hood",
+        "An open sandwich on the bench",
+        "Gloves and tied-back hair"
+      ],
+      "answer": 2,
+      "explanation": "No food/drink at the bench — it's both a contamination and a safety hazard. 70% ethanol (more effective than 100% because water aids protein denaturation), a flame or hood, and PPE are all standard.",
+      "probe": "Why is 70% ethanol a better disinfectant than 100%?"
+    },
+    {
+      "id": "media-plates-q1",
+      "nodeId": "media-plates",
+      "topic": "Media & Plates",
+      "difficulty": "foundational",
+      "prompt": "You autoclave LB-agar and want ampicillin plates. When do you add the antibiotic?",
+      "options": [
+        "Before autoclaving",
+        "Into the molten agar after it cools to ~50 °C, just before pouring",
+        "After the plates have set",
+        "It doesn't matter"
+      ],
+      "answer": 1,
+      "explanation": "Ampicillin is heat-labile — autoclaving destroys it. Cool the autoclaved agar to ~50 °C (hand-warm, still liquid) before adding filter-sterilized antibiotic, then pour. Too hot destroys the drug; too cool and the agar sets in the bottle.",
+      "probe": "How do you sterilize a heat-labile antibiotic stock?"
+    },
+    {
+      "id": "media-plates-q2",
+      "nodeId": "culturing-conditions",
+      "topic": "Culturing",
+      "difficulty": "core",
+      "prompt": "Why streak a plate for single colonies rather than just spreading the whole sample?",
+      "options": [
+        "It looks tidier",
+        "To isolate individual clones — each colony arises from one cell, giving a clonal population",
+        "To use less agar",
+        "To speed up growth"
+      ],
+      "answer": 1,
+      "explanation": "Streaking dilutes cells across the plate so isolated colonies each grow from a single founder cell — essential for picking a pure clone after transformation. A confluent lawn can't be clonally sampled.",
+      "probe": "Why does clonality matter when you pick a colony for a miniprep?"
+    },
+    {
+      "id": "pcr-q1",
+      "nodeId": "pcr",
+      "topic": "PCR",
+      "difficulty": "core",
+      "prompt": "Your PCR product is your desired band PLUS several smaller nonspecific bands. Which single change most directly increases specificity?",
+      "options": [
+        "Lower the annealing temperature",
+        "Raise the annealing temperature (toward primer Tm)",
+        "Add more template",
+        "Increase cycle number to 45"
+      ],
+      "answer": 1,
+      "explanation": "Nonspecific priming happens when annealing is too permissive. Raising the annealing temperature toward the primers' Tm tightens specificity. Lowering it or adding cycles makes nonspecific bands worse; a gradient PCR finds the optimum.",
+      "probe": "What else besides temperature can rescue specificity (additives, polymerase choice)?"
+    },
+    {
+      "id": "pcr-q2",
+      "nodeId": "pcr",
+      "topic": "PCR",
+      "difficulty": "core",
+      "prompt": "Extension is at 72 °C. A rough rule for extension TIME with a standard polymerase is:",
+      "options": [
+        "1 minute per 1 kb of product",
+        "1 second per 1 kb",
+        "10 minutes regardless of length",
+        "No extension step is needed"
+      ],
+      "answer": 0,
+      "explanation": "Standard Taq extends ~1 kb/min at 72 °C, so set extension to ~1 min per kb (fast/high-fidelity enzymes like Q5 are much quicker, ~20–30 s/kb — always check the enzyme's spec). Too short a time truncates long products.",
+      "probe": "If you switched to a high-fidelity polymerase for a 3 kb amplicon, how would you change the extension time?"
+    },
+    {
+      "id": "pcr-q3",
+      "nodeId": "pcr",
+      "topic": "PCR",
+      "difficulty": "advanced",
+      "prompt": "You are cloning a gene into an expression vector and it MUST be mutation-free. Which polymerase do you choose and why?",
+      "options": [
+        "Standard Taq — cheapest",
+        "A high-fidelity, proofreading (3'→5' exonuclease) polymerase like Q5 or Phusion",
+        "Any polymerase; fidelity doesn't matter for cloning",
+        "A reverse transcriptase"
+      ],
+      "answer": 1,
+      "explanation": "Taq lacks proofreading (~1 error per ~10⁴ nt) and would introduce mutations. Use a high-fidelity proofreading polymerase (Q5, Phusion) for cloning, expression constructs, and sequencing templates. Taq is fine for diagnostic colony PCR where you only check size.",
+      "probe": "Why is Taq acceptable for colony PCR but not for building an expression construct?"
+    },
+    {
+      "id": "pcr-q4",
+      "nodeId": "pcr",
+      "topic": "PCR / Controls",
+      "difficulty": "core",
+      "prompt": "Which control detects reagent/primer contamination in a PCR run?",
+      "options": [
+        "A tube with template but no primers",
+        "A no-template control (NTC): all reagents, water instead of template",
+        "A tube run at 4 °C",
+        "No controls are needed"
+      ],
+      "answer": 1,
+      "explanation": "The no-template control swaps template for water. A band in the NTC means your reagents/primers are contaminated (often with previous product) and any positive result is untrustworthy. A positive control confirms the reaction works.",
+      "probe": "If your NTC shows a band the same size as your product, what's the likely source?"
+    },
+    {
+      "id": "primer-design-q1",
+      "nodeId": "primer-design",
+      "topic": "Primer Design",
+      "difficulty": "core",
+      "prompt": "Which primer property most directly sets the annealing temperature and should be MATCHED between a primer pair?",
+      "options": [
+        "Primer length in kb",
+        "Melting temperature (Tm)",
+        "The restriction site added to the 5' end",
+        "The colour of the tube"
+      ],
+      "answer": 1,
+      "explanation": "Tm (driven by length and GC content) sets annealing temperature; a pair with mismatched Tm anneals unevenly and misprimes. Aim for primers ~18–25 nt, ~40–60% GC, Tm within ~2–5 °C of each other, and anneal ~3–5 °C below the lower Tm.",
+      "probe": "Why is a 'GC clamp' at the 3' end helpful, and what problem do complementary 3' ends cause?"
+    },
+    {
+      "id": "primer-design-q2",
+      "nodeId": "primer-design",
+      "topic": "Primer Design",
+      "difficulty": "advanced",
+      "prompt": "Two primers whose 3' ends are complementary to each other tend to produce what artifact?",
+      "options": [
+        "Longer product",
+        "Primer-dimers — primers amplify each other, wasting reagents and giving a small band",
+        "Higher fidelity",
+        "Nothing"
+      ],
+      "answer": 1,
+      "explanation": "Complementary 3' ends let primers extend off one another, forming primer-dimers: a small, often bright band near the bottom of the gel that consumes dNTPs/primers and competes with real amplification. Design tools flag self- and hetero-dimers.",
+      "probe": "Why is the 3' end specifically the dangerous region for both dimers and mispriming?"
+    },
+    {
+      "id": "primer-design-q3",
+      "nodeId": "primer-design",
+      "topic": "Primer Design",
+      "difficulty": "advanced",
+      "prompt": "You want to add a BamHI site to your insert via PCR. Where do you put the recognition sequence, and what else must you include?",
+      "options": [
+        "In the middle of the primer only",
+        "At the 5' end as a tail, plus a few extra 'guard' bases 5' of the site so the enzyme can cut",
+        "At the 3' end so it primes better",
+        "Nowhere — enzymes cut anywhere"
+      ],
+      "answer": 1,
+      "explanation": "Restriction sites are added as 5' tails (they don't need to match the template). Most enzymes cut poorly at the very end of a fragment, so you add several extra 'guard'/spacer bases 5' of the site. The 3' end must stay complementary to the template to prime.",
+      "probe": "How would you check that the site you're adding doesn't already occur inside your insert?"
+    },
+    {
+      "id": "gel-electrophoresis-q1",
+      "nodeId": "gel-electrophoresis",
+      "topic": "Gel Electrophoresis",
+      "difficulty": "foundational",
+      "prompt": "In an agarose gel, DNA migrates toward which electrode, and why?",
+      "options": [
+        "Toward the negative cathode, because DNA is positive",
+        "Toward the positive anode, because DNA's phosphate backbone is negatively charged",
+        "It doesn't move",
+        "Toward whichever electrode is closer"
+      ],
+      "answer": 1,
+      "explanation": "DNA's sugar-phosphate backbone is negatively charged, so it runs toward the positive anode ('run to red'). Smaller fragments move faster through the agarose mesh, so size separates by migration distance.",
+      "probe": "Which runs farther in a given time: a 500 bp or a 5000 bp fragment?"
+    },
+    {
+      "id": "gel-electrophoresis-q2",
+      "nodeId": "gel-electrophoresis",
+      "topic": "Gel Electrophoresis",
+      "difficulty": "core",
+      "prompt": "You need to resolve small fragments of 100–500 bp cleanly. How should you adjust the agarose percentage?",
+      "options": [
+        "Use a lower % (e.g. 0.7%)",
+        "Use a higher % (e.g. 2%)",
+        "Percentage doesn't affect resolution",
+        "Skip the gel"
+      ],
+      "answer": 1,
+      "explanation": "Higher-percentage agarose (denser mesh) resolves small fragments better; lower-percentage gels (0.7%) resolve large fragments (>10 kb). ~2% is right for a few hundred bp; ~1% is a good general default.",
+      "probe": "What % would you pick to separate 8 kb from 10 kb?"
+    },
+    {
+      "id": "gel-electrophoresis-q3",
+      "nodeId": "gel-electrophoresis",
+      "topic": "Gel Electrophoresis",
+      "difficulty": "core",
+      "prompt": "What is the purpose of the loading dye (6× blue/orange) mixed with your sample?",
+      "options": [
+        "It stains the DNA so you can see the bands under UV",
+        "It adds density so the sample sinks into the well, and a tracking dye shows migration progress",
+        "It cuts the DNA",
+        "It is the size ladder"
+      ],
+      "answer": 1,
+      "explanation": "Loading dye contains glycerol/Ficoll (density, so sample sinks into the well) and tracking dyes (bromophenol blue / xylene cyanol) that migrate at known apparent sizes so you can stop the gel before your DNA runs off. It does NOT stain the DNA — that's the intercalator (SYBR/EtBr).",
+      "probe": "How do you actually visualize the DNA bands, and what safety issue does that raise?"
+    },
+    {
+      "id": "gel-electrophoresis-q4",
+      "nodeId": "gel-imaging",
+      "topic": "Gel Imaging / Extraction",
+      "difficulty": "advanced",
+      "prompt": "When gel-extracting a band for downstream cloning, why prefer blue-light / SYBR Safe over a UV transilluminator with ethidium bromide?",
+      "options": [
+        "Blue light is brighter",
+        "UV exposure nicks and damages the DNA (and EtBr is a mutagen); blue light spares the DNA",
+        "There's no difference",
+        "EtBr makes DNA run faster"
+      ],
+      "answer": 1,
+      "explanation": "UV light causes thymine dimers and strand breaks that reduce cloning/ligation efficiency, and EtBr is a mutagen requiring careful handling. Blue-light systems with safer dyes let you excise bands with minimal DNA damage and safer handling.",
+      "probe": "If you must use UV, how do you minimize DNA damage during excision?"
+    },
+    {
+      "id": "miniprep-q1",
+      "nodeId": "miniprep",
+      "topic": "Miniprep / Plasmid Purification",
+      "difficulty": "core",
+      "prompt": "In alkaline-lysis miniprep, what does the neutralization buffer (potassium acetate) accomplish?",
+      "options": [
+        "Lyses the cells",
+        "Precipitates SDS/protein/genomic DNA/cell debris while small plasmid renatures and stays soluble",
+        "Elutes the plasmid from the column",
+        "Degrades RNA"
+      ],
+      "answer": 1,
+      "explanation": "Alkaline lysis: (1) resuspend, (2) NaOH/SDS lyses cells and denatures DNA+protein, (3) potassium acetate neutralizes — the small, supercoiled plasmid quickly renatures and stays soluble, while chromosomal DNA, SDS-protein, and debris form a white precipitate you spin down. The plasmid-containing supernatant goes onto the column.",
+      "probe": "Why does supercoiled plasmid renature but sheared genomic DNA does not?"
+    },
+    {
+      "id": "miniprep-q2",
+      "nodeId": "miniprep",
+      "topic": "Miniprep",
+      "difficulty": "advanced",
+      "prompt": "Why should you NOT vortex vigorously during the lysis step of a plasmid miniprep?",
+      "options": [
+        "It denatures the plasmid permanently",
+        "Shearing fragments genomic DNA into plasmid-sized pieces that co-purify and contaminate your prep",
+        "It's fine to vortex",
+        "It heats the sample"
+      ],
+      "answer": 1,
+      "explanation": "Gentle inversion keeps chromosomal DNA in long strands that partition away during neutralization/spin. Vortexing shears genomic DNA into small fragments that behave like plasmid and contaminate the elution. Mix by inversion, not vortex, through lysis.",
+      "probe": "What would genomic contamination look like on a downstream sequencing read or gel?"
+    },
+    {
+      "id": "miniprep-q3",
+      "nodeId": "miniprep",
+      "topic": "Miniprep / Silica columns",
+      "difficulty": "core",
+      "prompt": "On a silica spin column, DNA binds in the presence of high chaotropic salt and is eluted with:",
+      "options": [
+        "More high-salt buffer",
+        "Low-salt buffer or water (e.g. EB / warm water)",
+        "Ethanol",
+        "Isopropanol"
+      ],
+      "answer": 1,
+      "explanation": "Silica binds DNA under high chaotropic salt; the ethanol wash removes salts/contaminants; then a low-ionic-strength buffer or water releases the DNA. Eluting in water/EB (not the wash buffer, which contains ethanol) is essential, and residual ethanol will ruin downstream enzymatic steps.",
+      "probe": "Why must you do a dry spin before elution?"
+    },
+    {
+      "id": "restriction-digest-q1",
+      "nodeId": "restriction-digest",
+      "topic": "Restriction Digest",
+      "difficulty": "core",
+      "prompt": "You cut a vector and insert with the SAME two enzymes producing different sticky ends on each side. The main advantage is:",
+      "options": [
+        "Faster digestion",
+        "Directional (forced) cloning — the insert can only ligate in one orientation",
+        "No ligase needed",
+        "It prevents any self-ligation forever"
+      ],
+      "answer": 1,
+      "explanation": "Two different overhangs force directional cloning: the insert's ends are complementary to specific vector ends, so it goes in one orientation and the vector can't simply re-close on itself (the two ends aren't compatible). Single-enzyme (same overhang) cloning is nondirectional and self-ligates readily.",
+      "probe": "How does treating a single-cut vector with phosphatase (CIP/rSAP) reduce self-ligation?"
+    },
+    {
+      "id": "restriction-digest-q2",
+      "nodeId": "restriction-digest",
+      "topic": "Restriction Digest",
+      "difficulty": "advanced",
+      "prompt": "You leave a digest overnight with lots of enzyme in a suboptimal buffer and see extra unexpected cuts. What happened?",
+      "options": [
+        "Normal behaviour",
+        "Star activity — relaxed specificity from over-digestion / high glycerol / wrong buffer causes cutting at near-cognate sites",
+        "The DNA degraded on its own",
+        "The enzyme ran out"
+      ],
+      "answer": 1,
+      "explanation": "Star activity is relaxed sequence specificity caused by excess enzyme, too much glycerol (>5%, from high enzyme volume), wrong buffer/pH, or very long incubation. Keep enzyme ≤10% of reaction volume, use the recommended buffer, and don't massively over-incubate.",
+      "probe": "Why does the '10% glycerol rule' (enzyme ≤1/10 of the reaction) matter here?"
+    },
+    {
+      "id": "restriction-digest-q3",
+      "nodeId": "restriction-digest",
+      "topic": "Restriction Digest",
+      "difficulty": "advanced",
+      "prompt": "A restriction site is present in your plasmid map but the enzyme won't cut it. A common molecular reason in E. coli-prepped DNA is:",
+      "options": [
+        "The DNA is too pure",
+        "Dam/Dcm methylation of the site blocks the enzyme",
+        "The plasmid is too small",
+        "Too much enzyme"
+      ],
+      "answer": 1,
+      "explanation": "Standard E. coli strains methylate GATC (Dam) and CCWGG (Dcm). Some enzymes are blocked by overlapping methylation. Prep the plasmid from a dam⁻/dcm⁻ strain, or choose a methylation-insensitive isoschizomer.",
+      "probe": "How would you find out whether your enzyme is Dam/Dcm sensitive before wasting a prep?"
+    },
+    {
+      "id": "restriction-digest-q4",
+      "nodeId": "restriction-digest",
+      "topic": "Restriction Digest / Units",
+      "difficulty": "core",
+      "prompt": "One 'unit' of a restriction enzyme is defined as:",
+      "options": [
+        "1 µL of enzyme",
+        "The amount that digests 1 µg of substrate DNA in 1 hour at the recommended temperature",
+        "1 mg of protein",
+        "Enough to cut any plasmid instantly"
+      ],
+      "answer": 1,
+      "explanation": "A unit cuts 1 µg of the standard substrate (often λ DNA) in 1 hour under optimal conditions. You scale units to your DNA amount and desired time — but excess units invite star activity, so more is not always better.",
+      "probe": "You have 2 µg of DNA and want a 15-minute digest — how do you think about units?"
+    },
+    {
+      "id": "ligation-q1",
+      "nodeId": "ligation",
+      "topic": "Ligation",
+      "difficulty": "core",
+      "prompt": "For a standard sticky-end ligation, a common vector : insert MOLAR ratio to try first is:",
+      "options": [
+        "1 : 1 by mass",
+        "Roughly 1 : 3 (vector : insert) by moles",
+        "10 : 1 vector : insert",
+        "It doesn't matter"
+      ],
+      "answer": 1,
+      "explanation": "~1:3 molar excess of insert favors vector–insert joining over vector recircularization. Note it's by MOLES, not mass — a short insert has many more molecules per ng than a long vector, so you convert using fragment lengths.",
+      "probe": "Why must the ratio be computed in moles rather than nanograms?"
+    },
+    {
+      "id": "ligation-q2",
+      "nodeId": "ligation",
+      "topic": "Ligation",
+      "difficulty": "core",
+      "prompt": "T4 DNA ligase needs which cofactor, and what must the fragment ends carry?",
+      "options": [
+        "Mg²⁺ only; ends need 3' overhangs",
+        "ATP; ends need a 5' phosphate (and a 3'-OH) to be joined",
+        "GTP; ends must be blunt",
+        "No cofactor; any ends work"
+      ],
+      "answer": 1,
+      "explanation": "T4 ligase uses ATP to seal a nick between a 5'-phosphate and a 3'-hydroxyl. PCR products (from unphosphorylated primers) lack a 5'-phosphate and won't ligate until phosphorylated (PNK) — conversely, dephosphorylating a vector (CIP) prevents its self-ligation.",
+      "probe": "Given that, why does dephosphorylating the vector cut down on empty background colonies?"
+    },
+    {
+      "id": "ligation-q3",
+      "nodeId": "ligation",
+      "topic": "Ligation",
+      "difficulty": "advanced",
+      "prompt": "Blunt-end ligation is much less efficient than sticky-end. Which adjustment helps most?",
+      "options": [
+        "Less ligase, less insert",
+        "More concentrated ends, more ligase, longer/ cooler incubation, and PEG crowding",
+        "Higher temperature (37 °C)",
+        "Add EDTA"
+      ],
+      "answer": 1,
+      "explanation": "Blunt ends have no base-pairing to hold ends together, so raise effective end concentration, use more ligase, incubate longer (often 16 °C overnight — a balance between ligase activity and transient end annealing), and PEG (crowding agent) boosts intermolecular joining.",
+      "probe": "Why is 16 °C a common compromise temperature for ligation?"
+    },
+    {
+      "id": "plasmid-insertion-q1",
+      "nodeId": "plasmid-insertion",
+      "topic": "Transformation",
+      "difficulty": "core",
+      "prompt": "In heat-shock transformation of chemically competent E. coli, what is the correct thermal sequence?",
+      "options": [
+        "Room temp → boil → freeze",
+        "Ice (cells + DNA) → 42 °C heat shock ~30–45 s → back on ice → recover in SOC at 37 °C",
+        "42 °C for 10 min → ice",
+        "Only room temperature throughout"
+      ],
+      "answer": 1,
+      "explanation": "Keep competent cells + DNA on ice so DNA associates with the membrane, give a brief 42 °C shock to create transient pores for uptake, return to ice, then add rich medium (SOC) and shake at 37 °C ~1 h so cells recover and express the resistance gene BEFORE plating on selection.",
+      "probe": "Why is the outgrowth/recovery step essential when your marker is antibiotic resistance?"
+    },
+    {
+      "id": "plasmid-insertion-q2",
+      "nodeId": "plasmid-insertion",
+      "topic": "Transformation / Controls",
+      "difficulty": "advanced",
+      "prompt": "Your ligation-plus-transformation gives lots of colonies, but so does your 'vector-only, no-insert' control. What does that tell you?",
+      "options": [
+        "Great cloning — proceed",
+        "High background of self-ligated/uncut vector; your colonies are probably empty vector, not clones",
+        "The antibiotic failed",
+        "The cells are dead"
+      ],
+      "answer": 1,
+      "explanation": "The vector-only control measures background from uncut or self-ligated vector. If it's high, most experimental colonies are empty vector. Fixes: ensure complete double digest, dephosphorylate the vector, gel-purify the cut backbone, use directional cloning.",
+      "probe": "Which control tells you the competent cells and antibiotic are behaving (a positive and a cells-only control)?"
+    },
+    {
+      "id": "plasmid-insertion-q3",
+      "nodeId": "plasmid-insertion",
+      "topic": "Transformation",
+      "difficulty": "core",
+      "prompt": "What is the role of the antibiotic-resistance gene on the plasmid during transformation?",
+      "options": [
+        "It kills the E. coli",
+        "Selectable marker: only cells that took up (and maintain) the plasmid survive on antibiotic plates",
+        "It replicates the plasmid",
+        "It expresses your protein of interest"
+      ],
+      "answer": 1,
+      "explanation": "The resistance marker is the selection: plate on the matching antibiotic and only transformants with the plasmid grow. It's paired with an origin of replication (copy number) and, in expression vectors, a promoter driving your gene.",
+      "probe": "What two other plasmid features besides the marker determine copy number and expression?"
+    },
+    {
+      "id": "plasmid-insertion-q4",
+      "nodeId": "plasmid-insertion",
+      "topic": "Blue-white screening",
+      "difficulty": "advanced",
+      "prompt": "On X-gal/IPTG plates with a lacZα cloning vector, a WHITE colony usually means:",
+      "options": [
+        "No plasmid at all",
+        "Insert disrupted lacZα (no functional β-gal) → likely contains your insert",
+        "The colony is contaminated",
+        "Empty vector"
+      ],
+      "answer": 1,
+      "explanation": "Blue-white screening: intact lacZα cleaves X-gal → blue. An insert cloned into the MCS disrupts lacZα, so no β-gal, so the colony stays white — a quick first-pass indicator of a successful insertion (confirm by colony PCR/sequencing).",
+      "probe": "Why is white only a first screen and not proof of the correct construct?"
+    },
+    {
+      "id": "confirmation-q1",
+      "nodeId": "confirmation",
+      "topic": "Colony PCR / Screening",
+      "difficulty": "core",
+      "prompt": "In colony PCR to screen transformants, why include an initial longer 95 °C hold and why is Taq fine here?",
+      "options": [
+        "To purify the DNA; Taq is high-fidelity",
+        "The hot start lyses cells to release template; you only need to check SIZE, so proofreading fidelity isn't required",
+        "To anneal primers; Taq is cheapest only",
+        "No reason"
+      ],
+      "answer": 1,
+      "explanation": "An extended initial denaturation lyses the picked colony to free template. Because you're only asking 'is an insert of the right size present?', cheap Taq is fine — you don't need high fidelity for a size check. Sequence-verify the positive clones afterward.",
+      "probe": "Design a primer strategy that distinguishes empty vector from insert by band size."
+    },
+    {
+      "id": "sequencing-q1",
+      "nodeId": "sequencing",
+      "topic": "Sanger Sequencing",
+      "difficulty": "core",
+      "prompt": "Sanger sequencing determines sequence by:",
+      "options": [
+        "Cutting DNA with enzymes",
+        "Chain termination: fluorescently labelled ddNTPs randomly stop extension, giving a nested set of fragments read by size",
+        "Measuring absorbance",
+        "Counting colonies"
+      ],
+      "answer": 1,
+      "explanation": "Dideoxynucleotides (ddNTPs) lack the 3'-OH needed to extend, so incorporation terminates the chain. A population of terminated fragments of every length, separated by capillary electrophoresis with base-specific fluorescence, is read off as the sequence (the chromatogram).",
+      "probe": "How do you choose a sequencing primer's position relative to the region you want to read cleanly?"
+    },
+    {
+      "id": "sequencing-q2",
+      "nodeId": "sequencing",
+      "topic": "Sequencing QC",
+      "difficulty": "advanced",
+      "prompt": "Your Sanger chromatogram is clean for the first ~30 bases then shows overlapping double peaks for the rest. Most likely explanation?",
+      "options": [
+        "Perfect read",
+        "Two templates / a mixed population (e.g. a heterozygous indel or two plasmids), or primer binding two sites — the traces superimpose",
+        "The dye ran out",
+        "The DNA was too pure"
+      ],
+      "answer": 1,
+      "explanation": "Superimposed peaks after a clean start typically mean two sequences are being read at once: a mixed plasmid prep, a frameshift/indel making the two alleles diverge at that point, or a primer with two binding sites. Re-streak for a single colony and re-prep.",
+      "probe": "How would a single-colony re-streak distinguish a mixed prep from a true heterozygous template?"
+    },
+    {
+      "id": "gibson-q1",
+      "nodeId": "gibson",
+      "topic": "Gibson Assembly",
+      "difficulty": "core",
+      "prompt": "Gibson assembly joins fragments that share overlapping ends using three activities in one tube at 50 °C. What are they?",
+      "options": [
+        "Restriction enzyme, ligase, phosphatase",
+        "5' exonuclease (chews back to expose overlaps), polymerase (fills gaps), ligase (seals nicks)",
+        "Reverse transcriptase, primase, helicase",
+        "Only DNA ligase"
+      ],
+      "answer": 1,
+      "explanation": "A T5 exonuclease chews 5' ends to expose complementary single-stranded overlaps that anneal; a polymerase fills remaining gaps; a ligase seals the nicks — all isothermally at 50 °C. It's scarless and sequence-independent, needing ~20–40 bp overlaps designed into the fragment ends.",
+      "probe": "How do you design the overlap regions when ordering primers/gBlocks for Gibson?"
+    },
+    {
+      "id": "gibson-q2",
+      "nodeId": "gibson",
+      "topic": "Gibson vs classic cloning",
+      "difficulty": "advanced",
+      "prompt": "A key advantage of Gibson assembly over restriction–ligation cloning is:",
+      "options": [
+        "It needs no DNA",
+        "Scarless, sequence-independent joining and easy multi-fragment assembly (no reliance on unique restriction sites)",
+        "It's always cheaper",
+        "It cannot make errors"
+      ],
+      "answer": 1,
+      "explanation": "Gibson doesn't depend on the presence/absence of restriction sites, leaves no scar sequence at junctions, and can assemble several fragments at once — ideal when your insert contains internal sites or you're building multi-part constructs. The cost is careful overlap design.",
+      "probe": "When might classic restriction–ligation still be the better choice?"
+    },
+    {
+      "id": "golden-gate-q1",
+      "nodeId": "golden-gate",
+      "topic": "Golden Gate",
+      "difficulty": "advanced",
+      "prompt": "Golden Gate assembly uses Type IIS enzymes (e.g. BsaI). What property makes it 'scarless' and one-pot?",
+      "options": [
+        "They cut at random",
+        "Type IIS enzymes cut OUTSIDE their recognition site, so the site is removed from the product and custom overhangs are defined by the user",
+        "They don't need a buffer",
+        "They methylate DNA"
+      ],
+      "answer": 1,
+      "explanation": "Type IIS enzymes recognize one sequence but cleave a defined distance away, leaving user-designed 4-nt overhangs and removing the recognition site from the final assembly. Cut and ligate cycle in one pot because re-formed junctions no longer contain the enzyme site, driving the reaction to completion (MoClo/standardized parts).",
+      "probe": "Why must you 'domesticate' internal BsaI sites out of your parts first?"
+    },
+    {
+      "id": "crispr-q1",
+      "nodeId": "crispr",
+      "topic": "CRISPR",
+      "difficulty": "core",
+      "prompt": "For SpCas9, a valid target requires a PAM adjacent to the ~20 nt protospacer. What is SpCas9's canonical PAM?",
+      "options": [
+        "TATA",
+        "NGG (immediately 3' of the 20 nt target)",
+        "AATT",
+        "No PAM is needed"
+      ],
+      "answer": 1,
+      "explanation": "SpCas9 requires a 5'-NGG-3' PAM immediately 3' of the 20-nt protospacer; without a PAM, Cas9 won't cut regardless of gRNA match. The gRNA supplies the 20-nt specificity; the PAM is checked by the protein.",
+      "probe": "Why can't you target a site that has a perfect 20-nt match but no adjacent NGG?"
+    },
+    {
+      "id": "crispr-q2",
+      "nodeId": "crispr",
+      "topic": "CRISPR",
+      "difficulty": "core",
+      "prompt": "You want a precise sequence edit (knock-IN), not just a knockout. What must you supply besides Cas9 + gRNA?",
+      "options": [
+        "Nothing extra",
+        "A repair template (donor DNA) with homology arms, so HDR installs the edit",
+        "More Cas9",
+        "A restriction enzyme"
+      ],
+      "answer": 1,
+      "explanation": "A double-strand break repaired by NHEJ gives indels → knockouts. For a precise edit you provide a donor template with homology arms flanking the desired change so homology-directed repair (HDR) copies it in. HDR is less efficient and largely restricted to dividing cells.",
+      "probe": "Why is HDR efficiency often the limiting factor, and how do people bias repair toward HDR?"
+    },
+    {
+      "id": "crispr-q3",
+      "nodeId": "crispr",
+      "topic": "CRISPR / Specificity",
+      "difficulty": "advanced",
+      "prompt": "The biggest specificity concern when choosing a gRNA is:",
+      "options": [
+        "GC content only",
+        "Off-target sites elsewhere in the genome with similar sequence + PAM",
+        "The colour of the plasmid",
+        "Primer-dimers"
+      ],
+      "answer": 1,
+      "explanation": "gRNAs can direct cutting at genomic sites that differ by a few mismatches (especially PAM-distal), causing off-target edits. Design tools score genome-wide off-targets; you pick unique guides, and high-fidelity Cas variants reduce off-target activity.",
+      "probe": "Which region of the 20-nt guide is most mismatch-sensitive (the 'seed'), and why does that matter for off-targets?"
+    },
+    {
+      "id": "protein-induction-q1",
+      "nodeId": "protein-induction",
+      "topic": "Protein Induction",
+      "difficulty": "core",
+      "prompt": "In a T7/lac expression system, IPTG induces expression because it:",
+      "options": [
+        "Feeds the cells",
+        "Is a non-hydrolyzable lactose analog that relieves lac repression, switching on the promoter",
+        "Kills uninduced cells",
+        "Purifies the protein"
+      ],
+      "answer": 1,
+      "explanation": "IPTG mimics allolactose and binds the lac repressor, derepressing the promoter driving T7 RNA polymerase (or the gene directly). Being non-metabolizable, its concentration stays roughly constant, giving steady induction. You typically induce at mid-log (OD600 ~0.5).",
+      "probe": "Why induce at mid-log OD600 rather than early lag or stationary phase?"
+    },
+    {
+      "id": "protein-induction-q2",
+      "nodeId": "protein-induction",
+      "topic": "Protein Induction / Solubility",
+      "difficulty": "advanced",
+      "prompt": "Your induced protein is abundant but ends up in insoluble inclusion bodies. Which change most commonly improves SOLUBLE yield?",
+      "options": [
+        "Induce harder: more IPTG at 42 °C",
+        "Lower the post-induction temperature (e.g. 16–25 °C) and/or reduce IPTG for slower folding",
+        "Add more antibiotic",
+        "Grow to stationary phase first"
+      ],
+      "answer": 1,
+      "explanation": "Overfast expression outruns folding/chaperones and aggregates into inclusion bodies. Slowing synthesis — lower temperature (16–25 °C, often overnight), less IPTG, richer/auto-induction media, or a solubility tag — gives chaperones time and boosts soluble yield.",
+      "probe": "How would you experimentally confirm the protein is in inclusion bodies vs the soluble fraction?"
+    },
+    {
+      "id": "protein-induction-q3",
+      "nodeId": "protein-induction",
+      "topic": "Expression controls",
+      "difficulty": "core",
+      "prompt": "To show induction actually worked before purifying, what do you run?",
+      "options": [
+        "Only the final elution",
+        "SDS-PAGE of pre-induction vs post-induction whole-cell samples, looking for a new band at the expected MW",
+        "A PCR",
+        "A miniprep"
+      ],
+      "answer": 1,
+      "explanation": "Compare uninduced (0 h) and induced (post-IPTG) whole-cell lysates on SDS-PAGE; a strong new band at your protein's predicted molecular weight in the induced lane confirms expression. Then check soluble vs insoluble fractions.",
+      "probe": "Where would you expect your target band if the protein is ~40 kDa?"
+    },
+    {
+      "id": "cell-lysis-q1",
+      "nodeId": "cell-lysis",
+      "topic": "Cell Lysis",
+      "difficulty": "core",
+      "prompt": "You lyse E. coli by sonication for a His-tagged protein prep. Why keep the sample ICE-COLD and add protease inhibitors?",
+      "options": [
+        "To speed lysis",
+        "Sonication heats the sample and lysis releases proteases; cold + inhibitors prevent denaturation and degradation of your target",
+        "To help the tag bind",
+        "Cold makes cells lyse faster"
+      ],
+      "answer": 1,
+      "explanation": "Sonication deposits heat that can denature protein, and breaking cells frees proteases that chew your target. Keep everything on ice, pulse with rests, and include protease inhibitors (and often DNase to cut viscosity from released genomic DNA).",
+      "probe": "Why is the lysate viscous, and what do you add to fix it before loading a column?"
+    },
+    {
+      "id": "cell-lysis-q2",
+      "nodeId": "cell-lysis",
+      "topic": "Cell Lysis",
+      "difficulty": "core",
+      "prompt": "After lysis you centrifuge hard. For a soluble cytoplasmic protein, which fraction do you load onto the affinity column?",
+      "options": [
+        "The pellet (debris + inclusion bodies)",
+        "The cleared supernatant (soluble lysate)",
+        "Both mixed",
+        "Neither"
+      ],
+      "answer": 1,
+      "explanation": "A high-speed spin pellets membranes, unbroken cells, and inclusion bodies; the soluble protein stays in the cleared supernatant, which you load onto the column. (If your protein is in the pellet, that's the inclusion-body problem.)",
+      "probe": "If almost nothing binds the column, how do you tell 'didn't express' from 'expressed but insoluble'?"
+    },
+    {
+      "id": "affinity-purification-q1",
+      "nodeId": "affinity-purification",
+      "topic": "Affinity Purification (His-tag)",
+      "difficulty": "core",
+      "prompt": "A His6-tagged protein is purified on Ni-NTA resin. What elutes the bound protein?",
+      "options": [
+        "High salt",
+        "Imidazole (competes with histidine for Ni²⁺), typically a rising gradient/high concentration",
+        "Water",
+        "Low pH only, never imidazole"
+      ],
+      "answer": 1,
+      "explanation": "The His-tag chelates immobilized Ni²⁺; imidazole (an imidazole ring like histidine's side chain) competes for the nickel and releases the protein. A low imidazole concentration in the wash removes weak binders; high imidazole elutes your target (low pH is an alternative elution).",
+      "probe": "Why put a LOW concentration of imidazole in the wash buffer?"
+    },
+    {
+      "id": "affinity-purification-q2",
+      "nodeId": "affinity-purification",
+      "topic": "Affinity Purification",
+      "difficulty": "advanced",
+      "prompt": "Your Ni-NTA elution contains your protein plus several E. coli contaminant bands. Most likely cause + fix?",
+      "options": [
+        "Column too clean; add more contaminants",
+        "Native His-rich E. coli proteins bind weakly; add low imidazole to wash/binding buffer and/or a second polishing step (SEC/ion-exchange)",
+        "Use water for everything",
+        "Skip washing"
+      ],
+      "answer": 1,
+      "explanation": "Some native proteins with surface histidines bind Ni weakly. Including 10–20 mM imidazole in binding/wash buffers strips them while keeping your tagged protein bound; a second orthogonal step (size-exclusion or ion-exchange) polishes to high purity.",
+      "probe": "How does size-exclusion chromatography separate proteins on a totally different principle from affinity?"
+    },
+    {
+      "id": "affinity-purification-q3",
+      "nodeId": "affinity-purification",
+      "topic": "Purification / Tags",
+      "difficulty": "advanced",
+      "prompt": "Why might you place a protease cleavage site (e.g. TEV) between the His-tag and your protein?",
+      "options": [
+        "To help it bind nickel",
+        "So you can remove the tag after purification, leaving native (or near-native) protein",
+        "To make it glow",
+        "To increase toxicity"
+      ],
+      "answer": 1,
+      "explanation": "A cleavable linker (TEV/ PreScission/ thrombin site) lets you purify via the tag, then cut the tag off — useful when the tag could interfere with activity, crystallization, or assays. You often re-run over Ni-NTA to remove the freed tag and protease.",
+      "probe": "After TEV cleavage, how does a second Ni-NTA pass separate cut protein from tag + His-tagged TEV?"
+    },
+    {
+      "id": "sds-page-q1",
+      "nodeId": "sds-page",
+      "topic": "SDS-PAGE",
+      "difficulty": "core",
+      "prompt": "In SDS-PAGE, what does SDS do so that proteins separate by SIZE alone?",
+      "options": [
+        "Cuts the protein",
+        "Coats proteins with uniform negative charge and denatures them, so migration depends on mass, not native charge/shape",
+        "Stains the bands",
+        "Cross-links proteins"
+      ],
+      "answer": 1,
+      "explanation": "SDS is an anionic detergent that unfolds proteins and binds ~proportionally to length, swamping intrinsic charge so the charge-to-mass ratio is roughly constant. Then migration through polyacrylamide depends on size — small proteins run farther.",
+      "probe": "What does the reducing agent (DTT/β-mercaptoethanol) in the loading buffer additionally accomplish?"
+    },
+    {
+      "id": "sds-page-q2",
+      "nodeId": "sds-page",
+      "topic": "SDS-PAGE",
+      "difficulty": "core",
+      "prompt": "Why is a gel 'discontinuous' with a low-% stacking gel above a higher-% resolving gel?",
+      "options": [
+        "Decoration",
+        "The stacking gel concentrates all samples into a thin sharp band before they enter the resolving gel, improving band resolution",
+        "To slow the dye",
+        "To hold the comb"
+      ],
+      "answer": 1,
+      "explanation": "The stacking gel (large pores, different pH) sandwiches proteins between leading Cl⁻ and trailing glycine ions, focusing them into a razor-thin zone so every protein enters the resolving gel at the same line — giving sharp, well-separated bands.",
+      "probe": "What determines whether you pour a 10% vs a 15% resolving gel?"
+    },
+    {
+      "id": "sds-page-q3",
+      "nodeId": "sds-page",
+      "topic": "SDS-PAGE / Detection",
+      "difficulty": "foundational",
+      "prompt": "After running, you stain the gel with Coomassie Blue. What is the approximate detection limit / purpose?",
+      "options": [
+        "Detects single molecules",
+        "Total-protein stain visualizing bands down to ~tens of ng; used to assess purity and size",
+        "Only detects DNA",
+        "Measures enzyme activity"
+      ],
+      "answer": 1,
+      "explanation": "Coomassie is a general protein stain (LOD ~50–100 ng/band) for judging purity, size, and relative amount. For higher sensitivity use silver stain; for specific identification use a Western blot with antibodies.",
+      "probe": "When would you choose a Western blot over Coomassie?"
+    },
+    {
+      "id": "western-blot-q1",
+      "nodeId": "western-blot",
+      "topic": "Western Blot",
+      "difficulty": "core",
+      "prompt": "What does the BLOCKING step (e.g. milk/BSA) prevent in a Western blot?",
+      "options": [
+        "It transfers the protein",
+        "Non-specific antibody binding to empty membrane, which would cause high background",
+        "It denatures the antibody",
+        "It stains total protein"
+      ],
+      "answer": 1,
+      "explanation": "After transfer, unoccupied membrane would bind antibody non-specifically. Blocking coats those sites with inert protein so the antibody only binds its target, giving clean specific bands instead of a grey smear.",
+      "probe": "Why might BSA be preferred over milk when probing for a phosphoprotein?"
+    },
+    {
+      "id": "western-blot-q2",
+      "nodeId": "western-blot",
+      "topic": "Western Blot",
+      "difficulty": "advanced",
+      "prompt": "Primary then secondary antibody: what's the role of the enzyme-conjugated SECONDARY antibody?",
+      "options": [
+        "It binds the target protein directly",
+        "It binds the primary antibody and provides signal amplification + the detectable enzyme (HRP) for chemiluminescence",
+        "It transfers protein to membrane",
+        "It blocks the membrane"
+      ],
+      "answer": 1,
+      "explanation": "The unlabeled primary binds the target; multiple enzyme-linked secondaries bind each primary (amplification) and carry HRP/AP that turns substrate into light/color at the band. One labeled secondary works for many primaries of the same host species.",
+      "probe": "Why must the secondary be raised against the primary's host species?"
+    },
+    {
+      "id": "elisa-q1",
+      "nodeId": "elisa",
+      "topic": "ELISA",
+      "difficulty": "core",
+      "prompt": "In a SANDWICH ELISA, the analyte is captured between two antibodies. What generates the quantitative signal?",
+      "options": [
+        "DNA polymerase",
+        "An enzyme (e.g. HRP) on the detection antibody converts substrate to a colored/luminescent product proportional to analyte",
+        "Gel migration",
+        "Centrifugation"
+      ],
+      "answer": 1,
+      "explanation": "Capture antibody binds analyte; a detection antibody binds a second epitope; its conjugated enzyme turns substrate into signal measured on a plate reader. Signal scales with analyte concentration, read against a standard curve.",
+      "probe": "Why does a sandwich format give better specificity than a direct ELISA?"
+    },
+    {
+      "id": "elisa-q2",
+      "nodeId": "elisa",
+      "topic": "ELISA / Quantitation",
+      "difficulty": "advanced",
+      "prompt": "To turn ELISA absorbance into a concentration you must:",
+      "options": [
+        "Guess",
+        "Run a standard curve of known concentrations and interpolate your unknowns",
+        "Only read one well",
+        "Use the A260/A280 ratio"
+      ],
+      "answer": 1,
+      "explanation": "You run serial dilutions of a known standard, fit a curve (often 4-parameter logistic), and interpolate sample absorbances to get concentration. Samples must fall within the curve's linear/usable range — dilute if over-range.",
+      "probe": "What do you do if a sample's signal is above the top standard?"
+    },
+    {
+      "id": "rna-purification-q1",
+      "nodeId": "rna-purification",
+      "topic": "RNA Purification",
+      "difficulty": "core",
+      "prompt": "The biggest practical enemy when working with RNA is:",
+      "options": [
+        "UV light",
+        "Ubiquitous, robust RNases — from skin/benches — that degrade RNA; work RNase-free (gloves, RNaseZap, dedicated reagents)",
+        "Too much ethanol",
+        "Cold temperatures"
+      ],
+      "answer": 1,
+      "explanation": "RNases are everywhere and extremely stable, so RNA work demands RNase-free tubes/tips/water, frequent glove changes, RNaseZap-treated surfaces, and keeping samples cold. A guanidinium lysis buffer (TRIzol) both lyses cells and inactivates RNases.",
+      "probe": "How does TRIzol/guanidinium protect RNA during extraction?"
+    },
+    {
+      "id": "rna-purification-q2",
+      "nodeId": "rna-purification",
+      "topic": "RNA QC",
+      "difficulty": "advanced",
+      "prompt": "On a denaturing gel / Bioanalyzer of total eukaryotic RNA, intact RNA shows a 28S:18S rRNA ratio near 2:1. A smeared, low-ratio trace means:",
+      "options": [
+        "Perfect RNA",
+        "Degradation — RNase activity has chewed the RNA (low RIN)",
+        "Too much RNA",
+        "DNA contamination only"
+      ],
+      "answer": 1,
+      "explanation": "Sharp 28S and 18S bands (~2:1) indicate intact RNA (high RIN). Degraded RNA loses that ratio and smears toward small sizes — a warning that downstream RT-qPCR/RNA-seq will be unreliable. Prokaryotic rRNA (23S/16S) is the analogous check.",
+      "probe": "Why would you check RIN before committing an RNA sample to library prep?"
+    },
+    {
+      "id": "rt-qpcr-q1",
+      "nodeId": "rt-qpcr",
+      "topic": "RT-qPCR",
+      "difficulty": "core",
+      "prompt": "In RT-qPCR, what does the 'RT' step do and why is it required first?",
+      "options": [
+        "Restriction of the template",
+        "Reverse transcription converts RNA → cDNA, because the qPCR polymerase amplifies DNA, not RNA",
+        "Real-time detection",
+        "Removes primers"
+      ],
+      "answer": 1,
+      "explanation": "Reverse transcriptase makes complementary DNA from your RNA (using oligo-dT, random hexamers, or gene-specific primers). qPCR then amplifies that cDNA. Without RT there's no DNA template to quantify.",
+      "probe": "Why is a '-RT' (no reverse transcriptase) control useful for detecting genomic DNA contamination?"
+    },
+    {
+      "id": "rt-qpcr-q2",
+      "nodeId": "rt-qpcr",
+      "topic": "qPCR / Quantitation",
+      "difficulty": "advanced",
+      "prompt": "A lower Ct (quantification cycle) for a target means:",
+      "options": [
+        "Less starting template",
+        "More starting template (it crossed threshold in fewer cycles)",
+        "The reaction failed",
+        "Nothing about abundance"
+      ],
+      "answer": 1,
+      "explanation": "Ct is the cycle where signal crosses threshold; more starting template crosses earlier → lower Ct. Each ~1 Ct ≈ a doubling (~3.3 Ct per 10×). Relative expression is computed vs a reference gene (ΔΔCt), which normalizes input differences.",
+      "probe": "Why normalize to a housekeeping/reference gene rather than comparing raw Ct?"
+    },
+    {
+      "id": "dna101-q1",
+      "nodeId": "dna101",
+      "topic": "DNA Fundamentals",
+      "difficulty": "foundational",
+      "prompt": "DNA strands are described as antiparallel and are synthesized by polymerases in which direction?",
+      "options": [
+        "3'→5'",
+        "5'→3' (adding to the free 3'-OH)",
+        "Either direction randomly",
+        "Only 5'→5'"
+      ],
+      "answer": 1,
+      "explanation": "The two strands run antiparallel (5'→3' opposite 3'→5'). All DNA polymerases add nucleotides to the free 3'-OH, so synthesis is 5'→3'. This underlies primer design, Okazaki fragments, and why ddNTPs (no 3'-OH) terminate chains.",
+      "probe": "Why does the 5'→3' rule mean a primer's 3' end must match the template to extend?"
+    },
+    {
+      "id": "plasmids101-q1",
+      "nodeId": "plasmids101",
+      "topic": "Plasmids",
+      "difficulty": "foundational",
+      "prompt": "Which three features are essential to a basic cloning/expression plasmid?",
+      "options": [
+        "Promoter, telomere, centromere",
+        "Origin of replication, selectable marker, and a multiple cloning site (and, for expression, a promoter)",
+        "Only an origin",
+        "Ribosome and mitochondrion"
+      ],
+      "answer": 1,
+      "explanation": "An origin of replication (sets host range + copy number), a selectable marker (antibiotic resistance for selection), and a multiple cloning site/insert region are core; expression vectors add a promoter, RBS, and often a tag. Recognizing these on a plasmid map is fundamental.",
+      "probe": "How does the choice of origin affect plasmid copy number and yield?"
+    },
+    {
+      "id": "backbone-selection-q1",
+      "nodeId": "backbone-selection",
+      "topic": "Vector Choice",
+      "difficulty": "core",
+      "prompt": "You need high protein yield in E. coli with tight control of leaky expression. Which backbone feature matters most?",
+      "options": [
+        "A eukaryotic CMV promoter",
+        "A tightly regulated inducible promoter (e.g. T7/lac with lacI) and a suitable copy number",
+        "No promoter at all",
+        "A mammalian origin"
+      ],
+      "answer": 1,
+      "explanation": "Match the vector to the host and goal: for E. coli expression, a strong inducible promoter (T7) with tight repression (lacI/pLysS) minimizes leaky/toxic expression before induction. A CMV promoter is for mammalian cells and wouldn't drive E. coli expression.",
+      "probe": "Why would a toxic protein specifically demand tight (low-leak) repression?"
+    },
+    {
+      "id": "genomic-dna-q1",
+      "nodeId": "genomic-dna",
+      "topic": "Genomic DNA Extraction",
+      "difficulty": "core",
+      "prompt": "Why handle high-molecular-weight genomic DNA gently (wide-bore tips, minimal vortexing)?",
+      "options": [
+        "It's radioactive",
+        "Long genomic DNA is easily sheared by mechanical force, which harms applications needing long intact fragments (e.g. long-read sequencing)",
+        "Vortexing denatures it permanently",
+        "It has no effect"
+      ],
+      "answer": 1,
+      "explanation": "Genomic DNA molecules are very long and fragile; pipetting hard or vortexing shears them. For PCR of short amplicons some shearing is tolerable, but long-read sequencing and cloning of large fragments need gentle handling to preserve length.",
+      "probe": "Contrast this with plasmid prep — why is shearing a bigger deal for one than the other?"
+    },
+    {
+      "id": "protein-design-q1",
+      "nodeId": "protein-design",
+      "topic": "Computational Protein Design",
+      "difficulty": "core",
+      "prompt": "In an AlphaFold2 prediction, what does a per-residue pLDDT score tell you?",
+      "options": [
+        "The protein's melting temperature",
+        "Per-residue confidence in the predicted local structure (high pLDDT = reliable)",
+        "The binding affinity",
+        "The expression level"
+      ],
+      "answer": 1,
+      "explanation": "pLDDT is AlphaFold's per-residue confidence (0-100). High-pLDDT regions are reliably predicted; low-pLDDT often marks disordered/flexible regions. It is confidence, not correctness or function - and not thermostability.",
+      "probe": "Why might a low-pLDDT stretch be biologically meaningful rather than just 'wrong'?"
+    },
+    {
+      "id": "protein-design-q2",
+      "nodeId": "protein-design",
+      "topic": "Computational Protein Design",
+      "difficulty": "advanced",
+      "prompt": "ProteinMPNN is used for 'inverse folding.' What problem does it solve?",
+      "options": [
+        "Predicts structure from sequence",
+        "Given a target backbone/structure, designs amino-acid sequences likely to fold into it",
+        "Docks two proteins",
+        "Measures stability experimentally"
+      ],
+      "answer": 1,
+      "explanation": "Inverse folding is the reverse of structure prediction: given a desired 3D backbone, ProteinMPNN proposes sequences that should adopt it. You then re-predict those sequences (AlphaFold/ESMFold) to check they fold back to the target.",
+      "probe": "How does 'design then re-predict then compare RMSD' (self-consistency) filter good designs?"
+    },
+    {
+      "id": "protein-design-q3",
+      "nodeId": "protein-design",
+      "topic": "Computational Protein Design",
+      "difficulty": "advanced",
+      "prompt": "You designed 1000 binders in silico. Why is a 'self-consistency' check (design to structure to re-fold) important before ordering genes?",
+      "options": [
+        "It measures binding affinity directly",
+        "It flags designs whose sequence does not actually re-fold to the intended backbone, cutting wet-lab waste",
+        "It is not necessary",
+        "It replaces experimental testing entirely"
+      ],
+      "answer": 1,
+      "explanation": "Self-consistency (does the designed sequence, when folded by an independent predictor, return to the target backbone with low RMSD and high confidence?) is a cheap in-silico filter that removes likely-nonfolding designs before you spend money synthesizing and testing them. It does not prove function - that still needs the wet lab.",
+      "probe": "What in-silico metrics besides RMSD would you use to rank the survivors?"
+    },
+    {
+      "id": "cell-free-q1",
+      "nodeId": "cell-free",
+      "topic": "Cell-Free Systems",
+      "difficulty": "core",
+      "prompt": "A cell-free (TX-TL) reaction expresses a protein without living cells. Where do transcription and translation happen?",
+      "options": [
+        "Inside intact bacteria",
+        "In a cell extract or reconstituted (PURE) system supplied with energy and amino acids",
+        "In a thermocycler only",
+        "On a sequencing flow cell"
+      ],
+      "answer": 1,
+      "explanation": "Cell-free uses the transcription/translation machinery in a crude lysate (or the purified PURE system) plus an energy mix and amino acids. You add DNA template and read output - no transformation, no growth.",
+      "probe": "Why can linear PCR templates be used cell-free but are risky, and what limits their lifetime?"
+    },
+    {
+      "id": "cell-free-q2",
+      "nodeId": "cell-free",
+      "topic": "Cell-Free Systems",
+      "difficulty": "advanced",
+      "prompt": "Which situation most favors cell-free over in-vivo expression?",
+      "options": [
+        "Producing kilograms of a cheap enzyme",
+        "Rapidly prototyping circuits or expressing a product toxic to living cells, or a freeze-dried field biosensor",
+        "When you need the cheapest possible reaction",
+        "Long-term continuous culture"
+      ],
+      "answer": 1,
+      "explanation": "Cell-free shines for fast prototyping (hours, easy to vary), toxic products (no cell to kill), and portable freeze-dried diagnostics. It is generally more expensive per reaction and not the route for bulk, low-cost production - that is fermentation.",
+      "probe": "Why does removing the cell membrane simplify prototyping of genetic circuits?"
+    },
+    {
+      "id": "genetic-circuits-q1",
+      "nodeId": "genetic-circuits",
+      "topic": "Genetic Circuits",
+      "difficulty": "core",
+      "prompt": "Why build genetic circuits from CHARACTERISED standard parts and standardised assembly (MoClo)?",
+      "options": [
+        "It looks impressive",
+        "Composability + predictability: known part strengths and scarless one-pot assembly make circuit behaviour more designable",
+        "It avoids needing DNA",
+        "It removes the need for testing"
+      ],
+      "answer": 1,
+      "explanation": "Characterised parts (known promoter/RBS strengths) plus standardised assembly (MoClo/Golden Gate) let you compose circuits predictably and rebuild variants fast. It reduces - but does not remove - the need to characterise the assembled circuit.",
+      "probe": "What are 'context effects' that can make a well-characterised part misbehave in a new circuit?"
+    },
+    {
+      "id": "genetic-circuits-q2",
+      "nodeId": "genetic-circuits",
+      "topic": "Genetic Circuits",
+      "difficulty": "advanced",
+      "prompt": "In tools like Cello, how is Boolean logic (e.g. a NOR gate) physically implemented in a cell?",
+      "options": [
+        "With silicon transistors",
+        "With repressor proteins acting on promoters - transcriptional regulation implements the logic",
+        "By cutting DNA with CRISPR",
+        "With antibiotics"
+      ],
+      "answer": 1,
+      "explanation": "Genetic logic gates are built from repressors/activators wired to promoters (e.g. NOT/NOR from a repressor turning off a promoter). Cello compiles a truth table into a layout of such gates using characterised parts.",
+      "probe": "Why does 'gate load' / retroactivity make chaining many genetic gates harder than chaining electronic ones?"
+    },
+    {
+      "id": "building-genomes-q1",
+      "nodeId": "building-genomes",
+      "topic": "Building Genomes",
+      "difficulty": "advanced",
+      "prompt": "Why is genome-scale DNA built by HIERARCHICAL assembly rather than synthesized in one piece?",
+      "options": [
+        "Tradition",
+        "Synthesis has length/error limits, so you build and sequence-verify oligos to genes to cassettes to segments, preventing errors from propagating",
+        "It is cheaper to guess",
+        "Genomes are small"
+      ],
+      "answer": 1,
+      "explanation": "You cannot reliably synthesize a chromosome directly; DNA synthesis is limited in length and accuracy. Hierarchical assembly builds and verifies at each tier so errors are caught early instead of compounding across a megabase.",
+      "probe": "What did JCVI-syn3.0 demonstrate about how many genes a cell minimally needs?"
+    },
+    {
+      "id": "biofabrication-q1",
+      "nodeId": "biofabrication",
+      "topic": "Biofabrication",
+      "difficulty": "core",
+      "prompt": "Engineered living materials / biofabrication (e.g. mycelium, bacterial cellulose) differ from normal manufacturing because:",
+      "options": [
+        "They are 3D-printed from plastic",
+        "The material is GROWN by organisms under controlled conditions, adding constraints of biology, reproducibility, and scale",
+        "They require no design",
+        "They cannot be sustainable"
+      ],
+      "answer": 1,
+      "explanation": "Biofabrication grows materials via living systems (fungi, bacteria), so you design the growth process and scaffold rather than machining a part - trading manufacturing control for biological constraints and sustainability upside.",
+      "probe": "What reproducibility challenges does 'growing' a material introduce versus casting or milling one?"
+    },
+    {
+      "id": "lab-automation-q1",
+      "nodeId": "lab-automation",
+      "topic": "Lab Automation",
+      "difficulty": "core",
+      "prompt": "What is the primary reason biotech labs and biofoundries invest in automated liquid handling?",
+      "options": [
+        "Robots are cheaper than any technician",
+        "Reproducibility, throughput, and a traceable record - the same protocol runs identically across hundreds of samples",
+        "To eliminate all scientists",
+        "Robots never need calibration"
+      ],
+      "answer": 1,
+      "explanation": "Automation's value is consistency at scale and traceability (every step logged), enabling design-build-test-learn cycles that manual pipetting cannot match. Robots still need careful calibration and good protocol design.",
+      "probe": "Give an example of a step you would deliberately keep manual, and why."
+    },
+    {
+      "id": "lab-automation-q2",
+      "nodeId": "lab-automation",
+      "topic": "Lab Automation",
+      "difficulty": "core",
+      "prompt": "Opentrons protocols are written in Python. Before a run touches real samples, what is the essential safety step?",
+      "options": [
+        "Nothing - just run it",
+        "Calibrate labware/tip offsets and do a dry run (no liquid) to catch collisions and mis-picks",
+        "Run it twice as fast",
+        "Skip the deck layout"
+      ],
+      "answer": 1,
+      "explanation": "You define the deck map and labware, calibrate offsets, then dry-run to verify motions, tip pickup, and no collisions before committing precious samples. A wrong offset or labware definition otherwise crashes the tip or aspirates air.",
+      "probe": "How do 'liquid classes' (aspiration/dispense speeds) matter when automating viscous or volatile reagents?"
+    },
+    {
+      "id": "lab-automation-q3",
+      "nodeId": "lab-automation",
+      "topic": "Lab Automation",
+      "difficulty": "advanced",
+      "prompt": "Which is a real, common failure mode of automated liquid handling that you must design around?",
+      "options": [
+        "The robot inventing new samples",
+        "Tip pickup failures, evaporation in long runs, and inaccurate transfers of viscous/volatile liquids",
+        "Too much reproducibility",
+        "Perfect results every time"
+      ],
+      "answer": 1,
+      "explanation": "Automation fails in specific ways: missed/partial tip pickup, evaporation over long unattended runs, and volume error on non-aqueous liquids without tuned liquid classes. Good protocols add checks, sealing, and calibration for these.",
+      "probe": "How would you detect a silent pipetting error in an overnight automated run?"
+    },
+    {
+      "id": "bioinformatics-q1",
+      "nodeId": "bioinformatics",
+      "topic": "Bioinformatics",
+      "difficulty": "core",
+      "prompt": "What extra information does a FASTQ file carry that a FASTA file does not?",
+      "options": [
+        "The organism name",
+        "A per-base quality (Phred) score for every nucleotide",
+        "The 3D structure",
+        "The plasmid map"
+      ],
+      "answer": 1,
+      "explanation": "FASTA is just header + sequence. FASTQ adds a per-base Phred quality score (encoded as ASCII), letting you QC and trim reads by confidence - essential before alignment or variant calling.",
+      "probe": "A Phred score of 30 corresponds to what error probability, roughly?"
+    },
+    {
+      "id": "bioinformatics-q2",
+      "nodeId": "bioinformatics",
+      "topic": "Bioinformatics",
+      "difficulty": "core",
+      "prompt": "In a BLAST result, which combination best indicates a strong, trustworthy hit?",
+      "options": [
+        "High e-value, low identity",
+        "Low e-value (near 0), high percent identity, and high query coverage",
+        "Any hit at all",
+        "Short alignment length only"
+      ],
+      "answer": 1,
+      "explanation": "A low e-value means the match is unlikely by chance; combined with high percent identity AND high query coverage it is a strong hit. A great identity over a tiny fraction of the query (low coverage) can still be misleading.",
+      "probe": "Why can a high-identity but low-coverage hit be misleading?"
+    },
+    {
+      "id": "ngs-analysis-q1",
+      "nodeId": "ngs-analysis",
+      "topic": "NGS Analysis",
+      "difficulty": "core",
+      "prompt": "What does 'read depth' (coverage) mean, and why does it matter for variant calling?",
+      "options": [
+        "The physical length of the flow cell",
+        "How many reads cover a given position - higher depth gives more confidence a called variant is real, not an error",
+        "The number of genes",
+        "The GC content"
+      ],
+      "answer": 1,
+      "explanation": "Depth/coverage = number of reads spanning a position. Low depth cannot distinguish a true heterozygous variant from a sequencing error; adequate, even coverage is prerequisite to confident calls.",
+      "probe": "Why is uniform coverage as important as average coverage?"
+    },
+    {
+      "id": "ngs-analysis-q2",
+      "nodeId": "ngs-analysis",
+      "topic": "NGS Analysis",
+      "difficulty": "advanced",
+      "prompt": "Reads still contain sequencing adapters. If you align without trimming them, what happens?",
+      "options": [
+        "Nothing",
+        "Adapter bases cause mismatches/soft-clipping and mis-mapping, degrading alignment and inflating false variants",
+        "Faster alignment",
+        "Better coverage"
+      ],
+      "answer": 1,
+      "explanation": "Untrimmed adapters and low-quality tails cause misalignment, soft-clipping, and spurious variant calls. Standard practice is FastQC then adapter/quality trimming before mapping - garbage in, garbage out.",
+      "probe": "How would MultiQC help you catch this across a whole batch of samples?"
+    },
+    {
+      "id": "ml-for-biology-q1",
+      "nodeId": "ml-for-biology",
+      "topic": "ML / AI for Biology",
+      "difficulty": "advanced",
+      "prompt": "The single most common way a biological ML model gives falsely great performance is:",
+      "options": [
+        "Too little training data",
+        "Data leakage - test sequences are near-homologs of training sequences, so a random split overstates generalization",
+        "Using a GPU",
+        "Too many epochs"
+      ],
+      "answer": 1,
+      "explanation": "Biological sequences are related by evolution, so a random train/test split puts near-duplicates on both sides and the model 'memorizes' homology. You must split by sequence/structure identity (cluster first) so the test set is genuinely novel.",
+      "probe": "How do tools like MMseqs2/CD-HIT clustering give you a leakage-resistant split?"
+    },
+    {
+      "id": "ml-for-biology-q2",
+      "nodeId": "ml-for-biology",
+      "topic": "ML / AI for Biology",
+      "difficulty": "core",
+      "prompt": "What is a protein language model (e.g. ESM) primarily used for as a tool?",
+      "options": [
+        "Running PCR",
+        "Producing learned per-residue/per-protein embeddings that capture structure/function signal for downstream tasks",
+        "Sequencing DNA",
+        "Sorting cells"
+      ],
+      "answer": 1,
+      "explanation": "Protein LMs trained on millions of sequences produce embeddings that encode evolutionary/structural/functional information; these features power downstream predictors (function, stability, variant effects) and can guide design.",
+      "probe": "Why can an embedding-based model work with far fewer labeled examples than training from raw sequence?"
+    },
+    {
+      "id": "ml-for-biology-q3",
+      "nodeId": "ml-for-biology",
+      "topic": "ML / AI for Biology",
+      "difficulty": "core",
+      "prompt": "How should you treat a generative model's top designs (or a predictor's top hits)?",
+      "options": [
+        "As finished, validated results",
+        "As hypotheses to be validated experimentally, reporting real wet-lab hit rate, not just held-out metrics",
+        "As proof of function",
+        "As unusable"
+      ],
+      "answer": 1,
+      "explanation": "Model output is a prioritized hypothesis list. The honest metric is the experimental hit rate when you actually build and test top candidates - held-out AUC/accuracy can be inflated (leakage) and never proves biological function.",
+      "probe": "What does a low wet-lab hit rate despite high held-out accuracy usually indicate?"
+    },
+    {
+      "id": "flow-cytometry-q1",
+      "nodeId": "flow-cytometry",
+      "topic": "Flow Cytometry",
+      "difficulty": "core",
+      "prompt": "On a flow cytometer, forward scatter (FSC) and side scatter (SSC) report roughly:",
+      "options": [
+        "Two fluorescence colors",
+        "Cell size (FSC) and internal complexity/granularity (SSC)",
+        "DNA and RNA content",
+        "pH and temperature"
+      ],
+      "answer": 1,
+      "explanation": "FSC correlates with cell size and SSC with internal granularity/complexity. Together they gate cells from debris and separate populations (e.g. lymphocytes vs granulocytes) before fluorescence is even considered.",
+      "probe": "How do you use FSC height vs area to exclude doublets?"
+    },
+    {
+      "id": "flow-cytometry-q2",
+      "nodeId": "flow-cytometry",
+      "topic": "Flow Cytometry",
+      "difficulty": "advanced",
+      "prompt": "Why is 'compensation' necessary in multicolor flow cytometry?",
+      "options": [
+        "To make cells brighter",
+        "Fluorophore emission spectra overlap, so signal spills into other detectors; single-stain controls correct this spillover",
+        "To sort faster",
+        "To fix the pH"
+      ],
+      "answer": 1,
+      "explanation": "Fluorophores have broad, overlapping emission, so a dye meant for one channel bleeds into others. Compensation (from single-stain controls) mathematically subtracts spillover; without it, spillover masquerades as a real double-positive population.",
+      "probe": "What is an FMO control and what does it let you set that single-stains do not?"
+    },
+    {
+      "id": "mammalian-cell-culture-q1",
+      "nodeId": "mammalian-cell-culture",
+      "topic": "Mammalian Cell Culture",
+      "difficulty": "core",
+      "prompt": "Why passage (split) adherent cells before they become fully over-confluent?",
+      "options": [
+        "To waste media",
+        "Over-confluence causes contact inhibition/stress that alters growth and phenotype, and cells can detach/die",
+        "It makes them grow faster forever",
+        "Confluence does not matter"
+      ],
+      "answer": 1,
+      "explanation": "At/over 100% confluence, contact inhibition, nutrient depletion, and stress change behavior and can trigger detachment/death. Passaging at ~70-80% keeps cells healthy and phenotypically stable.",
+      "probe": "How does seeding density at split affect the next passage's health and timing?"
+    },
+    {
+      "id": "mammalian-cell-culture-q2",
+      "nodeId": "mammalian-cell-culture",
+      "topic": "Mammalian Cell Culture",
+      "difficulty": "advanced",
+      "prompt": "Mycoplasma contamination is dangerous in cell culture mainly because:",
+      "options": [
+        "It turns media bright red instantly",
+        "It is invisible (no turbidity), yet silently alters cell physiology and ruins data - requiring routine testing to detect",
+        "It kills cells within minutes visibly",
+        "It only affects bacteria"
+      ],
+      "answer": 1,
+      "explanation": "Unlike bacterial/fungal contamination, mycoplasma does not cloud the media - cultures look fine while gene expression, growth, and results are corrupted. You must test routinely (PCR/stain) because you cannot see it.",
+      "probe": "Why does the standard CO2 incubator + bicarbonate media system need the CO2 level maintained (what does phenol-red tell you)?"
+    },
+    {
+      "id": "directed-evolution-q1",
+      "nodeId": "directed-evolution",
+      "topic": "Directed Evolution",
+      "difficulty": "core",
+      "prompt": "The governing principle of directed evolution is often stated as:",
+      "options": [
+        "You get what you design",
+        "'You get what you select for' - the selection/screen, not the library, determines the outcome",
+        "More mutations is always better",
+        "Selection is optional"
+      ],
+      "answer": 1,
+      "explanation": "Diversity (error-prone PCR, shuffling) supplies variants, but the selection pressure decides which survive. A poorly designed assay evolves variants that cheat the readout rather than acquiring the property you actually want.",
+      "probe": "Give an example of a selection that could be 'gamed' by an unintended solution."
+    },
+    {
+      "id": "directed-evolution-q2",
+      "nodeId": "directed-evolution",
+      "topic": "Directed Evolution",
+      "difficulty": "advanced",
+      "prompt": "What is the practical difference between SELECTION and SCREENING in a directed-evolution campaign?",
+      "options": [
+        "They are identical",
+        "Selection couples the desired property to survival (huge libraries, hands-off); screening measures each variant individually (smaller libraries, more information)",
+        "Screening is always better",
+        "Selection needs no assay"
+      ],
+      "answer": 1,
+      "explanation": "Selection links the trait to survival/growth so only winners persist - it scales to enormous libraries but tells you little about losers. Screening assays variants one by one (e.g. plate-based, FACS) - richer data but throughput-limited. Choose by library size and what you can couple to survival.",
+      "probe": "How does FACS blur the line by enabling high-throughput screening at selection-like scale?"
+    },
+    {
+      "id": "biomanufacturing-q1",
+      "nodeId": "biomanufacturing",
+      "topic": "Biomanufacturing",
+      "difficulty": "advanced",
+      "prompt": "Going from a shake flask to a large bioreactor, which factor most commonly becomes the scale-up bottleneck?",
+      "options": [
+        "The color of the vessel",
+        "Oxygen transfer and mixing - gradients in dissolved O2, pH, and nutrients appear at scale",
+        "The plasmid sequence",
+        "The antibiotic"
+      ],
+      "answer": 1,
+      "explanation": "At scale, you cannot mix and aerate as efficiently; oxygen transfer (kLa) and mixing time create gradients the cells never saw in a flask. Managing DO, agitation, and feed is the core of scale-up engineering.",
+      "probe": "Why does simply increasing stirrer speed to add oxygen create its own problem (shear)?"
+    },
+    {
+      "id": "biomanufacturing-q2",
+      "nodeId": "biomanufacturing",
+      "topic": "Biomanufacturing",
+      "difficulty": "core",
+      "prompt": "In a fed-batch process, how does it differ from a simple batch culture?",
+      "options": [
+        "Nothing",
+        "Nutrients are fed gradually during the run to control growth and avoid overflow metabolism, extending high productivity",
+        "It uses no cells",
+        "It runs colder"
+      ],
+      "answer": 1,
+      "explanation": "Batch provides all nutrients up front; fed-batch feeds substrate gradually to keep cells in a productive state and avoid inhibitory byproducts (e.g. acetate/overflow metabolism), typically boosting titer. Continuous processes feed and harvest simultaneously.",
+      "probe": "What is 'overflow metabolism' and why does feeding slowly help avoid it?"
+    },
+    {
+      "id": "doe-statistics-q1",
+      "nodeId": "doe-statistics",
+      "topic": "DoE & Rigor",
+      "difficulty": "core",
+      "prompt": "Why is Design of Experiments (DoE) usually better than changing one factor at a time (OFAT)?",
+      "options": [
+        "It uses fewer replicates",
+        "It varies factors together, so it finds interactions and the optimum with fewer total runs than OFAT",
+        "It avoids statistics",
+        "OFAT is actually better"
+      ],
+      "answer": 1,
+      "explanation": "OFAT misses interactions (where the best level of A depends on B) and is inefficient. Factorial/response-surface DoE varies factors simultaneously, revealing interactions and locating optima with fewer experiments.",
+      "probe": "Give an example where two factors interact so strongly that OFAT would find the wrong optimum."
+    },
+    {
+      "id": "doe-statistics-q2",
+      "nodeId": "doe-statistics",
+      "topic": "DoE & Rigor",
+      "difficulty": "advanced",
+      "prompt": "What distinguishes biological replicates from technical replicates, and why does it matter for your statistics?",
+      "options": [
+        "Nothing, they are interchangeable",
+        "Biological replicates are independent samples (capture real variability); technical replicates re-measure the same sample - only biological replicates support claims about the population",
+        "Technical replicates increase sample size for inference",
+        "Replicates are unnecessary"
+      ],
+      "answer": 1,
+      "explanation": "Technical replicates measure instrument/handling noise on one sample; biological replicates are independent biological units and capture the variability you actually want to generalize over. Treating technical replicates as n inflates significance (pseudoreplication).",
+      "probe": "How does pseudoreplication lead to p-values that fail to reproduce?"
+    },
+    {
+      "id": "biosafety-biosecurity-q1",
+      "nodeId": "biosafety-biosecurity",
+      "topic": "Biosafety & Biosecurity",
+      "difficulty": "core",
+      "prompt": "Biosafety Levels (BSL-1 to BSL-4) are assigned based primarily on:",
+      "options": [
+        "The size of the lab",
+        "The risk of the biological agent (pathogenicity, transmissibility, treatability) and the work being done",
+        "The budget",
+        "The number of staff"
+      ],
+      "answer": 1,
+      "explanation": "BSL is set by agent risk and procedure: BSL-1 (non-pathogenic, e.g. lab E. coli), BSL-2 (moderate-risk), BSL-3 (serious/airborne, e.g. TB), BSL-4 (lethal, no treatment, e.g. Ebola). Each level adds containment, PPE, and practices.",
+      "probe": "What containment upgrades distinguish BSL-2 from BSL-3?"
+    },
+    {
+      "id": "biosafety-biosecurity-q2",
+      "nodeId": "biosafety-biosecurity",
+      "topic": "Biosafety & Biosecurity",
+      "difficulty": "advanced",
+      "prompt": "What is the distinction between biosafety and biosecurity, and where does DNA-synthesis screening fit?",
+      "options": [
+        "They are the same thing",
+        "Biosafety prevents accidental harm; biosecurity prevents deliberate misuse - synthesis providers screening orders against pathogens/toxins is a biosecurity control",
+        "Biosecurity is only about lab coats",
+        "Screening is unrelated to either"
+      ],
+      "answer": 1,
+      "explanation": "Biosafety = protecting people/environment from accidents (containment, PPE). Biosecurity = preventing malicious misuse or diversion. Gene-synthesis screening (IGSC members check orders against dangerous sequences) is a front-line biosecurity measure, alongside DURC oversight.",
+      "probe": "Why is dual-use research of concern (DURC) governance a professional obligation, not just a regulatory box?"
+    },
+    {
+      "id": "intro-q1",
+      "nodeId": "intro",
+      "topic": "Lab Orientation",
+      "difficulty": "foundational",
+      "prompt": "Before doing any genetic-modification work described in this curriculum, the non-negotiable first step is:",
+      "options": [
+        "Order reagents immediately",
+        "Confirm you are working in a legal, registered/approved space with appropriate oversight and documentation",
+        "Post the protocol publicly",
+        "Skip records to save time"
+      ],
+      "answer": 1,
+      "explanation": "Much of this work constitutes genetic modification and is regulated in most jurisdictions. Working in an approved space (institutional/registered community lab) with the right oversight and a documented record is the baseline professional and legal requirement - everything else follows from it.",
+      "probe": "Who would you approach for approval of a recombinant DNA experiment at an institution?"
+    },
+    {
+      "id": "host-selection-q1",
+      "nodeId": "host-selection",
+      "topic": "Host Selection",
+      "difficulty": "core",
+      "prompt": "Why is a laboratory K-12 derivative of E. coli the default chassis for beginner synthetic biology?",
+      "options": [
+        "It grows the slowest",
+        "It is non-pathogenic (BSL-1), extremely well-characterised, fast-growing, and genetically tractable",
+        "It is the only bacterium that takes plasmids",
+        "It requires no containment rules at all"
+      ],
+      "answer": 1,
+      "explanation": "K-12 lab strains are disabled, non-pathogenic, and enormously well-characterised, with mature tools (plasmids, markers, protocols). That makes results interpretable and the work BSL-1. It still requires proper practice and oversight - 'safe strain' is not 'no rules'.",
+      "probe": "What would push you to choose a different chassis, such as yeast or Bacillus?"
+    },
+    {
+      "id": "buffer-mixing-q1",
+      "nodeId": "buffer-mixing",
+      "topic": "Buffers & Reagents",
+      "difficulty": "core",
+      "prompt": "You need 50 mL of 1x TAE from a 50x stock. How much stock do you use, and why does buffer choice matter in a gel?",
+      "options": [
+        "50 mL stock; buffer is irrelevant",
+        "1 mL stock + 49 mL water; the buffer carries current and maintains pH so DNA charge/migration stays consistent",
+        "25 mL stock; it makes the gel set",
+        "5 mL stock; it stains the DNA"
+      ],
+      "answer": 1,
+      "explanation": "C1V1 = C2V2: 50x to 1x is a 50-fold dilution, so 50 mL / 50 = 1 mL stock topped to 50 mL. The buffer conducts current and holds pH constant - without it DNA charge and migration drift and the gel runs poorly (or overheats).",
+      "probe": "What happens to a gel run if you use water instead of running buffer in the tank?"
+    },
+    {
+      "id": "gblock-design-q1",
+      "nodeId": "gblock-design",
+      "topic": "Synthetic DNA Design",
+      "difficulty": "advanced",
+      "prompt": "When designing a synthetic gene fragment (gBlock) for expression in E. coli, which design consideration matters most?",
+      "options": [
+        "Making it as GC-rich as possible",
+        "Codon optimisation for the host plus avoiding extreme GC, long repeats, and strong secondary structure that break synthesis",
+        "Adding as many restriction sites as possible",
+        "Keeping it under 20 bp"
+      ],
+      "answer": 1,
+      "explanation": "Synthesis vendors fail on repeats, homopolymers, hairpins, and extreme GC; expression suffers from rare codons in the host. So you codon-optimise for the chassis and smooth out the sequence complexity - while also adding the overhangs/sites your assembly method needs.",
+      "probe": "Why can codon optimisation occasionally hurt, e.g. for co-translational folding?"
+    },
+    {
+      "id": "gradient-pcr-q1",
+      "nodeId": "gradient-pcr",
+      "topic": "Gradient PCR",
+      "difficulty": "core",
+      "prompt": "What is the purpose of running a gradient PCR?",
+      "options": [
+        "To test many templates at once",
+        "To test a range of annealing temperatures in one run and empirically find the one giving specific, strong product",
+        "To increase the extension time",
+        "To replace the need for primers"
+      ],
+      "answer": 1,
+      "explanation": "A gradient block applies different annealing temperatures across the rows in a single run, so you can identify the optimum empirically rather than guessing from calculated Tm - the fastest way to fix weak or nonspecific amplification.",
+      "probe": "Once you find the optimum on a gradient, what do you check on the gel to pick the winning temperature?"
+    },
+    {
+      "id": "flanking-addition-q1",
+      "nodeId": "flanking-addition",
+      "topic": "Flanking Sequence Addition",
+      "difficulty": "advanced",
+      "prompt": "You add restriction sites/assembly overhangs as 5' tails on your PCR primers. Why does the 3' end of the primer have to stay perfectly complementary to the template?",
+      "options": [
+        "It does not matter",
+        "Polymerase extends from the 3' end - a mismatched 3' end will not prime, while the unmatched 5' tail is simply incorporated into the product",
+        "The 3' end binds the enzyme",
+        "The 5' tail must match the template instead"
+      ],
+      "answer": 1,
+      "explanation": "Extension initiates at the 3'-OH, so 3' complementarity is essential for priming. The 5' tail need not match: in cycle 1 it hangs off, and from cycle 2 onward it is copied into the amplicon - which is exactly how you append sites, overhangs, or tags.",
+      "probe": "After how many cycles is the added flanking sequence present on both ends of the product?"
+    },
+    {
+      "id": "sdm-q1",
+      "nodeId": "sdm",
+      "topic": "Site-Directed Mutagenesis",
+      "difficulty": "advanced",
+      "prompt": "After a whole-plasmid site-directed mutagenesis PCR, you digest with DpnI before transforming. What does DpnI do?",
+      "options": [
+        "Cuts the new mutant plasmid",
+        "Cuts Dam-METHYLATED DNA - destroying the original template from E. coli while sparing the unmethylated PCR product",
+        "Ligates the ends",
+        "Removes the primers"
+      ],
+      "answer": 1,
+      "explanation": "DpnI cleaves methylated GATC. The parental plasmid, prepped from a Dam+ E. coli strain, is methylated and gets destroyed; the newly synthesised (in vitro, unmethylated) mutant product survives. Skipping DpnI leaves a huge background of wild-type template.",
+      "probe": "What would your screening results look like if you forgot the DpnI step?"
+    },
+    {
+      "id": "proteins101-q1",
+      "nodeId": "proteins101",
+      "topic": "Proteins 101",
+      "difficulty": "foundational",
+      "prompt": "Which statement about protein structure is correct?",
+      "options": [
+        "Primary structure is the 3D fold",
+        "Primary structure is the amino-acid sequence; secondary is local motifs (alpha-helix/beta-sheet); tertiary is the 3D fold; quaternary is multi-subunit assembly",
+        "Quaternary structure applies to every protein",
+        "Secondary structure means the gene sequence"
+      ],
+      "answer": 1,
+      "explanation": "Sequence (primary) determines local hydrogen-bonded motifs (secondary), which pack into the 3D fold (tertiary); quaternary applies only to proteins with multiple subunits. This hierarchy is why a single point mutation can cascade into a misfolded, non-functional protein.",
+      "probe": "Roughly how do you estimate a protein's molecular weight from its number of residues?"
+    },
+    {
+      "id": "final-project-q1",
+      "nodeId": "final-project",
+      "topic": "Integrated Project",
+      "difficulty": "core",
+      "prompt": "You express and purify a protein end-to-end. Which set of checkpoints best proves the workflow actually worked?",
+      "options": [
+        "Only the final gel",
+        "Sequence-verified construct, induced vs uninduced SDS-PAGE, soluble vs insoluble fractions, and purity of the final elution",
+        "Colony count alone",
+        "The OD600 reading only"
+      ],
+      "answer": 1,
+      "explanation": "Each stage needs its own evidence: sequencing proves the construct, the +/- induction gel proves expression, the soluble/insoluble split proves it did not go to inclusion bodies, and the final gel proves purity. A single end-point gel cannot tell you where a failure occurred.",
+      "probe": "If the final elution is empty, how do these checkpoints let you localise the failure?"
+    },
+    {
+      "id": "advanced-omics-q1",
+      "nodeId": "advanced-omics",
+      "topic": "Omics",
+      "difficulty": "advanced",
+      "prompt": "Transcriptomics (RNA-seq) measures mRNA abundance. Why can it be a poor proxy for protein levels?",
+      "options": [
+        "mRNA and protein are always proportional",
+        "Post-transcriptional regulation, translation efficiency, and differing mRNA/protein stability decouple transcript abundance from protein abundance",
+        "RNA-seq measures protein directly",
+        "Proteins are not encoded by mRNA"
+      ],
+      "answer": 1,
+      "explanation": "mRNA-protein correlation is often modest: translation rate, protein turnover, and post-transcriptional/post-translational regulation all intervene. That is exactly why proteomics exists as a separate measurement layer rather than being inferred from RNA-seq.",
+      "probe": "When would you invest in proteomics rather than relying on transcriptomics?"
+    },
+    {
+      "id": "eln-lims-q1",
+      "nodeId": "eln-lims",
+      "topic": "ELN / LIMS & Data Hygiene",
+      "difficulty": "core",
+      "prompt": "What is the practical test of whether your electronic lab record is good enough?",
+      "options": [
+        "It is long",
+        "Another competent scientist could reproduce the experiment from your record alone - materials, conditions, and metadata all linked and versioned",
+        "Only you can understand it",
+        "It is stored on your laptop desktop"
+      ],
+      "answer": 1,
+      "explanation": "Records exist to make work reproducible and auditable. FAIR practice - linked materials with unique IDs, captured conditions/metadata, and versioned (never overwritten) entries - is what lets a colleague, an auditor, or future-you rerun the work.",
+      "probe": "Why is versioning a plasmid map preferable to overwriting the file?"
+    }
+  ]
+}

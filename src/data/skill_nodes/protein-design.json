@@ -1,0 +1,85 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "protein-design",
+  "title": {
+    "name": "computational protein design",
+    "level": 7
+  },
+  "project": "Protein Engineering",
+  "video": {
+    "url": ""
+  },
+  "time": 180,
+  "level": "advanced",
+  "overview": {
+    "description": "Design and optimise proteins in silico before you ever touch a bench. Structure predictors (AlphaFold2, ESMFold) fold a sequence; generative models (RFdiffusion) invent new backbones; inverse-folding models (ProteinMPNN) choose sequences that fold to a target shape. You filter computationally, then order genes and validate.",
+    "objectives": [
+      "predict a structure from sequence with AlphaFold2/ESMFold",
+      "generate a de novo backbone or binder with RFdiffusion",
+      "design sequences for a fold with ProteinMPNN (inverse folding)",
+      "rank designs in silico and plan experimental validation"
+    ],
+    "prerequisites": [
+      "Proteins 101",
+      "Primer Design (to order/clone the gene)"
+    ]
+  },
+  "steps": {
+    "description": "A design-build-test loop that starts on a GPU: specify the function, model or generate the structure, choose sequences, filter, then express and assay the winners.",
+    "intro": "Modern protein design front-loads the expensive wet-lab step with cheap in-silico screening: generate thousands of candidates, keep the few most likely to fold and function, and only build those.",
+    "tools": [
+      "AlphaFold2 / ColabFold or ESMFold",
+      "RFdiffusion (de novo backbones)",
+      "ProteinMPNN (inverse folding)",
+      "a gene-synthesis vendor + expression vector"
+    ],
+    "estimatatedTime": {
+      "setup": 45,
+      "config": 90,
+      "testing": 45
+    },
+    "instructions": [
+      {
+        "title": "Define the target",
+        "description": "State the function: a binder to a target, an enzyme scaffold, a stabilised variant. Fix the constraints (interface, active site, size)."
+      },
+      {
+        "title": "Model or generate",
+        "description": "Fold candidate sequences with AlphaFold2/ESMFold, or generate new backbones toward the target with RFdiffusion."
+      },
+      {
+        "title": "Design sequences",
+        "description": "Run ProteinMPNN on the backbone to pick sequences likely to fold to it; re-predict to check self-consistency (design then fold then compare RMSD)."
+      },
+      {
+        "title": "Filter & order",
+        "description": "Rank by pLDDT/ipTM, interface metrics, and self-consistency; order the top genes and clone into an expression vector."
+      },
+      {
+        "title": "Build & test",
+        "description": "Express, purify (His-tag), and assay binding/activity/stability. Feed results back into the next design round."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Design one protein (a binder, scaffold, or stabilised variant), show the in-silico evidence it should fold (structure prediction + self-consistency), and outline how you would express and test it."
+  },
+  "resources": [
+    {
+      "title": "HTGAA - Protein Design (Weeks 4-5)",
+      "url": "https://2026a.htgaa.org/"
+    },
+    {
+      "title": "AlphaFold / ColabFold (structure prediction)",
+      "url": "https://github.com/sokrypton/ColabFold"
+    },
+    {
+      "title": "RFdiffusion - de novo protein design (Baker Lab)",
+      "url": "https://github.com/RosettaCommons/RFdiffusion"
+    },
+    {
+      "title": "ProteinMPNN - inverse folding",
+      "url": "https://github.com/dauparas/ProteinMPNN"
+    }
+  ]
+}

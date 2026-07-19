@@ -1,0 +1,82 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "sterile-workspace",
+  "title": {
+    "name": "the sterile workspace",
+    "level": 1
+  },
+  "project": "Lab Setup",
+  "video": {
+    "url": ""
+  },
+  "time": 30,
+  "level": "beginner",
+  "overview": {
+    "description": "Before any synbio, you need PPE and a sterile workspace. Ethanol kills surface bacteria while the Bunsen flame creates an updraft - your cone of protection. Anything within ~2 feet of a roaring blue flame is reasonably safe from contamination.",
+    "objectives": [
+      "assemble basic PPE (gloves, lab coat, goggles)",
+      "create a sterile bench using 70% ethanol and a flame",
+      "understand the Bunsen 'cone of protection'",
+      "choose a media-sterilisation method (autoclave, pressure cooker, or microwave)"
+    ],
+    "prerequisites": [
+      "a workspace you can dedicate to lab work"
+    ]
+  },
+  "steps": {
+    "description": "Before any synbio, you need PPE and a sterile workspace. Ethanol kills surface bacteria while the Bunsen flame creates an updraft - your cone of protection. Anything within ~2 feet of a roaring blue flame is reasonably safe from contamination.",
+    "intro": "Before any synbio, you need PPE and a sterile workspace. Ethanol kills surface bacteria while the Bunsen flame creates an updraft - your cone of protection. Anything within ~2 feet of a roaring blue flame is reasonably safe from contamination.",
+    "tools": [
+      "nitrile gloves",
+      "lab coat",
+      "goggles",
+      "70% ethanol spray",
+      "Bunsen burner or portable equivalent",
+      "paper towels"
+    ],
+    "estimatatedTime": {
+      "setup": 5,
+      "config": 10,
+      "testing": 10
+    },
+    "instructions": [
+      {
+        "title": "Suit up",
+        "description": "Put on gloves, lab coat and goggles whenever working with hazardous reagents. Know the hazards of every reagent before you touch it."
+      },
+      {
+        "title": "Spray down the bench",
+        "description": "Spray your workspace with 70% ethanol and wipe dry. Spray bare hands and wrists - it won't disable RNAses but prevents most contamination."
+      },
+      {
+        "title": "Light the flame correctly",
+        "description": "Spark your lighter/match FIRST, then turn on the gas. Never release flammable gas before you have a flame."
+      },
+      {
+        "title": "Pick a sterilisation method",
+        "description": "Autoclave (gold standard), pressure cooker, or microwave (900 W / 10 min). If microwaving, incubate test plates at RT and 37C for a week to confirm sterility."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Photograph your set-up sterile workspace with PPE on and your flame lit. Note which media-sterilisation method you chose and why."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: The Sterile Workspace protocol",
+      "url": "https://www.neosynbio.com/the-sterile-workspace"
+    },
+    {
+      "title": "Addgene: Personal Protective Equipment (Intro to the Lab Bench)",
+      "url": "https://www.addgene.org/protocols/"
+    },
+    {
+      "title": "Microwave-sterilised media supports microbial growth (ResearchGate)",
+      "url": "https://www.researchgate.net/publication/215796685_Microwave_sterilized_media_supports_better_microbial_growth_than_autoclaved_media"
+    },
+    {
+      "title": "JoVE Science Education: Aseptic Technique",
+      "url": "https://www.jove.com/science-education"
+    }
+  ]
+}

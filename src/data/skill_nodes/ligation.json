@@ -1,0 +1,82 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "ligation",
+  "title": {
+    "name": "ligation & troubleshooting",
+    "level": 3
+  },
+  "project": "Cut & Paste Cloning",
+  "video": {
+    "url": "https://www.neb.com/en-us/tools-and-resources/video-library/dna-ligation"
+  },
+  "time": 90,
+  "level": "intermediate",
+  "overview": {
+    "description": "T4 DNA ligase glues DNA back together. Its buffer is the most thermosensitive reagent in the whole guide - 1-2 freeze/thaw cycles and it's done, so aliquot into 10 ul tubes. Controls aren't optional: they're your bumpers for debugging perishable reagents.",
+    "objectives": [
+      "set up a T4 DNA ligase reaction",
+      "protect thermosensitive ligase buffer with tiny aliquots",
+      "design the full panel of control plates"
+    ],
+    "prerequisites": [
+      "digested backbone and insert",
+      "T4 DNA ligase",
+      "competent cells"
+    ]
+  },
+  "steps": {
+    "description": "T4 DNA ligase glues DNA back together. Its buffer is the most thermosensitive reagent in the whole guide - 1-2 freeze/thaw cycles and it's done, so aliquot into 10 ul tubes. Controls aren't optional: they're your bumpers for debugging perishable reagents.",
+    "intro": "T4 DNA ligase glues DNA back together. Its buffer is the most thermosensitive reagent in the whole guide - 1-2 freeze/thaw cycles and it's done, so aliquot into 10 ul tubes. Controls aren't optional: they're your bumpers for debugging perishable reagents.",
+    "tools": [
+      "T4 DNA ligase",
+      "ligase buffer (aliquoted)",
+      "digested DNA",
+      "competent cells",
+      "control plates"
+    ],
+    "estimatatedTime": {
+      "setup": 15,
+      "config": 30,
+      "testing": 30
+    },
+    "instructions": [
+      {
+        "title": "Aliquot the buffer",
+        "description": "Split ligase buffer into 10 ul single-use tubes; only thaw one at a time."
+      },
+      {
+        "title": "Set up the reaction",
+        "description": "Combine vector, insert, ligase and ATP-containing buffer at the right molar ratio; add kinase if ends are dephosphorylated."
+      },
+      {
+        "title": "Run the controls",
+        "description": "Set up negative (no plasmid), positive (uncut), digest-only, ligation, and optional dephosphorylation plates."
+      },
+      {
+        "title": "Transform & interpret",
+        "description": "Transform the ligation mix and read each control plate to localise any failure."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Submit your ligation plus a labelled photo of all control plates, with a one-line interpretation of each."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Ligation & Troubleshooting",
+      "url": "https://www.neosynbio.com/ligation-troubleshooting"
+    },
+    {
+      "title": "NEB: DNA ligation with T4 DNA ligase (protocol)",
+      "url": "https://www.neb.com/en-us/protocols/0001/01/01/dna-ligation-with-t4-dna-ligase-m0202"
+    },
+    {
+      "title": "Addgene: DNA ligation protocol",
+      "url": "https://www.addgene.org/protocols/dna-ligation/"
+    },
+    {
+      "title": "Addgene: Plasmid screening strategies",
+      "url": "https://blog.addgene.org/plasmids-101-plasmid-screening-strategies"
+    }
+  ]
+}

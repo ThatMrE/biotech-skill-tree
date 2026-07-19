@@ -1,0 +1,72 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "gel-imaging",
+  "title": {
+    "name": "gel illumination & photography",
+    "level": 3
+  },
+  "project": "Analysis Core",
+  "video": {
+    "url": ""
+  },
+  "time": 30,
+  "level": "beginner",
+  "overview": {
+    "description": "You don't need a fancy transilluminator - a few LEDs, a black enclosure box and a smartphone can beat institutional kit. A badly lit photo of a perfect gel still looks terrible, so this step is as critical as running the gel.",
+    "objectives": [
+      "choose the right illumination for your stain",
+      "build a cheap enclosure + filter for a smartphone camera",
+      "avoid the classic gel-dropping tragedy"
+    ],
+    "prerequisites": [
+      "a stained gel",
+      "a light source"
+    ]
+  },
+  "steps": {
+    "description": "You don't need a fancy transilluminator - a few LEDs, a black enclosure box and a smartphone can beat institutional kit. A badly lit photo of a perfect gel still looks terrible, so this step is as critical as running the gel.",
+    "intro": "You don't need a fancy transilluminator - a few LEDs, a black enclosure box and a smartphone can beat institutional kit. A badly lit photo of a perfect gel still looks terrible, so this step is as critical as running the gel.",
+    "tools": [
+      "UV or blue-light source",
+      "orange/amber filter",
+      "dark enclosure",
+      "smartphone camera"
+    ],
+    "estimatatedTime": {
+      "setup": 5,
+      "config": 10,
+      "testing": 10
+    },
+    "instructions": [
+      {
+        "title": "Match light to stain",
+        "description": "Use the excitation wavelength your stain requires (UV for EtBr, blue light for many safer stains)."
+      },
+      {
+        "title": "Build an enclosure",
+        "description": "Use a 3D-printed or cardboard black box with an orange filter over the camera to cut glare."
+      },
+      {
+        "title": "Carry the gel carefully",
+        "description": "Everyone drops one eventually - support the gel fully on its way to the imager."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Submit a clean, well-exposed gel photo with the lanes and ladder clearly readable."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Gel Illumination & Photography",
+      "url": "https://www.neosynbio.com/gel-illumination-photography"
+    },
+    {
+      "title": "Flowers for Everyone (Sebastian S. Cocioba) - DIY synbio blog",
+      "url": "https://docs.google.com/document/d/10Y4NgXjMRvG_Vd5D4o2lPJp1ehY2R516gpfrh2PZWfw/edit"
+    },
+    {
+      "title": "Bio-Rad: gel documentation fundamentals",
+      "url": "https://www.bio-rad.com/en-us/applications-technologies/gel-documentation"
+    }
+  ]
+}

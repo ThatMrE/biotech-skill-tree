@@ -1,0 +1,75 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "micropipette",
+  "title": {
+    "name": "the micropipette",
+    "level": 1
+  },
+  "project": "Equipment",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=aSeod1Y5MRc"
+  },
+  "time": 30,
+  "level": "beginner",
+  "overview": {
+    "description": "The micropipette is the most important tool in your arsenal. Accurate, confident pipetting underpins every protocol in this tree - get comfortable here and everything downstream gets easier.",
+    "objectives": [
+      "set volume correctly across P10/P100/P1000",
+      "use first vs second stop",
+      "avoid bubbles and ensure accuracy/precision"
+    ],
+    "prerequisites": [
+      "a set of micropipettes and tips"
+    ]
+  },
+  "steps": {
+    "description": "The micropipette is the most important tool in your arsenal. Accurate, confident pipetting underpins every protocol in this tree - get comfortable here and everything downstream gets easier.",
+    "intro": "The micropipette is the most important tool in your arsenal. Accurate, confident pipetting underpins every protocol in this tree - get comfortable here and everything downstream gets easier.",
+    "tools": [
+      "P10/P100/P1000 micropipettes",
+      "appropriate tips",
+      "practice tubes",
+      "coloured water"
+    ],
+    "estimatatedTime": {
+      "setup": 5,
+      "config": 10,
+      "testing": 10
+    },
+    "instructions": [
+      {
+        "title": "Pick the right pipette",
+        "description": "Choose the pipette whose range brackets your target volume; never set beyond the marked range."
+      },
+      {
+        "title": "Set the volume",
+        "description": "Dial to the target volume, reading the digits correctly for each pipette model."
+      },
+      {
+        "title": "Aspirate & dispense",
+        "description": "Press to the first stop to draw up; use the second stop to fully expel. Pipette slowly to avoid bubbles."
+      },
+      {
+        "title": "Verify accuracy",
+        "description": "Practise with coloured water and, if possible, check by weighing on a balance."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Demonstrate accurate transfers across P10/P100/P1000 (a photo or short clip), and note any accuracy check you performed."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: THE Micropipette equipment guide",
+      "url": "https://www.neosynbio.com/micropipette"
+    },
+    {
+      "title": "Addgene: pipetting fundamentals (Intro to the Lab Bench)",
+      "url": "https://www.addgene.org/protocols/"
+    },
+    {
+      "title": "Eppendorf: how to pipette correctly",
+      "url": "https://www.eppendorf.com/us-en/lab-academy/lab-practice/"
+    }
+  ]
+}

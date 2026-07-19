@@ -1,0 +1,77 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "building-genomes",
+  "title": {
+    "name": "building genomes",
+    "level": 8
+  },
+  "project": "Genome-Scale",
+  "video": {
+    "url": ""
+  },
+  "time": 240,
+  "level": "advanced",
+  "overview": {
+    "description": "Design and assemble DNA at genome scale: minimal genomes (JCVI-syn3.0), the synthetic yeast Sc2.0, and whole-genome recoding to free up codons. Everything is hierarchical - oligos to genes to cassettes to chromosomes - and installation uses transplantation or CRISPR-based methods.",
+    "objectives": [
+      "plan hierarchical assembly of a genome-scale construct",
+      "explain minimal-genome and genome-recoding concepts",
+      "compare genome-installation methods (transplantation, iterative editing)",
+      "reason about error rate and verification at scale"
+    ],
+    "prerequisites": [
+      "Golden Gate / Gibson assembly",
+      "CRISPR / Cas9"
+    ]
+  },
+  "steps": {
+    "description": "Break a genome design into buildable tiers, synthesise and assemble bottom-up with error checking at each level, then install and verify.",
+    "intro": "You cannot synthesise a chromosome in one piece - genome engineering is a hierarchy of assemblies, each verified before it becomes a part in the next.",
+    "tools": [
+      "DNA synthesis + hierarchical assembly (Gibson/Golden Gate/yeast assembly)",
+      "genome-design software",
+      "a host for installation",
+      "long-read sequencing for verification"
+    ],
+    "estimatatedTime": {
+      "setup": 60,
+      "config": 120,
+      "testing": 60
+    },
+    "instructions": [
+      {
+        "title": "Design & segment",
+        "description": "Design the target sequence (e.g. recode codons, remove/refactor elements) and split it into synthesisable segments with defined junctions."
+      },
+      {
+        "title": "Assemble hierarchically",
+        "description": "Build oligos to genes to cassettes to megabase segments, sequence-verifying at each tier so errors do not propagate."
+      },
+      {
+        "title": "Install",
+        "description": "Introduce the synthetic DNA into a host by transplantation or iterative CRISPR-based replacement."
+      },
+      {
+        "title": "Verify function",
+        "description": "Confirm the genome with long-read sequencing and test viability/phenotype of the engineered strain."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Outline a genome-scale project (minimal genome, recoding, or a large refactor): the hierarchical assembly plan, the installation method, and how you would verify it."
+  },
+  "resources": [
+    {
+      "title": "HTGAA - Building Genomes (Week 12)",
+      "url": "https://2026a.htgaa.org/"
+    },
+    {
+      "title": "JCVI - minimal synthetic cell (Syn3.0)",
+      "url": "https://www.jcvi.org/research/first-minimal-synthetic-bacterial-cell"
+    },
+    {
+      "title": "Sc2.0 - the synthetic yeast genome project",
+      "url": "https://syntheticyeast.github.io/"
+    }
+  ]
+}

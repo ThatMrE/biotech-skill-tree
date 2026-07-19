@@ -1,0 +1,80 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "affinity-purification",
+  "title": {
+    "name": "affinity tag purification",
+    "level": 7
+  },
+  "project": "Protein Production",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=JpWJraFcFp4"
+  },
+  "time": 150,
+  "level": "advanced",
+  "overview": {
+    "description": "With an affinity tag (designed in at the gBlock stage), purification is tractable: the tag binds a substrate (His-tag to Ni-NTA), contaminants wash away, then a competitor (imidazole) elutes your protein. FPLC scales this up; gravity columns work on a budget.",
+    "objectives": [
+      "bind, wash and elute a His-tagged protein on Ni-NTA",
+      "use imidazole gradients to maximise purity",
+      "consider cheaper tags (Car9/silica) at design time"
+    ],
+    "prerequisites": [
+      "clarified lysate with a tagged protein",
+      "Ni-NTA resin"
+    ]
+  },
+  "steps": {
+    "description": "With an affinity tag (designed in at the gBlock stage), purification is tractable: the tag binds a substrate (His-tag to Ni-NTA), contaminants wash away, then a competitor (imidazole) elutes your protein. FPLC scales this up; gravity columns work on a budget.",
+    "intro": "With an affinity tag (designed in at the gBlock stage), purification is tractable: the tag binds a substrate (His-tag to Ni-NTA), contaminants wash away, then a competitor (imidazole) elutes your protein. FPLC scales this up; gravity columns work on a budget.",
+    "tools": [
+      "Ni-NTA resin / spin columns",
+      "binding/wash/elution buffers",
+      "imidazole",
+      "centrifuge or gravity column"
+    ],
+    "estimatatedTime": {
+      "setup": 25,
+      "config": 50,
+      "testing": 50
+    },
+    "instructions": [
+      {
+        "title": "Bind",
+        "description": "Apply cleared lysate to equilibrated Ni-NTA resin so the His-tag binds the nickel."
+      },
+      {
+        "title": "Wash",
+        "description": "Wash with low-imidazole buffer (~20-30 mM) to remove weakly-bound contaminants."
+      },
+      {
+        "title": "Elute",
+        "description": "Elute with high imidazole (~250-500 mM); collect fractions for analysis."
+      },
+      {
+        "title": "Analyse",
+        "description": "Save load, flow-through, wash and elution fractions for SDS-PAGE."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Purify a tagged protein and submit the fraction set (load/FT/wash/elution) ready for an SDS-PAGE gel."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Affinity Tag Purification",
+      "url": "https://www.neosynbio.com/affinity-tag-purification"
+    },
+    {
+      "title": "Thermo Fisher: His-tagged protein production & purification",
+      "url": "https://www.thermofisher.com/us/en/home/life-science/protein-biology/protein-biology-learning-center/protein-biology-resource-library/pierce-protein-methods/his-tagged-proteins-production-purification.html"
+    },
+    {
+      "title": "Thermo Fisher: HisPur Ni-NTA purification kit handbook",
+      "url": "https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0011702_HisPur_NiNTA_Purifi_UG.pdf"
+    },
+    {
+      "title": "Hebrew University: small-scale His-tag purification protocol",
+      "url": "https://wolfson.huji.ac.il/purification/TagProteinPurif/HisTag_nature.htm"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "gradient-pcr",
+  "title": {
+    "name": "gradient pcr",
+    "level": 4
+  },
+  "project": "Amplification",
+  "video": {
+    "url": ""
+  },
+  "time": 60,
+  "level": "intermediate",
+  "overview": {
+    "description": "A gradient thermocycler runs the same reaction at a different temperature per column, testing up to 12 annealing temperatures at once. Without one, you can run the same reaction day after day - a gradient cycler is a quality-of-life upgrade worth scouting university surplus for.",
+    "objectives": [
+      "use a temperature gradient to optimise annealing",
+      "interpret a gradient gel to pick the best Tm",
+      "substitute day-by-day runs if you lack a gradient cycler"
+    ],
+    "prerequisites": [
+      "a primer pair",
+      "ideally a gradient thermocycler"
+    ]
+  },
+  "steps": {
+    "description": "A gradient thermocycler runs the same reaction at a different temperature per column, testing up to 12 annealing temperatures at once. Without one, you can run the same reaction day after day - a gradient cycler is a quality-of-life upgrade worth scouting university surplus for.",
+    "intro": "A gradient thermocycler runs the same reaction at a different temperature per column, testing up to 12 annealing temperatures at once. Without one, you can run the same reaction day after day - a gradient cycler is a quality-of-life upgrade worth scouting university surplus for.",
+    "tools": [
+      "gradient thermocycler (ideal)",
+      "primers",
+      "template",
+      "polymerase"
+    ],
+    "estimatatedTime": {
+      "setup": 10,
+      "config": 20,
+      "testing": 20
+    },
+    "instructions": [
+      {
+        "title": "Set the gradient",
+        "description": "Program a temperature gradient spanning ~5-10C around your predicted Tm."
+      },
+      {
+        "title": "Run & gel",
+        "description": "Run all columns, then load each on a gel side by side."
+      },
+      {
+        "title": "Pick the winner",
+        "description": "Choose the temperature giving the strongest specific band with the least non-specific product."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Submit a gradient gel image and state the optimal annealing temperature you'll use going forward."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Gradient PCR",
+      "url": "https://www.neosynbio.com/gradient-pcr"
+    },
+    {
+      "title": "NEB Tm Calculator (gradient planning)",
+      "url": "https://tmcalculator.neb.com/"
+    },
+    {
+      "title": "Bio-Rad: PCR temperature optimization",
+      "url": "https://www.bio-rad.com/en-us/applications-technologies/pcr-optimization"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "lab-automation",
+  "title": {
+    "name": "laboratory automation",
+    "level": 7
+  },
+  "project": "Lab Automation",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=Plh4KfAzTdc"
+  },
+  "time": 150,
+  "level": "advanced",
+  "overview": {
+    "description": "Move from hand-pipetting to programmable liquid handlers (Opentrons, Hamilton) and robotic workflows. Automation buys reproducibility, throughput, and a traceable record - the reason modern labs and biofoundries scale a protocol from 8 to 800 samples without the error creeping in.",
+    "objectives": [
+      "write a liquid-handling protocol as code (e.g. Opentrons Python API)",
+      "define deck layout, labware, and liquid classes; calibrate offsets",
+      "judge what is worth automating vs doing by hand",
+      "design for traceability - every step logged and reproducible"
+    ],
+    "prerequisites": [
+      "PCR",
+      "Micropipette"
+    ]
+  },
+  "steps": {
+    "description": "Move from hand-pipetting to programmable liquid handlers (Opentrons, Hamilton) and robotic workflows. Automation buys reproducibility, throughput, and a traceable record - the reason modern labs and biofoundries scale a protocol from 8 to 800 samples without the error creeping in.",
+    "intro": "A robot only does exactly what you script - the skill is turning a bench protocol into deterministic, calibrated, error-checked code.",
+    "tools": [
+      "Opentrons OT-2/Flex (or Hamilton/Tecan)",
+      "Python protocol API",
+      "labware definitions",
+      "a scheduler for multi-step runs"
+    ],
+    "estimatatedTime": {
+      "setup": 40,
+      "config": 80,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "Model the protocol",
+        "description": "Break the manual protocol into discrete transfers; identify volumes, sources, destinations, and mixing."
+      },
+      {
+        "title": "Write it as code",
+        "description": "Define labware and the deck map, then script the transfers with correct liquid classes (aspiration/dispense rates for viscous or volatile liquids)."
+      },
+      {
+        "title": "Calibrate & dry-run",
+        "description": "Calibrate tip and labware offsets, then dry-run without liquid to catch collisions and mispicks before committing samples."
+      },
+      {
+        "title": "Run, log, iterate",
+        "description": "Execute with run logs for traceability; review errors (tip pickup failures, evaporation) and tighten the protocol."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Automate one real protocol (e.g. a serial dilution or PCR setup) as a calibrated, dry-run-tested script, and justify why it was worth automating."
+  },
+  "resources": [
+    {
+      "title": "HTGAA - Opentrons lab work (Week 3)",
+      "url": "https://2026a.htgaa.org/"
+    },
+    {
+      "title": "Opentrons Python Protocol API docs",
+      "url": "https://docs.opentrons.com/v2/"
+    },
+    {
+      "title": "PyLabRobot - hardware-agnostic lab automation",
+      "url": "https://docs.pylabrobot.org/"
+    }
+  ]
+}

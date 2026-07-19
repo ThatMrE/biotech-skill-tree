@@ -1,0 +1,77 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "cell-free",
+  "title": {
+    "name": "cell-free systems (TX-TL)",
+    "level": 6
+  },
+  "project": "Cell-Free",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=pTAozxV2rKo"
+  },
+  "time": 120,
+  "level": "advanced",
+  "overview": {
+    "description": "Run transcription and translation outside a living cell, in a crude extract or the reconstituted PURE system. With no membrane and no growth to worry about, cell-free is fast to prototype, tolerant of toxic products, and can be freeze-dried into portable biosensors.",
+    "objectives": [
+      "run a TX-TL reaction expressing a reporter from added DNA",
+      "prototype a genetic circuit cell-free in hours, not days",
+      "build a freeze-dried, field-deployable biosensor",
+      "know when cell-free beats in-vivo expression (toxicity, speed, control)"
+    ],
+    "prerequisites": [
+      "Proteins 101",
+      "PCR (to make linear templates)"
+    ]
+  },
+  "steps": {
+    "description": "Add DNA (plasmid or linear PCR product) to an extract plus energy mix, incubate, and read the reporter - no transformation, no culturing.",
+    "intro": "Cell-free turns gene expression into a pipetting reaction: template + extract + energy + amino acids in a tube, output in a plate reader within hours.",
+    "tools": [
+      "cell extract or PURE system (e.g. myTXTL)",
+      "energy/amino-acid supplement mix",
+      "DNA template (plasmid or PCR)",
+      "plate reader for fluorescence/luminescence"
+    ],
+    "estimatatedTime": {
+      "setup": 30,
+      "config": 45,
+      "testing": 45
+    },
+    "instructions": [
+      {
+        "title": "Prepare template",
+        "description": "Use a plasmid or a linear PCR product with a strong promoter/RBS; linear templates are quick but degrade faster."
+      },
+      {
+        "title": "Assemble the reaction",
+        "description": "Combine extract, energy mix, and template on ice; keep reactions small (a few uL) and set up replicates + a no-DNA control."
+      },
+      {
+        "title": "Incubate & read",
+        "description": "Incubate at ~29-37 C and track reporter signal in real time on a plate reader."
+      },
+      {
+        "title": "Prototype or preserve",
+        "description": "Iterate circuit variants rapidly, or freeze-dry reactions onto paper for a portable biosensor."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Design a cell-free experiment that expresses a reporter from your DNA, including the controls, and explain why cell-free is the right choice for your application."
+  },
+  "resources": [
+    {
+      "title": "HTGAA - Cell-Free Systems (Week 9)",
+      "url": "https://2026a.htgaa.org/"
+    },
+    {
+      "title": "myTXTL cell-free expression (overview)",
+      "url": "https://arborbiosciences.com/products/cell-free-protein-expression/"
+    },
+    {
+      "title": "Pardee et al. - paper-based freeze-dried synthetic biology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25417167/"
+    }
+  ]
+}

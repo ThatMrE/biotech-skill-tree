@@ -1,0 +1,73 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "mammalian-cell-culture",
+  "title": {
+    "name": "mammalian cell culture",
+    "level": 6
+  },
+  "project": "Cell Culture",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=CMRKKl9XSDU"
+  },
+  "time": 150,
+  "level": "advanced",
+  "overview": {
+    "description": "Growing mammalian cells (HEK293, CHO) underpins therapeutics, antibody production, and cell-based assays. It is aseptic technique at a higher stakes level: slow-growing, contamination-prone cells in a CO2 incubator, passaged before they over-confluence.",
+    "objectives": [
+      "passage adherent/suspension cells at the right confluence",
+      "maintain sterility in a biosafety cabinet with slow-growing cells",
+      "understand CO2/bicarbonate media buffering and why phenol-red matters",
+      "detect and prevent contamination - including invisible mycoplasma"
+    ],
+    "prerequisites": [
+      "Aseptic technique"
+    ]
+  },
+  "steps": {
+    "description": "Growing mammalian cells (HEK293, CHO) underpins therapeutics, antibody production, and cell-based assays. It is aseptic technique at a higher stakes level: slow-growing, contamination-prone cells in a CO2 incubator, passaged before they over-confluence.",
+    "intro": "Mammalian culture is aseptic technique with no margin: a doubling time of a day means a single contamination event costs a week, so discipline in the hood is everything.",
+    "tools": [
+      "biosafety cabinet (laminar flow)",
+      "CO2 incubator",
+      "cell line + complete media",
+      "hemocytometer / cell counter",
+      "mycoplasma test"
+    ],
+    "estimatatedTime": {
+      "setup": 40,
+      "config": 80,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "Work in the hood",
+        "description": "Warm media, wipe everything with 70% ethanol, and keep a clean laminar-flow field; never breathe over open vessels."
+      },
+      {
+        "title": "Monitor confluence",
+        "description": "Check under the microscope; passage before cells over-grow (contact inhibition/stress changes phenotype)."
+      },
+      {
+        "title": "Passage",
+        "description": "Trypsinise (adherent) or split (suspension) to the right seeding density; count cells for reproducible splits."
+      },
+      {
+        "title": "Guard against contamination",
+        "description": "Watch media colour (phenol-red pH), and test routinely for mycoplasma - it is invisible by eye but wrecks data."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Outline a passaging routine for a cell line including confluence judgement, seeding density, and how you would monitor for contamination (bacterial, fungal, mycoplasma)."
+  },
+  "resources": [
+    {
+      "title": "Mammalian cell culture - basics (Thermo Fisher)",
+      "url": "https://www.thermofisher.com/us/en/home/references/gibco-cell-culture-basics.html"
+    },
+    {
+      "title": "Mycoplasma contamination - why it matters",
+      "url": "https://www.atcc.org/resources/technical-documents/mycoplasma-contamination"
+    }
+  ]
+}

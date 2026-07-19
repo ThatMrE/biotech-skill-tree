@@ -1,0 +1,72 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "advanced-omics",
+  "title": {
+    "name": "beyond the bench: rna, omics & bio-programming",
+    "level": 8
+  },
+  "project": "Future Directions",
+  "video": {
+    "url": ""
+  },
+  "time": 240,
+  "level": "advanced",
+  "overview": {
+    "description": "The guide's frontier: antibody production, Western/Eastern blots, ELISA, aptamers and mass spec for proteomes; RNA purification, RT-PCR/RT-qPCR and Northern blots for transcriptomes; plus gene switches, omics and advanced biological programming. Pick a thread and go deep.",
+    "objectives": [
+      "survey proteome analysis (Western blot, ELISA, mass spec)",
+      "survey RNA workflows (RT-PCR, RT-qPCR, Northern blot)",
+      "explore gene switches, omics and advanced biological programming"
+    ],
+    "prerequisites": [
+      "the capstone"
+    ]
+  },
+  "steps": {
+    "description": "The guide's frontier: antibody production, Western/Eastern blots, ELISA, aptamers and mass spec for proteomes; RNA purification, RT-PCR/RT-qPCR and Northern blots for transcriptomes; plus gene switches, omics and advanced biological programming. Pick a thread and go deep.",
+    "intro": "The guide's frontier: antibody production, Western/Eastern blots, ELISA, aptamers and mass spec for proteomes; RNA purification, RT-PCR/RT-qPCR and Northern blots for transcriptomes; plus gene switches, omics and advanced biological programming. Pick a thread and go deep.",
+    "tools": [
+      "depends on the chosen sub-topic"
+    ],
+    "estimatatedTime": {
+      "setup": 40,
+      "config": 80,
+      "testing": 80
+    },
+    "instructions": [
+      {
+        "title": "Pick a track",
+        "description": "Choose proteome analysis, RNA/transcriptomics, or biological programming."
+      },
+      {
+        "title": "Find the canonical guide",
+        "description": "Use the linked references to find the best-rated protocol for your chosen technique."
+      },
+      {
+        "title": "Run a pilot",
+        "description": "Design and run a small pilot experiment in your chosen area."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Pick one advanced technique, summarise the best protocol you found, and propose a pilot experiment."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Graduate's Guide (advanced sections)",
+      "url": "https://www.neosynbio.com/the-graduates-guide-to-synthetic-biology"
+    },
+    {
+      "title": "Bio-Rad: Western blotting guide",
+      "url": "https://www.bio-rad.com/en-us/applications-technologies/western-blotting"
+    },
+    {
+      "title": "Thermo Fisher: ELISA technical guide",
+      "url": "https://www.thermofisher.com/us/en/home/life-science/protein-biology/protein-biology-learning-center/protein-biology-resource-library/pierce-protein-methods/overview-elisa.html"
+    },
+    {
+      "title": "NEB: RNA reagents & RT-qPCR resources",
+      "url": "https://www.neb.com/en-us/applications/rna-analysis"
+    }
+  ]
+}

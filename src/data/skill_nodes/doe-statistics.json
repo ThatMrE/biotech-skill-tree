@@ -1,0 +1,71 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "doe-statistics",
+  "title": {
+    "name": "design of experiments & rigor",
+    "level": 6
+  },
+  "project": "Methods & Rigor",
+  "video": {
+    "url": ""
+  },
+  "time": 150,
+  "level": "advanced",
+  "overview": {
+    "description": "Experimental design and statistics separate a real effect from noise. Design of Experiments (DoE) explores many factors efficiently instead of one-factor-at-a-time; proper replication and controls prevent the p-hacking that fails to reproduce.",
+    "objectives": [
+      "design a multi-factor experiment (DoE) instead of OFAT",
+      "distinguish biological from technical replicates",
+      "choose controls and sample size for adequate power",
+      "avoid p-hacking / HARKing and pre-specify the analysis"
+    ],
+    "prerequisites": [
+      "Welcome / intro"
+    ]
+  },
+  "steps": {
+    "description": "Experimental design and statistics separate a real effect from noise. Design of Experiments (DoE) explores many factors efficiently instead of one-factor-at-a-time; proper replication and controls prevent the p-hacking that fails to reproduce.",
+    "intro": "Rigor is a skill, not a virtue: DoE finds interactions OFAT misses, and honest replication + pre-registration is what makes a result survive someone else repeating it.",
+    "tools": [
+      "a DoE tool (JMP/Minitab/Python)",
+      "a stats environment (R/Python)",
+      "a clear hypothesis + analysis plan"
+    ],
+    "estimatatedTime": {
+      "setup": 40,
+      "config": 80,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "State the hypothesis & plan",
+        "description": "Pre-specify the question, factors, response, and analysis before collecting data."
+      },
+      {
+        "title": "Design efficiently",
+        "description": "Use a factorial/response-surface DoE to vary factors together and detect interactions, instead of one factor at a time."
+      },
+      {
+        "title": "Replicate correctly",
+        "description": "Include biological replicates (independent samples) - not just technical replicates - and enough for power."
+      },
+      {
+        "title": "Analyse as planned",
+        "description": "Run the pre-specified analysis; report effect sizes and uncertainty, and resist fishing for significance."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Take a naive one-factor-at-a-time plan and redesign it as a DoE with proper replication and controls, explaining what the redesign lets you detect that OFAT cannot."
+  },
+  "resources": [
+    {
+      "title": "Design of Experiments - introduction",
+      "url": "https://en.wikipedia.org/wiki/Design_of_experiments"
+    },
+    {
+      "title": "NIST/SEMATECH e-Handbook of Statistical Methods",
+      "url": "https://www.itl.nist.gov/div898/handbook/"
+    }
+  ]
+}

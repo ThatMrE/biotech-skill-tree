@@ -1,0 +1,72 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "ngs-analysis",
+  "title": {
+    "name": "ngs data analysis",
+    "level": 7
+  },
+  "project": "Data & Informatics",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=fCd6B5HRaZ8"
+  },
+  "time": 150,
+  "level": "advanced",
+  "overview": {
+    "description": "Next-generation sequencing turns biology into big data: read QC, alignment to a reference, variant calling, and RNA-seq quantification. Understanding coverage/depth, error modes, and pipelines (nf-core) is a core industry competency.",
+    "objectives": [
+      "explain read depth / coverage and why it matters",
+      "run a mapping + variant-calling or RNA-seq quantification pipeline",
+      "QC reads (adapters, duplicates, quality) before calling anything",
+      "interpret a VCF and distinguish real variants from artefacts"
+    ],
+    "prerequisites": [
+      "Bioinformatics foundations"
+    ]
+  },
+  "steps": {
+    "description": "Next-generation sequencing turns biology into big data: read QC, alignment to a reference, variant calling, and RNA-seq quantification. Understanding coverage/depth, error modes, and pipelines (nf-core) is a core industry competency.",
+    "intro": "NGS analysis is a pipeline discipline: garbage-in propagates, so QC and coverage decisions upstream determine whether a downstream call is trustworthy.",
+    "tools": [
+      "reference genome + aligner (BWA/Bowtie2/STAR)",
+      "variant caller (GATK/bcftools)",
+      "QC (FastQC/MultiQC)",
+      "workflow manager (Nextflow / nf-core)"
+    ],
+    "estimatatedTime": {
+      "setup": 40,
+      "config": 80,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "QC the reads",
+        "description": "Run FastQC/MultiQC; trim adapters and low-quality tails; check duplication and GC bias."
+      },
+      {
+        "title": "Align",
+        "description": "Map to a reference (BWA/STAR); assess mapping rate and coverage uniformity."
+      },
+      {
+        "title": "Call & filter",
+        "description": "Call variants or quantify expression; filter by depth/quality to remove artefacts."
+      },
+      {
+        "title": "Reproduce",
+        "description": "Wrap it in a workflow (nf-core) so the whole pipeline reruns identically on new data."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Describe how you would go from raw reads to a filtered variant call (or expression matrix), naming the QC and coverage checks that make the result trustworthy."
+  },
+  "resources": [
+    {
+      "title": "nf-core - community NGS pipelines",
+      "url": "https://nf-co.re/"
+    },
+    {
+      "title": "GATK Best Practices",
+      "url": "https://gatk.broadinstitute.org/hc/en-us/sections/360007226651"
+    }
+  ]
+}

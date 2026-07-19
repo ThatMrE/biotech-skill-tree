@@ -1,0 +1,76 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "biosafety-biosecurity",
+  "title": {
+    "name": "biosafety & biosecurity",
+    "level": 5
+  },
+  "project": "Biosafety",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=c7mIhF8p3Hs"
+  },
+  "time": 150,
+  "level": "advanced",
+  "overview": {
+    "description": "Responsible practice is now a hiring requirement: biosafety levels (BSL-1 to 4) protect people and environment, while biosecurity and dual-use (DURC) governance protect against misuse. Knowing containment, IBC approval, and synthesis screening is table stakes.",
+    "objectives": [
+      "match work to the right biosafety level (BSL-1 to BSL-4)",
+      "apply containment, PPE, and waste/decontamination practices",
+      "understand dual-use research of concern (DURC) and responsible innovation",
+      "know that synthesized DNA is screened and why (biosecurity)"
+    ],
+    "prerequisites": [
+      "Host selection criteria"
+    ]
+  },
+  "steps": {
+    "description": "Responsible practice is now a hiring requirement: biosafety levels (BSL-1 to 4) protect people and environment, while biosecurity and dual-use (DURC) governance protect against misuse. Knowing containment, IBC approval, and synthesis screening is table stakes.",
+    "intro": "Biosafety protects against accidents; biosecurity protects against misuse. Both are professional obligations - and increasingly, legal and funding requirements - not optional extras.",
+    "tools": [
+      "risk assessment framework",
+      "the correct BSL facility + PPE",
+      "an IBC / institutional approval process",
+      "DNA-synthesis screening awareness (IGSC)"
+    ],
+    "estimatatedTime": {
+      "setup": 40,
+      "config": 80,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "Assess the risk",
+        "description": "Classify the agent and work; determine the required biosafety level and containment."
+      },
+      {
+        "title": "Contain & protect",
+        "description": "Use the right facility, PPE, and validated decontamination/waste procedures for that BSL."
+      },
+      {
+        "title": "Get oversight",
+        "description": "Route recombinant/dual-use work through the appropriate committee (IBC) and follow DURC policy."
+      },
+      {
+        "title": "Think biosecurity",
+        "description": "Understand that gene-synthesis providers screen orders against pathogens/toxins, and design work responsibly from the start."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Given a proposed experiment, assign the biosafety level and containment, and identify any dual-use/biosecurity concerns and the oversight it would require."
+  },
+  "resources": [
+    {
+      "title": "CDC/NIH - Biosafety in Microbiological & Biomedical Labs (BMBL)",
+      "url": "https://www.cdc.gov/labs/BMBL.html"
+    },
+    {
+      "title": "NIH - Dual Use Research of Concern (DURC)",
+      "url": "https://osp.od.nih.gov/policies/dual-use-research-of-concern/"
+    },
+    {
+      "title": "International Gene Synthesis Consortium - screening",
+      "url": "https://genesynthesisconsortium.org/"
+    }
+  ]
+}

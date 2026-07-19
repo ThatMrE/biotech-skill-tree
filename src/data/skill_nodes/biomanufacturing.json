@@ -1,0 +1,72 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "biomanufacturing",
+  "title": {
+    "name": "bioprocess & biomanufacturing",
+    "level": 7
+  },
+  "project": "Bioprocess",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=o4mRJOeuXJI"
+  },
+  "time": 150,
+  "level": "advanced",
+  "overview": {
+    "description": "Scaling from a shake flask to a bioreactor is its own discipline: batch vs fed-batch, oxygen transfer and mixing limits, and the shift into GMP/quality-by-design for anything therapeutic. This is where synbio meets a P&L.",
+    "objectives": [
+      "compare batch, fed-batch, and continuous processes",
+      "explain why oxygen transfer and mixing limit scale-up",
+      "monitor and control a bioreactor (pH, DO, temperature, feed)",
+      "understand GMP / quality-by-design at a high level"
+    ],
+    "prerequisites": [
+      "Protein Induction"
+    ]
+  },
+  "steps": {
+    "description": "Scaling from a shake flask to a bioreactor is its own discipline: batch vs fed-batch, oxygen transfer and mixing limits, and the shift into GMP/quality-by-design for anything therapeutic. This is where synbio meets a P&L.",
+    "intro": "Cells behave differently at 10 L than at 10 mL: gradients in oxygen, pH, and nutrients appear, so scale-up is about engineering the environment, not just growing more.",
+    "tools": [
+      "bioreactor / fermenter",
+      "process controls (pH, dissolved oxygen, feed pumps)",
+      "analytics for titer/quality",
+      "a QbD/GMP framework for regulated products"
+    ],
+    "estimatatedTime": {
+      "setup": 40,
+      "config": 80,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "Define the process mode",
+        "description": "Choose batch, fed-batch, or continuous based on product, growth, and inhibition; set the feed strategy."
+      },
+      {
+        "title": "Control the environment",
+        "description": "Maintain pH, dissolved oxygen, and temperature; recognise oxygen transfer (kLa) and mixing as the usual scale-up bottlenecks."
+      },
+      {
+        "title": "Monitor & sample",
+        "description": "Track growth, titer, and byproducts; keep the process in its validated window."
+      },
+      {
+        "title": "Think quality",
+        "description": "For regulated products, design for GMP/QbD - critical quality attributes and process parameters defined up front."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Propose a scale-up plan from flask to bioreactor for an expressed protein: process mode, the control parameters, and the scale-up risks (oxygen, mixing, shear)."
+  },
+  "resources": [
+    {
+      "title": "Bioprocessing basics (overview)",
+      "url": "https://en.wikipedia.org/wiki/Bioprocess_engineering"
+    },
+    {
+      "title": "FDA - Quality by Design / GMP overview",
+      "url": "https://www.fda.gov/drugs/pharmaceutical-quality-resources/current-good-manufacturing-practice-cgmp-regulations"
+    }
+  ]
+}

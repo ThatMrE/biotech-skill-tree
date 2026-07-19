@@ -1,0 +1,79 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "primer-design",
+  "title": {
+    "name": "primer design",
+    "level": 4
+  },
+  "project": "Amplification",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=mcOwlFVEino"
+  },
+  "time": 60,
+  "level": "intermediate",
+  "overview": {
+    "description": "Primers are short (~15-30 bp) sequences that kickstart PCR. The biggest challenge is designing them to prefer your template over each other - primer dimers can ruin a month. Aim for Tm 50-60C, GC 40-60%, and keep paired Tms within 5C.",
+    "objectives": [
+      "apply length, GC%, Tm and GC-clamp guidelines",
+      "avoid self-dimers and primer dimers",
+      "use Benchling/Primer3 and the NEB Tm Calculator"
+    ],
+    "prerequisites": [
+      "PCR fundamentals",
+      "a sequence viewer"
+    ]
+  },
+  "steps": {
+    "description": "Primers are short (~15-30 bp) sequences that kickstart PCR. The biggest challenge is designing them to prefer your template over each other - primer dimers can ruin a month. Aim for Tm 50-60C, GC 40-60%, and keep paired Tms within 5C.",
+    "intro": "Primers are short (~15-30 bp) sequences that kickstart PCR. The biggest challenge is designing them to prefer your template over each other - primer dimers can ruin a month. Aim for Tm 50-60C, GC 40-60%, and keep paired Tms within 5C.",
+    "tools": [
+      "Benchling primer wizard or Primer3",
+      "NEB Tm Calculator",
+      "NCBI BLAST"
+    ],
+    "estimatatedTime": {
+      "setup": 10,
+      "config": 20,
+      "testing": 20
+    },
+    "instructions": [
+      {
+        "title": "Set parameters",
+        "description": "Target length ~18-25 nt, GC 40-60%, Tm 50-60C, with a 3' GC clamp where possible."
+      },
+      {
+        "title": "Check for dimers",
+        "description": "Use a design wizard to flag self-dimers, hairpins and primer-primer complementarity."
+      },
+      {
+        "title": "Validate specificity",
+        "description": "BLAST your primers against the genome to rule out off-target binding."
+      },
+      {
+        "title": "Confirm Tm",
+        "description": "Calculate annealing temperature with the NEB Tm Calculator for your specific polymerase."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Design a validated primer pair, report Tm/GC/length for each, and show the dimer/specificity checks."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Primer Design",
+      "url": "https://www.neosynbio.com/primer-design"
+    },
+    {
+      "title": "Benchling: The basics of primer design for PCR",
+      "url": "https://www.benchling.com/the-basics-of-primer-design-for-pcr"
+    },
+    {
+      "title": "NEB Tm Calculator",
+      "url": "https://tmcalculator.neb.com/"
+    },
+    {
+      "title": "Primer3 / Primer3Plus",
+      "url": "https://primer3.org/"
+    }
+  ]
+}

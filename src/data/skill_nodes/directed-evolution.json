@@ -1,0 +1,73 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "directed-evolution",
+  "title": {
+    "name": "directed evolution",
+    "level": 7
+  },
+  "project": "Protein Engineering",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=FWEN2pxoXoQ"
+  },
+  "time": 150,
+  "level": "advanced",
+  "overview": {
+    "description": "When you cannot design a protein rationally, evolve it: generate diversity (error-prone PCR, DNA shuffling), then apply selection or screening for the property you want, over iterative rounds. The cardinal rule - you get what you select for - makes assay design the whole game.",
+    "objectives": [
+      "generate a mutant library (error-prone PCR, saturation mutagenesis, shuffling)",
+      "distinguish selection (survival-linked) from screening (measure each variant)",
+      "design a selection/screen that couples the desired property to a readout",
+      "iterate rounds and avoid selecting for the wrong thing"
+    ],
+    "prerequisites": [
+      "PCR",
+      "Transformation (plasmid insertion)"
+    ]
+  },
+  "steps": {
+    "description": "When you cannot design a protein rationally, evolve it: generate diversity (error-prone PCR, DNA shuffling), then apply selection or screening for the property you want, over iterative rounds. The cardinal rule - you get what you select for - makes assay design the whole game.",
+    "intro": "Directed evolution is Darwin in a plasmid: the library supplies variation, but the selection pressure decides the outcome - so a sloppy assay evolves a cheater, not a better enzyme.",
+    "tools": [
+      "error-prone PCR / mutagenesis kit",
+      "a large library + high-efficiency transformation",
+      "a selection or high-throughput screen",
+      "sequencing to track winners"
+    ],
+    "estimatatedTime": {
+      "setup": 40,
+      "config": 80,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "Diversify",
+        "description": "Build a library by error-prone PCR, saturation mutagenesis at key residues, or DNA shuffling; size the library to your screen."
+      },
+      {
+        "title": "Couple property to survival/signal",
+        "description": "Design a selection (only better variants live) or a screen (measure each clone) that truly reports the property you want."
+      },
+      {
+        "title": "Apply pressure",
+        "description": "Select/screen, pick winners, and sequence to see which mutations helped."
+      },
+      {
+        "title": "Iterate",
+        "description": "Recombine winners and repeat, tightening stringency each round; watch for artefacts you are inadvertently selecting."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Design a directed-evolution campaign for a target property: how you generate diversity, and - critically - the selection/screen that couples that property to a readout without being gamed."
+  },
+  "resources": [
+    {
+      "title": "Directed evolution - overview (Arnold Lab context)",
+      "url": "https://www.nobelprize.org/prizes/chemistry/2018/arnold/facts/"
+    },
+    {
+      "title": "Error-prone PCR & library methods (NEB)",
+      "url": "https://www.neb.com/en-us/applications/cloning-and-synthetic-biology/site-directed-mutagenesis"
+    }
+  ]
+}

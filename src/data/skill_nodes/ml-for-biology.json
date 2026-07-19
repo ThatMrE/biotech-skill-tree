@@ -1,0 +1,77 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "ml-for-biology",
+  "title": {
+    "name": "ml / ai for biology",
+    "level": 8
+  },
+  "project": "Bio AI / ML",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=hOtH5AAUWGA"
+  },
+  "time": 150,
+  "level": "advanced",
+  "overview": {
+    "description": "Machine learning is now a core biotech tool: protein language models (ESM) embed sequences, structure predictors (AlphaFold) fold them, and generative models design new ones. The valuable skill is not running a model but evaluating it honestly - homology-aware splits, sensible baselines, and wet-lab validation.",
+    "objectives": [
+      "use foundation models (ESM embeddings, AlphaFold) as tools",
+      "avoid data leakage with homology-aware train/test splits",
+      "choose baselines and metrics that actually reflect the biology",
+      "treat model output as a hypothesis to validate experimentally, not a result"
+    ],
+    "prerequisites": [
+      "Bioinformatics foundations",
+      "Computational protein design"
+    ]
+  },
+  "steps": {
+    "description": "Machine learning is now a core biotech tool: protein language models (ESM) embed sequences, structure predictors (AlphaFold) fold them, and generative models design new ones. The valuable skill is not running a model but evaluating it honestly - homology-aware splits, sensible baselines, and wet-lab validation.",
+    "intro": "Bio ML rewards skepticism: a model that looks brilliant usually has a leaky split or a too-easy test set - the job is to break your own model before the wet lab does.",
+    "tools": [
+      "protein language models (ESM)",
+      "AlphaFold / structure tools",
+      "PyTorch / scikit-learn",
+      "sequence-identity clustering (MMseqs2/CD-HIT) for splits"
+    ],
+    "estimatatedTime": {
+      "setup": 40,
+      "config": 80,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "Frame the task",
+        "description": "Define input->output precisely (function prediction, binder design, property regression) and the biological question it answers."
+      },
+      {
+        "title": "Split honestly",
+        "description": "Cluster by sequence/structure identity and split across clusters so the test set is not a near-duplicate of training (the #1 way bio ML lies)."
+      },
+      {
+        "title": "Baseline & embed",
+        "description": "Compare against a simple baseline; use ESM embeddings or structures as features where they help."
+      },
+      {
+        "title": "Validate wet-lab",
+        "description": "Treat top predictions as hypotheses - order and test them, and report real hit rate, not just held-out AUC."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Propose an ML task for a biological problem, specify a leakage-proof (homology-aware) evaluation, and describe how you would validate predictions experimentally."
+  },
+  "resources": [
+    {
+      "title": "HTGAA - AI, SynBio & Scaling Health (Week 13)",
+      "url": "https://2026a.htgaa.org/"
+    },
+    {
+      "title": "ESM - Evolutionary Scale Modeling (protein LMs)",
+      "url": "https://github.com/facebookresearch/esm"
+    },
+    {
+      "title": "AlphaFold",
+      "url": "https://github.com/google-deepmind/alphafold"
+    }
+  ]
+}

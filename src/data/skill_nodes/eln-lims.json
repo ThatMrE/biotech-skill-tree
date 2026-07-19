@@ -1,0 +1,71 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "eln-lims",
+  "title": {
+    "name": "eln / lims & data hygiene",
+    "level": 5
+  },
+  "project": "Data & Informatics",
+  "video": {
+    "url": ""
+  },
+  "time": 150,
+  "level": "advanced",
+  "overview": {
+    "description": "Electronic lab notebooks (Benchling) and LIMS are the backbone of an industry lab: versioned plasmid maps, sample tracking, inventory, and results tied to metadata. FAIR, well-annotated data is what makes a result reproducible and a candidate employable.",
+    "objectives": [
+      "keep a versioned, searchable electronic record (Benchling ELN)",
+      "track samples, plates, and inventory through a LIMS",
+      "annotate data with metadata so it is Findable, Accessible, Interoperable, Reusable (FAIR)",
+      "manage plasmid maps and sequences digitally, not in scattered files"
+    ],
+    "prerequisites": [
+      "Welcome / intro"
+    ]
+  },
+  "steps": {
+    "description": "Electronic lab notebooks (Benchling) and LIMS are the backbone of an industry lab: versioned plasmid maps, sample tracking, inventory, and results tied to metadata. FAIR, well-annotated data is what makes a result reproducible and a candidate employable.",
+    "intro": "The difference between an academic and an industry lab is often the data discipline: nothing is real until it is recorded, versioned, and findable by someone else.",
+    "tools": [
+      "Benchling (ELN + molecular biology suite)",
+      "a LIMS / sample tracker",
+      "consistent naming + metadata schema"
+    ],
+    "estimatatedTime": {
+      "setup": 40,
+      "config": 80,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "Structure the record",
+        "description": "Set up an ELN with a consistent experiment template: objective, method, materials (linked), results, conclusion."
+      },
+      {
+        "title": "Track physical samples",
+        "description": "Register plasmids, strains, and plates with unique IDs and locations so any tube is traceable."
+      },
+      {
+        "title": "Annotate for FAIR",
+        "description": "Attach metadata (conditions, batch, operator, instrument) so data can be reused and audited later."
+      },
+      {
+        "title": "Version everything",
+        "description": "Keep sequence/plasmid edits versioned; never overwrite - the history is part of the record."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Set up a small ELN/LIMS record for one experiment with linked materials, sample IDs, and FAIR metadata; explain how someone else could reproduce it from your record alone."
+  },
+  "resources": [
+    {
+      "title": "Benchling - ELN & molecular biology platform",
+      "url": "https://www.benchling.com/"
+    },
+    {
+      "title": "FAIR data principles (GO FAIR)",
+      "url": "https://www.go-fair.org/fair-principles/"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "protein-induction",
+  "title": {
+    "name": "induction of protein expression",
+    "level": 7
+  },
+  "project": "Protein Production",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=ePwVeXxU26w"
+  },
+  "time": 120,
+  "level": "intermediate",
+  "overview": {
+    "description": "Inducible expression lets you switch protein production on during exponential growth, avoiding the burden of constitutive expression. For E. coli, time induction by OD600. After inducing, you can lower the temperature to slow folding for complex proteins.",
+    "objectives": [
+      "compare inducible vs constitutive expression",
+      "measure OD600 to time induction",
+      "tune temperature post-induction for correct folding"
+    ],
+    "prerequisites": [
+      "an expression construct in a host",
+      "a spectrophotometer"
+    ]
+  },
+  "steps": {
+    "description": "Inducible expression lets you switch protein production on during exponential growth, avoiding the burden of constitutive expression. For E. coli, time induction by OD600. After inducing, you can lower the temperature to slow folding for complex proteins.",
+    "intro": "Inducible expression lets you switch protein production on during exponential growth, avoiding the burden of constitutive expression. For E. coli, time induction by OD600. After inducing, you can lower the temperature to slow folding for complex proteins.",
+    "tools": [
+      "spectrophotometer + cuvettes",
+      "inducer (e.g. IPTG)",
+      "shaking incubator",
+      "baffled flasks"
+    ],
+    "estimatatedTime": {
+      "setup": 20,
+      "config": 40,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "Grow to phase",
+        "description": "Grow cells at 37C with shaking until OD600 reaches the target window for your system."
+      },
+      {
+        "title": "Induce",
+        "description": "Add inducer (e.g. IPTG) to switch on expression."
+      },
+      {
+        "title": "Tune temperature",
+        "description": "For disulphide-bonded/complex proteins, drop the temperature to slow folding and reduce misfolding."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Produce a growth curve (OD600 vs time), mark your induction point, and note your post-induction conditions."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Induction of Protein Expression",
+      "url": "https://www.neosynbio.com/induction-of-protein-expression"
+    },
+    {
+      "title": "Thermo Fisher: recombinant protein expression learning center",
+      "url": "https://www.thermofisher.com/us/en/home/life-science/protein-biology/protein-biology-learning-center.html"
+    },
+    {
+      "title": "NEB: protein expression with T7 systems",
+      "url": "https://www.neb.com/en-us/applications/protein-expression-and-analysis"
+    }
+  ]
+}

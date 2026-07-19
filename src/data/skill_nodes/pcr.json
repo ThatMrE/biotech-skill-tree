@@ -1,0 +1,84 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "pcr",
+  "title": {
+    "name": "polymerase chain reaction (pcr)",
+    "level": 4
+  },
+  "project": "Amplification",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=WfiBa2Exdr4"
+  },
+  "time": 120,
+  "level": "intermediate",
+  "overview": {
+    "description": "PCR uses heating/cooling cycles to make a polymerase replicate the region between two primers, doubling product each cycle until millions of copies exist by ~25 cycles. Set up a master mix, distribute, add your variable, and let the machine work while you have a sandwich.",
+    "objectives": [
+      "explain denaturation, annealing and extension",
+      "assemble a master mix and distribute reactions",
+      "program thermocycler variables for your amplicon"
+    ],
+    "prerequisites": [
+      "template DNA",
+      "primers",
+      "a thermocycler",
+      "polymerase + dNTPs"
+    ]
+  },
+  "steps": {
+    "description": "PCR uses heating/cooling cycles to make a polymerase replicate the region between two primers, doubling product each cycle until millions of copies exist by ~25 cycles. Set up a master mix, distribute, add your variable, and let the machine work while you have a sandwich.",
+    "intro": "PCR uses heating/cooling cycles to make a polymerase replicate the region between two primers, doubling product each cycle until millions of copies exist by ~25 cycles. Set up a master mix, distribute, add your variable, and let the machine work while you have a sandwich.",
+    "tools": [
+      "thermocycler",
+      "DNA polymerase (Taq/Q5/Phusion)",
+      "dNTPs",
+      "primers",
+      "template",
+      "master mix tubes"
+    ],
+    "estimatatedTime": {
+      "setup": 20,
+      "config": 40,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "Build a master mix",
+        "description": "Combine water, buffer, dNTPs, polymerase and primers common to all reactions; add polymerase last on ice."
+      },
+      {
+        "title": "Distribute & add template",
+        "description": "Split the mix into tubes and add each template/variable."
+      },
+      {
+        "title": "Program the cycler",
+        "description": "Set initial denaturation, then 25-35 cycles of denature/anneal/extend, using the NEB Tm Calculator for annealing temperature."
+      },
+      {
+        "title": "Check on a gel",
+        "description": "Run the product on an agarose gel to confirm a band of the expected size."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Amplify a target region and submit a gel showing a clean single band at the expected size."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: PCR protocol",
+      "url": "https://www.neosynbio.com/polymerase-chain-reaction"
+    },
+    {
+      "title": "NEB: Polymerase Chain Reaction (PCR) overview",
+      "url": "https://www.neb.com/en-us/applications/dna-amplification-pcr-and-qpcr/polymerase-chain-reaction-pcr"
+    },
+    {
+      "title": "NEB: Protocol for a routine PCR reaction",
+      "url": "https://www.neb.com/en/protocols/protocol-for-a-routine-pcr-reaction-e0553"
+    },
+    {
+      "title": "NEB Tm Calculator (annealing temperature)",
+      "url": "https://tmcalculator.neb.com/"
+    }
+  ]
+}

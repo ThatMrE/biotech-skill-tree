@@ -1,0 +1,72 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "golden-gate",
+  "title": {
+    "name": "golden gate assembly",
+    "level": 6
+  },
+  "project": "Advanced Assembly",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=NzQdLQ44I7w"
+  },
+  "time": 120,
+  "level": "advanced",
+  "overview": {
+    "description": "Golden Gate uses Type IIS enzymes (which cut outside their recognition site) to create scarless, directional, one-tube assemblies of 10+ fragments. Because cut sites are removed during assembly, ligation can proceed immediately - no purification step.",
+    "objectives": [
+      "use Type IIS enzymes that cut outside their recognition site",
+      "design fragments without internal recognition sites ('domestication')",
+      "assemble many ordered fragments in one reaction"
+    ],
+    "prerequisites": [
+      "Restriction Digest",
+      "Flanking Sequence Addition"
+    ]
+  },
+  "steps": {
+    "description": "Golden Gate uses Type IIS enzymes (which cut outside their recognition site) to create scarless, directional, one-tube assemblies of 10+ fragments. Because cut sites are removed during assembly, ligation can proceed immediately - no purification step.",
+    "intro": "Golden Gate uses Type IIS enzymes (which cut outside their recognition site) to create scarless, directional, one-tube assemblies of 10+ fragments. Because cut sites are removed during assembly, ligation can proceed immediately - no purification step.",
+    "tools": [
+      "Type IIS enzyme (BsaI/BsmBI)",
+      "T4 ligase",
+      "fragments with designed overhangs",
+      "thermocycler"
+    ],
+    "estimatatedTime": {
+      "setup": 20,
+      "config": 40,
+      "testing": 40
+    },
+    "instructions": [
+      {
+        "title": "Design overhangs",
+        "description": "Place Type IIS sites so digestion leaves unique 4 nt overhangs that define fragment order."
+      },
+      {
+        "title": "Domesticate fragments",
+        "description": "Remove internal recognition sites via silent mutations so only the designed sites are cut."
+      },
+      {
+        "title": "Cycle digest-ligate",
+        "description": "Run alternating digest/ligation cycles in one tube, then transform."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Assemble an ordered multi-part construct by Golden Gate and confirm correct assembly by screening."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: Golden Gate Assembly",
+      "url": "https://www.neosynbio.com/golden-gate-assembly"
+    },
+    {
+      "title": "NEB: Golden Gate Assembly overview & protocol",
+      "url": "https://www.neb.com/en-us/applications/cloning-and-synthetic-biology/dna-assembly-and-cloning/golden-gate-assembly"
+    },
+    {
+      "title": "Addgene: Plasmids 101 - Golden Gate cloning",
+      "url": "https://blog.addgene.org/plasmids-101-golden-gate-cloning"
+    }
+  ]
+}

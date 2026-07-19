@@ -1,0 +1,72 @@
+{
+  "treeId": "synthetic-biology",
+  "id": "buffer-mixing",
+  "title": {
+    "name": "diy buffer mixing",
+    "level": 1
+  },
+  "project": "Reagent Prep",
+  "video": {
+    "url": ""
+  },
+  "time": 60,
+  "level": "intermediate",
+  "overview": {
+    "description": "Buffers resist pH change and you'll use them for nearly everything. Mixing your own can save thousands in a community lab, but involves deadly compounds in pure form (e.g. HCl, guanidine thiocyanate). Solo hobbyists should usually buy pre-mixed.",
+    "objectives": [
+      "understand what buffers do (resisting pH change)",
+      "weigh DIY vs commercial buffers on cost and safety",
+      "handle hazardous pure compounds with correct PPE",
+      "calibrate and use a pH meter"
+    ],
+    "prerequisites": [
+      "the sterile workspace and PPE"
+    ]
+  },
+  "steps": {
+    "description": "Buffers resist pH change and you'll use them for nearly everything. Mixing your own can save thousands in a community lab, but involves deadly compounds in pure form (e.g. HCl, guanidine thiocyanate). Solo hobbyists should usually buy pre-mixed.",
+    "intro": "Buffers resist pH change and you'll use them for nearly everything. Mixing your own can save thousands in a community lab, but involves deadly compounds in pure form (e.g. HCl, guanidine thiocyanate). Solo hobbyists should usually buy pre-mixed.",
+    "tools": [
+      "pH meter",
+      "balance",
+      "fume hood or excellent ventilation",
+      "full PPE"
+    ],
+    "estimatatedTime": {
+      "setup": 10,
+      "config": 20,
+      "testing": 20
+    },
+    "instructions": [
+      {
+        "title": "Decide DIY vs buy",
+        "description": "Solo and can't source pure acids safely? Buy pre-mixed. In a funded community lab? DIY can cut huge costs."
+      },
+      {
+        "title": "Suit up for chemicals",
+        "description": "Pure compounds are far more dangerous than the diluted reagents you've used so far. Read every MSDS."
+      },
+      {
+        "title": "Calibrate the pH meter",
+        "description": "Two- or three-point calibrate against standard buffers before measuring; titrate carefully to target pH."
+      }
+    ]
+  },
+  "submission": {
+    "description": "Mix one simple buffer (e.g. 1x TAE) from scratch, record the recipe and final measured pH, and note the hazards you mitigated."
+  },
+  "resources": [
+    {
+      "title": "NeoSynBio: DIY Buffer Mixing protocols",
+      "url": "https://www.neosynbio.com/diy-buffer-mixing"
+    },
+    {
+      "title": "NeoSynBio: pH Meter equipment guide",
+      "url": "https://www.neosynbio.com/ph-meter"
+    },
+    {
+      "title": "Cold Spring Harbor Protocols: buffers & stock solutions",
+      "url": "https://cshprotocols.cshlp.org/"
+    }
+  ]
+}

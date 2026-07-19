@@ -1,0 +1,874 @@
+{
+  "name": "synthetic biology",
+  "subtitle": "from sterile bench to purified protein",
+  "author": "neosynbio (curated)",
+  "description": "A project-based wet-lab synthetic biology curriculum adapted from the open-source NeoSynBio Graduate's Guide, with the best-rated external guides (NEB, Addgene, Benchling, SnapGene, Thermo Fisher, Bio-Rad, iGEM) attached to every node.",
+  "nodes": [
+    {
+      "id": "intro",
+      "title": "welcome to the synbio skill tree",
+      "description": "How to navigate this project-based synthetic biology curriculum and set up for success.",
+      "defaultStatus": "inProgress",
+      "link": "/intro",
+      "initialPosition": [
+        0,
+        -1.5
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "sterile-workspace",
+      "title": "the sterile workspace",
+      "description": "Set up PPE, a Bunsen 'cone of protection', and a media-sterilisation strategy.",
+      "defaultStatus": "locked",
+      "link": "/sterile-workspace",
+      "initialPosition": [
+        0,
+        0
+      ],
+      "dependencies": [
+        "intro"
+      ]
+    },
+    {
+      "id": "host-selection",
+      "title": "host selection criteria",
+      "description": "Choose a safe, well-characterised, single-celled host - and check it's legal.",
+      "defaultStatus": "locked",
+      "link": "/host-selection",
+      "initialPosition": [
+        -2.1,
+        0
+      ],
+      "dependencies": [
+        "intro"
+      ]
+    },
+    {
+      "id": "culturing-conditions",
+      "title": "culturing conditions",
+      "description": "Know your organism: ideal media, temperature, growth curve and morphology.",
+      "defaultStatus": "locked",
+      "link": "/culturing-conditions",
+      "initialPosition": [
+        -2.1,
+        1.1
+      ],
+      "dependencies": [
+        "host-selection"
+      ]
+    },
+    {
+      "id": "buffer-mixing",
+      "title": "diy buffer mixing",
+      "description": "Mix your own buffers safely to cut costs - or buy pre-mixed if working solo.",
+      "defaultStatus": "locked",
+      "link": "/buffer-mixing",
+      "initialPosition": [
+        2.3,
+        0.6
+      ],
+      "dependencies": [
+        "sterile-workspace"
+      ]
+    },
+    {
+      "id": "media-plates",
+      "title": "mixing media & pouring plates",
+      "description": "Mix LB media/agar, pour plates, and make antibiotic selection plates.",
+      "defaultStatus": "locked",
+      "link": "/media-plates",
+      "initialPosition": [
+        0,
+        1.5
+      ],
+      "dependencies": [
+        "sterile-workspace",
+        "culturing-conditions"
+      ]
+    },
+    {
+      "id": "sterile-technique",
+      "title": "sterile (aseptic) technique",
+      "description": "Master the core discipline of microbiology - plus the inoculating loop and spreader.",
+      "defaultStatus": "locked",
+      "link": "/sterile-technique",
+      "initialPosition": [
+        0,
+        3
+      ],
+      "dependencies": [
+        "media-plates"
+      ]
+    },
+    {
+      "id": "dna101",
+      "title": "dna101 (theory)",
+      "description": "Refresh DNA structure, base pairing and the interactions cloning relies on.",
+      "defaultStatus": "locked",
+      "link": "/dna101",
+      "initialPosition": [
+        -2.2,
+        2.1
+      ],
+      "dependencies": [
+        "intro"
+      ]
+    },
+    {
+      "id": "genomic-dna",
+      "title": "purification of genomic dna",
+      "description": "Extract genomic DNA - and learn why you'll usually work with plasmids instead.",
+      "defaultStatus": "locked",
+      "link": "/genomic-dna",
+      "initialPosition": [
+        -2.2,
+        3.3
+      ],
+      "dependencies": [
+        "dna101",
+        "sterile-technique"
+      ]
+    },
+    {
+      "id": "plasmids101",
+      "title": "plasmids101 (theory)",
+      "description": "Understand plasmids as the programmable 'add-ons' of the cell.",
+      "defaultStatus": "locked",
+      "link": "/plasmids101",
+      "initialPosition": [
+        1.9,
+        2.0
+      ],
+      "dependencies": [
+        "dna101"
+      ]
+    },
+    {
+      "id": "backbone-selection",
+      "title": "backbone selection (theory)",
+      "description": "Choose the right plasmid backbone for your first experiments.",
+      "defaultStatus": "locked",
+      "link": "/backbone-selection",
+      "initialPosition": [
+        3.0,
+        2.3
+      ],
+      "dependencies": [
+        "plasmids101"
+      ]
+    },
+    {
+      "id": "miniprep",
+      "title": "plasmid miniprep (ethanol lysis)",
+      "description": "Purify plasmid DNA via the premier miniprep workflow: lyse, capture, wash, elute.",
+      "defaultStatus": "locked",
+      "link": "/miniprep",
+      "initialPosition": [
+        0,
+        4.5
+      ],
+      "dependencies": [
+        "plasmids101",
+        "sterile-technique",
+        "buffer-mixing"
+      ]
+    },
+    {
+      "id": "plasmid-insertion",
+      "title": "plasmid insertion (transformation)",
+      "description": "Get DNA into cells: heat shock, electroporation, or gene guns.",
+      "defaultStatus": "locked",
+      "link": "/plasmid-insertion",
+      "initialPosition": [
+        1.7,
+        5.0
+      ],
+      "dependencies": [
+        "miniprep"
+      ]
+    },
+    {
+      "id": "gel-electrophoresis",
+      "title": "agarose gel electrophoresis",
+      "description": "Separate and size DNA fragments - your bread-and-butter readout.",
+      "defaultStatus": "locked",
+      "link": "/gel-electrophoresis",
+      "initialPosition": [
+        0,
+        6.0
+      ],
+      "dependencies": [
+        "miniprep"
+      ]
+    },
+    {
+      "id": "gel-imaging",
+      "title": "gel illumination & photography",
+      "description": "Capture publication-quality gel images with cheap kit and a smartphone.",
+      "defaultStatus": "locked",
+      "link": "/gel-imaging",
+      "initialPosition": [
+        -1.9,
+        6.5
+      ],
+      "dependencies": [
+        "gel-electrophoresis"
+      ]
+    },
+    {
+      "id": "gblock-design",
+      "title": "gblock & insert design (theory)",
+      "description": "Design the perfect synthetic insert - codon optimisation, tags, cut sites.",
+      "defaultStatus": "locked",
+      "link": "/gblock-design",
+      "initialPosition": [
+        3.2,
+        3.5
+      ],
+      "dependencies": [
+        "backbone-selection"
+      ]
+    },
+    {
+      "id": "restriction-digest",
+      "title": "restriction enzyme digest",
+      "description": "Cut plasmid and insert with restriction enzymes; plan with a sequence viewer.",
+      "defaultStatus": "locked",
+      "link": "/restriction-digest",
+      "initialPosition": [
+        -0.4,
+        7.5
+      ],
+      "dependencies": [
+        "backbone-selection",
+        "gel-electrophoresis",
+        "gblock-design"
+      ]
+    },
+    {
+      "id": "ligation",
+      "title": "ligation & troubleshooting",
+      "description": "Glue DNA with T4 ligase and design the five control plates that save you weeks.",
+      "defaultStatus": "locked",
+      "link": "/ligation",
+      "initialPosition": [
+        0,
+        9.0
+      ],
+      "dependencies": [
+        "restriction-digest",
+        "plasmid-insertion"
+      ]
+    },
+    {
+      "id": "pcr",
+      "title": "polymerase chain reaction (pcr)",
+      "description": "Amplify any DNA region exponentially with a thermocycler and a master mix.",
+      "defaultStatus": "locked",
+      "link": "/pcr",
+      "initialPosition": [
+        1.9,
+        7.0
+      ],
+      "dependencies": [
+        "gel-electrophoresis"
+      ]
+    },
+    {
+      "id": "primer-design",
+      "title": "primer design",
+      "description": "Design primer pairs that bind your template, not each other.",
+      "defaultStatus": "locked",
+      "link": "/primer-design",
+      "initialPosition": [
+        3.0,
+        7.8
+      ],
+      "dependencies": [
+        "pcr"
+      ]
+    },
+    {
+      "id": "gradient-pcr",
+      "title": "gradient pcr",
+      "description": "Find the optimal annealing temperature in a single run.",
+      "defaultStatus": "locked",
+      "link": "/gradient-pcr",
+      "initialPosition": [
+        3.2,
+        9.0
+      ],
+      "dependencies": [
+        "primer-design"
+      ]
+    },
+    {
+      "id": "flanking-addition",
+      "title": "flanking sequence addition",
+      "description": "Add restriction sites or assembly overhangs via 5' primer overhangs.",
+      "defaultStatus": "locked",
+      "link": "/flanking-addition",
+      "initialPosition": [
+        1.8,
+        8.5
+      ],
+      "dependencies": [
+        "primer-design"
+      ]
+    },
+    {
+      "id": "confirmation",
+      "title": "confirmation of edits",
+      "description": "Screen clones with patch plates, colony PCR and restriction-digest analysis.",
+      "defaultStatus": "locked",
+      "link": "/confirmation",
+      "initialPosition": [
+        0,
+        10.7
+      ],
+      "dependencies": [
+        "ligation",
+        "pcr"
+      ]
+    },
+    {
+      "id": "sequencing",
+      "title": "sequencing prep & interpretation",
+      "description": "Prepare samples for external (or in-house Nanopore) sequencing and read results.",
+      "defaultStatus": "locked",
+      "link": "/sequencing",
+      "initialPosition": [
+        -2.0,
+        11.0
+      ],
+      "dependencies": [
+        "confirmation"
+      ]
+    },
+    {
+      "id": "gibson",
+      "title": "gibson assembly",
+      "description": "Scarless single-tube assembly of up to ~6 fragments via homologous overlaps.",
+      "defaultStatus": "locked",
+      "link": "/gibson",
+      "initialPosition": [
+        2.0,
+        10.7
+      ],
+      "dependencies": [
+        "flanking-addition",
+        "ligation"
+      ]
+    },
+    {
+      "id": "golden-gate",
+      "title": "golden gate assembly",
+      "description": "Type IIS scarless assembly of 10+ ordered fragments in one tube.",
+      "defaultStatus": "locked",
+      "link": "/golden-gate",
+      "initialPosition": [
+        3.4,
+        10.9
+      ],
+      "dependencies": [
+        "flanking-addition",
+        "restriction-digest"
+      ]
+    },
+    {
+      "id": "sdm",
+      "title": "site-directed mutagenesis",
+      "description": "Introduce a precise point mutation via megaprimer or round-the-world PCR.",
+      "defaultStatus": "locked",
+      "link": "/sdm",
+      "initialPosition": [
+        4.0,
+        9.2
+      ],
+      "dependencies": [
+        "primer-design",
+        "gradient-pcr"
+      ]
+    },
+    {
+      "id": "crispr",
+      "title": "crispr / cas9",
+      "description": "Target precise genomic edits with a Cas enzyme and a designed guide RNA.",
+      "defaultStatus": "locked",
+      "link": "/crispr",
+      "initialPosition": [
+        2.4,
+        12.2
+      ],
+      "dependencies": [
+        "ligation",
+        "primer-design"
+      ]
+    },
+    {
+      "id": "proteins101",
+      "title": "proteins101 (theory)",
+      "description": "Working knowledge of protein mechanics before producing them in the lab.",
+      "defaultStatus": "locked",
+      "link": "/proteins101",
+      "initialPosition": [
+        0,
+        12.2
+      ],
+      "dependencies": [
+        "confirmation"
+      ]
+    },
+    {
+      "id": "protein-induction",
+      "title": "induction of protein expression",
+      "description": "Trigger protein expression at the right growth phase using OD600.",
+      "defaultStatus": "locked",
+      "link": "/protein-induction",
+      "initialPosition": [
+        0,
+        13.7
+      ],
+      "dependencies": [
+        "proteins101"
+      ]
+    },
+    {
+      "id": "cell-lysis",
+      "title": "cell lysis",
+      "description": "Bust open cells to release your protein into cell slurry.",
+      "defaultStatus": "locked",
+      "link": "/cell-lysis",
+      "initialPosition": [
+        0,
+        15.2
+      ],
+      "dependencies": [
+        "protein-induction"
+      ]
+    },
+    {
+      "id": "affinity-purification",
+      "title": "affinity tag purification",
+      "description": "Recover tagged protein from cell slurry (His-tag / Ni-NTA, or Car9/silica).",
+      "defaultStatus": "locked",
+      "link": "/affinity-purification",
+      "initialPosition": [
+        -1.6,
+        16.2
+      ],
+      "dependencies": [
+        "cell-lysis",
+        "gblock-design"
+      ]
+    },
+    {
+      "id": "sds-page",
+      "title": "sds-page",
+      "description": "Size and quantify proteins on a denaturing polyacrylamide gel.",
+      "defaultStatus": "locked",
+      "link": "/sds-page",
+      "initialPosition": [
+        0,
+        16.7
+      ],
+      "dependencies": [
+        "affinity-purification",
+        "gel-electrophoresis"
+      ]
+    },
+    {
+      "id": "final-project",
+      "title": "capstone: express & purify a protein",
+      "description": "Demonstrate mastery end to end: design, build, confirm, express and purify a protein.",
+      "defaultStatus": "locked",
+      "link": "/final-project",
+      "initialPosition": [
+        0,
+        18.2
+      ],
+      "dependencies": [
+        "sds-page",
+        "gel-imaging",
+        "confirmation"
+      ]
+    },
+    {
+      "id": "advanced-omics",
+      "title": "beyond the bench: rna, omics & bio-programming",
+      "description": "The frontier: gene switches, omics, aptamers, mass spec and advanced biological programming.",
+      "defaultStatus": "locked",
+      "link": "/advanced-omics",
+      "initialPosition": [
+        0,
+        21.0
+      ],
+      "dependencies": [
+        "final-project",
+        "western-blot",
+        "rt-qpcr"
+      ]
+    },
+    {
+      "id": "micropipette",
+      "title": "the micropipette",
+      "description": "Master the single most important tool in the lab: accurate, bubble-free pipetting.",
+      "defaultStatus": "locked",
+      "link": "/micropipette",
+      "initialPosition": [
+        -3.6,
+        -0.6
+      ],
+      "dependencies": [
+        "intro"
+      ]
+    },
+    {
+      "id": "centrifuge",
+      "title": "the centrifuge",
+      "description": "Pellet cells and clear lysates safely - the workhorse behind minipreps.",
+      "defaultStatus": "locked",
+      "link": "/centrifuge",
+      "initialPosition": [
+        -4.8,
+        -0.6
+      ],
+      "dependencies": [
+        "intro"
+      ]
+    },
+    {
+      "id": "thermocycler",
+      "title": "the thermocycler",
+      "description": "Program the heating/cooling cycles that drive PCR.",
+      "defaultStatus": "locked",
+      "link": "/thermocycler",
+      "initialPosition": [
+        -3.6,
+        -1.8
+      ],
+      "dependencies": [
+        "intro"
+      ]
+    },
+    {
+      "id": "spectrophotometer",
+      "title": "the spectrophotometer",
+      "description": "Measure OD600 to track cell growth and time induction.",
+      "defaultStatus": "locked",
+      "link": "/spectrophotometer",
+      "initialPosition": [
+        -4.8,
+        -1.8
+      ],
+      "dependencies": [
+        "intro"
+      ]
+    },
+    {
+      "id": "western-blot",
+      "title": "western blot",
+      "description": "Detect a specific protein by size + antibody after transferring an SDS-PAGE gel to a membrane.",
+      "defaultStatus": "locked",
+      "link": "/western-blot",
+      "initialPosition": [
+        -2.0,
+        17.6
+      ],
+      "dependencies": [
+        "sds-page"
+      ]
+    },
+    {
+      "id": "elisa",
+      "title": "elisa",
+      "description": "Quantify a protein/antigen in solution with an antibody-based plate assay.",
+      "defaultStatus": "locked",
+      "link": "/elisa",
+      "initialPosition": [
+        -3.3,
+        16.6
+      ],
+      "dependencies": [
+        "affinity-purification"
+      ]
+    },
+    {
+      "id": "rna-purification",
+      "title": "rna purification",
+      "description": "Extract intact RNA while keeping ubiquitous RNases at bay.",
+      "defaultStatus": "locked",
+      "link": "/rna-purification",
+      "initialPosition": [
+        -3.7,
+        4.6
+      ],
+      "dependencies": [
+        "genomic-dna"
+      ]
+    },
+    {
+      "id": "rt-qpcr",
+      "title": "rt-qpcr",
+      "description": "Reverse-transcribe RNA to cDNA and quantify transcript levels in real time.",
+      "defaultStatus": "locked",
+      "link": "/rt-qpcr",
+      "initialPosition": [
+        -3.5,
+        6.1
+      ],
+      "dependencies": [
+        "rna-purification",
+        "pcr"
+      ]
+    },
+    {
+      "id": "protein-design",
+      "title": "computational protein design",
+      "description": "Design proteins in silico with AlphaFold, RFdiffusion, and ProteinMPNN before building them.",
+      "defaultStatus": "locked",
+      "link": "/protein-design",
+      "initialPosition": [
+        4.4,
+        12.6
+      ],
+      "dependencies": [
+        "proteins101"
+      ]
+    },
+    {
+      "id": "genetic-circuits",
+      "title": "genetic circuits",
+      "description": "Wire standardised parts into logic circuits with MoClo/Golden Gate and Cello.",
+      "defaultStatus": "locked",
+      "link": "/genetic-circuits",
+      "initialPosition": [
+        4.8,
+        10.9
+      ],
+      "dependencies": [
+        "gibson",
+        "golden-gate"
+      ]
+    },
+    {
+      "id": "cell-free",
+      "title": "cell-free systems (TX-TL)",
+      "description": "Express genes in cell extracts - fast prototyping and freeze-dried biosensors.",
+      "defaultStatus": "locked",
+      "link": "/cell-free",
+      "initialPosition": [
+        2.3,
+        14.4
+      ],
+      "dependencies": [
+        "proteins101",
+        "pcr"
+      ]
+    },
+    {
+      "id": "building-genomes",
+      "title": "building genomes",
+      "description": "Assemble DNA at genome scale: minimal genomes, Sc2.0, and recoding.",
+      "defaultStatus": "locked",
+      "link": "/building-genomes",
+      "initialPosition": [
+        4.0,
+        14.6
+      ],
+      "dependencies": [
+        "golden-gate",
+        "crispr"
+      ]
+    },
+    {
+      "id": "biofabrication",
+      "title": "bio design & biofabrication",
+      "description": "Grow materials and objects - engineered living materials and biofabrication.",
+      "defaultStatus": "locked",
+      "link": "/biofabrication",
+      "initialPosition": [
+        2.2,
+        19.8
+      ],
+      "dependencies": [
+        "final-project"
+      ]
+    },
+    {
+      "id": "lab-automation",
+      "title": "laboratory automation",
+      "description": "Program liquid handlers (Opentrons) and robotic workflows for reproducible, high-throughput science.",
+      "defaultStatus": "locked",
+      "link": "/lab-automation",
+      "initialPosition": [
+        -3.6,
+        22.4
+      ],
+      "dependencies": [
+        "pcr",
+        "micropipette"
+      ]
+    },
+    {
+      "id": "eln-lims",
+      "title": "eln / lims & data hygiene",
+      "description": "Benchling ELN/LIMS, sample tracking, and FAIR data - the backbone of an industry lab.",
+      "defaultStatus": "locked",
+      "link": "/eln-lims",
+      "initialPosition": [
+        -1.4,
+        22.4
+      ],
+      "dependencies": [
+        "intro"
+      ]
+    },
+    {
+      "id": "mammalian-cell-culture",
+      "title": "mammalian cell culture",
+      "description": "Grow HEK/CHO cells aseptically for therapeutics and assays; passaging, CO2, contamination.",
+      "defaultStatus": "locked",
+      "link": "/mammalian-cell-culture",
+      "initialPosition": [
+        0.8,
+        22.4
+      ],
+      "dependencies": [
+        "sterile-technique"
+      ]
+    },
+    {
+      "id": "bioinformatics",
+      "title": "bioinformatics foundations",
+      "description": "Sequence formats, quality scores, alignment, and Biopython/pandas scripting.",
+      "defaultStatus": "locked",
+      "link": "/bioinformatics",
+      "initialPosition": [
+        3.0,
+        22.4
+      ],
+      "dependencies": [
+        "sequencing"
+      ]
+    },
+    {
+      "id": "doe-statistics",
+      "title": "design of experiments & rigor",
+      "description": "DoE over one-factor-at-a-time, replication, controls, and avoiding p-hacking.",
+      "defaultStatus": "locked",
+      "link": "/doe-statistics",
+      "initialPosition": [
+        -3.6,
+        23.8
+      ],
+      "dependencies": [
+        "intro"
+      ]
+    },
+    {
+      "id": "biosafety-biosecurity",
+      "title": "biosafety & biosecurity",
+      "description": "BSL levels, containment, dual-use (DURC) governance, and DNA-synthesis screening.",
+      "defaultStatus": "locked",
+      "link": "/biosafety-biosecurity",
+      "initialPosition": [
+        -1.4,
+        23.8
+      ],
+      "dependencies": [
+        "host-selection"
+      ]
+    },
+    {
+      "id": "flow-cytometry",
+      "title": "flow cytometry & facs",
+      "description": "Single-cell analysis and sorting by scatter and fluorescence; gating and compensation.",
+      "defaultStatus": "locked",
+      "link": "/flow-cytometry",
+      "initialPosition": [
+        0.8,
+        23.8
+      ],
+      "dependencies": [
+        "mammalian-cell-culture"
+      ]
+    },
+    {
+      "id": "ngs-analysis",
+      "title": "ngs data analysis",
+      "description": "Read QC, alignment, coverage, and variant calling / RNA-seq pipelines (nf-core).",
+      "defaultStatus": "locked",
+      "link": "/ngs-analysis",
+      "initialPosition": [
+        3.0,
+        23.8
+      ],
+      "dependencies": [
+        "bioinformatics"
+      ]
+    },
+    {
+      "id": "directed-evolution",
+      "title": "directed evolution",
+      "description": "Generate diversity and select/screen for improved variants over iterative rounds.",
+      "defaultStatus": "locked",
+      "link": "/directed-evolution",
+      "initialPosition": [
+        -1.4,
+        25.2
+      ],
+      "dependencies": [
+        "pcr",
+        "plasmid-insertion"
+      ]
+    },
+    {
+      "id": "ml-for-biology",
+      "title": "ml / ai for biology",
+      "description": "Foundation models (ESM, AlphaFold), generative design, and leakage-proof evaluation.",
+      "defaultStatus": "locked",
+      "link": "/ml-for-biology",
+      "initialPosition": [
+        0.8,
+        25.2
+      ],
+      "dependencies": [
+        "bioinformatics",
+        "protein-design"
+      ]
+    },
+    {
+      "id": "biomanufacturing",
+      "title": "bioprocess & biomanufacturing",
+      "description": "Scale flask to bioreactor: batch/fed-batch, oxygen transfer, and GMP/quality-by-design.",
+      "defaultStatus": "locked",
+      "link": "/biomanufacturing",
+      "initialPosition": [
+        3.0,
+        25.2
+      ],
+      "dependencies": [
+        "protein-induction"
+      ]
+    }
+  ],
+  "mainPathNodes": [
+    "intro",
+    "sterile-workspace",
+    "media-plates",
+    "sterile-technique",
+    "miniprep",
+    "gel-electrophoresis",
+    "pcr",
+    "restriction-digest",
+    "ligation",
+    "confirmation",
+    "proteins101",
+    "protein-induction",
+    "affinity-purification",
+    "sds-page",
+    "final-project"
+  ]
+}
