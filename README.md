@@ -5,7 +5,9 @@ open-source [NeoSynBio *Graduate's Guide to Synthetic Biology*](https://www.neos
 and enriched with the best-rated external guides for every topic (NEB, Addgene, Benchling,
 SnapGene, Thermo Fisher, Bio-Rad, IDT, iGEM, Cold Spring Harbor Protocols).
 
-**59 nodes · 189 curated resource links · 23 nodes with verified technique videos · one coherent dependency graph**
+**▶ Live: https://biotech-skill-tree.netlify.app**
+
+**59 nodes · 189 curated resource links · 37 nodes with verified technique videos · one coherent dependency graph**
 that takes a learner from a sterile bench all the way to expressing, purifying, and analysing their own protein —
 and out into computational protein design, genetic circuits, cell-free systems, genome-scale assembly, and biofabrication.
 
@@ -25,6 +27,18 @@ date, and instructors from the published **Spring 2026** schedule (e.g. CRISPR �
 Gibson/Golden Gate → Week 6 *Genetic Circuits I: Assembly*). Five HTGAA-derived nodes extend the tree into the
 course's advanced scope: **computational protein design, genetic circuits, cell-free systems (TX-TL), building
 genomes, and bio design & biofabrication**. 20 nodes are week-mapped.
+
+## Deploying
+
+The viewer is a single static file, so deployment is just publishing one directory:
+
+```bash
+netlify deploy --prod --dir=viewer --site=<site-id>
+```
+
+`netlify.toml` sets `publish = "viewer"` with an SPA catch-all redirect. **Always deploy with an
+explicit `--dir=viewer`** — this repo lives inside a larger private working folder, and `--dir`
+guarantees only the viewer is ever published.
 
 ## Interactive viewer (start here)
 
@@ -56,7 +70,7 @@ of truth — edit a node file, rerun the script, reload.
 ## Interview mode (technical-screen tool)
 
 The **◇ interview** tab turns the skill tree into a hiring/prep tool backed by a practical question
-bank (`src/data/interview_questions.json` — **105 questions across 48 techniques/equipment**, tagged
+bank (`src/data/interview_questions.json` — **116 questions covering all 59 nodes (100%)**, tagged
 `foundational` / `core` / `advanced` and anchored to the tree node they test). Questions are written
 to probe *how to actually use the equipment* — pick the right pipette for 2.5 µL, why you balance a
 centrifuge, star activity in a digest, imidazole elution off Ni-NTA, inclusion-body rescue, PAM
