@@ -459,7 +459,20 @@ HTML = r"""<!doctype html>
       var proj=(det.project||'');
       el.innerHTML='<div class="nt">'+esc(n.title)+'</div>'
         +'<div class="nm"><span class="glyphs">'+glyphs(n)+'</span>'+(proj?'<span>'+esc(proj)+'</span>':'')+'</div>';
-      el.addEventListener('click',function(ev){ev.stopPropagation();openPop(n.id);});
+      el.setAttribute('data-node',n.id);
+      el.setAttribute('role','button');
+      el.tabIndex=0;
+      // Primary activation is the map's pointerup (tap-vs-drag aware). This click
+      // handler is a belt-and-braces fallback for environments where pointer
+      // events behave differently; openPop() is guarded so it can't double-fire.
+      el.addEventListener('click',function(ev){
+        ev.stopPropagation();
+        if(Date.now()-lastTapOpen<500)return; // pointerup already handled this tap
+        openPop(n.id);
+      });
+      el.addEventListener('keydown',function(ev){
+        if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();openPop(n.id);}
+      });
       canvas.appendChild(el);
       nodeEls[n.id]=el;
     });
@@ -664,31 +677,74 @@ HTML = r"""<!doctype html>
     var r=mapEl.getBoundingClientRect();
     zoomAt(e.clientX-r.left,e.clientY-r.top,e.deltaY<0?1.12:1/1.12);
   },{passive:false});
-  // pointer drag + pinch
-  var ptrs={},last=null,pinchD=0;
+  // ---- pointer drag + pinch, WITHOUT breaking click-to-open ----
+  // Calling setPointerCapture() on pointerdown retargets the resulting `click`
+  // to #map, so a node's own click handler never fires for a real mouse (only
+  // for a synthetic el.click()). So: capture ONLY once a real drag starts, and
+  // decide "tap vs drag" ourselves on pointerup.
+  var ptrs={},last=null,pinchD=0,downPt=null,dragged=false;
+  var DRAG_SLOP=5;   // px of movement before it counts as a pan, not a tap
+  var lastTapOpen=0; // timestamp: lets the fallback click handler stand down
+
   mapEl.addEventListener('pointerdown',function(e){
-    mapEl.setPointerCapture(e.pointerId);
     ptrs[e.pointerId]={x:e.clientX,y:e.clientY};
-    if(Object.keys(ptrs).length===1){last={x:e.clientX,y:e.clientY};mapEl.classList.add('drag');}
+    if(Object.keys(ptrs).length===1){
+      last={x:e.clientX,y:e.clientY};
+      downPt={x:e.clientX,y:e.clientY,id:e.pointerId,node:nodeAt(e.target)};
+      dragged=false;
+    }else{
+      downPt=null; // second finger => gesture, never a tap
+    }
   });
+
   mapEl.addEventListener('pointermove',function(e){
     if(!ptrs[e.pointerId])return;
     ptrs[e.pointerId]={x:e.clientX,y:e.clientY};
     var ids=Object.keys(ptrs);
     if(ids.length>=2){
+      dragged=true;
       var a=ptrs[ids[0]],b=ptrs[ids[1]];
       var d=Math.hypot(a.x-b.x,a.y-b.y);
       var r=mapEl.getBoundingClientRect();
       var midx=(a.x+b.x)/2-r.left,midy=(a.y+b.y)/2-r.top;
       if(pinchD)zoomAt(midx,midy,d/pinchD);
       pinchD=d; last=null;
-    }else if(last){
+      return;
+    }
+    if(!dragged&&downPt&&Math.hypot(e.clientX-downPt.x,e.clientY-downPt.y)<=DRAG_SLOP)return; // still a tap
+    if(!dragged){
+      dragged=true;
+      mapEl.classList.add('drag');
+      // now that it is genuinely a drag, capture so panning survives leaving the window
+      try{mapEl.setPointerCapture(e.pointerId);}catch(_){}
+    }
+    if(last){
       tx+=e.clientX-last.x; ty+=e.clientY-last.y; last={x:e.clientX,y:e.clientY}; applyTransform();
     }
   });
-  function endPtr(e){delete ptrs[e.pointerId];if(Object.keys(ptrs).length<2)pinchD=0;
-    if(Object.keys(ptrs).length===0){last=null;mapEl.classList.remove('drag');}}
-  mapEl.addEventListener('pointerup',endPtr);
+
+  mapEl.addEventListener('pointerup',function(e){
+    // a tap that never moved past the slop opens the node under the pointer
+    if(!dragged&&downPt&&downPt.id===e.pointerId){
+      var id=downPt.node||nodeAt(e.target)||nodeAtPoint(e.clientX,e.clientY);
+      if(id){lastTapOpen=Date.now();openPop(id);}
+    }
+    endPtr(e);
+  });
+
+  function nodeAt(target){
+    var el=target&&target.closest?target.closest('.node'):null;
+    return el?el.getAttribute('data-node'):null;
+  }
+  function nodeAtPoint(x,y){ // fallback if the event was retargeted
+    return nodeAt(document.elementFromPoint(x,y));
+  }
+  function endPtr(e){
+    try{if(mapEl.hasPointerCapture&&mapEl.hasPointerCapture(e.pointerId))mapEl.releasePointerCapture(e.pointerId);}catch(_){}
+    delete ptrs[e.pointerId];
+    if(Object.keys(ptrs).length<2)pinchD=0;
+    if(Object.keys(ptrs).length===0){last=null;downPt=null;dragged=false;mapEl.classList.remove('drag');}
+  }
   mapEl.addEventListener('pointercancel',endPtr);
 
   function fitTo(nodes){
