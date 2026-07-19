@@ -1,0 +1,91 @@
+name: Deploy to Netlify
+
+# Rebuilds the viewer from the JSON data and deploys it on every push to main,
+# so editing a node file (or the interview bank) is enough to ship a change.
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "**/*.md"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Never let two deploys race; a newer push supersedes an in-flight one.
+concurrency:
+  group: netlify-deploy
+  cancel-in-progress: true
+
+env:
+  # Not a secret - the site id is public. The auth token is the credential.
+  NETLIFY_SITE_ID: b4393c72-36a7-44e9-a545-e55b3724177c
+  PUBLISH_DIR: viewer
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Require the Netlify auth token
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          if [ -z "$NETLIFY_AUTH_TOKEN" ]; then
+            echo "::error::Missing repository secret NETLIFY_AUTH_TOKEN."
+            echo "Create a personal access token at https://app.netlify.com/user/applications#personal-access-tokens"
+            echo "then add it under Settings -> Secrets and variables -> Actions as NETLIFY_AUTH_TOKEN."
+            exit 1
+          fi
+
+      # Fails the build on a broken graph, a gated node, a bad question, or a
+      # malformed video URL - so a bad commit can never reach production.
+      - name: Validate data integrity
+        run: python validate.py
+
+      - name: Rebuild the viewer from data
+        run: python build_viewer.py
+
+      - name: Warn if the committed viewer was stale
+        run: |
+          if ! git diff --quiet -- "$PUBLISH_DIR/index.html"; then
+            echo "::warning::viewer/index.html in the repo differed from a fresh build."
+            echo "The freshly built version is what gets deployed. Run 'python build_viewer.py' and commit to keep them in sync."
+          fi
+
+      # Guard: only ever publish the viewer directory, never the repo root.
+      - name: Verify the publish directory
+        run: |
+          echo "Contents of $PUBLISH_DIR:"
+          find "$PUBLISH_DIR" -type f -print
+          count=$(find "$PUBLISH_DIR" -type f | wc -l)
+          if [ "$count" -ne 1 ] || [ ! -f "$PUBLISH_DIR/index.html" ]; then
+            echo "::error::Expected exactly one file ($PUBLISH_DIR/index.html) but found $count."
+            exit 1
+          fi
+
+      - name: Deploy to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          npx --yes netlify-cli@24.0.1 deploy \
+            --prod \
+            --dir="$PUBLISH_DIR" \
+            --site="$NETLIFY_SITE_ID" \
+            --message="${GITHUB_SHA::7}: $(git log -1 --pretty=%s)"
+
+      - name: Summary
+        run: |
+          {
+            echo "### Deployed to Netlify :rocket:"
+            echo ""
+            echo "- **Live:** https://biotech-skill-tree.netlify.app"
+            echo "- **Commit:** \`${GITHUB_SHA::7}\`"
+          } >> "$GITHUB_STEP_SUMMARY"
