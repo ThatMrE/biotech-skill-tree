@@ -9,25 +9,25 @@
         "name": "The Sterile Workspace",
         "id": "sterile-workspace",
         "description": "Set up PPE, a Bunsen 'cone of protection', and a media-sterilisation strategy.",
-        "isUnlocked": false,
+        "isUnlocked": true,
         "children": [
           {
             "name": "DIY Buffer Mixing",
             "id": "buffer-mixing",
             "description": "Mix your own buffers safely to cut costs - or buy pre-mixed if working solo.",
-            "isUnlocked": false
+            "isUnlocked": true
           },
           {
             "name": "Mixing Media & Pouring Plates",
             "id": "media-plates",
             "description": "Mix LB media/agar, pour plates, and make antibiotic selection plates.",
-            "isUnlocked": false,
+            "isUnlocked": true,
             "children": [
               {
                 "name": "Sterile (Aseptic) Technique",
                 "id": "sterile-technique",
                 "description": "Master the core discipline of microbiology - plus the inoculating loop and spreader.",
-                "isUnlocked": false
+                "isUnlocked": true
               }
             ]
           }
@@ -37,13 +37,13 @@
         "name": "Host Selection Criteria",
         "id": "host-selection",
         "description": "Choose a safe, well-characterised, single-celled host - and check it's legal.",
-        "isUnlocked": false,
+        "isUnlocked": true,
         "children": [
           {
             "name": "Culturing Conditions",
             "id": "culturing-conditions",
             "description": "Know your organism: ideal media, temperature, growth curve and morphology.",
-            "isUnlocked": false
+            "isUnlocked": true
           }
         ]
       },
@@ -51,25 +51,25 @@
         "name": "DNA101 (Theory)",
         "id": "dna101",
         "description": "Refresh DNA structure, base pairing and the interactions cloning relies on.",
-        "isUnlocked": false,
+        "isUnlocked": true,
         "children": [
           {
             "name": "Purification of Genomic DNA",
             "id": "genomic-dna",
             "description": "Extract genomic DNA - and learn why you'll usually work with plasmids instead.",
-            "isUnlocked": false,
+            "isUnlocked": true,
             "children": [
               {
                 "name": "RNA Purification",
                 "id": "rna-purification",
                 "description": "Extract intact RNA while keeping ubiquitous RNases at bay.",
-                "isUnlocked": false,
+                "isUnlocked": true,
                 "children": [
                   {
                     "name": "RT-qPCR",
                     "id": "rt-qpcr",
                     "description": "Reverse-transcribe RNA to cDNA and quantify transcript levels in real time.",
-                    "isUnlocked": false
+                    "isUnlocked": true
                   }
                 ]
               }
@@ -79,85 +79,85 @@
             "name": "Plasmids101 (Theory)",
             "id": "plasmids101",
             "description": "Understand plasmids as the programmable 'add-ons' of the cell.",
-            "isUnlocked": false,
+            "isUnlocked": true,
             "children": [
               {
                 "name": "Backbone Selection (Theory)",
                 "id": "backbone-selection",
                 "description": "Choose the right plasmid backbone for your first experiments.",
-                "isUnlocked": false,
+                "isUnlocked": true,
                 "children": [
                   {
                     "name": "gBlock & Insert Design (Theory)",
                     "id": "gblock-design",
                     "description": "Design the perfect synthetic insert - codon optimisation, tags, cut sites.",
-                    "isUnlocked": false
+                    "isUnlocked": true
                   },
                   {
                     "name": "Restriction Enzyme Digest",
                     "id": "restriction-digest",
                     "description": "Cut plasmid and insert with restriction enzymes; plan with a sequence viewer.",
-                    "isUnlocked": false,
+                    "isUnlocked": true,
                     "children": [
                       {
                         "name": "Ligation & Troubleshooting",
                         "id": "ligation",
                         "description": "Glue DNA with T4 ligase and design the five control plates that save you weeks.",
-                        "isUnlocked": false,
+                        "isUnlocked": true,
                         "children": [
                           {
                             "name": "Confirmation of Edits",
                             "id": "confirmation",
                             "description": "Screen clones with patch plates, colony PCR and restriction-digest analysis.",
-                            "isUnlocked": false,
+                            "isUnlocked": true,
                             "children": [
                               {
                                 "name": "Sequencing Prep & Interpretation",
                                 "id": "sequencing",
                                 "description": "Prepare samples for external (or in-house Nanopore) sequencing and read results.",
-                                "isUnlocked": false
+                                "isUnlocked": true
                               },
                               {
                                 "name": "Proteins101 (Theory)",
                                 "id": "proteins101",
                                 "description": "Working knowledge of protein mechanics before producing them in the lab.",
-                                "isUnlocked": false,
+                                "isUnlocked": true,
                                 "children": [
                                   {
                                     "name": "Induction of Protein Expression",
                                     "id": "protein-induction",
                                     "description": "Trigger protein expression at the right growth phase using OD600.",
-                                    "isUnlocked": false,
+                                    "isUnlocked": true,
                                     "children": [
                                       {
                                         "name": "Cell Lysis",
                                         "id": "cell-lysis",
                                         "description": "Bust open cells to release your protein into cell slurry.",
-                                        "isUnlocked": false,
+                                        "isUnlocked": true,
                                         "children": [
                                           {
                                             "name": "Affinity Tag Purification",
                                             "id": "affinity-purification",
                                             "description": "Recover tagged protein from cell slurry (His-tag / Ni-NTA, or Car9/silica).",
-                                            "isUnlocked": false,
+                                            "isUnlocked": true,
                                             "children": [
                                               {
                                                 "name": "SDS-PAGE",
                                                 "id": "sds-page",
                                                 "description": "Size and quantify proteins on a denaturing polyacrylamide gel.",
-                                                "isUnlocked": false,
+                                                "isUnlocked": true,
                                                 "children": [
                                                   {
                                                     "name": "Capstone: Express & Purify a Protein",
                                                     "id": "final-project",
                                                     "description": "Demonstrate mastery end to end: design, build, confirm, express and purify a protein.",
-                                                    "isUnlocked": false,
+                                                    "isUnlocked": true,
                                                     "children": [
                                                       {
                                                         "name": "Beyond the Bench: RNA, Omics & Bio-Programming",
                                                         "id": "advanced-omics",
                                                         "description": "The frontier: gene switches, omics, aptamers, mass spec and advanced biological programming.",
-                                                        "isUnlocked": false
+                                                        "isUnlocked": true
                                                       }
                                                     ]
                                                   },
@@ -165,7 +165,7 @@
                                                     "name": "Western Blot",
                                                     "id": "western-blot",
                                                     "description": "Detect a specific protein by size + antibody after transferring an SDS-PAGE gel to a membrane.",
-                                                    "isUnlocked": false
+                                                    "isUnlocked": true
                                                   }
                                                 ]
                                               },
@@ -173,7 +173,7 @@
                                                 "name": "ELISA",
                                                 "id": "elisa",
                                                 "description": "Quantify a protein/antigen in solution with an antibody-based plate assay.",
-                                                "isUnlocked": false
+                                                "isUnlocked": true
                                               }
                                             ]
                                           }
@@ -189,7 +189,7 @@
                             "name": "CRISPR / Cas9",
                             "id": "crispr",
                             "description": "Target precise genomic edits with a Cas enzyme and a designed guide RNA.",
-                            "isUnlocked": false
+                            "isUnlocked": true
                           }
                         ]
                       }
@@ -201,61 +201,61 @@
                 "name": "Plasmid Miniprep (Ethanol Lysis)",
                 "id": "miniprep",
                 "description": "Purify plasmid DNA via the premier miniprep workflow: lyse, capture, wash, elute.",
-                "isUnlocked": false,
+                "isUnlocked": true,
                 "children": [
                   {
                     "name": "Plasmid Insertion (Transformation)",
                     "id": "plasmid-insertion",
                     "description": "Get DNA into cells: heat shock, electroporation, or gene guns.",
-                    "isUnlocked": false
+                    "isUnlocked": true
                   },
                   {
                     "name": "Agarose Gel Electrophoresis",
                     "id": "gel-electrophoresis",
                     "description": "Separate and size DNA fragments - your bread-and-butter readout.",
-                    "isUnlocked": false,
+                    "isUnlocked": true,
                     "children": [
                       {
                         "name": "Gel Illumination & Photography",
                         "id": "gel-imaging",
                         "description": "Capture publication-quality gel images with cheap kit and a smartphone.",
-                        "isUnlocked": false
+                        "isUnlocked": true
                       },
                       {
                         "name": "Polymerase Chain Reaction (PCR)",
                         "id": "pcr",
                         "description": "Amplify any DNA region exponentially with a thermocycler and a master mix.",
-                        "isUnlocked": false,
+                        "isUnlocked": true,
                         "children": [
                           {
                             "name": "Primer Design",
                             "id": "primer-design",
                             "description": "Design primer pairs that bind your template, not each other.",
-                            "isUnlocked": false,
+                            "isUnlocked": true,
                             "children": [
                               {
                                 "name": "Gradient PCR",
                                 "id": "gradient-pcr",
                                 "description": "Find the optimal annealing temperature in a single run.",
-                                "isUnlocked": false
+                                "isUnlocked": true
                               },
                               {
                                 "name": "Flanking Sequence Addition",
                                 "id": "flanking-addition",
                                 "description": "Add restriction sites or assembly overhangs via 5' primer overhangs.",
-                                "isUnlocked": false,
+                                "isUnlocked": true,
                                 "children": [
                                   {
                                     "name": "Gibson Assembly",
                                     "id": "gibson",
                                     "description": "Scarless single-tube assembly of up to ~6 fragments via homologous overlaps.",
-                                    "isUnlocked": false
+                                    "isUnlocked": true
                                   },
                                   {
                                     "name": "Golden Gate Assembly",
                                     "id": "golden-gate",
                                     "description": "Type IIS scarless assembly of 10+ ordered fragments in one tube.",
-                                    "isUnlocked": false
+                                    "isUnlocked": true
                                   }
                                 ]
                               },
@@ -263,7 +263,7 @@
                                 "name": "Site-Directed Mutagenesis",
                                 "id": "sdm",
                                 "description": "Introduce a precise point mutation via megaprimer or round-the-world PCR.",
-                                "isUnlocked": false
+                                "isUnlocked": true
                               }
                             ]
                           }
@@ -281,25 +281,25 @@
         "name": "THE Micropipette",
         "id": "micropipette",
         "description": "Master the single most important tool in the lab: accurate, bubble-free pipetting.",
-        "isUnlocked": false
+        "isUnlocked": true
       },
       {
         "name": "The Centrifuge",
         "id": "centrifuge",
         "description": "Pellet cells and clear lysates safely - the workhorse behind minipreps.",
-        "isUnlocked": false
+        "isUnlocked": true
       },
       {
         "name": "The Thermocycler",
         "id": "thermocycler",
         "description": "Program the heating/cooling cycles that drive PCR.",
-        "isUnlocked": false
+        "isUnlocked": true
       },
       {
         "name": "The Spectrophotometer",
         "id": "spectrophotometer",
         "description": "Measure OD600 to track cell growth and time induction.",
-        "isUnlocked": false
+        "isUnlocked": true
       }
     ]
   }

@@ -94,9 +94,10 @@ HTML = r"""<!doctype html>
   .node .nt{font-size:11.5px;line-height:1.25;letter-spacing:.01em}
   .node .nm{font-size:9px;color:var(--dim);margin-top:5px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
   .node .glyphs{font-size:10px;letter-spacing:2px}
-  .node.locked{opacity:.5;filter:grayscale(.4)}
-  .node.ready{border-color:var(--orange);box-shadow:0 0 0 1px rgba(255,122,47,.5)}
-  .node.ready::after{content:"";position:absolute;inset:-3px;border-radius:11px;border:1px solid var(--orange);
+  /* every node is open/navigable - 'open' is a soft de-emphasis, never a lock */
+  .node.open{opacity:.92}
+  .node.next{border-color:var(--orange);box-shadow:0 0 0 1px rgba(255,122,47,.5)}
+  .node.next::after{content:"";position:absolute;inset:-3px;border-radius:11px;border:1px solid var(--orange);
     animation:pulse 1.6s ease-in-out infinite;pointer-events:none}
   @keyframes pulse{0%,100%{opacity:.15}50%{opacity:.8}}
   .node.done{border-color:var(--green-dim)}
@@ -127,8 +128,9 @@ HTML = r"""<!doctype html>
   .li .txt small{color:var(--dim);font-size:10.5px;display:block;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .li .glyphs{font-size:11px;letter-spacing:2px;color:var(--dim)}
   .pill{font-size:9px;padding:3px 7px;border-radius:20px;border:1px solid var(--edge);color:var(--dim);white-space:nowrap}
-  .pill.ready{color:var(--orange);border-color:var(--orange)}
+  .pill.next{color:var(--orange);border-color:var(--orange)}
   .pill.done{color:var(--green);border-color:var(--green-dim)}
+  .pill.open{color:var(--dim);border-color:var(--edge)}
 
   /* ---------- INTERVIEW ---------- */
   #interview{position:absolute;inset:0;overflow:auto;padding:22px 18px 60px;display:none}
@@ -234,6 +236,9 @@ HTML = r"""<!doctype html>
   .req{display:flex;align-items:center;gap:8px;font-size:12.5px;margin-bottom:5px}
   .req .m{font-size:13px}
   .req.ok{color:var(--green)}.req.no{color:var(--dim)}
+  .req a.jump{color:inherit;text-decoration:none;border-bottom:1px dotted currentColor}
+  .req a.jump:hover{color:var(--green);border-bottom-color:var(--green)}
+  .freenote{font-size:11px;color:var(--dim);font-style:italic;margin-top:8px;padding-left:2px}
   .steps{counter-reset:s}
   .step{display:flex;gap:11px;margin-bottom:9px}
   .step .n{flex:0 0 auto;width:22px;height:22px;border-radius:50%;border:1px solid var(--edge);
@@ -289,8 +294,8 @@ HTML = r"""<!doctype html>
     <div class="stats" id="stats"></div>
     <div class="legend">
       <i><span class="dot" style="background:var(--green)"></span>main path</i>
-      <i><span class="dot" style="background:var(--orange)"></span>ready to start</i>
-      <i><span class="dot" style="background:var(--edge)"></span>locked</i>
+      <i><span class="dot" style="background:var(--orange)"></span>next up (suggested)</i>
+      <i><span class="dot" style="background:var(--edge)"></span>open — take in any order</i>
       <i>★ main · ⚙ equipment · ▶ has video · ⬢ HTGAA</i>
     </div>
   </header>
@@ -338,15 +343,19 @@ HTML = r"""<!doctype html>
   try{done = JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){done={};}
   function save(){try{localStorage.setItem(KEY,JSON.stringify(done));}catch(e){}}
   function isDone(id){return !!done[id];}
-  function isReady(id){
-    if(isDone(id))return false;
-    var n=byId[id]; if(!n)return false;
-    var deps=n.dependencies||[];
-    if(n.defaultStatus==='inProgress'&&deps.length===0)return true;
-    if(deps.length===0)return true;
-    return deps.every(isDone);
+  function prereqsMet(id){
+    var n=byId[id]; if(!n)return true;
+    return (n.dependencies||[]).every(isDone);
   }
-  function status(id){return isDone(id)?'done':isReady(id)?'ready':'locked';}
+  // NOTHING IS EVER LOCKED. Every node is open, openable, and completable in any
+  // order. Dependencies are shown as suggested trajectory, never as a gate --
+  // 'next' merely flags the natural next step along the path.
+  function status(id){return isDone(id)?'done':prereqsMet(id)?'next':'open';}
+  // reverse index: what each node leads to (for trajectory navigation)
+  var childrenOf={};
+  NODES.forEach(function(n){
+    (n.dependencies||[]).forEach(function(d){(childrenOf[d]=childrenOf[d]||[]).push(n.id);});
+  });
 
   // ---- layout from initialPosition ----
   var xs=NODES.map(function(n){return n.initialPosition[0];});
@@ -412,11 +421,8 @@ HTML = r"""<!doctype html>
   function refreshMapStatus(){
     NODES.forEach(function(n){
       var el=nodeEls[n.id]; if(!el)return;
-      el.classList.remove('locked','ready','done','main');
-      var s=status(n.id);
-      if(s==='locked')el.classList.add('locked');
-      if(s==='ready')el.classList.add('ready');
-      if(s==='done')el.classList.add('done');
+      el.classList.remove('open','next','done','main');
+      el.classList.add(status(n.id));
       if(MAIN.has(n.id))el.classList.add('main');
     });
   }
@@ -454,8 +460,8 @@ HTML = r"""<!doctype html>
   function refreshListStatus(){
     listEl.querySelectorAll('.pill').forEach(function(p){
       var id=p.getAttribute('data-pill'),s=status(id);
-      p.className='pill'+(s==='ready'?' ready':s==='done'?' done':'');
-      p.textContent=s==='done'?'done':s==='ready'?'ready':'locked';
+      p.className='pill '+s;
+      p.textContent=s==='done'?'done':s==='next'?'next up':'open';
     });
   }
 
@@ -490,13 +496,23 @@ HTML = r"""<!doctype html>
         +'<a href="'+esc(HTGAA.link||'https://www.htgaa.org/')+'" target="_blank" rel="noopener">'+esc((HTGAA.course||'HTGAA')+(HTGAA.term?' · '+HTGAA.term:''))+' ↗</a>'
         +'</div></section>';
     }
-    // requirements
+    // trajectory: builds on / leads to (navigable, never a gate)
     var deps=n.dependencies||[];
     if(deps.length){
-      html+='<section><h4>requires</h4>';
+      html+='<section><h4>builds on</h4>';
       deps.forEach(function(d){
         var ok=isDone(d);
-        html+='<div class="req '+(ok?'ok':'no')+'"><span class="m">'+(ok?'✓':'○')+'</span>'+esc(byId[d]?byId[d].title:d)+'</div>';
+        html+='<div class="req '+(ok?'ok':'no')+'"><span class="m">'+(ok?'✓':'○')+'</span>'
+          +'<a href="#" class="jump" data-jump="'+esc(d)+'">'+esc(byId[d]?byId[d].title:d)+'</a></div>';
+      });
+      html+='<div class="freenote">Guidance, not a gate — you can start this any time and take skills out of order.</div>';
+      html+='</section>';
+    }
+    var kids=childrenOf[id]||[];
+    if(kids.length){
+      html+='<section><h4>leads to</h4>';
+      kids.forEach(function(c){
+        html+='<div class="req no"><span class="m">→</span><a href="#" class="jump" data-jump="'+esc(c)+'">'+esc(byId[c]?byId[c].title:c)+'</a></div>';
       });
       html+='</section>';
     }
@@ -529,18 +545,20 @@ HTML = r"""<!doctype html>
         return '<a href="'+esc(r.url)+'" target="_blank" rel="noopener">'+esc(r.title)+' <span>'+esc(host)+' ↗</span></a>';
       }).join('')+'</div></section>';
     }
-    // CTA
+    // CTA — always available; no node is ever locked
     if(s==='done'){
       html+='<button class="cta done" id="ctaBtn">✓ completed — mark not done</button>';
-    }else if(s==='ready'||n.defaultStatus==='inProgress'){
-      html+='<button class="cta go" id="ctaBtn">mark complete →</button>';
     }else{
-      html+='<button class="cta wait" disabled>complete prerequisites first</button>';
+      html+='<button class="cta go" id="ctaBtn">mark complete →</button>';
     }
     html+='</div>';
     pop.innerHTML=html;
     scrim.classList.add('show');
     document.getElementById('popx').addEventListener('click',closePop);
+    // navigate the trajectory: clicking a prerequisite / downstream skill opens it
+    pop.querySelectorAll('[data-jump]').forEach(function(a){
+      a.addEventListener('click',function(e){e.preventDefault();openPop(a.getAttribute('data-jump'));});
+    });
     var cta=document.getElementById('ctaBtn');
     if(cta&&!cta.disabled){
       cta.addEventListener('click',function(){
@@ -858,12 +876,13 @@ HTML = r"""<!doctype html>
   // ---- stats ----
   function refreshStats(){
     var d=NODES.filter(function(n){return isDone(n.id);}).length;
-    var r=NODES.filter(function(n){return isReady(n.id);}).length;
+    var r=NODES.filter(function(n){return status(n.id)==='next';}).length;
     document.getElementById('stats').innerHTML=
       '<span><b>'+NODES.length+'</b> nodes</span>'
       +'<span><b>'+d+'</b> completed</span>'
-      +'<span><b>'+r+'</b> ready now</span>'
-      +'<span><b>'+MAIN.size+'</b> on main path</span>';
+      +'<span><b>'+r+'</b> next up</span>'
+      +'<span><b>'+MAIN.size+'</b> on main path</span>'
+      +'<span style="color:var(--green)">all nodes unlocked — explore in any order</span>';
   }
   function refreshAll(){refreshMapStatus();refreshListStatus();refreshStats();}
 

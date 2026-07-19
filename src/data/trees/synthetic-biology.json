@@ -20,7 +20,7 @@
       "id": "sterile-workspace",
       "title": "the sterile workspace",
       "description": "Set up PPE, a Bunsen 'cone of protection', and a media-sterilisation strategy.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/sterile-workspace",
       "initialPosition": [
         0,
@@ -34,7 +34,7 @@
       "id": "host-selection",
       "title": "host selection criteria",
       "description": "Choose a safe, well-characterised, single-celled host - and check it's legal.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/host-selection",
       "initialPosition": [
         -2.1,
@@ -48,7 +48,7 @@
       "id": "culturing-conditions",
       "title": "culturing conditions",
       "description": "Know your organism: ideal media, temperature, growth curve and morphology.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/culturing-conditions",
       "initialPosition": [
         -2.1,
@@ -62,7 +62,7 @@
       "id": "buffer-mixing",
       "title": "diy buffer mixing",
       "description": "Mix your own buffers safely to cut costs - or buy pre-mixed if working solo.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/buffer-mixing",
       "initialPosition": [
         2.3,
@@ -76,7 +76,7 @@
       "id": "media-plates",
       "title": "mixing media & pouring plates",
       "description": "Mix LB media/agar, pour plates, and make antibiotic selection plates.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/media-plates",
       "initialPosition": [
         0,
@@ -91,7 +91,7 @@
       "id": "sterile-technique",
       "title": "sterile (aseptic) technique",
       "description": "Master the core discipline of microbiology - plus the inoculating loop and spreader.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/sterile-technique",
       "initialPosition": [
         0,
@@ -105,7 +105,7 @@
       "id": "dna101",
       "title": "dna101 (theory)",
       "description": "Refresh DNA structure, base pairing and the interactions cloning relies on.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/dna101",
       "initialPosition": [
         -2.2,
@@ -119,7 +119,7 @@
       "id": "genomic-dna",
       "title": "purification of genomic dna",
       "description": "Extract genomic DNA - and learn why you'll usually work with plasmids instead.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/genomic-dna",
       "initialPosition": [
         -2.2,
@@ -134,7 +134,7 @@
       "id": "plasmids101",
       "title": "plasmids101 (theory)",
       "description": "Understand plasmids as the programmable 'add-ons' of the cell.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/plasmids101",
       "initialPosition": [
         1.9,
@@ -148,7 +148,7 @@
       "id": "backbone-selection",
       "title": "backbone selection (theory)",
       "description": "Choose the right plasmid backbone for your first experiments.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/backbone-selection",
       "initialPosition": [
         3.0,
@@ -162,7 +162,7 @@
       "id": "miniprep",
       "title": "plasmid miniprep (ethanol lysis)",
       "description": "Purify plasmid DNA via the premier miniprep workflow: lyse, capture, wash, elute.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/miniprep",
       "initialPosition": [
         0,
@@ -178,7 +178,7 @@
       "id": "plasmid-insertion",
       "title": "plasmid insertion (transformation)",
       "description": "Get DNA into cells: heat shock, electroporation, or gene guns.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/plasmid-insertion",
       "initialPosition": [
         1.7,
@@ -192,7 +192,7 @@
       "id": "gel-electrophoresis",
       "title": "agarose gel electrophoresis",
       "description": "Separate and size DNA fragments - your bread-and-butter readout.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/gel-electrophoresis",
       "initialPosition": [
         0,
@@ -206,7 +206,7 @@
       "id": "gel-imaging",
       "title": "gel illumination & photography",
       "description": "Capture publication-quality gel images with cheap kit and a smartphone.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/gel-imaging",
       "initialPosition": [
         -1.9,
@@ -220,7 +220,7 @@
       "id": "gblock-design",
       "title": "gblock & insert design (theory)",
       "description": "Design the perfect synthetic insert - codon optimisation, tags, cut sites.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/gblock-design",
       "initialPosition": [
         3.2,
@@ -234,7 +234,7 @@
       "id": "restriction-digest",
       "title": "restriction enzyme digest",
       "description": "Cut plasmid and insert with restriction enzymes; plan with a sequence viewer.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/restriction-digest",
       "initialPosition": [
         -0.4,
@@ -250,7 +250,7 @@
       "id": "ligation",
       "title": "ligation & troubleshooting",
       "description": "Glue DNA with T4 ligase and design the five control plates that save you weeks.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/ligation",
       "initialPosition": [
         0,
@@ -265,7 +265,7 @@
       "id": "pcr",
       "title": "polymerase chain reaction (pcr)",
       "description": "Amplify any DNA region exponentially with a thermocycler and a master mix.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/pcr",
       "initialPosition": [
         1.9,
@@ -279,7 +279,7 @@
       "id": "primer-design",
       "title": "primer design",
       "description": "Design primer pairs that bind your template, not each other.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/primer-design",
       "initialPosition": [
         3.0,
@@ -293,7 +293,7 @@
       "id": "gradient-pcr",
       "title": "gradient pcr",
       "description": "Find the optimal annealing temperature in a single run.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/gradient-pcr",
       "initialPosition": [
         3.2,
@@ -307,7 +307,7 @@
       "id": "flanking-addition",
       "title": "flanking sequence addition",
       "description": "Add restriction sites or assembly overhangs via 5' primer overhangs.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/flanking-addition",
       "initialPosition": [
         1.8,
@@ -321,7 +321,7 @@
       "id": "confirmation",
       "title": "confirmation of edits",
       "description": "Screen clones with patch plates, colony PCR and restriction-digest analysis.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/confirmation",
       "initialPosition": [
         0,
@@ -336,7 +336,7 @@
       "id": "sequencing",
       "title": "sequencing prep & interpretation",
       "description": "Prepare samples for external (or in-house Nanopore) sequencing and read results.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/sequencing",
       "initialPosition": [
         -2.0,
@@ -350,7 +350,7 @@
       "id": "gibson",
       "title": "gibson assembly",
       "description": "Scarless single-tube assembly of up to ~6 fragments via homologous overlaps.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/gibson",
       "initialPosition": [
         2.0,
@@ -365,7 +365,7 @@
       "id": "golden-gate",
       "title": "golden gate assembly",
       "description": "Type IIS scarless assembly of 10+ ordered fragments in one tube.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/golden-gate",
       "initialPosition": [
         3.4,
@@ -380,7 +380,7 @@
       "id": "sdm",
       "title": "site-directed mutagenesis",
       "description": "Introduce a precise point mutation via megaprimer or round-the-world PCR.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/sdm",
       "initialPosition": [
         4.0,
@@ -395,7 +395,7 @@
       "id": "crispr",
       "title": "crispr / cas9",
       "description": "Target precise genomic edits with a Cas enzyme and a designed guide RNA.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/crispr",
       "initialPosition": [
         2.4,
@@ -410,7 +410,7 @@
       "id": "proteins101",
       "title": "proteins101 (theory)",
       "description": "Working knowledge of protein mechanics before producing them in the lab.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/proteins101",
       "initialPosition": [
         0,
@@ -424,7 +424,7 @@
       "id": "protein-induction",
       "title": "induction of protein expression",
       "description": "Trigger protein expression at the right growth phase using OD600.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/protein-induction",
       "initialPosition": [
         0,
@@ -438,7 +438,7 @@
       "id": "cell-lysis",
       "title": "cell lysis",
       "description": "Bust open cells to release your protein into cell slurry.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/cell-lysis",
       "initialPosition": [
         0,
@@ -452,7 +452,7 @@
       "id": "affinity-purification",
       "title": "affinity tag purification",
       "description": "Recover tagged protein from cell slurry (His-tag / Ni-NTA, or Car9/silica).",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/affinity-purification",
       "initialPosition": [
         -1.6,
@@ -467,7 +467,7 @@
       "id": "sds-page",
       "title": "sds-page",
       "description": "Size and quantify proteins on a denaturing polyacrylamide gel.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/sds-page",
       "initialPosition": [
         0,
@@ -482,7 +482,7 @@
       "id": "final-project",
       "title": "capstone: express & purify a protein",
       "description": "Demonstrate mastery end to end: design, build, confirm, express and purify a protein.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/final-project",
       "initialPosition": [
         0,
@@ -498,7 +498,7 @@
       "id": "advanced-omics",
       "title": "beyond the bench: rna, omics & bio-programming",
       "description": "The frontier: gene switches, omics, aptamers, mass spec and advanced biological programming.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/advanced-omics",
       "initialPosition": [
         0,
@@ -514,7 +514,7 @@
       "id": "micropipette",
       "title": "the micropipette",
       "description": "Master the single most important tool in the lab: accurate, bubble-free pipetting.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/micropipette",
       "initialPosition": [
         -3.6,
@@ -528,7 +528,7 @@
       "id": "centrifuge",
       "title": "the centrifuge",
       "description": "Pellet cells and clear lysates safely - the workhorse behind minipreps.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/centrifuge",
       "initialPosition": [
         -4.8,
@@ -542,7 +542,7 @@
       "id": "thermocycler",
       "title": "the thermocycler",
       "description": "Program the heating/cooling cycles that drive PCR.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/thermocycler",
       "initialPosition": [
         -3.6,
@@ -556,7 +556,7 @@
       "id": "spectrophotometer",
       "title": "the spectrophotometer",
       "description": "Measure OD600 to track cell growth and time induction.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/spectrophotometer",
       "initialPosition": [
         -4.8,
@@ -570,7 +570,7 @@
       "id": "western-blot",
       "title": "western blot",
       "description": "Detect a specific protein by size + antibody after transferring an SDS-PAGE gel to a membrane.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/western-blot",
       "initialPosition": [
         -2.0,
@@ -584,7 +584,7 @@
       "id": "elisa",
       "title": "elisa",
       "description": "Quantify a protein/antigen in solution with an antibody-based plate assay.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/elisa",
       "initialPosition": [
         -3.3,
@@ -598,7 +598,7 @@
       "id": "rna-purification",
       "title": "rna purification",
       "description": "Extract intact RNA while keeping ubiquitous RNases at bay.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/rna-purification",
       "initialPosition": [
         -3.7,
@@ -612,7 +612,7 @@
       "id": "rt-qpcr",
       "title": "rt-qpcr",
       "description": "Reverse-transcribe RNA to cDNA and quantify transcript levels in real time.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/rt-qpcr",
       "initialPosition": [
         -3.5,
@@ -627,7 +627,7 @@
       "id": "protein-design",
       "title": "computational protein design",
       "description": "Design proteins in silico with AlphaFold, RFdiffusion, and ProteinMPNN before building them.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/protein-design",
       "initialPosition": [
         4.4,
@@ -641,7 +641,7 @@
       "id": "genetic-circuits",
       "title": "genetic circuits",
       "description": "Wire standardised parts into logic circuits with MoClo/Golden Gate and Cello.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/genetic-circuits",
       "initialPosition": [
         4.8,
@@ -656,7 +656,7 @@
       "id": "cell-free",
       "title": "cell-free systems (TX-TL)",
       "description": "Express genes in cell extracts - fast prototyping and freeze-dried biosensors.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/cell-free",
       "initialPosition": [
         2.3,
@@ -671,7 +671,7 @@
       "id": "building-genomes",
       "title": "building genomes",
       "description": "Assemble DNA at genome scale: minimal genomes, Sc2.0, and recoding.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/building-genomes",
       "initialPosition": [
         4.0,
@@ -686,7 +686,7 @@
       "id": "biofabrication",
       "title": "bio design & biofabrication",
       "description": "Grow materials and objects - engineered living materials and biofabrication.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/biofabrication",
       "initialPosition": [
         2.2,
@@ -700,7 +700,7 @@
       "id": "lab-automation",
       "title": "laboratory automation",
       "description": "Program liquid handlers (Opentrons) and robotic workflows for reproducible, high-throughput science.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/lab-automation",
       "initialPosition": [
         -3.6,
@@ -715,7 +715,7 @@
       "id": "eln-lims",
       "title": "eln / lims & data hygiene",
       "description": "Benchling ELN/LIMS, sample tracking, and FAIR data - the backbone of an industry lab.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/eln-lims",
       "initialPosition": [
         -1.4,
@@ -729,7 +729,7 @@
       "id": "mammalian-cell-culture",
       "title": "mammalian cell culture",
       "description": "Grow HEK/CHO cells aseptically for therapeutics and assays; passaging, CO2, contamination.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/mammalian-cell-culture",
       "initialPosition": [
         0.8,
@@ -743,7 +743,7 @@
       "id": "bioinformatics",
       "title": "bioinformatics foundations",
       "description": "Sequence formats, quality scores, alignment, and Biopython/pandas scripting.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/bioinformatics",
       "initialPosition": [
         3.0,
@@ -757,7 +757,7 @@
       "id": "doe-statistics",
       "title": "design of experiments & rigor",
       "description": "DoE over one-factor-at-a-time, replication, controls, and avoiding p-hacking.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/doe-statistics",
       "initialPosition": [
         -3.6,
@@ -771,7 +771,7 @@
       "id": "biosafety-biosecurity",
       "title": "biosafety & biosecurity",
       "description": "BSL levels, containment, dual-use (DURC) governance, and DNA-synthesis screening.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/biosafety-biosecurity",
       "initialPosition": [
         -1.4,
@@ -785,7 +785,7 @@
       "id": "flow-cytometry",
       "title": "flow cytometry & facs",
       "description": "Single-cell analysis and sorting by scatter and fluorescence; gating and compensation.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/flow-cytometry",
       "initialPosition": [
         0.8,
@@ -799,7 +799,7 @@
       "id": "ngs-analysis",
       "title": "ngs data analysis",
       "description": "Read QC, alignment, coverage, and variant calling / RNA-seq pipelines (nf-core).",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/ngs-analysis",
       "initialPosition": [
         3.0,
@@ -813,7 +813,7 @@
       "id": "directed-evolution",
       "title": "directed evolution",
       "description": "Generate diversity and select/screen for improved variants over iterative rounds.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/directed-evolution",
       "initialPosition": [
         -1.4,
@@ -828,7 +828,7 @@
       "id": "ml-for-biology",
       "title": "ml / ai for biology",
       "description": "Foundation models (ESM, AlphaFold), generative design, and leakage-proof evaluation.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/ml-for-biology",
       "initialPosition": [
         0.8,
@@ -843,7 +843,7 @@
       "id": "biomanufacturing",
       "title": "bioprocess & biomanufacturing",
       "description": "Scale flask to bioreactor: batch/fed-batch, oxygen transfer, and GMP/quality-by-design.",
-      "defaultStatus": "locked",
+      "defaultStatus": "inProgress",
       "link": "/biomanufacturing",
       "initialPosition": [
         3.0,

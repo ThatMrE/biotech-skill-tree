@@ -40,6 +40,20 @@ netlify deploy --prod --dir=viewer --site=<site-id>
 explicit `--dir=viewer`** — this repo lives inside a larger private working folder, and `--dir`
 guarantees only the viewer is ever published.
 
+## Nothing is locked — explore in any order
+
+This is a **reference curriculum and trajectory map, not a gated game**. Every node is open,
+openable, and completable from the first visit, regardless of what you have finished:
+
+- No node is ever `locked`. The data carries no gating either (`defaultStatus: "inProgress"`
+  throughout, and `isUnlocked: true` in the nested fallback file).
+- Dependencies are preserved as **guidance**, not gates — they still draw the graph and populate
+  each node's *builds on* / *leads to* lists so you can preview where a skill sits in the
+  progression and what it opens up.
+- Node states are only ever **done**, **next up** (a suggested next step whose prerequisites you
+  happen to have finished), or **open**. "Open" is a soft de-emphasis, never a barrier — you can
+  jump straight to CRISPR, biomanufacturing, or the capstone on day one.
+
 ## Interactive viewer (start here)
 
 `viewer/index.html` is a **self-contained, dependency-free** interactive front end — all 43 nodes,
@@ -59,8 +73,9 @@ What it does:
 
 - **Map view** — the real dependency graph laid out from each node's `initialPosition`, green main-path
   spine, dashed-orange optional equipment links, pan/drag, scroll- and pinch-zoom, +/−/⤢/⟲ controls.
-- **Click any node → popup** with overview, live-status requirements (✓/○), objectives, numbered
-  protocol, embedded technique video (with YouTube fallback link), and resource links.
+- **Click any node → popup** with overview, trajectory (**builds on** / **leads to**), objectives,
+  numbered protocol, embedded technique video (with YouTube fallback link), and resource links.
+  Prerequisite and downstream names are **clickable**, so you can walk the trajectory node to node.
 - **List view** — searchable, tappable index grouped by tier; auto-defaults on phones (≤720px).
 - **Search** filters both views; **progress** (mark-complete → unlock cascade) persists via `localStorage`.
 
