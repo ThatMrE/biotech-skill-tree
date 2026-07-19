@@ -30,15 +30,37 @@ genomes, and bio design & biofabrication**. 20 nodes are week-mapped.
 
 ## Deploying
 
-The viewer is a single static file, so deployment is just publishing one directory:
+**Automatic:** every push to `main` runs [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml),
+which validates the data, rebuilds the viewer from JSON, and deploys to Netlify. Editing a node file
+or the interview bank and pushing is enough to ship — you don't need to rebuild locally.
+
+The workflow requires one repository secret:
+
+| Secret | Where to get it |
+| --- | --- |
+| `NETLIFY_AUTH_TOKEN` | [Netlify → User settings → Applications → Personal access tokens](https://app.netlify.com/user/applications#personal-access-tokens) |
+
+Add it under **Settings → Secrets and variables → Actions**. (The site ID is not secret and is set
+as a plain env var in the workflow.)
+
+**Manual / local:**
 
 ```bash
+python validate.py          # integrity checks (CI runs this too)
+python build_viewer.py
 netlify deploy --prod --dir=viewer --site=<site-id>
 ```
 
 `netlify.toml` sets `publish = "viewer"` with an SPA catch-all redirect. **Always deploy with an
 explicit `--dir=viewer`** — this repo lives inside a larger private working folder, and `--dir`
-guarantees only the viewer is ever published.
+guarantees only the viewer is ever published. The workflow enforces the same rule: it aborts unless
+the publish directory contains exactly one file, `viewer/index.html`.
+
+## Validation
+
+`python validate.py` fails the build on: graph/detail mismatch, unresolved dependencies, dependency
+cycles, **any locked node**, malformed YouTube IDs, duplicate/invalid interview questions, or a node
+missing an interview question. CI runs it before every deploy.
 
 ## Nothing is locked — explore in any order
 
