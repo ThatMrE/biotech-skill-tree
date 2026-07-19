@@ -100,9 +100,32 @@ What it does:
   Prerequisite and downstream names are **clickable**, so you can walk the trajectory node to node.
 - **List view** — searchable, tappable index grouped by tier; auto-defaults on phones (≤720px).
 - **Search** filters both views; **progress** (mark-complete → unlock cascade) persists via `localStorage`.
+- **Light & dark mode** — see below.
 
 `build_viewer.py` re-emits the viewer from the JSON data, so the data files remain the single source
 of truth — edit a node file, rerun the script, reload.
+
+## Theming & typography
+
+**Typeface:** [Inter](https://rsms.me/inter/) — an open, Helvetica-style neo-grotesque — with a
+`Helvetica Neue → Helvetica → Arial → Liberation Sans` fallback stack. The CSS variables are still
+named `--mono` / `--disp` (both now resolve to Inter) so existing rules keep working.
+
+**Light & dark mode** via the ☀/☾ button in the header:
+
+- Every colour is a themed custom property. `:root` holds the dark palette,
+  `:root[data-theme="light"]` the light one — so there are no hardcoded colours to miss.
+  (The single literal left is `#000`, the video letterbox, which is correct in both.)
+- The theme **follows your OS** and keeps following it until you click the toggle; an explicit
+  choice then persists in `localStorage` under `synbio-theme`.
+- An inline `<head>` script applies the theme **before first paint**, so there is no flash of the
+  wrong scheme on load.
+- The light palette is contrast-checked to WCAG AA: body 17.2:1, muted text 5.4:1, accent 4.86:1,
+  primary button 4.99:1. (The acid green darkens to `#4d7c0f` in light mode — the dark-mode
+  `#c6f24e` is unreadable on white.)
+
+Note that the SVG dependency edges set `stroke="var(--edge)"` as a presentation attribute, which
+re-resolves on theme change — don't replace those with literal colours.
 
 ## Interview mode (technical-screen tool)
 
