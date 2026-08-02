@@ -112,15 +112,23 @@ LABS_BODY = r"""
   </div>
   <div class="chips" id="regionChips"></div>
   <div class="filters">
+    <div class="viewtoggle" id="viewToggle">
+      <button data-view="list" class="on">&#9776; list</button>
+      <button data-view="map">&#9673; map</button>
+    </div>
     <label class="chk"><input type="checkbox" id="activeOnly" checked> active labs only</label>
     <span class="count" id="count"></span>
   </div>
 
+  <div id="map"></div>
+  <p id="mapNote"></p>
   <div id="results" class="results"></div>
 </main>
 
 <div id="scrim" class="scrim"><div id="pop" class="pop"></div></div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
 <script id="data" type="application/json">__DATA__</script>
 <script>
 (function(){
@@ -132,6 +140,7 @@ LABS_BODY = r"""
   var STATUS={active:{c:'ok',t:'active'},dormant:{c:'warn',t:'dormant'},uncertain:{c:'dim',t:'unverified'},dead:{c:'bad',t:'closed'}};
   var regionSel=null, myPos=null, q='';
   var activeOnly=document.getElementById('activeOnly');
+  var view='list', map=null, cluster=null, tileLayer=null, mapBuilt=false;
 
   // region chips
   var regions={}; LABS.forEach(function(l){regions[l.region]=(regions[l.region]||0)+1;});
@@ -160,7 +169,7 @@ LABS_BODY = r"""
     return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));}
   function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 
-  function render(){
+  function filtered(){
     var list=LABS.filter(function(l){
       if(activeOnly.checked && l.status!=='active')return false;
       if(regionSel && l.region!==regionSel)return false;
@@ -169,9 +178,72 @@ LABS_BODY = r"""
     });
     if(myPos){list.forEach(function(l){l._d=hav(myPos,l);});list.sort(function(a,b){return a._d-b._d;});}
     else{list.sort(function(a,b){var o={active:0,dormant:1,uncertain:2,dead:3};return (o[a.status]-o[b.status])||a.name.localeCompare(b.name);});}
+    return list;
+  }
+  function render(){
+    var list=filtered();
     document.getElementById('count').textContent=list.length+' lab'+(list.length===1?'':'s')+(activeOnly.checked?' active':'')+(regionSel?' in '+regionSel:'');
     document.getElementById('results').innerHTML=list.map(card).join('')||'<p class="empty">No labs match. Try clearing filters or unchecking &ldquo;active only.&rdquo;</p>';
-    document.querySelectorAll('[data-compose]').forEach(function(b){b.addEventListener('click',function(){compose(b.getAttribute('data-compose'));});});
+    document.querySelectorAll('#results [data-compose]').forEach(function(b){b.addEventListener('click',function(){compose(b.getAttribute('data-compose'));});});
+    if(view==='map'&&map)renderMap(list);
+  }
+
+  // ---- MAP VIEW (Leaflet, loaded from CDN) ----
+  var vt=document.getElementById('viewToggle');
+  vt.querySelectorAll('button').forEach(function(b){
+    b.addEventListener('click',function(){setView(b.getAttribute('data-view'));});
+  });
+  function setView(v){
+    view=v;
+    vt.querySelectorAll('button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-view')===v);});
+    document.getElementById('map').classList.toggle('show',v==='map');
+    document.getElementById('results').style.display=v==='map'?'none':'';
+    document.getElementById('mapNote').textContent=v==='map'?'Markers coloured by status · click a marker to reach out. Tiles © OpenStreetMap contributors, © CARTO.':'';
+    if(v==='map'){ if(!mapBuilt)buildMap(); if(map){map.invalidateSize(); renderMap(filtered());} }
+  }
+  function tileUrl(){var d=document.documentElement.getAttribute('data-theme')==='dark';
+    return 'https://{s}.basemaps.cartocdn.com/'+(d?'dark_all':'light_all')+'/{z}/{x}/{y}{r}.png';}
+  function buildMap(){
+    if(typeof L==='undefined'){
+      document.getElementById('map').innerHTML='<div style="padding:20px;color:var(--dim);font-size:13px">Map needs an internet connection to load. The list view works offline.</div>';
+      return;
+    }
+    map=L.map('map',{worldCopyJump:true,scrollWheelZoom:true}).setView([25,5],2);
+    tileLayer=L.tileLayer(tileUrl(),{maxZoom:18,attribution:'&copy; OpenStreetMap &copy; CARTO',subdomains:'abcd'}).addTo(map);
+    cluster=L.markerClusterGroup({maxClusterRadius:45,showCoverageOnHover:false});
+    map.addLayer(cluster);
+    map.on('popupopen',function(e){
+      var el=e.popup.getElement(); if(!el)return;
+      var b=el.querySelector('[data-compose]');
+      if(b)b.addEventListener('click',function(){map.closePopup();compose(b.getAttribute('data-compose'));});
+    });
+    // swap tiles when the theme changes
+    new MutationObserver(function(){if(tileLayer)tileLayer.setUrl(tileUrl());})
+      .observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+    mapBuilt=true;
+  }
+  function renderMap(list){
+    if(!map||!cluster)return;
+    cluster.clearLayers();
+    var pts=[];
+    list.forEach(function(l){
+      if(typeof l.lat!=='number'||typeof l.lng!=='number')return;
+      var st=STATUS[l.status]||STATUS.uncertain;
+      var m=L.marker([l.lat,l.lng],{icon:L.divIcon({className:'',html:'<div class="lmark '+l.status+'"></div>',iconSize:[14,14]}),title:l.name});
+      m.bindPopup(popupHtml(l),{maxWidth:260});
+      cluster.addLayer(m); pts.push([l.lat,l.lng]);
+    });
+    if(myPos){map.setView([myPos.lat,myPos.lng],4);}
+    else if(pts.length){try{map.fitBounds(pts,{padding:[30,30],maxZoom:6});}catch(e){}}
+  }
+  function popupHtml(l){
+    var st=STATUS[l.status]||STATUS.uncertain;
+    return '<div class="pop-lab"><div class="pl-name">'+esc(l.name)+'</div>'
+      +'<div class="pl-loc">'+esc(l.city?l.city+', ':'')+esc(l.country||'')+(myPos&&l._d!=null?' · '+Math.round(l._d).toLocaleString()+' km':'')+'</div>'
+      +'<span class="pl-badge '+st.c+'">'+st.t+'</span>'
+      +(l.desc?'<div class="pl-desc">'+esc(l.desc)+'</div>':'')
+      +'<div class="pl-acts">'+(l.url?'<a href="'+esc(l.url)+'" target="_blank" rel="noopener">visit site ↗</a>':'')
+      +(l.url?'<button data-compose="'+esc(l.name)+'∷'+esc(l.url)+'">reach out →</button>':'')+'</div></div>';
   }
 
   function card(l){
@@ -230,7 +302,32 @@ LABS_BODY = r"""
 """
 
 LABS_CSS = r"""
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css">
 <style>
+  .viewtoggle{display:inline-flex;border:1px solid var(--edge);border-radius:8px;overflow:hidden;margin-bottom:12px}
+  .viewtoggle button{background:transparent;border:0;color:var(--dim);font-family:var(--sans);font-size:13px;padding:8px 16px;cursor:pointer}
+  .viewtoggle button.on{background:var(--green);color:var(--on-accent);font-weight:700}
+  #map{display:none;height:min(66vh,560px);border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface-2);margin-bottom:6px}
+  #map.show{display:block}
+  #mapNote{font-size:11px;color:var(--dim);margin:0 0 16px}
+  .lmark{width:14px;height:14px;border-radius:50%;border:2px solid var(--bg);box-shadow:0 0 0 1px rgba(0,0,0,.35)}
+  .lmark.active{background:var(--ok)} .lmark.dormant{background:var(--warn)} .lmark.uncertain{background:var(--dim)} .lmark.dead{background:var(--bad)}
+  /* Leaflet popup themed */
+  .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--panel);color:var(--ink);box-shadow:0 12px 40px var(--shadow)}
+  .leaflet-popup-content{margin:12px 14px;font-family:var(--sans)}
+  .leaflet-container a.leaflet-popup-close-button{color:var(--dim)}
+  .pop-lab .pl-name{font-size:14px;font-weight:700;line-height:1.25}
+  .pop-lab .pl-loc{font-size:11.5px;color:var(--dim);margin:3px 0 7px}
+  .pop-lab .pl-badge{font-size:9px;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:20px;border:1px solid currentColor}
+  .pop-lab .pl-badge.ok{color:var(--ok)}.pop-lab .pl-badge.warn{color:var(--warn)}.pop-lab .pl-badge.bad{color:var(--bad)}.pop-lab .pl-badge.dim{color:var(--dim)}
+  .pop-lab .pl-desc{font-size:11.5px;color:var(--dim);line-height:1.45;margin:8px 0}
+  .pop-lab .pl-acts{display:flex;gap:8px;align-items:center;margin-top:8px;flex-wrap:wrap}
+  .pop-lab .pl-acts a{font-size:11.5px;color:var(--green);text-decoration:none}
+  .pop-lab .pl-acts button{font-size:11.5px;border:1px solid var(--edge);border-radius:6px;background:transparent;color:var(--ink);font-family:var(--sans);padding:5px 9px;cursor:pointer}
+  .pop-lab .pl-acts button:hover{border-color:var(--green);color:var(--green)}
+  .leaflet-bar a{background:var(--surface);color:var(--ink);border-color:var(--edge)}
   .controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
   .search{flex:1 1 280px;min-width:200px;display:flex;align-items:center;gap:8px;border:1px solid var(--edge);border-radius:8px;padding:8px 12px;background:var(--surface)}
   .search span{color:var(--dim)}
