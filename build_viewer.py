@@ -118,6 +118,9 @@ HTML = r"""<!doctype html>
   .themeBtn{flex:0 0 auto;width:34px;height:34px;border-radius:8px;border:1px solid var(--edge);
     background:var(--surface);color:var(--ink);font-size:15px;line-height:1;cursor:pointer}
   .themeBtn:hover{border-color:var(--green);color:var(--green)}
+  .pagenav{display:flex;gap:6px}
+  .pagenav a{font-size:12px;padding:7px 11px;border:1px solid var(--edge);border-radius:7px;color:var(--dim);text-decoration:none;white-space:nowrap}
+  .pagenav a:hover{border-color:var(--green);color:var(--green)}
   .search{flex:1 1 220px;min-width:140px;display:flex;align-items:center;gap:8px;
     border:1px solid var(--edge);border-radius:6px;padding:6px 10px;background:var(--surface-3)}
   .search input{flex:1;background:transparent;border:0;outline:0;color:var(--ink);font-family:var(--mono);font-size:13px}
@@ -345,6 +348,7 @@ HTML = r"""<!doctype html>
         <button data-mode="list">☰ list</button>
         <button data-mode="interview">◇ interview</button>
       </div>
+      <div class="pagenav"><a href="costs.html">$ cost</a><a href="labs.html">⌖ labs</a></div>
       <button class="themeBtn" id="themeBtn" type="button" aria-label="Toggle light or dark theme">◐</button>
     </div>
     <div class="hrow" style="margin-top:10px">

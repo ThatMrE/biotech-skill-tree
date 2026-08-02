@@ -1,0 +1,95 @@
+{
+  "note": "Planning estimates (USD, +/- ~30%). Equipment is one-time & shared; consumables scale per student. Prices approximate - confirm with vendors. Big instruments (big:true) are the ones worth sharing/renting below scale.",
+  "equipment": [
+    { "id": "pipettes",        "name": "Micropipette set (P20/P200/P1000)", "retail": 200,  "diy": 60,   "big": false },
+    { "id": "centrifuge",      "name": "Mini centrifuge",                    "retail": 200,  "diy": 25,   "big": false },
+    { "id": "thermocycler",    "name": "Thermal cycler (PCR)",              "retail": 800,  "diy": 150,  "big": false },
+    { "id": "gelbox",          "name": "Gel electrophoresis + blue transilluminator", "retail": 500, "diy": 90, "big": false },
+    { "id": "spectrophotometer","name": "Spectrophotometer / OD reader",    "retail": 300,  "diy": 50,   "big": false },
+    { "id": "incubator",       "name": "Incubator (37 C)",                  "retail": 150,  "diy": 40,   "big": false },
+    { "id": "hood",            "name": "Still-air box / small hood",        "retail": 500,  "diy": 30,   "big": false },
+    { "id": "heatblock",       "name": "Heat block / water bath",           "retail": 150,  "diy": 50,   "big": false },
+    { "id": "coldstorage",     "name": "-20 C freezer + fridge",            "retail": 800,  "diy": 400,  "big": false },
+    { "id": "sdspage",         "name": "SDS-PAGE rig + power supply",       "retail": 600,  "diy": 150,  "big": false },
+    { "id": "western",         "name": "Western blot transfer module",     "retail": 300,  "diy": null, "big": false },
+    { "id": "misc",            "name": "Glassware, stirrer, small tools",  "retail": 200,  "diy": 50,   "big": false },
+    { "id": "opentrons",       "name": "Opentrons OT-2 liquid handler",    "retail": 5000, "diy": 1500, "big": true },
+    { "id": "qpcr",            "name": "Real-time PCR (qPCR) machine",      "retail": 4000, "diy": null, "big": true },
+    { "id": "sequencer",       "name": "MinION sequencer + flow cells",    "retail": 1700, "diy": null, "big": true },
+    { "id": "pioreactor",      "name": "Pioreactor (bench bioreactor)",    "retail": 250,  "diy": 150,  "big": false },
+    { "id": "fluorscope",      "name": "Fluorescence microscope",          "retail": 700,  "diy": 200,  "big": false },
+    { "id": "laptop",          "name": "Laptop for compute",               "retail": 1000, "diy": 0,    "big": false }
+  ],
+  "tracks": [
+    {
+      "id": "foundations",
+      "name": "Foundations & sterile technique",
+      "desc": "Sterile workspace, host selection, media & plates, buffers - the base everything sits on.",
+      "recommended": true,
+      "equipment": ["hood", "incubator", "misc", "coldstorage"],
+      "perStudent": 15
+    },
+    {
+      "id": "core",
+      "name": "Core molecular biology",
+      "desc": "DNA extraction, plasmids, miniprep, transformation, restriction/ligation, Gibson/Golden Gate, PCR, CRISPR.",
+      "recommended": true,
+      "equipment": ["pipettes", "centrifuge", "thermocycler", "gelbox", "heatblock"],
+      "perStudent": 80
+    },
+    {
+      "id": "protein",
+      "name": "Protein expression & analysis",
+      "desc": "Induction, lysis, His-tag purification, SDS-PAGE, western blot, ELISA.",
+      "equipment": ["spectrophotometer", "sdspage", "western"],
+      "perStudent": 70
+    },
+    {
+      "id": "rna",
+      "name": "RNA & qPCR",
+      "desc": "RNase-free RNA prep and RT-qPCR quantitation.",
+      "equipment": ["qpcr"],
+      "perStudent": 40
+    },
+    {
+      "id": "automation",
+      "name": "Lab automation (Opentrons)",
+      "desc": "Programmable liquid handling & reproducible workflows.",
+      "equipment": ["opentrons"],
+      "perStudent": 10
+    },
+    {
+      "id": "sequencing",
+      "name": "Sequencing & NGS",
+      "desc": "Real sequencing on a MinION plus the compute to analyse reads.",
+      "equipment": ["sequencer", "laptop"],
+      "perStudent": 25
+    },
+    {
+      "id": "compute",
+      "name": "Bio-AI, bioinformatics & data",
+      "desc": "Foundation models, sequence analysis, DoE, ELN - mostly free/online tools.",
+      "equipment": ["laptop"],
+      "perStudent": 0
+    },
+    {
+      "id": "biofab",
+      "name": "Biofabrication & biomanufacturing",
+      "desc": "Grown materials (mycelium/cellulose) and bench bioprocess/fermentation.",
+      "equipment": ["pioreactor", "incubator"],
+      "perStudent": 35
+    },
+    {
+      "id": "cellculture",
+      "name": "Mammalian cell culture & flow",
+      "desc": "Cell culture and flow cytometry - realistically needs a BSL-2 space / core facility.",
+      "equipment": ["hood", "incubator", "fluorscope", "coldstorage"],
+      "perStudent": 50,
+      "facility": true
+    }
+  ],
+  "shareModel": {
+    "benchFeePerStudent": 25,
+    "note": "In 'share' mode the big instruments (Opentrons, qPCR, sequencer) are NOT bought - you rent core-facility / community-lab time instead, modelled as a per-student bench fee."
+  }
+}

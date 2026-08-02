@@ -50,25 +50,31 @@ jobs:
       - name: Validate data integrity
         run: python validate.py
 
-      - name: Rebuild the viewer from data
-        run: python build_viewer.py
-
-      - name: Warn if the committed viewer was stale
+      - name: Rebuild the viewer + companion pages from data
         run: |
-          if ! git diff --quiet -- "$PUBLISH_DIR/index.html"; then
-            echo "::warning::viewer/index.html in the repo differed from a fresh build."
-            echo "The freshly built version is what gets deployed. Run 'python build_viewer.py' and commit to keep them in sync."
+          python build_viewer.py
+          python build_pages.py
+
+      - name: Warn if the committed pages were stale
+        run: |
+          if ! git diff --quiet -- "$PUBLISH_DIR"; then
+            echo "::warning::A file in $PUBLISH_DIR differed from a fresh build."
+            echo "The freshly built version is what gets deployed. Run build_viewer.py + build_pages.py and commit to keep them in sync."
           fi
 
-      # Guard: only ever publish the viewer directory, never the repo root.
+      # Guard: only ever publish the viewer directory (never the repo root, which
+      # sits inside a larger private folder). Allow exactly the known page set.
       - name: Verify the publish directory
         run: |
           echo "Contents of $PUBLISH_DIR:"
           find "$PUBLISH_DIR" -type f -print
-          count=$(find "$PUBLISH_DIR" -type f | wc -l)
-          if [ "$count" -ne 1 ] || [ ! -f "$PUBLISH_DIR/index.html" ]; then
-            echo "::error::Expected exactly one file ($PUBLISH_DIR/index.html) but found $count."
-            exit 1
+          # every published file must be one of the known HTML pages
+          unexpected=$(find "$PUBLISH_DIR" -type f ! -name 'index.html' ! -name 'labs.html' ! -name 'costs.html')
+          if [ -n "$unexpected" ]; then
+            echo "::error::Unexpected file(s) in publish dir:"; echo "$unexpected"; exit 1
+          fi
+          if [ ! -f "$PUBLISH_DIR/index.html" ]; then
+            echo "::error::$PUBLISH_DIR/index.html is missing."; exit 1
           fi
 
       - name: Deploy to Netlify

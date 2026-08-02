@@ -161,6 +161,34 @@ def main():
             if nid not in graph:
                 err(f"HTGAA companion references unknown node '{nid}'")
 
+    # --- companion pages data (labs + cost model) ---------------------------
+    labs_path = ROOT / "src" / "data" / "labs.json"
+    n_labs = 0
+    if labs_path.exists():
+        labs = json.loads(labs_path.read_text(encoding="utf-8")).get("labs", [])
+        n_labs = len(labs)
+        for i, l in enumerate(labs):
+            for field in ("name", "region", "status"):
+                if not l.get(field):
+                    err(f"lab #{i} ('{l.get('name','?')}') missing '{field}'")
+            if l.get("url") and not str(l["url"]).startswith(("http://", "https://")):
+                err(f"lab '{l.get('name')}' has a malformed url")
+    cost_path = ROOT / "src" / "data" / "cost_model.json"
+    n_tracks = 0
+    if cost_path.exists():
+        cm = json.loads(cost_path.read_text(encoding="utf-8"))
+        eq_ids = {e["id"] for e in cm.get("equipment", [])}
+        n_tracks = len(cm.get("tracks", []))
+        for t in cm.get("tracks", []):
+            for eid in t.get("equipment", []):
+                if eid not in eq_ids:
+                    err(f"cost track '{t['id']}' references unknown equipment '{eid}'")
+
+    # companion HTML pages must exist alongside the viewer
+    for pg in ("labs.html", "costs.html"):
+        if not (ROOT / "viewer" / pg).exists():
+            err(f"viewer/{pg} missing - run `python build_pages.py`")
+
     # --- report -------------------------------------------------------------
     print(f"nodes:      {len(graph)}")
     print(f"details:    {len(details)}")
@@ -169,6 +197,8 @@ def main():
     print(f"htgaa map:  {len(h.get('map', {})) if HTGAA.exists() else 0}")
     print(f"resources:  {sum(len(d.get('resources', [])) for d in details.values())}")
     print(f"kits:       {n_kits}")
+    print(f"labs:       {n_labs}")
+    print(f"cost tracks:{n_tracks}")
 
     for w in warnings:
         print(f"WARN  {w}")
