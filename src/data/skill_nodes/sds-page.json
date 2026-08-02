@@ -76,5 +76,21 @@
       "title": "NeoSynBio: SDS-PAGE enclosure equipment",
       "url": "https://www.neosynbio.com/sdspage-enclosure"
     }
+  ],
+  "kits": [
+    {
+      "name": "Mini-PROTEAN SDS-PAGE system + precast gels",
+      "vendor": "Bio-Rad",
+      "url": "https://www.bio-rad.com/",
+      "price": "~$300-800 + gels",
+      "note": "Run proteins by size; add a Coomassie stain to visualise bands."
+    },
+    {
+      "name": "Protein electrophoresis classroom kit",
+      "vendor": "Edvotek",
+      "url": "https://www.edvotek.com/",
+      "price": "~$120-200",
+      "note": "Complete SDS-PAGE teaching kit with samples and stain."
+    }
   ]
 }

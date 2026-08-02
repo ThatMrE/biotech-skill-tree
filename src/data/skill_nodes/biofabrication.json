@@ -72,5 +72,21 @@
       "title": "Biofabricate - grown-materials design community",
       "url": "https://www.biofabricate.co/"
     }
+  ],
+  "kits": [
+    {
+      "name": "Grow-It-Yourself mycelium material kit",
+      "vendor": "Ecovative (grow.bio)",
+      "url": "https://grow.bio/",
+      "price": "~$30-60",
+      "note": "Grow a solid mushroom-material object in a mould - biofabrication you can hold."
+    },
+    {
+      "name": "Bacterial cellulose (kombucha SCOBY)",
+      "vendor": "(kitchen/DIY)",
+      "url": "https://grow.bio/",
+      "price": "~$15-30",
+      "note": "Grow a leather-like cellulose sheet from a SCOBY culture - cheapest living material."
+    }
   ]
 }

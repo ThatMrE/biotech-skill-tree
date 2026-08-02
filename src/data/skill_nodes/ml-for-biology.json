@@ -73,5 +73,23 @@
       "title": "AlphaFold",
       "url": "https://github.com/google-deepmind/alphafold"
     }
+  ],
+  "kits": [
+    {
+      "name": "Google Colab (free cloud GPU)",
+      "vendor": "Google Colab",
+      "url": "https://colab.research.google.com/",
+      "price": "free",
+      "note": "Train models and run ESM/AlphaFold notebooks with a free GPU.",
+      "diy": true
+    },
+    {
+      "name": "Public ML-bio datasets (free)",
+      "vendor": "Kaggle / HuggingFace",
+      "url": "https://rosalind.info/",
+      "price": "free",
+      "note": "Benchmark tasks with proper homology-aware splits.",
+      "diy": true
+    }
   ]
 }

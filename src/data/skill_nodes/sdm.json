@@ -67,5 +67,21 @@
       "title": "Addgene: site-directed mutagenesis overview",
       "url": "https://blog.addgene.org/plasmids-101-mutagenesis"
     }
+  ],
+  "kits": [
+    {
+      "name": "Q5 Site-Directed Mutagenesis Kit",
+      "vendor": "New England Biolabs",
+      "url": "https://www.neb.com/",
+      "price": "~$150-300",
+      "note": "Whole-plasmid mutagenesis with the DpnI template-removal step included."
+    },
+    {
+      "name": "QuikChange II mutagenesis kit",
+      "vendor": "Agilent",
+      "url": "https://www.agilent.com/",
+      "price": "~$200-400",
+      "note": "The classic point-mutation workflow."
+    }
   ]
 }

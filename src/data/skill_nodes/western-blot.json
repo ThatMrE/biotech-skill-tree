@@ -73,5 +73,21 @@
       "title": "Abcam: Western blot protocol & troubleshooting",
       "url": "https://www.abcam.com/en-us/technical-resources/protocols/western-blot"
     }
+  ],
+  "kits": [
+    {
+      "name": "Western blot classroom kit",
+      "vendor": "Edvotek",
+      "url": "https://www.edvotek.com/",
+      "price": "~$150-250",
+      "note": "Transfer, block, and probe with primary/secondary antibodies for a specific band."
+    },
+    {
+      "name": "Immuno-blot module",
+      "vendor": "Bio-Rad",
+      "url": "https://www.bio-rad.com/",
+      "price": "~$200-400",
+      "note": "Blotting apparatus and reagents for antibody detection."
+    }
   ]
 }

@@ -66,5 +66,14 @@
       "title": "NEB: designing primers with 5' additions",
       "url": "https://www.neb.com/en-us/tools-and-resources/usage-guidelines"
     }
+  ],
+  "kits": [
+    {
+      "name": "Tailed primers (synthesis)",
+      "vendor": "IDT",
+      "url": "https://www.idtdna.com/",
+      "price": "~$0.15-0.40/base",
+      "note": "Order primers with 5' restriction/overhang tails; keep the 3' end template-matched."
+    }
   ]
 }

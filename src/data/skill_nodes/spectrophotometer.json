@@ -62,5 +62,14 @@
       "title": "OD600 and bacterial growth curves (overview)",
       "url": "https://www.thermofisher.com/us/en/home/life-science/lab-equipment/spectrophotometers-refractometers-electrochemistry/uv-vis-spectrophotometers.html"
     }
+  ],
+  "kits": [
+    {
+      "name": "Education spectrophotometer / colorimeter",
+      "vendor": "Carolina / Vernier",
+      "url": "https://www.carolina.com/",
+      "price": "~$150-500",
+      "note": "Read OD600 for growth curves and A260/A280 for nucleic-acid purity."
+    }
   ]
 }

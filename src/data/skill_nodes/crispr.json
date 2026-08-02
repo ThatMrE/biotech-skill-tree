@@ -76,5 +76,21 @@
       "title": "SnapGene: guide to gRNA design for CRISPR",
       "url": "https://www.snapgene.com/guides/design-grna-for-crispr"
     }
+  ],
+  "kits": [
+    {
+      "name": "CRISPR bacterial gene-editing kit",
+      "vendor": "The ODIN",
+      "url": "https://www.the-odin.com/",
+      "price": "~$169",
+      "note": "Edit an E. coli gene at home with gRNA + Cas9 - legal, educational, hands-on."
+    },
+    {
+      "name": "Alt-R CRISPR-Cas9 reagents",
+      "vendor": "IDT",
+      "url": "https://www.idtdna.com/",
+      "price": "~$100-300",
+      "note": "Research-grade gRNAs and Cas9 protein for real editing experiments."
+    }
   ]
 }

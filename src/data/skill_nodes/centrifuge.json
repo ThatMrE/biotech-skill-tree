@@ -61,5 +61,14 @@
       "title": "Eppendorf: centrifugation basics & rcf/rpm conversion",
       "url": "https://www.eppendorf.com/us-en/lab-academy/"
     }
+  ],
+  "kits": [
+    {
+      "name": "Mini benchtop centrifuge",
+      "vendor": "The ODIN / miniPCR",
+      "url": "https://www.minipcr.com/",
+      "price": "~$100-300",
+      "note": "6-8 tube mini-fuge for minipreps and spins; balance your tubes."
+    }
   ]
 }

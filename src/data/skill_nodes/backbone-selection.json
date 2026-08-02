@@ -65,5 +65,22 @@
       "title": "iGEM Registry: pSB1C3 and standard backbones",
       "url": "https://parts.igem.org/Plasmid_backbones/Assembly"
     }
+  ],
+  "kits": [
+    {
+      "name": "Vector design tools (free)",
+      "vendor": "Benchling / SnapGene Viewer",
+      "url": "https://www.benchling.com/",
+      "price": "free",
+      "note": "Compare promoters, oris and tags in silico before you build.",
+      "diy": true
+    },
+    {
+      "name": "Expression/cloning vector set",
+      "vendor": "Addgene",
+      "url": "https://www.addgene.org/",
+      "price": "~$30-75/plasmid",
+      "note": "Browse deposited backbones by application (expression, cloning, reporters)."
+    }
   ]
 }

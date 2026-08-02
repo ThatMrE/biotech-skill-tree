@@ -65,5 +65,22 @@
       "title": "Addgene: Plasmids 101 blog series",
       "url": "https://blog.addgene.org/topic/plasmids-101"
     }
+  ],
+  "kits": [
+    {
+      "name": "Plasmid map viewer (free)",
+      "vendor": "Benchling",
+      "url": "https://www.benchling.com/",
+      "price": "free",
+      "note": "Design and annotate plasmids in the browser - identify ori, marker, MCS.",
+      "diy": true
+    },
+    {
+      "name": "Plasmids from the repository",
+      "vendor": "Addgene",
+      "url": "https://www.addgene.org/",
+      "price": "~$30-75/plasmid",
+      "note": "Real, sequence-verified plasmids for registered labs/community spaces."
+    }
   ]
 }

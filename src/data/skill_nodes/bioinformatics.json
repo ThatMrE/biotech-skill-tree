@@ -68,5 +68,23 @@
       "title": "Rosalind - learn bioinformatics by problem-solving",
       "url": "https://rosalind.info/"
     }
+  ],
+  "kits": [
+    {
+      "name": "Rosalind problems (free)",
+      "vendor": "Rosalind",
+      "url": "https://rosalind.info/",
+      "price": "free",
+      "note": "Learn sequence analysis by solving real problems in the browser.",
+      "diy": true
+    },
+    {
+      "name": "Biopython + public data (free)",
+      "vendor": "NCBI / Biopython",
+      "url": "https://rosalind.info/",
+      "price": "free",
+      "note": "Script FASTQ QC, alignment and parsing on a laptop; no wet lab.",
+      "diy": true
+    }
   ]
 }

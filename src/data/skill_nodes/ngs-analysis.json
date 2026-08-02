@@ -68,5 +68,22 @@
       "title": "GATK Best Practices",
       "url": "https://gatk.broadinstitute.org/hc/en-us/sections/360007226651"
     }
+  ],
+  "kits": [
+    {
+      "name": "nf-core pipelines + SRA data (free)",
+      "vendor": "nf-core / NCBI SRA",
+      "url": "https://rosalind.info/",
+      "price": "free",
+      "note": "Run real QC->align->variant-call pipelines on public reads.",
+      "diy": true
+    },
+    {
+      "name": "MinION for your own reads",
+      "vendor": "Oxford Nanopore",
+      "url": "https://nanoporetech.com/",
+      "price": "~$1,000 starter",
+      "note": "Generate reads you QC, align and call variants on yourself."
+    }
   ]
 }

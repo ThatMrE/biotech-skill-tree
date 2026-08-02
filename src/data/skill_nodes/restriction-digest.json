@@ -78,5 +78,21 @@
       "title": "SnapGene: simulating restriction cloning",
       "url": "https://www.snapgene.com/guides"
     }
+  ],
+  "kits": [
+    {
+      "name": "Restriction enzyme + buffer set",
+      "vendor": "New England Biolabs",
+      "url": "https://www.neb.com/",
+      "price": "~$60-200",
+      "note": "Common enzymes with optimal buffers; watch star activity and the 10% glycerol rule."
+    },
+    {
+      "name": "Restriction digestion & analysis kit",
+      "vendor": "Edvotek",
+      "url": "https://www.edvotek.com/",
+      "price": "~$120-180",
+      "note": "Cut lambda/plasmid DNA and read the fragment pattern on a gel."
+    }
   ]
 }

@@ -78,5 +78,21 @@
       "title": "NeoSynBio: Heat shock of chemically competent cells",
       "url": "https://www.neosynbio.com/heat-shock-transformation-of-chemically-competent-cells"
     }
+  ],
+  "kits": [
+    {
+      "name": "pGLO bacterial transformation kit",
+      "vendor": "Bio-Rad Explorer",
+      "url": "https://www.bio-rad.com/",
+      "price": "~$150-200",
+      "note": "The classic: transform E. coli to glow green, with selection and controls built in."
+    },
+    {
+      "name": "Bacterial transformation kit",
+      "vendor": "The ODIN",
+      "url": "https://www.the-odin.com/",
+      "price": "~$100-160",
+      "note": "DIY-friendly heat-shock transformation with a fluorescent/selectable plasmid."
+    }
   ]
 }

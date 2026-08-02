@@ -69,5 +69,21 @@
       "title": "EMBL-EBI: protein bioinformatics training",
       "url": "https://www.ebi.ac.uk/training/"
     }
+  ],
+  "kits": [
+    {
+      "name": "Fluorescent protein expression kit",
+      "vendor": "Amino Labs",
+      "url": "https://amino.bio/",
+      "price": "~$100-200",
+      "note": "Make cells produce a coloured/fluorescent protein - see the central dogma work."
+    },
+    {
+      "name": "Protein structure model set",
+      "vendor": "Carolina",
+      "url": "https://www.carolina.com/",
+      "price": "~$30-80",
+      "note": "Physical models for primary->quaternary structure intuition."
+    }
   ]
 }

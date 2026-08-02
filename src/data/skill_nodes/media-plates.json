@@ -81,5 +81,21 @@
       "title": "Cold Spring Harbor Protocols: LB (Luria-Bertani) medium",
       "url": "https://cshprotocols.cshlp.org/content/2006/1/pdb.rec8141"
     }
+  ],
+  "kits": [
+    {
+      "name": "LB agar + petri dishes + antibiotic",
+      "vendor": "The ODIN",
+      "url": "https://www.the-odin.com/",
+      "price": "~$30-70",
+      "note": "Pour your own selective plates - add the antibiotic after the agar cools to ~50 C."
+    },
+    {
+      "name": "Prepared/pourable media kit",
+      "vendor": "Carolina",
+      "url": "https://www.carolina.com/",
+      "price": "~$25-60",
+      "note": "Ready LB broth/agar and plates for classroom microbiology."
+    }
   ]
 }

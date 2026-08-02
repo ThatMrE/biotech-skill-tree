@@ -78,5 +78,21 @@
       "title": "QIAGEN: QIAprep Spin Miniprep Kit handbook",
       "url": "https://www.qiagen.com/us/products/discovery-and-translational-research/dna-rna-purification/dna-purification/plasmid-dna/qiaprep-spin-miniprep-kit"
     }
+  ],
+  "kits": [
+    {
+      "name": "Zyppy plasmid miniprep kit",
+      "vendor": "Zymo Research",
+      "url": "https://www.zymoresearch.com/",
+      "price": "~$90-200",
+      "note": "Column-based plasmid prep from overnight cultures - the everyday workhorse."
+    },
+    {
+      "name": "Plasmid purification classroom kit",
+      "vendor": "Edvotek",
+      "url": "https://www.edvotek.com/",
+      "price": "~$100-160",
+      "note": "Alkaline-lysis miniprep with reagents and instructions."
+    }
   ]
 }

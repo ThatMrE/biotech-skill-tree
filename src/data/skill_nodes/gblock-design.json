@@ -71,5 +71,21 @@
       "title": "Benchling: sequence design tutorials",
       "url": "https://www.benchling.com/the-basics-of-primer-design-for-pcr"
     }
+  ],
+  "kits": [
+    {
+      "name": "gBlocks gene fragments (synthesis)",
+      "vendor": "IDT",
+      "url": "https://www.idtdna.com/",
+      "price": "~$0.07-0.15/bp",
+      "note": "Order a designed DNA fragment; codon-optimise and smooth GC/repeats first."
+    },
+    {
+      "name": "Gene synthesis",
+      "vendor": "Twist Bioscience",
+      "url": "https://www.twistbioscience.com/",
+      "price": "quote",
+      "note": "Synthesised genes/fragments for larger or more complex constructs."
+    }
   ]
 }

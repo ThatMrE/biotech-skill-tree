@@ -80,5 +80,21 @@
       "title": "NEB Tm Calculator (annealing temperature)",
       "url": "https://tmcalculator.neb.com/"
     }
+  ],
+  "kits": [
+    {
+      "name": "PCR learning lab + reagents",
+      "vendor": "miniPCR bio",
+      "url": "https://www.minipcr.com/",
+      "price": "~$100-200",
+      "note": "Guided amplification experiments; pairs with the mini16 cycler."
+    },
+    {
+      "name": "PCR amplification kit",
+      "vendor": "Bio-Rad Explorer",
+      "url": "https://www.bio-rad.com/",
+      "price": "~$150-250",
+      "note": "Classroom PCR with template, primers and master mix."
+    }
   ]
 }

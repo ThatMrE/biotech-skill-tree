@@ -64,5 +64,21 @@
       "title": "Bio-Rad: ELISA basics & formats",
       "url": "https://www.bio-rad-antibodies.com/elisa-types-direct-indirect-sandwich-competition-elisa-formats.html"
     }
+  ],
+  "kits": [
+    {
+      "name": "ELISA Immuno Explorer kit",
+      "vendor": "Bio-Rad Explorer",
+      "url": "https://www.bio-rad.com/",
+      "price": "~$150-250",
+      "note": "Run a plate-based antigen/antibody assay with a colour readout and standard curve."
+    },
+    {
+      "name": "ELISA classroom kit",
+      "vendor": "Edvotek",
+      "url": "https://www.edvotek.com/",
+      "price": "~$120-200",
+      "note": "Simulated/real ELISA to teach sandwich detection and quantitation."
+    }
   ]
 }

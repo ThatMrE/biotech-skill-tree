@@ -68,5 +68,14 @@
       "title": "Bio-Rad: PCR temperature optimization",
       "url": "https://www.bio-rad.com/en-us/applications-technologies/pcr-optimization"
     }
+  ],
+  "kits": [
+    {
+      "name": "Gradient-capable thermal cycler",
+      "vendor": "Bio-Rad / miniPCR",
+      "url": "https://www.bio-rad.com/",
+      "price": "~$1,000+",
+      "note": "Run an annealing-temperature gradient in one plate to find the optimum."
+    }
   ]
 }

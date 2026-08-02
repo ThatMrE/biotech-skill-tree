@@ -67,5 +67,21 @@
       "title": "Addgene: analyze sequencing results (Sanger)",
       "url": "https://blog.addgene.org/plasmids-101-plasmid-screening-strategies"
     }
+  ],
+  "kits": [
+    {
+      "name": "Whole-plasmid Sanger/Nanopore sequencing",
+      "vendor": "Plasmidsaurus",
+      "url": "https://www.plasmidsaurus.com/",
+      "price": "~$15/plasmid",
+      "note": "Mail in a plasmid, get the full sequence back - the easiest verification."
+    },
+    {
+      "name": "MinION portable sequencer",
+      "vendor": "Oxford Nanopore",
+      "url": "https://nanoporetech.com/",
+      "price": "~$1,000 starter",
+      "note": "Real DNA sequencing on your own bench for reads and data to analyse."
+    }
   ]
 }

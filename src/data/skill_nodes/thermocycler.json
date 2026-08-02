@@ -65,5 +65,21 @@
       "title": "NEB Tm Calculator (program your annealing temp)",
       "url": "https://tmcalculator.neb.com/"
     }
+  ],
+  "kits": [
+    {
+      "name": "miniPCR mini16 thermal cycler",
+      "vendor": "miniPCR bio",
+      "url": "https://www.minipcr.com/",
+      "price": "~$700-900",
+      "note": "Real, programmable PCR in a palm-sized machine; app-controlled."
+    },
+    {
+      "name": "Bento Lab (built-in thermocycler)",
+      "vendor": "Bento Lab",
+      "url": "https://www.bento.bio/",
+      "price": "~$1,000+",
+      "note": "PCR + gel + centrifuge together if you want one device for the whole spine."
+    }
   ]
 }

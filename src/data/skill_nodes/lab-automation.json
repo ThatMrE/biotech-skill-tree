@@ -73,5 +73,22 @@
       "title": "PyLabRobot - hardware-agnostic lab automation",
       "url": "https://docs.pylabrobot.org/"
     }
+  ],
+  "kits": [
+    {
+      "name": "Opentrons OT-2 / Flex liquid handler",
+      "vendor": "Opentrons",
+      "url": "https://opentrons.com/",
+      "price": "~$5,000+",
+      "note": "Program real pipetting robots in Python; the OT-2 is the accessible workhorse."
+    },
+    {
+      "name": "Opentrons simulator / API (free)",
+      "vendor": "Opentrons",
+      "url": "https://opentrons.com/",
+      "price": "free",
+      "note": "Write and dry-run protocols in software before you own hardware.",
+      "diy": true
+    }
   ]
 }

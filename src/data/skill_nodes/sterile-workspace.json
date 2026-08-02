@@ -78,5 +78,21 @@
       "title": "JoVE Science Education: Aseptic Technique",
       "url": "https://www.jove.com/science-education"
     }
+  ],
+  "kits": [
+    {
+      "name": "DIY still-air box + sterile supplies",
+      "vendor": "The ODIN",
+      "url": "https://www.the-odin.com/",
+      "price": "~$30-80",
+      "note": "Alcohol lamp, inoculation loops, nitrile gloves, and 70% ethanol - a contamination-safe bench for cheap."
+    },
+    {
+      "name": "Bunsen/alcohol burner + PPE set",
+      "vendor": "Carolina",
+      "url": "https://www.carolina.com/",
+      "price": "~$40-90",
+      "note": "Classroom aseptic-technique consumables and safety gear."
+    }
   ]
 }

@@ -72,5 +72,22 @@
       "title": "International Gene Synthesis Consortium - screening",
       "url": "https://genesynthesisconsortium.org/"
     }
+  ],
+  "kits": [
+    {
+      "name": "Free biosafety training (courses)",
+      "vendor": "WHO / CITI / CDC BMBL",
+      "url": "https://www.who.int/",
+      "price": "free",
+      "note": "Complete a biosafety course and read the BMBL - the credential employers expect.",
+      "diy": true
+    },
+    {
+      "name": "PPE + risk-assessment practice",
+      "vendor": "Carolina",
+      "url": "https://www.carolina.com/",
+      "price": "~$40-100",
+      "note": "Gloves, goggles, coats and a risk-assessment worksheet to practise BSL judgement."
+    }
   ]
 }

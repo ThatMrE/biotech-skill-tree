@@ -68,5 +68,22 @@
       "title": "NEB: RNA reagents & RT-qPCR resources",
       "url": "https://www.neb.com/en-us/applications/rna-analysis"
     }
+  ],
+  "kits": [
+    {
+      "name": "Public omics datasets + tools (free)",
+      "vendor": "NCBI SRA / GEO",
+      "url": "https://rosalind.info/",
+      "price": "free",
+      "note": "Practise RNA-seq/omics analysis on real published data with no wet lab.",
+      "diy": true
+    },
+    {
+      "name": "MinION for your own omics reads",
+      "vendor": "Oxford Nanopore",
+      "url": "https://nanoporetech.com/",
+      "price": "~$1,000 starter",
+      "note": "Generate transcriptome/metagenome reads to analyse yourself."
+    }
   ]
 }

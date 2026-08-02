@@ -68,5 +68,21 @@
       "title": "NEB: protein expression with T7 systems",
       "url": "https://www.neb.com/en-us/applications/protein-expression-and-analysis"
     }
+  ],
+  "kits": [
+    {
+      "name": "pGLO GFP induction kit",
+      "vendor": "Bio-Rad Explorer",
+      "url": "https://www.bio-rad.com/",
+      "price": "~$150-200",
+      "note": "Arabinose-inducible GFP: run +/- inducer and see expression switch on."
+    },
+    {
+      "name": "IPTG-inducible expression kit",
+      "vendor": "The ODIN",
+      "url": "https://www.the-odin.com/",
+      "price": "~$120-180",
+      "note": "Express a protein under lac control; induce at mid-log and compare lanes."
+    }
   ]
 }

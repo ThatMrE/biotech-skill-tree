@@ -68,5 +68,21 @@
       "title": "Cold Spring Harbor Protocols: buffers & stock solutions",
       "url": "https://cshprotocols.cshlp.org/"
     }
+  ],
+  "kits": [
+    {
+      "name": "TAE/TBE buffer + reagents",
+      "vendor": "Edvotek",
+      "url": "https://www.edvotek.com/",
+      "price": "~$20-50",
+      "note": "Concentrated electrophoresis buffer to dilute; practice C1V1=C2V2."
+    },
+    {
+      "name": "Lab reagents & balances",
+      "vendor": "Carolina",
+      "url": "https://www.carolina.com/",
+      "price": "~$30-100",
+      "note": "Basic salts, a scale, and pH strips to mix buffers from scratch."
+    }
   ]
 }

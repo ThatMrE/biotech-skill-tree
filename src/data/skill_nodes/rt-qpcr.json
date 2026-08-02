@@ -68,5 +68,21 @@
       "title": "JoVE: RNA extraction & RT-PCR (video)",
       "url": "https://www.jove.com/v/10104/rna-extraction-and-rt-pcr-analysis-of-environmental-microbes"
     }
+  ],
+  "kits": [
+    {
+      "name": "Open qPCR machine",
+      "vendor": "Chai Bio",
+      "url": "https://www.chaibio.com/",
+      "price": "~$3,000-5,000",
+      "note": "An accessible real-time PCR instrument for RT-qPCR and quantitation."
+    },
+    {
+      "name": "RT-qPCR reagent kit",
+      "vendor": "New England Biolabs",
+      "url": "https://www.neb.com/",
+      "price": "~$150-400",
+      "note": "Reverse-transcription + qPCR master mixes; include a -RT control."
+    }
   ]
 }

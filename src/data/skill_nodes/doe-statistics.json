@@ -67,5 +67,23 @@
       "title": "NIST/SEMATECH e-Handbook of Statistical Methods",
       "url": "https://www.itl.nist.gov/div898/handbook/"
     }
+  ],
+  "kits": [
+    {
+      "name": "R / Python + JMP student (free)",
+      "vendor": "Posit / JMP",
+      "url": "https://rosalind.info/",
+      "price": "free",
+      "note": "Design factorial experiments and analyse them; free student tooling.",
+      "diy": true
+    },
+    {
+      "name": "DoE dice/coin sampling exercises",
+      "vendor": "(classroom)",
+      "url": "https://www.carolina.com/",
+      "price": "~$10-30",
+      "note": "Hands-on replication and sampling drills to feel variance and power.",
+      "diy": true
+    }
   ]
 }

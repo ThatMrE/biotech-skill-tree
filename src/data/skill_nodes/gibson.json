@@ -71,5 +71,14 @@
       "title": "Benchling: Gibson assembly wizard",
       "url": "https://www.benchling.com/"
     }
+  ],
+  "kits": [
+    {
+      "name": "NEBuilder HiFi / Gibson Assembly Kit",
+      "vendor": "New England Biolabs",
+      "url": "https://www.neb.com/",
+      "price": "~$150-400",
+      "note": "One-tube exonuclease+polymerase+ligase assembly; design 20-40 bp overlaps."
+    }
   ]
 }

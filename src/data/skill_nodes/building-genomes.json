@@ -73,5 +73,22 @@
       "title": "Sc2.0 - the synthetic yeast genome project",
       "url": "https://syntheticyeast.github.io/"
     }
+  ],
+  "kits": [
+    {
+      "name": "Hierarchical assembly (MoClo) kits",
+      "vendor": "Addgene",
+      "url": "https://www.addgene.org/",
+      "price": "~$65+/kit",
+      "note": "Practise multi-part, multi-tier assembly - the skill genome-scale work is built on."
+    },
+    {
+      "name": "Genome-design software (free)",
+      "vendor": "Benchling",
+      "url": "https://www.benchling.com/",
+      "price": "free",
+      "note": "Plan large constructs, junctions and recoding in silico.",
+      "diy": true
+    }
   ]
 }

@@ -139,6 +139,21 @@ def main():
     if uncovered:
         err(f"{len(uncovered)} node(s) have no interview question: {', '.join(uncovered)}")
 
+    # --- hands-on kits ------------------------------------------------------
+    n_kits = 0
+    for nid, d in details.items():
+        kits = d.get("kits", [])
+        if not kits:
+            err(f"node '{nid}' has no hands-on kits")
+            continue
+        for i, kit in enumerate(kits):
+            n_kits += 1
+            for field in ("name", "vendor", "url", "price", "note"):
+                if not kit.get(field):
+                    err(f"node '{nid}' kit #{i} missing '{field}'")
+            if not str(kit.get("url", "")).startswith("https://"):
+                err(f"node '{nid}' kit #{i} url is not https: {kit.get('url')!r}")
+
     # --- HTGAA companion ----------------------------------------------------
     if HTGAA.exists():
         h = json.loads(HTGAA.read_text(encoding="utf-8"))
@@ -153,6 +168,7 @@ def main():
     print(f"questions:  {len(qb)}  (coverage {len(covered)}/{len(graph)})")
     print(f"htgaa map:  {len(h.get('map', {})) if HTGAA.exists() else 0}")
     print(f"resources:  {sum(len(d.get('resources', [])) for d in details.values())}")
+    print(f"kits:       {n_kits}")
 
     for w in warnings:
         print(f"WARN  {w}")

@@ -66,5 +66,21 @@
       "title": "Addgene: Streaking & picking bacterial colonies",
       "url": "https://www.addgene.org/protocols/streak-plate/"
     }
+  ],
+  "kits": [
+    {
+      "name": "Mini incubator",
+      "vendor": "The ODIN",
+      "url": "https://www.the-odin.com/",
+      "price": "~$60-150",
+      "note": "Hold plates/cultures at 37 C; the DNA Playground also heats and cools."
+    },
+    {
+      "name": "Petri dishes + inoculation loops",
+      "vendor": "Carolina",
+      "url": "https://www.carolina.com/",
+      "price": "~$20-50",
+      "note": "Consumables for streaking for single colonies."
+    }
   ]
 }

@@ -68,5 +68,14 @@
       "title": "Bio-Rad: gel documentation fundamentals",
       "url": "https://www.bio-rad.com/en-us/applications-technologies/gel-documentation"
     }
+  ],
+  "kits": [
+    {
+      "name": "Blue-light transilluminator",
+      "vendor": "miniPCR bio",
+      "url": "https://www.minipcr.com/",
+      "price": "~$100-300",
+      "note": "Safely excise bands for cloning without UV damage to your DNA."
+    }
   ]
 }

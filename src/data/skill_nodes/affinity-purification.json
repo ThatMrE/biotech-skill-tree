@@ -76,5 +76,21 @@
       "title": "Hebrew University: small-scale His-tag purification protocol",
       "url": "https://wolfson.huji.ac.il/purification/TagProteinPurif/HisTag_nature.htm"
     }
+  ],
+  "kits": [
+    {
+      "name": "Protein chromatography (GFP) kit",
+      "vendor": "Bio-Rad Explorer",
+      "url": "https://www.bio-rad.com/",
+      "price": "~$150-250",
+      "note": "Purify green fluorescent protein by column chromatography - see purification in colour."
+    },
+    {
+      "name": "His-tag Ni-NTA spin kit",
+      "vendor": "Zymo / Cytiva",
+      "url": "https://www.zymoresearch.com/",
+      "price": "~$100-250",
+      "note": "Bind a His-tagged protein to nickel resin and elute with imidazole."
+    }
   ]
 }

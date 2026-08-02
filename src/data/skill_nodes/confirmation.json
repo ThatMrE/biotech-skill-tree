@@ -77,5 +77,21 @@
       "title": "Addgene: Verify your clones with colony PCR (Gateway blog)",
       "url": "https://blog.addgene.org/plasmids-101-gateway-cloning"
     }
+  ],
+  "kits": [
+    {
+      "name": "Colony PCR reagents",
+      "vendor": "New England Biolabs",
+      "url": "https://www.neb.com/",
+      "price": "~$60-150",
+      "note": "Cheap Taq master mix to size-screen transformants straight from colonies."
+    },
+    {
+      "name": "PCR screening kit",
+      "vendor": "miniPCR bio",
+      "url": "https://www.minipcr.com/",
+      "price": "~$100-200",
+      "note": "Amplify and gel-check inserts to confirm your clone."
+    }
   ]
 }

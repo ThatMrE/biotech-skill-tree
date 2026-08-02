@@ -71,5 +71,21 @@
       "title": "Eppendorf: how to pipette correctly",
       "url": "https://www.eppendorf.com/us-en/lab-academy/lab-practice/"
     }
+  ],
+  "kits": [
+    {
+      "name": "Adjustable micropipette + tips (set)",
+      "vendor": "Amino Labs / Carolina",
+      "url": "https://amino.bio/",
+      "price": "~$50-250",
+      "note": "A P20/P200/P1000 range covers most work; education pipettes are budget-friendly."
+    },
+    {
+      "name": "Micropipette practice / dye kit",
+      "vendor": "Carolina",
+      "url": "https://www.carolina.com/",
+      "price": "~$30-80",
+      "note": "Calibration and technique drills before you touch real reagents."
+    }
   ]
 }

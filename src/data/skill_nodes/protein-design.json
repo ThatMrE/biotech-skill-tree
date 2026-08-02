@@ -81,5 +81,22 @@
       "title": "ProteinMPNN - inverse folding",
       "url": "https://github.com/dauparas/ProteinMPNN"
     }
+  ],
+  "kits": [
+    {
+      "name": "ColabFold / RFdiffusion (free, cloud GPU)",
+      "vendor": "Google Colab",
+      "url": "https://colab.research.google.com/",
+      "price": "free",
+      "note": "Fold, generate and score protein designs in the browser - no hardware needed.",
+      "diy": true
+    },
+    {
+      "name": "Design + order a designed gene",
+      "vendor": "IDT / Twist",
+      "url": "https://www.idtdna.com/",
+      "price": "~$0.07-0.15/bp",
+      "note": "Turn an in-silico design into DNA to actually express and test."
+    }
   ]
 }

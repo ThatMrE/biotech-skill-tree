@@ -69,5 +69,21 @@
       "title": "Nature Scitable: nucleic acid structure topic room",
       "url": "https://www.nature.com/scitable/topic/genetics-5/"
     }
+  ],
+  "kits": [
+    {
+      "name": "DNA extraction (strawberry/cheek) kit",
+      "vendor": "Amino Labs / Carolina",
+      "url": "https://amino.bio/",
+      "price": "~$15-40",
+      "note": "See real DNA precipitate with household reagents - the classic first experiment."
+    },
+    {
+      "name": "DNA model building set",
+      "vendor": "Carolina",
+      "url": "https://www.carolina.com/",
+      "price": "~$25-60",
+      "note": "Physical double-helix models to internalise antiparallel 5'->3' structure."
+    }
   ]
 }

@@ -69,5 +69,21 @@
       "title": "iGEM Registry: chassis organisms",
       "url": "https://parts.igem.org/Main_Page"
     }
+  ],
+  "kits": [
+    {
+      "name": "Competent E. coli (safe K-12 strain)",
+      "vendor": "The ODIN",
+      "url": "https://www.the-odin.com/",
+      "price": "~$25-60",
+      "note": "Non-pathogenic lab strain to practice on - the standard BSL-1 chassis."
+    },
+    {
+      "name": "Bacterial cultures & strains",
+      "vendor": "Carolina",
+      "url": "https://www.carolina.com/",
+      "price": "~$10-40",
+      "note": "Well-characterised teaching strains; check strain safety before ordering."
+    }
   ]
 }

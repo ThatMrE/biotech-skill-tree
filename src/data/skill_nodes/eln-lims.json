@@ -67,5 +67,15 @@
       "title": "FAIR data principles (GO FAIR)",
       "url": "https://www.go-fair.org/fair-principles/"
     }
+  ],
+  "kits": [
+    {
+      "name": "Benchling ELN (free for academics)",
+      "vendor": "Benchling",
+      "url": "https://www.benchling.com/",
+      "price": "free",
+      "note": "Set up a real versioned notebook + sample tracking; the industry-standard skill.",
+      "diy": true
+    }
   ]
 }

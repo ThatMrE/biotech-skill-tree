@@ -302,6 +302,16 @@ HTML = r"""<!doctype html>
     font-size:12px;text-decoration:none;color:var(--ink)}
   .res a:hover{border-color:var(--green);color:var(--green)}
   .res a span{color:var(--dim);font-size:10px}
+  .kits{display:flex;flex-direction:column;gap:8px}
+  .kit{display:block;padding:11px 12px;border:1px solid var(--line);border-radius:9px;text-decoration:none;
+    color:var(--ink);background:var(--surface-2);transition:border-color .12s}
+  .kit:hover{border-color:var(--green)}
+  .kit .kn{font-size:12.5px;font-weight:600;line-height:1.3}
+  .kit .ktag{font-style:normal;font-size:9px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--info);border:1px solid var(--info-edge);border-radius:20px;padding:1px 6px;margin-left:5px;vertical-align:middle}
+  .kit .km{display:flex;justify-content:space-between;gap:8px;margin:4px 0 5px;font-size:11px;color:var(--dim)}
+  .kit .km b{color:var(--green);font-weight:700;white-space:nowrap}
+  .kit .kd{font-size:11.5px;line-height:1.45;color:var(--dim)}
   .htgaa{border:1px solid var(--info-edge);border-radius:10px;background:linear-gradient(180deg,var(--info-a),var(--info-b));padding:13px 15px}
   .htgaa .hh{display:flex;align-items:center;gap:8px;font-family:var(--disp);font-weight:800;font-size:11px;
     letter-spacing:.12em;text-transform:uppercase;color:var(--info);margin-bottom:8px}
@@ -606,6 +616,17 @@ HTML = r"""<!doctype html>
         var host=''; try{host=new URL(r.url).hostname.replace('www.','');}catch(e){}
         return '<a href="'+esc(r.url)+'" target="_blank" rel="noopener">'+esc(r.title)+' <span>'+esc(host)+' ↗</span></a>';
       }).join('')+'</div></section>';
+    }
+    // hands-on training kits
+    if(det.kits&&det.kits.length){
+      html+='<section><h4>🧰 hands-on kits</h4><div class="kits">'+det.kits.map(function(kt){
+        return '<a class="kit" href="'+esc(kt.url)+'" target="_blank" rel="noopener">'
+          +'<div class="kn">'+esc(kt.name)+(kt.diy?' <em class="ktag">online</em>':'')+'</div>'
+          +'<div class="km"><span>'+esc(kt.vendor)+'</span><b>'+esc(kt.price)+'</b></div>'
+          +'<div class="kd">'+esc(kt.note)+'</div></a>';
+      }).join('')+'</div>'
+        +'<div class="freenote">Prices approximate — confirm with the vendor. Do genetic-modification work only in a legal, registered space.</div>'
+        +'</section>';
     }
     // CTA — always available; no node is ever locked
     if(s==='done'){

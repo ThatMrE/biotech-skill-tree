@@ -72,5 +72,21 @@
       "title": "Benchling: notebook for documenting your build",
       "url": "https://www.benchling.com/"
     }
+  ],
+  "kits": [
+    {
+      "name": "Zero to Genetic Engineering Hero (complete)",
+      "vendor": "Amino Labs",
+      "url": "https://amino.bio/",
+      "price": "~$300-500",
+      "note": "A full express-and-analyse arc in one guided kit - a capstone in a box."
+    },
+    {
+      "name": "Bento Lab + reagent bundles",
+      "vendor": "Bento Lab",
+      "url": "https://www.bento.bio/",
+      "price": "~$1,000+",
+      "note": "Reusable hardware to run an end-to-end personal project."
+    }
   ]
 }

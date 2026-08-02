@@ -68,5 +68,14 @@
       "title": "JoVE: RNA extraction & RT-PCR (video)",
       "url": "https://www.jove.com/v/10104/rna-extraction-and-rt-pcr-analysis-of-environmental-microbes"
     }
+  ],
+  "kits": [
+    {
+      "name": "Direct-zol / Quick-RNA kit",
+      "vendor": "Zymo Research",
+      "url": "https://www.zymoresearch.com/",
+      "price": "~$120-300",
+      "note": "Guanidinium lysis that inactivates RNases; work RNase-free and cold."
+    }
   ]
 }

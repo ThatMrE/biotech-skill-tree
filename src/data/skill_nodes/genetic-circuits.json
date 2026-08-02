@@ -77,5 +77,21 @@
       "title": "SynBioHub - parts & designs repository",
       "url": "https://synbiohub.org/"
     }
+  ],
+  "kits": [
+    {
+      "name": "MoClo / CIDAR genetic-parts kit",
+      "vendor": "Addgene",
+      "url": "https://www.addgene.org/",
+      "price": "~$65+/kit",
+      "note": "Characterised promoters/RBSs/repressors to build and test logic circuits."
+    },
+    {
+      "name": "Engineering kit with reporters",
+      "vendor": "Amino Labs",
+      "url": "https://amino.bio/",
+      "price": "~$150-300",
+      "note": "Build simple regulated circuits with fluorescent outputs."
+    }
   ]
 }

@@ -78,5 +78,21 @@
       "title": "Addgene: Plasmid screening strategies",
       "url": "https://blog.addgene.org/plasmids-101-plasmid-screening-strategies"
     }
+  ],
+  "kits": [
+    {
+      "name": "T4 DNA Ligase / Quick Ligation Kit",
+      "vendor": "New England Biolabs",
+      "url": "https://www.neb.com/",
+      "price": "~$60-150",
+      "note": "Join sticky/blunt ends; remember the 5'-phosphate and molar-ratio rules."
+    },
+    {
+      "name": "Recombinant DNA / cloning kit",
+      "vendor": "Edvotek",
+      "url": "https://www.edvotek.com/",
+      "price": "~$130-200",
+      "note": "Cut-and-paste a fragment into a vector end to end."
+    }
   ]
 }

@@ -69,5 +69,21 @@
       "title": "Mycoplasma contamination - why it matters",
       "url": "https://www.atcc.org/resources/technical-documents/mycoplasma-contamination"
     }
+  ],
+  "kits": [
+    {
+      "name": "Cell lines & complete media",
+      "vendor": "ATCC",
+      "url": "https://www.atcc.org/",
+      "price": "~$300-600 + media",
+      "note": "Authenticated lines to passage - but this needs a hood + CO2 incubator and BSL-2 practice."
+    },
+    {
+      "name": "Community-lab bench time",
+      "vendor": "(local DIYbio / community lab)",
+      "url": "https://www.the-odin.com/",
+      "price": "varies",
+      "note": "Safest route to real mammalian culture: use a shared, properly-equipped BSL-2 space."
+    }
   ]
 }

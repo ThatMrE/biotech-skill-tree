@@ -56,6 +56,20 @@ explicit `--dir=viewer`** — this repo lives inside a larger private working fo
 guarantees only the viewer is ever published. The workflow enforces the same rule: it aborts unless
 the publish directory contains exactly one file, `viewer/index.html`.
 
+## Hands-on training kits
+
+Every node carries a `kits` array — a purchasable kit (or free online toolset) that lets a learner
+actually *do* the skill, not just read about it. **[KITS.md](KITS.md)** is the full catalogue (111
+kits across all 59 skills); the same data renders as a **🧰 hands-on kits** section in each node's popup.
+
+- Vendors span DIY/education (The ODIN, Amino Labs, Bio-Rad Explorer, miniPCR, Edvotek, Carolina) and
+  research (NEB, IDT, Zymo, Addgene, Opentrons, Oxford Nanopore, Pioreactor, Chai Bio).
+- Every kit URL points to a vendor domain **verified to resolve**. Prices are ballpark USD and flagged
+  as approximate in the UI. Items tagged **online** are free software/datasets/courses, not products.
+- Skills that realistically need a shared facility (mammalian cell culture → BSL-2; flow cytometry →
+  a core) say so and point to community-lab / core-facility access instead of implying a home kit.
+- Genetic-modification framing is preserved throughout: **work only in a legal, registered space.**
+
 ## Validation
 
 `python validate.py` fails the build on: graph/detail mismatch, unresolved dependencies, dependency
@@ -96,7 +110,8 @@ What it does:
 - **Map view** — the real dependency graph laid out from each node's `initialPosition`, green main-path
   spine, dashed-orange optional equipment links, pan/drag, scroll- and pinch-zoom, +/−/⤢/⟲ controls.
 - **Click any node → popup** with overview, trajectory (**builds on** / **leads to**), objectives,
-  numbered protocol, embedded technique video (with YouTube fallback link), and resource links.
+  numbered protocol, embedded technique video (with YouTube fallback link), resource links, and
+  **🧰 hands-on kits** — purchasable kits (or free online toolsets) to actually practise the skill.
   Prerequisite and downstream names are **clickable**, so you can walk the trajectory node to node.
 - **List view** — searchable, tappable index grouped by tier; auto-defaults on phones (≤720px).
 - **Search** filters both views; **progress** (mark-complete → unlock cascade) persists via `localStorage`.

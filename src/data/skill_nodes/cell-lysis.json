@@ -67,5 +67,21 @@
       "title": "Thermo Fisher: traditional methods of cell lysis",
       "url": "https://www.thermofisher.com/us/en/home/life-science/protein-biology/protein-biology-learning-center/protein-biology-resource-library/pierce-protein-methods/traditional-methods-cell-lysis.html"
     }
+  ],
+  "kits": [
+    {
+      "name": "Lysozyme / lysis reagents",
+      "vendor": "Zymo / Carolina",
+      "url": "https://www.carolina.com/",
+      "price": "~$30-90",
+      "note": "Enzymatic/chemical lysis to release protein; keep cold, add protease inhibitors."
+    },
+    {
+      "name": "Ultrasonic homogeniser (budget)",
+      "vendor": "(general lab supplier)",
+      "url": "https://www.the-odin.com/",
+      "price": "~$100-300",
+      "note": "Sonicate cells on ice with rest pulses; DNase cuts the viscous lysate."
+    }
   ]
 }

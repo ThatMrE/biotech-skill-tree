@@ -75,5 +75,22 @@
       "title": "Primer3 / Primer3Plus",
       "url": "https://primer3.org/"
     }
+  ],
+  "kits": [
+    {
+      "name": "Primer3 designer (free)",
+      "vendor": "Primer3",
+      "url": "https://primer3.org/",
+      "price": "free",
+      "note": "Design primers with matched Tm, GC clamp and no dimers.",
+      "diy": true
+    },
+    {
+      "name": "Custom DNA oligos (synthesis)",
+      "vendor": "IDT",
+      "url": "https://www.idtdna.com/",
+      "price": "~$0.15-0.40/base",
+      "note": "Order your designed primers; standard desalted oligos are cheap."
+    }
   ]
 }

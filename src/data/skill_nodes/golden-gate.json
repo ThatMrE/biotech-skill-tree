@@ -68,5 +68,21 @@
       "title": "Addgene: Plasmids 101 - Golden Gate cloning",
       "url": "https://blog.addgene.org/plasmids-101-golden-gate-cloning"
     }
+  ],
+  "kits": [
+    {
+      "name": "NEB Golden Gate Assembly Kit",
+      "vendor": "New England Biolabs",
+      "url": "https://www.neb.com/",
+      "price": "~$150-350",
+      "note": "Type IIS one-pot assembly; domesticate internal BsaI sites first."
+    },
+    {
+      "name": "MoClo standardized parts toolkit",
+      "vendor": "Addgene",
+      "url": "https://www.addgene.org/",
+      "price": "~$65+/kit",
+      "note": "Community MoClo kits of characterised parts for hierarchical assembly."
+    }
   ]
 }

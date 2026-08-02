@@ -69,5 +69,21 @@
       "title": "Error-prone PCR & library methods (NEB)",
       "url": "https://www.neb.com/en-us/applications/cloning-and-synthetic-biology/site-directed-mutagenesis"
     }
+  ],
+  "kits": [
+    {
+      "name": "GeneMorph II error-prone PCR kit",
+      "vendor": "Agilent",
+      "url": "https://www.agilent.com/",
+      "price": "~$300-500",
+      "note": "Generate a mutant library by error-prone PCR - the diversity half of evolution."
+    },
+    {
+      "name": "Selection reagents + transformation",
+      "vendor": "The ODIN / NEB",
+      "url": "https://www.neb.com/",
+      "price": "~$100-300",
+      "note": "Pair the library with a selection/screen; you get what you select for."
+    }
   ]
 }

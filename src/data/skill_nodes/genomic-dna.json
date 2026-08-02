@@ -69,5 +69,21 @@
       "title": "Addgene: DNA quantification with a spectrophotometer",
       "url": "https://www.addgene.org/protocols/dna-quantification/"
     }
+  ],
+  "kits": [
+    {
+      "name": "Quick-DNA genomic extraction kit",
+      "vendor": "Zymo Research",
+      "url": "https://www.zymoresearch.com/",
+      "price": "~$100-250",
+      "note": "Spin-column genomic DNA from cells/tissue; handle gently to avoid shearing."
+    },
+    {
+      "name": "DNA isolation classroom kit",
+      "vendor": "Edvotek",
+      "url": "https://www.edvotek.com/",
+      "price": "~$100-180",
+      "note": "Guided extraction with reagents and protocol for teaching."
+    }
   ]
 }

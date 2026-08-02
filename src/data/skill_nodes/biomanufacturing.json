@@ -68,5 +68,21 @@
       "title": "FDA - Quality by Design / GMP overview",
       "url": "https://www.fda.gov/drugs/pharmaceutical-quality-resources/current-good-manufacturing-practice-cgmp-regulations"
     }
+  ],
+  "kits": [
+    {
+      "name": "Pioreactor (open-source bioreactor)",
+      "vendor": "Pioreactor",
+      "url": "https://pioreactor.com/",
+      "price": "~$200 starter",
+      "note": "A real, affordable bioreactor: monitor and control growth, feeds and OD."
+    },
+    {
+      "name": "Fermentation starter setup",
+      "vendor": "(DIY)",
+      "url": "https://www.the-odin.com/",
+      "price": "~$50-200",
+      "note": "Practice batch/fed-batch control with accessible fermentation gear."
+    }
   ]
 }

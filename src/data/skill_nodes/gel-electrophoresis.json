@@ -83,5 +83,21 @@
       "title": "Bio-Rad: Sub-Cell GT agarose gel electrophoresis manual",
       "url": "https://www.bio-rad.com/sites/default/files/webroot/web/pdf/lsr/literature/M1704400B.PDF"
     }
+  ],
+  "kits": [
+    {
+      "name": "blueGel electrophoresis system",
+      "vendor": "miniPCR bio",
+      "url": "https://www.minipcr.com/",
+      "price": "~$400-600",
+      "note": "Cast, run and view DNA gels with safe blue light - no UV, no EtBr."
+    },
+    {
+      "name": "DNA electrophoresis classroom kit",
+      "vendor": "Edvotek",
+      "url": "https://www.edvotek.com/",
+      "price": "~$100-180",
+      "note": "Complete gel rig plus dyes, ladder and samples."
+    }
   ]
 }

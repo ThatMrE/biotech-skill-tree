@@ -68,5 +68,21 @@
       "title": "Compensation & controls (BD)",
       "url": "https://www.bdbiosciences.com/en-us/resources/bd-assay-sites/multicolor-flow-cytometry"
     }
+  ],
+  "kits": [
+    {
+      "name": "Core-facility / community-lab access",
+      "vendor": "(institutional)",
+      "url": "https://www.the-odin.com/",
+      "price": "per-run fee",
+      "note": "Flow cytometers are institutional; book time at a university core or community lab."
+    },
+    {
+      "name": "Fluorescence microscope (proxy)",
+      "vendor": "Carolina",
+      "url": "https://www.carolina.com/",
+      "price": "~$300-1,500",
+      "note": "See labelled cells and gating intuition at the bench before a real cytometer."
+    }
   ]
 }

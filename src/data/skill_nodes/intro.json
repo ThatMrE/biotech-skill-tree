@@ -71,5 +71,28 @@
       "title": "Benchling (free academic molecular biology suite)",
       "url": "https://www.benchling.com/"
     }
+  ],
+  "kits": [
+    {
+      "name": "Genetic Engineering Home Lab Kit",
+      "vendor": "The ODIN",
+      "url": "https://www.the-odin.com/",
+      "price": "~$169",
+      "note": "Everything to run your first bacterial engineering experiment at home - the classic entry point."
+    },
+    {
+      "name": "DNA Playground (starter)",
+      "vendor": "Amino Labs",
+      "url": "https://amino.bio/",
+      "price": "~$200+",
+      "note": "All-in-one beginner station: incubation, engineering, and a guided app - built for first-timers."
+    },
+    {
+      "name": "Bento Lab (portable molecular lab)",
+      "vendor": "Bento Lab",
+      "url": "https://www.bento.bio/",
+      "price": "~$1,000+",
+      "note": "PCR + centrifuge + gel + power in one case - a reusable base for many nodes below."
+    }
   ]
 }

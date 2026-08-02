@@ -73,5 +73,21 @@
       "title": "Pardee et al. - paper-based freeze-dried synthetic biology",
       "url": "https://pubmed.ncbi.nlm.nih.gov/25417167/"
     }
+  ],
+  "kits": [
+    {
+      "name": "Cell-free / TX-TL expression kit",
+      "vendor": "The ODIN (DIY) / myTXTL (research)",
+      "url": "https://www.the-odin.com/",
+      "price": "~$150-400",
+      "note": "Express protein from DNA in a tube with no living cells; myTXTL is the research-grade extract."
+    },
+    {
+      "name": "BioBits-style freeze-dried demos",
+      "vendor": "Amino Labs",
+      "url": "https://amino.bio/",
+      "price": "~$100-200",
+      "note": "Education cell-free reactions you add water/DNA to - great for biosensors."
+    }
   ]
 }
