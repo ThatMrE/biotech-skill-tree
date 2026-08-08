@@ -604,6 +604,9 @@
     html+='</div>';
     pop.innerHTML=html;
     scrim.classList.add('show');
+    // reflect the open node in the URL so it can be shared / deep-linked (/#node-id).
+    // replaceState does NOT fire hashchange, so this never re-triggers openFromHash.
+    try{history.replaceState(null,'','#'+encodeURIComponent(id));}catch(e){}
     document.getElementById('popx').addEventListener('click',closePop);
     // navigate the trajectory: clicking a prerequisite / downstream skill opens it
     pop.querySelectorAll('[data-jump]').forEach(function(a){
@@ -618,7 +621,9 @@
     }
     pop.scrollTop=0;
   }
-  function closePop(){scrim.classList.remove('show');}
+  function closePop(){scrim.classList.remove('show');
+    // drop the #node-id from the URL when the panel closes (no hashchange fired)
+    try{if(location.hash)history.replaceState(null,'',location.pathname+location.search);}catch(e){}}
   scrim.addEventListener('click',function(e){if(e.target===scrim)closePop();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closePop();});
 
@@ -987,6 +992,19 @@
     setTimeout(function(){openPop(id);},60);
   }
 
+  // ---- deep-linking: open a node straight from the URL hash (e.g. /#crispr) ----
+  function nodeIdFromHash(){
+    var h=(location.hash||'').replace(/^#/,'');
+    try{h=decodeURIComponent(h);}catch(e){}
+    return (h&&byId[h])?h:null;   // only honour a hash that names a real node
+  }
+  function openFromHash(){
+    var id=nodeIdFromHash();
+    if(id)studyNode(id);          // switch to a sensible view and open the node's detail
+  }
+  // react to the hash changing after load (shared link opened in-tab, back/forward, manual edit)
+  window.addEventListener('hashchange',openFromHash);
+
   // ---- stats ----
   function refreshStats(){
     var d=NODES.filter(function(n){return isDone(n.id);}).length;
@@ -1013,6 +1031,8 @@
   // default to list on narrow screens
   if(window.innerWidth<=720)setMode('list'); else {setMode('map');readableView(NODES);}
   if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){if(mode==='map')readableView(NODES);});
+  // if the page was opened with /#node-id, jump straight to that node
+  openFromHash();
 })();
 </script>
 </body>
