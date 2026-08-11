@@ -100,7 +100,7 @@ LABS_BODY = r"""
   <button class="themeBtn" id="themeBtn" type="button" aria-label="Toggle theme">◐</button>
 </header>
 <main>
-  <h1 class="page">Find a community lab &mdash; and reach out</h1>
+  <h1 class="page">Find a community lab &mdash; and make contact</h1>
   <p class="lead">The skills in the tree need a bench. These are community &amp; DIY biolabs worldwide (from the
   <a href="https://global-biolab-atlas.netlify.app/" target="_blank" rel="noopener">Global Biolab Atlas</a>) where you can
   often get access to equipment and space to learn. Find one near you, then <strong>send your own message</strong> via their
@@ -198,7 +198,7 @@ LABS_BODY = r"""
     vt.querySelectorAll('button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-view')===v);});
     document.getElementById('map').classList.toggle('show',v==='map');
     document.getElementById('results').style.display=v==='map'?'none':'';
-    document.getElementById('mapNote').textContent=v==='map'?'Markers coloured by status · click a marker to reach out. Tiles © OpenStreetMap contributors, © CARTO.':'';
+    document.getElementById('mapNote').textContent=v==='map'?'Markers coloured by status · click a marker to make contact. Tiles © OpenStreetMap contributors, © CARTO.':'';
     if(v==='map'){ if(!mapBuilt)buildMap(); if(map){map.invalidateSize(); renderMap(filtered());} }
   }
   function tileUrl(){var d=document.documentElement.getAttribute('data-theme')==='dark';
@@ -243,7 +243,7 @@ LABS_BODY = r"""
       +'<span class="pl-badge '+st.c+'">'+st.t+'</span>'
       +(l.desc?'<div class="pl-desc">'+esc(l.desc)+'</div>':'')
       +'<div class="pl-acts">'+(l.url?'<a href="'+esc(l.url)+'" target="_blank" rel="noopener">visit site ↗</a>':'')
-      +(l.url?'<button data-compose="'+esc(l.name)+'∷'+esc(l.url)+'">reach out →</button>':'')+'</div></div>';
+      +(l.url?'<button data-compose="'+esc(l.name)+'∷'+esc(l.url)+'">make contact →</button>':'')+'</div></div>';
   }
 
   function card(l){
@@ -388,7 +388,7 @@ COSTS_BODY = r"""
 </header>
 <main>
   <h1 class="page">What would a hands-on program cost?</h1>
-  <p class="lead">Equipment is a one-time, shared cost; consumables scale per student. Pick who it&rsquo;s for, how you&rsquo;ll
+  <p class="lead">Equipment is a one-time, shared cost. Consumables scale per student. Pick who it&rsquo;s for, how you&rsquo;ll
   buy, and which tracks to teach &mdash; the estimate updates live. Planning figures only (&plusmn;~30%); see the
   <a href="https://crablaboratory.com/" target="_blank" rel="noopener">lab-in-a-box</a> end of the spectrum too.</p>
 
